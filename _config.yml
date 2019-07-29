@@ -1,19 +1,30 @@
-title: Fred Adams
+# this file defines a few configuration variables for the site
+
+# title of the site
+title: Fred Adams's Website
+
+# info about the author, including name, and social medias
 author:
   name: "Fred Adams"
   github: "https://github.com/xtrp/"
   instagram: "https://instagram.com/xtrp127/"
-  email: "mailto:xtrp127@gmail.com"
   devto: "https://dev.to/xtrp/"
   stackoverflow: "https://stackoverflow.com/users/10007107/fred-adams"
 
+# sections includes a list of objects with titles and
+# directories of sections that are to be listed directly
+# within the navigation bar. The directory variable shows
+# the location, like this: "/[directory]/"
 sections:
   - name: "Home"
-    file: ""
+    directory: ""
   - name: "Code"
-    file: "code"
+    directory: "code"
   - name: "About"
-    file: "about"
+    directory: "about"
+  - name: "About"
+    directory: "about"
+dropdown_sections:
 
 permalink: /:year/:month/:day/:title/
 
