@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>I Tried Making a Chrome Extension | Fred Adams</title>
+        
+        <link rel="stylesheet" href="/assets/normalize.css">
+        <link rel="stylesheet" href="/assets/skeleton.css">
+        <link rel="stylesheet" href="/assets/main.css">
+
+        <link rel="shortcut icon" href="/favicon.ico">
+    </head>
+    <body>
+        <nav  class="white"  style="background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(/assets/.jpg)">
+    <div class="top">
+        <a href="/">Fred Adams</a>
+        <ul>
+            
+            <a  href="/">Home</a>
+            
+            <a  href="/code">Code</a>
+            
+            <a  href="/about">About</a>
+            
+
+        </ul>
+    </div>
+    <h1>I Tried Making a Chrome Extension</h1>
+</nav>
+
+        <div class="container">
+            <div class="block post">
+    <div class="top">
+        <h1>I Tried Making a Chrome Extension</h1>
+        <p>Published on 11 December, 2018</p>
+    </div>
+    <p>Hey. So yesterday I wrote a post talking about some software I wrote to encode and decode text hidden inside images.</p>
+
+<p>Just a day after I wrote that website/tool, I tried making a Chrome Extension, and it actually went pretty well and I’m quite proud of the final product.</p>
+
+<p>So the purpose of the Chrome extension was to be able to right click on any image in page and be able to make a meme using that image.</p>
+
+<p>It’s called MemeMachine.</p>
+
+<p>Chrome extensions are surprisingly pretty easy to make; all you need is a <code class="highlighter-rouge">manifest.json</code> file with all of your configuration and basic extension info, as well as a JavaScript file and any other files in your extension.</p>
+
+<p>My extension consisted of two main files: one to be run in the background of each page, and one to be injected into each page.</p>
+
+<p>The background script created an option in the context menu (menu opened on right click) to make a meme if an image what right clicked on. If that option was clicked, a message was sent to the injected script to show a modal (popup box) with the specified image URL and text boxes for the meme text.</p>
+
+<p>The meme creation and downloading part was done using HTML5 Canvas, and I had to do some pretty cool workarounds to fix several annoying bugs.</p>
+
+<p>For example, when downloading the meme, there was a common error in which sites prohibited CORS (Cross-Origin Resource Sharing) requests, so the photo couldn’t be used in HTML5 Canvas and couldn’t be downloaded. In this case I had to send a message to the background script with the image and meme text, as the background script had the correct permissions and could bypass quite a few different errors regarding security.</p>
+
+<p>Overall, I learned a lot from this project about Chrome extensions in general, as well working with HTML5 Canvas and images.</p>
+
+<p>You can check out MemeMachine <a href="https://xtrp.github.io/MemeMachine/">here</a>, or see it on GitHub <a href="https://github.com/xtrp/MemeMachine">here</a>.</p>
+
+<p>Thanks for scrolling.</p>
+
+<p><em>- Fred Adams</em></p>
+
+</div>
+
+            <footer>
+    <p>&copy; Fred Adams <script>document.write(new Date().getFullYear());</script></p>
+    <ul>
+        <a href="mailto:xtrp127@gmail.com">Email</a>
+        <a href="https://github.com/xtrp/">GitHub</a>
+        <a href="https://dev.to/xtrp/">DEV</a>
+        <a href="https://stackoverflow.com/users/10007107/fred-adams">Stack Overflow</a>
+        <a href="https://instagram.com/xtrp127/">Instagram</a>
+    </ul>
+</footer>
+        </div>
+    </body>
+</html>

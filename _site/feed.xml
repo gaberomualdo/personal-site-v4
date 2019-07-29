@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-15T11:18:25+01:00</updated><id>http://localhost:4000/</id><title type="html">Fred Adams</title><author><name>Fred Adams</name><email>mailto:xtrp127@gmail.com</email></author><entry><title type="html">MailSpring: My New Favorite Email App</title><link href="http://localhost:4000/2019/03/19/my-new-favorite-mail-app/" rel="alternate" type="text/html" title="MailSpring: My New Favorite Email App" /><published>2019-03-19T12:12:12+00:00</published><updated>2019-03-19T12:12:12+00:00</updated><id>http://localhost:4000/2019/03/19/my-new-favorite-mail-app</id><content type="html" xml:base="http://localhost:4000/2019/03/19/my-new-favorite-mail-app/">&lt;p&gt;Hey. So I actually have a few email accounts, which I check often.&lt;/p&gt;
+
+&lt;p&gt;Over the past few years, I’ve simply used the online email portal (e.g. gmail.com or inbox.google.com). I’d seen people use the default Mail app for macOS or the Mail app for Windows, but frankly, I found those nothing more than just a container for the web email versions.&lt;/p&gt;
+
+&lt;p&gt;But just a few days ago, I downloaded an email client called MailSpring. MailSpring is great for quite a few notable reasons.&lt;/p&gt;
+
+&lt;p&gt;The first, and I think most important one being it’s cross-platform compatibility: it is available for macOS, Windows, and Linux. The functionality on all three platforms is exactly the same, and MailSpring runs seamlessely on all of them.&lt;/p&gt;
+
+&lt;p&gt;MailSpring works just like any other mail app, and it allows you to have multiple email accounts running simultaneously. Basic features like composing an email and replying to an email are of course present on MailSpring, along with a few extra features that frankly, make MailSpring my favorite mail app.&lt;/p&gt;
+
+&lt;p&gt;MailSpring has read receipts automatically enabled, so you can see when someone opens an email, even if they are opening it for the second or third time. MailSpring also has an option to change the theme of the app, with a few built in ones like the Light and Dark themes, and while the built in ones are already great, you can download and run different and more unique themes yourself. If you’d like, you can even build your own MailSpring theme.&lt;/p&gt;
+
+&lt;p&gt;MailSpring allows for extensive customization of the applications user interface and design. You can switch from a dual-panel layout to a single-panel layout depending on your preference, you have the ability to change the app font size, and, of course, as mentioned earlier, you can add and use different MailSpring themes to make your email client fit your mood or personality.&lt;/p&gt;
+
+&lt;p&gt;MailSpring also offers a great set of templates for email signatures: my favorite one being the one with the profile picture and name (shoot me an email at &lt;a href=&quot;mailto:someone@example.com?Subject=Hey!&quot;&gt;xtrp127@gmail.com&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;And of course, this is only what I’ve discovered about MailSpring in just 2 or 3 days.&lt;/p&gt;
+
+&lt;p&gt;Get MailSpring here: &lt;a href=&quot;https://getmailspring.com/&quot;&gt;getmailspring.com&lt;/a&gt;; oh, and it’s also open sourced on Github here: &lt;a href=&quot;https://github.com/Foundry376/Mailspring&quot;&gt;github.com/Foundry376/Mailspring&lt;/a&gt;.&lt;/p&gt;</content><author><name>Fred Adams</name><email>mailto:xtrp127@gmail.com</email></author><summary type="html">Hey. So I actually have a few email accounts, which I check often.</summary></entry><entry><title type="html">Starting Some Bigger Projects</title><link href="http://localhost:4000/2019/03/18/starting-some-bigger-projects/" rel="alternate" type="text/html" title="Starting Some Bigger Projects" /><published>2019-03-18T12:12:12+00:00</published><updated>2019-03-18T12:12:12+00:00</updated><id>http://localhost:4000/2019/03/18/starting-some-bigger-projects</id><content type="html" xml:base="http://localhost:4000/2019/03/18/starting-some-bigger-projects/">&lt;p&gt;Over the past year, and over my entire life, I’ve written a lot of code. Hundreds of repositories on GitHub, many of them public. Hundreds of projects on my local disk as well.&lt;/p&gt;
+
+&lt;p&gt;Reflecting on the past year and my time making and publishing things on GitHub, I think most of my projects are very small and simple tools.&lt;/p&gt;
+
+&lt;p&gt;Take Skyewire for instance: I wrote the code for that in a day, and it’s simply a quick tool that is useful sometimes. I’ve written and built countless projects that are just like that: they are just tools that I wrote in a day.&lt;/p&gt;
+
+&lt;p&gt;I haven’t really built and finished a big project. Ever. And I want to start doing that.&lt;/p&gt;
+
+&lt;p&gt;So I made an &lt;a href=&quot;https://github.com/orvato&quot;&gt;organization&lt;/a&gt;. That I’m calling Orvato. The purpose of Orvato is to build bigger, better, and more long-term projects. Those ones might take longer to code, but larger scale projects are more ambitious and attract a larger user base than simple “tools”. Larger projects allow for more creativity, and their success is defined by their uniqueness and user attractability.&lt;/p&gt;
+
+&lt;p&gt;I think being more creative and being more ambitious is what I need right now, and that’s what I’m doing.&lt;/p&gt;
+
+&lt;p&gt;See you later.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;— Fred Adams&lt;/em&gt;&lt;/p&gt;</content><author><name>Fred Adams</name><email>mailto:xtrp127@gmail.com</email></author><summary type="html">Over the past year, and over my entire life, I’ve written a lot of code. Hundreds of repositories on GitHub, many of them public. Hundreds of projects on my local disk as well.</summary></entry><entry><title type="html">I Tried Making a Program to Turn Photos Into Drawings</title><link href="http://localhost:4000/2019/03/18/i-tried-making-a-program-to-turn-photos-into-drawings/" rel="alternate" type="text/html" title="I Tried Making a Program to Turn Photos Into Drawings" /><published>2019-03-18T12:12:12+00:00</published><updated>2019-03-18T12:12:12+00:00</updated><id>http://localhost:4000/2019/03/18/i-tried-making-a-program-to-turn-photos-into-drawings</id><content type="html" xml:base="http://localhost:4000/2019/03/18/i-tried-making-a-program-to-turn-photos-into-drawings/">&lt;p&gt;A couple weeks ago I wrote a pretty simple program using HTML5 Canvas and JavaScript to turn photos into drawings.&lt;/p&gt;
+
+&lt;p&gt;The algorithm is quite simple, and the resulting drawings are meant to imitate impressionism, specifically that of the late 19th century, for example, Manet or Monet.&lt;/p&gt;
+
+&lt;p&gt;I was originally going to write a program that made drawings that were “Picasso’s”, where each section of color would be converted into the nearest accurate shape, for example a quadrilateral that fit the section, or a triangle.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, I realized that the algorithm for that would take a long time, and would significantly increase the already long load times that the algorithm took to run.&lt;/p&gt;
+
+&lt;p&gt;So I settled with a simple algorithm which works with a simple simulation of the “magic wand tool”.&lt;/p&gt;
+
+&lt;p&gt;Essentially, I have a function that can take a pixel, and run the magic wand tool on it. If you don’t know what the magic wand tool is, it’s simply a tool that allows you to select sections of the same color from a certain pixel.&lt;/p&gt;
+
+&lt;p&gt;My algorithm simply selects all the sections of a photo using the magic wand tool and essentially standardizes the color there. So if it had a section of mainly red, it would make all the pixels in that section the same exact color of red.&lt;/p&gt;
+
+&lt;p&gt;This algorithm works surprisingly well and manages to resemble impressionism on resulting drawings.&lt;/p&gt;
+
+&lt;p&gt;Check out the code here: &lt;a href=&quot;https://github.com/xtrp/gh&quot;&gt;github.com/xtrp/gh&lt;/a&gt;, or try it yourself here: &lt;a href=&quot;https://xtrp.github.io/gh/&quot;&gt;xtrp.github.io/gh/&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Thanks for scrolling.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;— Fred Adams&lt;/em&gt;&lt;/p&gt;</content><author><name>Fred Adams</name><email>mailto:xtrp127@gmail.com</email></author><summary type="html">A couple weeks ago I wrote a pretty simple program using HTML5 Canvas and JavaScript to turn photos into drawings.</summary></entry><entry><title type="html">My Attempt at an Algorithm to Make Modern Art</title><link href="http://localhost:4000/2019/02/16/canvas-shapes/" rel="alternate" type="text/html" title="My Attempt at an Algorithm to Make Modern Art" /><published>2019-02-16T12:12:12+00:00</published><updated>2019-02-16T12:12:12+00:00</updated><id>http://localhost:4000/2019/02/16/canvas-shapes</id><content type="html" xml:base="http://localhost:4000/2019/02/16/canvas-shapes/">&lt;p&gt;Modern art is categorized as very simple, yet pleasing and gives a greater message than just an artwork.&lt;/p&gt;
+
+&lt;p&gt;Over the past few months, I’ve been playing around with HTML5 Canvas, with projects like &lt;a href=&quot;https://xtrp.github.io/Arjun-April-Steganography&quot;&gt;Arjun-April Steganography&lt;/a&gt;, &lt;a href=&quot;https://xtrp.github.io/arjunsketch/&quot;&gt;Arjun Sketch&lt;/a&gt;, and &lt;a href=&quot;https://xtrp.github.io/pixelart_creator/&quot;&gt;PixelArt Creator&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I’ve also been working with a lot of randomization with my 2048 AI, &lt;a href=&quot;https://xtrp.github.io/jacob/&quot;&gt;Jacob&lt;/a&gt;, which uses the Monte Carlo Pure Search Tree algorithm, which is based on randomization being perfect.&lt;/p&gt;
+
+&lt;p&gt;There are so many cases where randomization makes something so much more perfect and eloquent than complex algorithms.&lt;/p&gt;
+
+&lt;p&gt;A prime example of this is AlphaZero, a chess engine built on the Monte Carlo algorithm, which, again, is based on randomization. The algorithm is extremely simple, yet somehow crushed the famous StockFish, an extremely complex chess engine that has been in production for decades, and has been worked on by countless computer science experts, as well as chess grandmasters.&lt;/p&gt;
+
+&lt;p&gt;So I decided to try and mix HTML5 Canvas and randomization to create abstract artwork with randomized shapes and opacities and colors.&lt;/p&gt;
+
+&lt;p&gt;It isn’t the best, but it looks really cool and it’s fun (at least for me) to reload the page and see what comes up.&lt;/p&gt;
+
+&lt;p&gt;See what the world of random gives you.&lt;/p&gt;
+
+&lt;p&gt;Check it out if you’d like: &lt;a href=&quot;https://xtrp.github.io/canvas_shapes&quot;&gt;Canvas Shapes&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Thanks for scrolling.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;- Fred Adams&lt;/em&gt;&lt;/p&gt;</content><author><name>Fred Adams</name><email>mailto:xtrp127@gmail.com</email></author><summary type="html">Modern art is categorized as very simple, yet pleasing and gives a greater message than just an artwork.</summary></entry><entry><title type="html">I’m Back!</title><link href="http://localhost:4000/2019/02/10/im-back/" rel="alternate" type="text/html" title="I'm Back!" /><published>2019-02-10T12:12:12+00:00</published><updated>2019-02-10T12:12:12+00:00</updated><id>http://localhost:4000/2019/02/10/im-back</id><content type="html" xml:base="http://localhost:4000/2019/02/10/im-back/">&lt;p&gt;Hi. So I realize I haven’t posted on this blog in literally &lt;em&gt;a month&lt;/em&gt;. I’m sorry.&lt;/p&gt;
+
+&lt;p&gt;In the beginning of January, I built a few pretty great projects, such as my 2048 AI, &lt;a href=&quot;https://xtrp.github.io/jacob/&quot;&gt;Jacob&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In mid-January, I took a break from coding. Other things came up in my life, and coding was pushed away.&lt;/p&gt;
+
+&lt;p&gt;But now, after around a month, I’m back. I haven’t coded properly in a while, so I’ve got to catch up. My typing speed isn’t as fast; I’ve forgotten some commands, but I’m so happy to be back writing code again.&lt;/p&gt;
+
+&lt;p&gt;Getting coding again is my top priority right now. I want to focus on building something beautiful. Something bigger. Something better. And I won’t let anyone or anything stop me.&lt;/p&gt;
+
+&lt;p&gt;I’m going to start small, but I want to create something that’s better than anything else I’ve made before. Anything else I made in 2018 or 2017 or 2016.&lt;/p&gt;
+
+&lt;p&gt;I’m also hoping to post on this blog more. I realize I’ve said that quite a few times; but I’m serious. I want to find consistency in posting here.&lt;/p&gt;
+
+&lt;p&gt;Regardless, I’m back, and I’ll post any updates or new projects as they come.&lt;/p&gt;
+
+&lt;p&gt;Thanks for scrolling.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;- Fred Adams&lt;/em&gt;&lt;/p&gt;</content><author><name>Fred Adams</name><email>mailto:xtrp127@gmail.com</email></author><summary type="html">Hi. So I realize I haven’t posted on this blog in literally a month. I’m sorry.</summary></entry><entry><title type="html">20 GitHub Projects I’ve Worked on This Year</title><link href="http://localhost:4000/2018/12/31/20-projects-ive-made-this-year-2018/" rel="alternate" type="text/html" title="20 GitHub Projects I've Worked on This Year" /><published>2018-12-31T12:12:12+00:00</published><updated>2018-12-31T12:12:12+00:00</updated><id>http://localhost:4000/2018/12/31/20-projects-ive-made-this-year-2018</id><content type="html" xml:base="http://localhost:4000/2018/12/31/20-projects-ive-made-this-year-2018/">&lt;p&gt;Hi! So as you all know, today is the last day of 2018.&lt;/p&gt;
+
+&lt;p&gt;I thought this would be a good time to look back at all of the coding projects I’ve worked on this year in 2018.&lt;/p&gt;
+
+&lt;p&gt;So I’ve compiled a list of 20 projects I’ve worked on this year in a rewind type format, starting with February 2018, and ending of course in December 2018.&lt;/p&gt;
+
+&lt;p&gt;If you’d like to see all of my public GitHub projects, check out my &lt;a href=&quot;https://github.com/xtrp&quot;&gt;GitHub Profile&lt;/a&gt;, or see the &lt;a href=&quot;https://xtrp.github.io/code/&quot;&gt;Project Page&lt;/a&gt; on my personal website.&lt;/p&gt;
+
+&lt;p&gt;Before I start, here are just a few cool statistics from my GitHub this year:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;1359 total contributions in 2018&lt;/li&gt;
+  &lt;li&gt;53 (4 in an organization) total public repositories (projects) created in 2018&lt;/li&gt;
+  &lt;li&gt;62 total private respositories (projects) created in 2018&lt;/li&gt;
+  &lt;li&gt;1 organization created in 2018&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Anyway, here are 20 projects I’ve worked in the past year:&lt;/p&gt;
+
+&lt;p&gt;Oh, and keep in mind that this is from the &lt;code class=&quot;highlighter-rouge&quot;&gt;xtrp&lt;/code&gt; GitHub account, which was created on February 27, 2018 (I previously had a different account on GitHub).&lt;/p&gt;
+
+&lt;h2 id=&quot;late-february-2018-hex-rgb-creator&quot;&gt;Late February 2018: Hex RGB Creator&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://xtrp.github.io/blogstatic/2018-12-31/hrc.png&quot; alt=&quot;Project Preview&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://xtrp.github.io/Hex-RGB-Creator/&quot;&gt;Website&lt;/a&gt;   &lt;a href=&quot;https://github.com/xtrp/Hex-RGB-Creator&quot;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Hex RGB Creator is a simple web app that allows you to play around with Hex and RGB colors.&lt;/p&gt;
+
+&lt;p&gt;On the site, there are 3 sliders refering to the red, green, and blue brightnesses of the resulting mixed color.&lt;/p&gt;
+
+&lt;p&gt;So for example, if you slide the red slider to the end and the green and blue sliders to 0, the resulting color would be a bright red.&lt;/p&gt;
+
+&lt;p&gt;The great thing about this site is that after you’ve moved the sliders, you can see the resulting mixed color, and the Hex and RGB representations of that color.&lt;/p&gt;
+
+&lt;p&gt;It makes it easy to copy those color formats and use them in your own site.&lt;/p&gt;
+
+&lt;p&gt;So let’s say your making a social media app that has a blue “Follow” button: you could go on Hex RGB Creator and move the sliders until you find a good blue color, and then just copy the Hex format and paste it into your code for the app.&lt;/p&gt;
+
+&lt;h2 id=&quot;early-march-2018-imagedit&quot;&gt;Early March 2018: Imagedit&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://xtrp.github.io/blogstatic/2018-12-31/imagedit.png&quot; alt=&quot;Project Preview&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://xtrp.github.io/Imagedit/&quot;&gt;Website&lt;/a&gt;   &lt;a href=&quot;https://github.com/xtrp/Imagedit&quot;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Imagedit is a simple web app that uses CSS filters to edit an image.&lt;/p&gt;
+
+&lt;p&gt;First, just paste the URL to the image you’d like to edit, and then you can see an interactive image filter editor.&lt;/p&gt;
+
+&lt;p&gt;You can change the brightness of the image, the contrast, and you can even blur to the image. The best filter in my opinion though is the “Color Wheel Rotate” filter, which lets you change the tint of the image. For example, if you had an image of a persons face, you could make that face look blue or green.&lt;/p&gt;
+
+&lt;h2 id=&quot;early-april-2018-textdump-and-skyewire&quot;&gt;Early April 2018: Textdump and Skyewire&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://xtrp.github.io/blogstatic/2018-12-31/skyewire.png&quot; alt=&quot;Project Preview&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://xtrp.github.io/skyewire/&quot;&gt;Website&lt;/a&gt;   &lt;a href=&quot;https://github.com/xtrp/skyewire&quot;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Textdump and Skyewire are two websites I made that have the same exact functionality, but Skyewire has a more modern and responsive design that works with mobile.&lt;/p&gt;
+
+&lt;p&gt;Skyewire and Textdump are websites that allow you to send text to another person via a simple pin.&lt;/p&gt;
+
+&lt;p&gt;So for example, if you want to send a long link to a set of 20 people, you could simply put it into Skyewire or Textdump, and Skyewire or Textdump would give a pin to send that refers to the text you entered. You could tell that pin to the 20 people, and they could put it into Skyewire and receive the text you sent.&lt;/p&gt;
+
+&lt;p&gt;Skyewire is quite useful: I’ve used it numerous times for a variety of different things.&lt;/p&gt;
+
+&lt;h2 id=&quot;mid-april-2018-volcanojs&quot;&gt;Mid-April 2018: Volcano.js&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://xtrp.github.io/blogstatic/2018-12-31/volcano.png&quot; alt=&quot;Project Preview&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://xtrp.github.io/volcano.js/&quot;&gt;Website&lt;/a&gt;   &lt;a href=&quot;https://github.com/xtrp/volcano.js&quot;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Volcano.js is a simple JavaScript library that allows you to embed and execute JavaScript code within HTML.&lt;/p&gt;
+
+&lt;p&gt;Within HTML, JavaScript is embedded within a pair of curly brackets that are preceded by an asterisk, like this: &lt;code class=&quot;highlighter-rouge&quot;&gt;*{JAVASCRIPT CODE HERE}&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;The embedded JavaScript code is executed and replaced inside the HTML. So for example, if you put the code:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;*{&quot;Hello&quot; + &quot; &quot; + &quot;World!&quot;}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;It would turn into:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;Hello World!&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;For more complex JavaScript code, a return statement is needed; specifically, if the code isn’t a simple variable or operation.&lt;/p&gt;
+
+&lt;p&gt;For example, let’s say you want to make a copyright statement with the current year in it without having to update the code manually every year:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;&lt;span class=&quot;ni&quot;&gt;&amp;amp;copy;&lt;/span&gt; *{ dateObj = new Date(); return d.getFullYear(); }&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;mid-june-2018-html5-rocket-templates-and-website&quot;&gt;Mid-June 2018: HTML5 Rocket Templates and Website&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://xtrp.github.io/blogstatic/2018-12-31/html5rocket.png&quot; alt=&quot;Project Preview&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://html5rocket.github.io/&quot;&gt;Website&lt;/a&gt;   &lt;a href=&quot;https://github.com/html5rocket&quot;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Inspired by &lt;a href=&quot;http://html5up.com&quot;&gt;HTML5 UP&lt;/a&gt;, I made a GitHub organization which makes responsive HTML5 website templates called &lt;a href=&quot;html5rocket.github.io&quot;&gt;HTML5 Rocket&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;HTML5 Rocket has, at this time, 3 templates, which can all be previewed and downloaded at the &lt;a href=&quot;https://html5rocket.github.io/&quot;&gt;HTML5 Rocket Website&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Although HTML5 UP has much more templates than HTML5 Rocket, there is one big difference: HTML5 UP requires attribution for their design, whereas HTML5 Rocket templates are completely free and do not require attribution as they are CC0 Licensed.&lt;/p&gt;
+
+&lt;p&gt;So for example, if you are making a professional company website, if you used HTML5 UP, you would have to keep a notice on the footer that says “Design by HTML5 UP” or “Made by HTML5 UP”, whereas, if you used HTML5 Rocket, you have all the rights and can do whatever you want with the templates.&lt;/p&gt;
+
+&lt;h2 id=&quot;early-july-2018-cobalt-jekyll-theme&quot;&gt;Early July 2018: Cobalt Jekyll Theme&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://xtrp.github.io/blogstatic/2018-12-31/cobalt.png&quot; alt=&quot;Project Preview&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://xtrp.github.io/cobalt-jekyll-theme/&quot;&gt;Website&lt;/a&gt;   &lt;a href=&quot;https://github.com/xtrp/cobalt-jekyll-theme&quot;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;At the time, I had been using Jekyll (a static-site generator that allows you to easily build blogs and other sites) and Jekyll Themes (prebuilt Jekyll sites that act as templates that you can edit) for a while, for my personal website and blog (this site!) and other projects.&lt;/p&gt;
+
+&lt;p&gt;I had always been using themes built by the community, and I felt comfortable with Jekyll as a whole, so I decided to try and make my own Jekyll Theme.&lt;/p&gt;
+
+&lt;p&gt;I called it Cobalt. The theme is extremely simple: with the name and description of the blog at the top, and then a timeline of posts with the post title, publish date, approximate read time, and a short preview of the post.&lt;/p&gt;
+
+&lt;p&gt;Cobalt is good for a minimalistic yet modern style blog in my opinion.&lt;/p&gt;
+
+&lt;h2 id=&quot;mid-and-late-july-capitol-net&quot;&gt;Mid and Late July: Capitol Net&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://xtrp.github.io/blogstatic/2018-12-31/capitolnet.png&quot; alt=&quot;Project Preview&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://xtrp.github.io/capitolnet/&quot;&gt;Website&lt;/a&gt;   &lt;a href=&quot;https://github.com/xtrp/capitolnet&quot;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Capitol Net is probably the biggest project I had worked on at this time.&lt;/p&gt;
+
+&lt;p&gt;Capitol Net is a simple site which focuses on anything and everything about United States politics.&lt;/p&gt;
+
+&lt;p&gt;On Capitol Net, you can read the latest and breaking politics news, you can view a list of federal committees from both the Senate and House, and you can view an index of politicians and legislators in Capitol Hill — Senators, Congressmen and Women, and of course, the President and Vice-President.&lt;/p&gt;
+
+&lt;h2 id=&quot;early-august-instcode&quot;&gt;Early August: InstCode&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://xtrp.github.io/blogstatic/2018-12-31/instcode.png&quot; alt=&quot;Project Preview&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://xtrp.github.io/instcode/&quot;&gt;Website&lt;/a&gt;   &lt;a href=&quot;https://github.com/xtrp/instcode&quot;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;InstCode is a simple site with coding challenges and problems, in JavaScript.&lt;/p&gt;
+
+&lt;p&gt;There are 3 difficulties, and at the moment, there are 5 problems for each difficulty, although in the near future I may add more.&lt;/p&gt;
+
+&lt;p&gt;InstCode was inspired by &lt;a href=&quot;https://codesignal.com/&quot;&gt;CodeSignal&lt;/a&gt;, and is, in my opinion, a great way to learn and improve on your JavaScript skills.&lt;/p&gt;
+
+&lt;h2 id=&quot;mid-august-blaze&quot;&gt;Mid-August: Blaze&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://xtrp.github.io/blogstatic/2018-12-31/blaze.png&quot; alt=&quot;Project Preview&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://xtrp.github.io/blaze/&quot;&gt;Website&lt;/a&gt;   &lt;a href=&quot;https://github.com/xtrp/blaze&quot;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Blaze is a simple to-do list web app, with a “todo meter” that tracks the progress of how many to-do list items you’ve completed.&lt;/p&gt;
+
+&lt;p&gt;It’s pretty cool in my opinion, and I built it in one day.&lt;/p&gt;
+
+&lt;h2 id=&quot;late-august-capitol-quiz&quot;&gt;Late August: Capitol Quiz&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://xtrp.github.io/blogstatic/2018-12-31/capitolquiz.png&quot; alt=&quot;Project Preview&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://xtrp.github.io/capitolquiz/&quot;&gt;Website&lt;/a&gt;   &lt;a href=&quot;https://github.com/xtrp/capitolquiz&quot;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Capitol Quiz is a simple quiz inspired by the &lt;a href=&quot;https://16personalities.com/&quot;&gt;16 Personalities MBTI Test&lt;/a&gt; which is essentially just a personality test but for your political views.&lt;/p&gt;
+
+&lt;p&gt;Capitol Quiz tests 4 political values: Social (Progressive or Traditional), Economic (Regulation or Freedom), Foreign (Interventionist or Isolationist), and Party (Democratic or Republican).&lt;/p&gt;
+
+&lt;p&gt;These 4 values form your political personality.&lt;/p&gt;
+
+&lt;p&gt;Capitol Quiz is simply a set of 40 or so statements that are judged by the test taker in terms of how much the test taker agrees or disagrees with the statement.&lt;/p&gt;
+
+&lt;p&gt;Capitol Quiz has an algorithm that takes the judgements and processes them into the 4 political values, which then create the test takers full political personality.&lt;/p&gt;
+
+&lt;h2 id=&quot;early-september-github-pinned-repo-scraper&quot;&gt;Early September: GitHub Pinned Repo Scraper&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://xtrp.github.io/blogstatic/2018-12-31/gh-scraper.png&quot; alt=&quot;Project Preview&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/xtrp/github-pinned-repo-scraper&quot;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;GitHub Pinned Repo Scraper is a simple web scraper written in PHP which gets a list of pinned repositories for any given GitHub user.&lt;/p&gt;
+
+&lt;p&gt;It’s quite simple, and it was mainly a project that I made to learn a bit more about PHP and web scraping in general.&lt;/p&gt;
+
+&lt;h2 id=&quot;mid-september-emily&quot;&gt;Mid-September: Emily&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://xtrp.github.io/blogstatic/2018-12-31/emily.png&quot; alt=&quot;Project Preview&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://xtrp.github.io/Emily/&quot;&gt;Website&lt;/a&gt;   &lt;a href=&quot;https://github.com/xtrp/Emily&quot;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Emily was my attempt at building an AI algorithm to play 2048.&lt;/p&gt;
+
+&lt;p&gt;Frankly, it’s not very good, and I might work on a better algorithm in the near future.&lt;/p&gt;
+
+&lt;h2 id=&quot;late-october-string-replace&quot;&gt;Late October: String Replace&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://xtrp.github.io/blogstatic/2018-12-31/stringreplace.png&quot; alt=&quot;Project Preview&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/xtrp/string_replace&quot;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;String Replace is a simple Chrome extension I built that replaces a string with another in every website you visit.&lt;/p&gt;
+
+&lt;p&gt;For example, you replace the word “the” with the word “test”, and every single site you visit would be changed with all of the “the”’s changed to “test”.&lt;/p&gt;
+
+&lt;h2 id=&quot;early-november-kalva&quot;&gt;Early November: Kalva&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://xtrp.github.io/blogstatic/2018-12-31/kalva.png&quot; alt=&quot;Project Preview&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://xtrp.github.io/kalva/&quot;&gt;Website&lt;/a&gt;   &lt;a href=&quot;https://github.com/xtrp/kalva&quot;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Kalva is a simple news site that uses &lt;a href=&quot;http://newsapi.org/&quot;&gt;NewsAPI&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Kalva allows you to see the top headlines and breaking news, as well as latest news from over 100 sources.&lt;/p&gt;
+
+&lt;p&gt;You can see news from only one source, and you can see news for a certain topic.&lt;/p&gt;
+
+&lt;p&gt;You can also search all news.&lt;/p&gt;
+
+&lt;h2 id=&quot;early-and-mid-november-ciphersjs&quot;&gt;Early and Mid November: Ciphers.js&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://xtrp.github.io/blogstatic/2018-12-31/ciphers.png&quot; alt=&quot;Project Preview&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://xtrp.github.io/ciphers.js/&quot;&gt;Website&lt;/a&gt;   &lt;a href=&quot;https://github.com/xtrp/ciphers.js&quot;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Ciphers.js is a simple JavaScript library which allows you to encrypt and decrypt numerous famous ciphers, such as the Caesar Cipher, ROT13, Morse Code, and more.&lt;/p&gt;
+
+&lt;p&gt;Ciphers.js is pretty cool and is quite easy to use.&lt;/p&gt;
+
+&lt;h2 id=&quot;mid-and-late-november-skyecrypt&quot;&gt;Mid and Late November: SkyeCrypt&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://xtrp.github.io/blogstatic/2018-12-31/skyecrypt.png&quot; alt=&quot;Project Preview&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://xtrp.github.io/skyecrypt/&quot;&gt;Website&lt;/a&gt;   &lt;a href=&quot;https://github.com/xtrp/skyecrypt&quot;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;SkyeCrypt is essentially an interactive website version of Ciphers.js.&lt;/p&gt;
+
+&lt;p&gt;SkyeCrypt gives users a modern and simple interface for encoding and decoding in any cipher supported by Ciphers.js.&lt;/p&gt;
+
+&lt;h2 id=&quot;early-december-arjun-april-steganography&quot;&gt;Early December: Arjun-April Steganography&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://xtrp.github.io/blogstatic/2018-12-31/steg.png&quot; alt=&quot;Project Preview&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://xtrp.github.io/Arjun-April-Steganography/&quot;&gt;Website&lt;/a&gt;   &lt;a href=&quot;https://github.com/xtrp/Arjun-April-Steganography&quot;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Arjun-April Steganography is a tool that allows you to hide text inside images.&lt;/p&gt;
+
+&lt;p&gt;The algorithm hides the text within slight color changes in the pixels in the image, with each pixel corresponding to a different character, and the charactor code hidden within the last digit of each RGB value in the color of each pixel.&lt;/p&gt;
+
+&lt;p&gt;Arjun-April Steganography is great for hiding text and watermarking images without a actual obvious watermark.&lt;/p&gt;
+
+&lt;h2 id=&quot;also-early-december-mememachine&quot;&gt;Also Early December: MemeMachine&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://xtrp.github.io/blogstatic/2018-12-31/mememachine.png&quot; alt=&quot;Project Preview&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://xtrp.github.io/MemeMachine/&quot;&gt;Website&lt;/a&gt;   &lt;a href=&quot;https://github.com/xtrp/MemeMachine&quot;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;MemeMachine is a simple Chrome Extension I built that allows you to right click on any image on any site and make a meme out of that image and download it.&lt;/p&gt;
+
+&lt;p&gt;It was a pretty cool project that helped me learn more about HTML5 Canvas and image manipulation.&lt;/p&gt;
+
+&lt;h2 id=&quot;mid-december-april&quot;&gt;Mid December: April&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://xtrp.github.io/blogstatic/2018-12-31/april.png&quot; alt=&quot;Project Preview&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://xtrp.github.io/april/&quot;&gt;Website&lt;/a&gt;   &lt;a href=&quot;https://github.com/xtrp/april&quot;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;April is an minimal yet effective homework organizer tool which allows you to add assignments and subjects, and sort tasks by due date or subject.&lt;/p&gt;
+
+&lt;p&gt;Although the design isn’t as good as it could be, it works well and is useful for students.&lt;/p&gt;
+
+&lt;h2 id=&quot;late-december-breeze&quot;&gt;Late December: Breeze&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://xtrp.github.io/blogstatic/2018-12-31/breeze.png&quot; alt=&quot;Project Preview&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/xtrp/breeze&quot;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Breeze is a static-site generator built in Python. It’s a lot like Volcano.js, except it’s written in Python, and the code is compiled in the server rather than the client.&lt;/p&gt;
+
+&lt;p&gt;I recommend checking out &lt;a href=&quot;https://github.com/xtrp/breeze&quot;&gt;Breeze on GitHub&lt;/a&gt; as it’s an interesting project and is very useful in my opinion.&lt;/p&gt;
+
+&lt;h2 id=&quot;thats-it&quot;&gt;That’s it!&lt;/h2&gt;
+
+&lt;p&gt;Those are my 20 most notable projects in 2018, in rewind format.&lt;/p&gt;
+
+&lt;p&gt;Of course these are not the only major projects I’ve worked on this year — in fact, I’ve made more than 40 projects in 2018.&lt;/p&gt;
+
+&lt;p&gt;If you’d like to see the 25 or so other projects I’ve made, check out &lt;a href=&quot;https://github.com/xtrp&quot;&gt;my GitHub&lt;/a&gt;, or see the &lt;a href=&quot;https://xtrp.github.io/projects&quot;&gt;Projects Page&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Anyway, thanks for scrolling and have a happy new year!&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;- Fred Adams&lt;/em&gt;&lt;/p&gt;</content><author><name>Fred Adams</name><email>mailto:xtrp127@gmail.com</email></author><summary type="html">Hi! So as you all know, today is the last day of 2018.</summary></entry><entry><title type="html">My Online Sketching App</title><link href="http://localhost:4000/2018/12/30/my-online-sketching-app/" rel="alternate" type="text/html" title="My Online Sketching App" /><published>2018-12-30T12:12:12+00:00</published><updated>2018-12-30T12:12:12+00:00</updated><id>http://localhost:4000/2018/12/30/my-online-sketching-app</id><content type="html" xml:base="http://localhost:4000/2018/12/30/my-online-sketching-app/">&lt;p&gt;Hi. So a couple weeks ago I built my own online sketching app using HTML5 Canvas.&lt;/p&gt;
+
+&lt;p&gt;I feel like in the past few weeks I’ve gotten much more comfortable using HTML5 Canvas, and I’ve found that it’s really useful in some situations; especially with JavaScript client-side image editing and manipulation.&lt;/p&gt;
+
+&lt;p&gt;The sketching app is pretty simple: it gives you a blank, 4:3 ratio white canvas, and you can draw using the crosshair cursor.&lt;/p&gt;
+
+&lt;p&gt;There are also a couple options: you can change the brush color, as well as the thickness (stroke width).&lt;/p&gt;
+
+&lt;p&gt;In addition, there is an undo function, and a download button that allows you to download a PNG file of your sketch.&lt;/p&gt;
+
+&lt;p&gt;Anyway, check out the app &lt;a href=&quot;https://xtrp.github.io/arjunsketch/&quot;&gt;here&lt;/a&gt; or see it on GitHub &lt;a href=&quot;https://github.com/xtrp/arjunsketch&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Thanks for scrolling.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;- Fred Adams&lt;/em&gt;&lt;/p&gt;</content><author><name>Fred Adams</name><email>mailto:xtrp127@gmail.com</email></author><summary type="html">Hi. So a couple weeks ago I built my own online sketching app using HTML5 Canvas.</summary></entry><entry><title type="html">Breeze: My Very Own Static-Site Generator</title><link href="http://localhost:4000/2018/12/29/breeze-static-site-generator/" rel="alternate" type="text/html" title="Breeze: My Very Own Static-Site Generator" /><published>2018-12-29T12:12:12+00:00</published><updated>2018-12-29T12:12:12+00:00</updated><id>http://localhost:4000/2018/12/29/breeze-static-site-generator</id><content type="html" xml:base="http://localhost:4000/2018/12/29/breeze-static-site-generator/">&lt;p&gt;Around a year ago, I started experimenting with Jekyll, a static-site generator which uses Ruby and runs seemlessly on and with GitHub Pages.&lt;/p&gt;
+
+&lt;p&gt;You might be wondering what a static-site generator is: it’s quite simply a script or program that takes a set of site files and compiles them into a site.&lt;/p&gt;
+
+&lt;p&gt;For example, in Jekyll, you could say to include a file within another one; for example, the HTML file for the navbar (e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;nav.html&lt;/code&gt;) within your homepage (e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;index.html&lt;/code&gt;), where Jekyll would simply generate the resulting compiled &lt;code class=&quot;highlighter-rouge&quot;&gt;index.html&lt;/code&gt; file with the contents of &lt;code class=&quot;highlighter-rouge&quot;&gt;nav.html&lt;/code&gt; included.&lt;/p&gt;
+
+&lt;p&gt;Of course, one could argue that static-site generators are useless, as the same results can be achieved with a database, for example PHP and SQL, or Node.js and MongoDB.&lt;/p&gt;
+
+&lt;p&gt;However, there quite a few advantages to using static-site generators, namely that static-site generators are databaseless, making load times much faster, and the possibility of databases being hacked impossible as there is no database that can be hacked in the first place.&lt;/p&gt;
+
+&lt;p&gt;Anyway, I tried building my own simple static-site generator myself, in Python.&lt;/p&gt;
+
+&lt;p&gt;My idea was to build a tool that could run a lot like PHP; in PHP, you can simply insert a starting and closing tag within any &lt;code class=&quot;highlighter-rouge&quot;&gt;.PHP&lt;/code&gt; file and execute PHP within the file.&lt;/p&gt;
+
+&lt;p&gt;I built something quite similar, but instead of executing PHP code within a file, it executes Python code.&lt;/p&gt;
+
+&lt;p&gt;And instead of using &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;?&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;?&amp;gt;&lt;/code&gt; as the starting and closing tags, my tool (called Breeze) uses &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;=&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;=&amp;gt;&lt;/code&gt;, which, personally, I think looks much cooler.&lt;/p&gt;
+
+&lt;p&gt;In addition, my tool provides a way to have a “prerequisite” Python program for the site: a file that is run along with any executed Python code within a file, which is called &lt;code class=&quot;highlighter-rouge&quot;&gt;config.py&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Within &lt;code class=&quot;highlighter-rouge&quot;&gt;config.py&lt;/code&gt;, any code can be run; although I personally recommend just using the file to add any variables or functions that will be used in embedded code inside files in the site.&lt;/p&gt;
+
+&lt;p&gt;Anyway, I just wanted to share that with you all.&lt;/p&gt;
+
+&lt;p&gt;Check out breeze on GitHub &lt;a href=&quot;https://github.com/xtrp/breeze/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Thanks for scrolling.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;- Fred Adams&lt;/em&gt;&lt;/p&gt;</content><author><name>Fred Adams</name><email>mailto:xtrp127@gmail.com</email></author><summary type="html">Around a year ago, I started experimenting with Jekyll, a static-site generator which uses Ruby and runs seemlessly on and with GitHub Pages.</summary></entry><entry><title type="html">A Slight Modification to the Game-a-Day Challenge</title><link href="http://localhost:4000/2018/12/13/a-slight-modification-to-the-game-a-day-challenge/" rel="alternate" type="text/html" title="A Slight Modification to the Game-a-Day Challenge" /><published>2018-12-13T12:12:12+00:00</published><updated>2018-12-13T12:12:12+00:00</updated><id>http://localhost:4000/2018/12/13/a-slight-modification-to-the-game-a-day-challenge</id><content type="html" xml:base="http://localhost:4000/2018/12/13/a-slight-modification-to-the-game-a-day-challenge/">&lt;p&gt;Hey. So just 2 days ago I started this challenge where I had to code and release at least one game per day.&lt;/p&gt;
+
+&lt;p&gt;After just 2 days of doing this, I have realized that this is quite impractical, and the quality of the games is not going to be very good with the limited time.&lt;/p&gt;
+
+&lt;p&gt;As a result, I have make a slight modification to the challenge, which says that I must work on, and make decent progress on at least one game per day.&lt;/p&gt;
+
+&lt;p&gt;With this modification, I can make more high quality games, as well as have more time for other, possibly more interesting and fun projects. And any other work I have to do.&lt;/p&gt;
+
+&lt;p&gt;Anyway, that’s all for now.&lt;/p&gt;
+
+&lt;p&gt;Thanks for scrolling.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;- Fred Adams&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note and Edit: this challenge has been completely discontinued as of December 30, 2018.&lt;/strong&gt;&lt;/p&gt;</content><author><name>Fred Adams</name><email>mailto:xtrp127@gmail.com</email></author><summary type="html">Hey. So just 2 days ago I started this challenge where I had to code and release at least one game per day.</summary></entry><entry><title type="html">The Struggles of Making Your Own Web Browser</title><link href="http://localhost:4000/2018/12/12/the-struggles-of-building-your-own-web-browser/" rel="alternate" type="text/html" title="The Struggles of Making Your Own Web Browser" /><published>2018-12-12T12:12:12+00:00</published><updated>2018-12-12T12:12:12+00:00</updated><id>http://localhost:4000/2018/12/12/the-struggles-of-building-your-own-web-browser</id><content type="html" xml:base="http://localhost:4000/2018/12/12/the-struggles-of-building-your-own-web-browser/">&lt;p&gt;Hi. So a couple weeks ago (late November) I tried building my own web browser for a semi-ish-friend (I know, just a &lt;strong&gt;semi-ish&lt;/strong&gt;-friend) of mine using a tool built by &lt;a href=&quot;https://atom.io/&quot;&gt;Atom&lt;/a&gt; called &lt;a href=&quot;https://electronjs.org/&quot;&gt;Electron&lt;/a&gt;, which allows devs to build cross-platform desktop apps using web technologies: specifically frontend technologies (HTML, CSS, JavaScript), and NodeJS for the backend, which allows you to run backend-like functions on the users machine.&lt;/p&gt;
+
+&lt;p&gt;Electron is built with Chromium, which is the website processing engine that powers &lt;a href=&quot;https://chrome.google.com/&quot;&gt;Google Chrome&lt;/a&gt;, and NodeJS to interact with the file system and the machine.&lt;/p&gt;
+
+&lt;p&gt;When I started working on the web browser, I honestly thought that I could just work on building the UI and some cool features, but little did I know that I had some really annoying stuff ahead of me.&lt;/p&gt;
+
+&lt;p&gt;So for the web browser, I used the HTML &lt;code class=&quot;highlighter-rouge&quot;&gt;webview&lt;/code&gt; tag to show each webpage and tab. Webviews are pretty easy to use with JavaScript, and are quite effective for the purposes of this project.&lt;/p&gt;
+
+&lt;p&gt;But unlike what I thought, webviews only display the website. Nothing more. I mean &lt;strong&gt;nothing&lt;/strong&gt; more. They don’t allow for links to be opened in new tabs, and they don’t account for the numerous problems that I’ve encountered with website compatibility, for example the fact that I had to enable a bunch of web-security and node-sandbox features to get Google Drive working, and the fact that watching Netflix is near impossible without injecting a bunch of CDM scripts (yeah guys, switch to Hulu).&lt;/p&gt;
+
+&lt;p&gt;And even after fixing most website compatibility issues (which I haven’t fully done yet in fact), there are some more things that need to be added, for example: printing a website, saving a website, saving history, saving cookies, context menus (options that show up when you right click), favicons (icon/logo that shows up on the top-left of the tab), and so much more.&lt;/p&gt;
+
+&lt;p&gt;In addition, Electron doesn’t even have standard shortcuts like Cmd+C or Cmd+V built-in (at least with a custom menu-bar); you have to make them yourself, which is really annoying and very time consuming.&lt;/p&gt;
+
+&lt;p&gt;And after you’ve done all that, then you can start working on the UI and features for your browser.&lt;/p&gt;
+
+&lt;p&gt;In all, I spent literally upwards of 4 to 5 hours working on this browser, and it’s not even close to finished. I still haven’t fixed Netflix. Or something like 15 other really popular websites.&lt;/p&gt;
+
+&lt;p&gt;So in the end, I have a new level of respect and love for the Google Chrome team. Also the Safari team. And maybe even the Internet Explorer team (although I think they’ve been disbanded or moved because IE has been discontinued).&lt;/p&gt;
+
+&lt;p&gt;Anyway, I’ll hopefully be releasing this web browser within the next few days, and hopefully it’ll have most popular sites working, as well as a few cool features that set it apart from Chrome and other popular browsers.&lt;/p&gt;
+
+&lt;p&gt;Stay tuned.&lt;/p&gt;
+
+&lt;p&gt;Thanks for scrolling.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;- Fred Adams&lt;/em&gt;&lt;/p&gt;</content><author><name>Fred Adams</name><email>mailto:xtrp127@gmail.com</email></author><summary type="html">Hi. So a couple weeks ago (late November) I tried building my own web browser for a semi-ish-friend (I know, just a semi-ish-friend) of mine using a tool built by Atom called Electron, which allows devs to build cross-platform desktop apps using web technologies: specifically frontend technologies (HTML, CSS, JavaScript), and NodeJS for the backend, which allows you to run backend-like functions on the users machine.</summary></entry></feed>

@@ -1,0 +1,91 @@
+<div id='game'></div>
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+#game {
+	background-color: #000;
+	width: 100vh;
+	height: 100vh;
+}
+#game div {
+	width: 5vh;
+	height: 5vh;
+	position: absolute;
+	box-sizing: border-box;
+	border: 2px solid black;
+	background-color: #0f0;
+}
+#game div.apple {
+	background-color: #f00;
+}
+</style>
+<script>
+px=py=9;
+ax=ay=xv=yv=0;
+trail=[{x: 9,y: 9}];
+gameover=false;
+
+document.onkeydown = function(e){
+	switch(e.keyCode){
+		case 37:
+			if(xv!=1){
+				xv=-1;yv=0;
+			}
+			break;
+		case 39:
+			if(xv!=-1){
+				xv=1;yv=0;
+			}
+			break;
+		case 38:
+			if(yv!=1){
+				yv=-1;xv=0;
+			}
+			break;
+		case 40:
+			if(yv!=-1){
+				yv=1;xv=0;
+			}
+	}
+}
+setInterval(function(){
+	px += xv;
+	py += yv;
+	if(px == -1){
+		px = 19;
+	}
+	if(px == 20){
+		px = 0;
+	}
+	if(py == -1){
+		py = 19;
+	}
+	if(py == 20){
+		py = 0;
+	}
+	document.getElementById("game").innerHTML = "";
+	document.getElementById("game").innerHTML += "<div class='apple' style='left: " + ax*5 + "vh; top: " + ay*5 + "vh;'></div>";
+	if(gameover){
+		location.reload();
+		alert("gameover :(");
+	}
+
+	trail.forEach(function(item,index){
+		document.getElementById("game").innerHTML += "<div style='left: " + item.x*5 + "vh; top: " + item.y*5 + "vh;'></div>";
+		if(item.x == px && item.y == py && (xv + yv)!=0){
+			gameover = true;
+		}
+	});
+
+	if(ax == px && ay == py){
+		ax = Math.floor(Math.random() * 20);
+		ay = Math.floor(Math.random() * 20);
+	}else{
+		trail.shift();
+	}
+	trail.push({x: px, y: py});
+
+},100);
+</script>

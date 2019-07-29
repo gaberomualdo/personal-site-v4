@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Running an HTTP Server from the Terminal using Python | Fred Adams</title>
+        
+        <link rel="stylesheet" href="/assets/normalize.css">
+        <link rel="stylesheet" href="/assets/skeleton.css">
+        <link rel="stylesheet" href="/assets/main.css">
+
+        <link rel="shortcut icon" href="/favicon.ico">
+    </head>
+    <body>
+        <nav  class="white"  style="background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(/assets/.jpg)">
+    <div class="top">
+        <a href="/">Fred Adams</a>
+        <ul>
+            
+            <a  href="/">Home</a>
+            
+            <a  href="/code">Code</a>
+            
+            <a  href="/about">About</a>
+            
+
+        </ul>
+    </div>
+    <h1>Running an HTTP Server from the Terminal using Python</h1>
+</nav>
+
+        <div class="container">
+            <div class="block post">
+    <div class="top">
+        <h1>Running an HTTP Server from the Terminal using Python</h1>
+        <p>Published on 17 September, 2018</p>
+    </div>
+    <p>This is just a quick post on how to run an HTTP Server from the terminal using Python.</p>
+
+<ul>
+  <li>Open the Terminal or Command Line</li>
+  <li>Make sure you have Python and Python SimpleHTTPServer (should be installed with Python) installed</li>
+  <li>cd into the directory you want to start the HTTP Server from</li>
+  <li>Run the following command:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>python <span class="nt">-m</span> SimpleHTTPServer 8000</code></pre></figure>
+
+<ul>
+  <li>This will start an HTTP Server on port 8000.</li>
+  <li>You can change the port by changing the number at the end of the command.</li>
+  <li>The HTTP Server will broadcast throughout your WiFi router, via your internal IPv4 address.</li>
+  <li>To get your IPv4 address, run the command <code class="highlighter-rouge">ifconfig</code> on macOS and Linux, or <code class="highlighter-rouge">ipconfig</code> on Windows, and find the value after <code class="highlighter-rouge">inet addr:</code>. It should be something like <code class="highlighter-rouge">192.168.1.50</code> or <code class="highlighter-rouge">10.55.4.47</code>.</li>
+  <li>Now, type your IPv4 address, then the port of your HTTP Server in your web browser, and it should be there! The great thing about this is that anyone on your router has access to this — do the same on any other device connected to the same WiFi, and it should be there.</li>
+</ul>
+
+<p>That’s all for this post.</p>
+
+<p>Thanks for scrolling.</p>
+
+<p><em>- Fred Adams</em></p>
+
+</div>
+
+            <footer>
+    <p>&copy; Fred Adams <script>document.write(new Date().getFullYear());</script></p>
+    <ul>
+        <a href="mailto:xtrp127@gmail.com">Email</a>
+        <a href="https://github.com/xtrp/">GitHub</a>
+        <a href="https://dev.to/xtrp/">DEV</a>
+        <a href="https://stackoverflow.com/users/10007107/fred-adams">Stack Overflow</a>
+        <a href="https://instagram.com/xtrp127/">Instagram</a>
+    </ul>
+</footer>
+        </div>
+    </body>
+</html>

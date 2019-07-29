@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Kalva: The News Website I Made | Fred Adams</title>
+        
+        <link rel="stylesheet" href="/assets/normalize.css">
+        <link rel="stylesheet" href="/assets/skeleton.css">
+        <link rel="stylesheet" href="/assets/main.css">
+
+        <link rel="shortcut icon" href="/favicon.ico">
+    </head>
+    <body>
+        <nav  class="white"  style="background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(/assets/.jpg)">
+    <div class="top">
+        <a href="/">Fred Adams</a>
+        <ul>
+            
+            <a  href="/">Home</a>
+            
+            <a  href="/code">Code</a>
+            
+            <a  href="/about">About</a>
+            
+
+        </ul>
+    </div>
+    <h1>Kalva: The News Website I Made</h1>
+</nav>
+
+        <div class="container">
+            <div class="block post">
+    <div class="top">
+        <h1>Kalva: The News Website I Made</h1>
+        <p>Published on 14 November, 2018</p>
+    </div>
+    <p>Hey.</p>
+
+<p>Last week I built a pretty intuitive website that I’d thought I write about on this blog.</p>
+
+<p>It’s called Kalva.</p>
+
+<p>Kalva is a news aggregator, which means that it essentially compiles news articles from a large set of sources and displays them.</p>
+
+<p>Kalva has three tabs: the top news tab, the news by source tab, and the news by topic tab.</p>
+
+<p>The top news tab is the default and just shows the top latest news from all of Kalva’s sources.</p>
+
+<p>The news by source tab allows users to view articles from a specific source. For example, I could read all the latest articles from CNN, or conversely, I could read all the latest articles from Fox News.</p>
+
+<p>The news by topic tab is pretty self-explanatory: it allows users to view articles of a specific topic, for example, I could see the latest sports news, the latest science news, the latest tech news, and so on and so forth.</p>
+
+<p>I’m pretty satisfied with Kalva; I particularly like the light gray and black design with Noto Sans as the main font.</p>
+
+<h3 id="the-apis">The APIs</h3>
+
+<p>I don’t get the news on Kalva. I mean, if I actually did, I would have to collect the latest 20 articles from 100+ sources every few minutes.</p>
+
+<p>Instead, I use an API (Application Programming Interface), which allows me to fetch new articles from all of those sources as they are published.</p>
+
+<p>Specifically, I use <a href="https://newsapi.org/">NewsAPI</a>, which is pretty great for a few reasons:</p>
+
+<ul>
+  <li>First, it allows CORS (Cross-origin Resource Sharing) requests, which means I can pretty easily get data from NewsAPI with client-side asynchronous (I use XHTTP) requests.</li>
+  <li>Second, it has tools for fetching all the different tabs. For example, if I want to fetch the top news, I just have to request <code class="highlighter-rouge">newsapi.org/v2/top-headlines</code>. For the sources, I can just request <code class="highlighter-rouge">newsapi.org/v2/everything?sources=[source]</code> with [source] replaced with the source I want (e.g. <code class="highlighter-rouge">cnn</code> or <code class="highlighter-rouge">fox-news</code>).</li>
+  <li>Last, it’s really, really fast. I can get 100+ articles from NewsAPI in less than a second. And it’s really reliable data. Each article has the same JSON format, with name, description, image, and url variables.</li>
+</ul>
+
+<h3 id="improvements">Improvements</h3>
+
+<p>Overall, as I said before, I’m pretty proud of Kalva.</p>
+
+<p>But of course, with everything in life, there are always improvements to be made, especially with Kalva, as I made it in such a short period of time (around a week).</p>
+
+<p>Here are a few improvements and extra features I might add when (and if) I come back to this project in the future:</p>
+
+<ul>
+  <li>Show news articles in an iframe within the site so users can view the article within Kalva without being redirected to the actual article URL.</li>
+  <li>A tailored feed that shows articles that match a users preference. The feed could also use some pretty interesting Machine Learning techniques to tailor the feed based on the types of articles a user clicks on and reads for the longest.</li>
+  <li>A better name. Frankly, in my opinion, the name Kalva isn’t very good. I need to change it.</li>
+  <li>News by Country. This option would be pretty intuitive: there could be a tab with news by country so that users could see the top news in any given country. For example, you could go to news in the U.S.A. and read about the midterm elections, or go to news in the U.K. and read about the Brexit negotiations.</li>
+</ul>
+
+<p>That’s all for now.</p>
+
+<p>Thanks for scrolling.</p>
+
+<p>Oh, and before you go, check out Kalva <a href="https://xtrp.github.io/kalva/">here</a> or see it on GitHub <a href="https://github.com/xtrp/kalva">here</a>.</p>
+
+<p><em>- Fred Adams</em></p>
+
+</div>
+
+            <footer>
+    <p>&copy; Fred Adams <script>document.write(new Date().getFullYear());</script></p>
+    <ul>
+        <a href="mailto:xtrp127@gmail.com">Email</a>
+        <a href="https://github.com/xtrp/">GitHub</a>
+        <a href="https://dev.to/xtrp/">DEV</a>
+        <a href="https://stackoverflow.com/users/10007107/fred-adams">Stack Overflow</a>
+        <a href="https://instagram.com/xtrp127/">Instagram</a>
+    </ul>
+</footer>
+        </div>
+    </body>
+</html>

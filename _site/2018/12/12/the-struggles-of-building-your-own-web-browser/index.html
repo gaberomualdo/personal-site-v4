@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>The Struggles of Making Your Own Web Browser | Fred Adams</title>
+        
+        <link rel="stylesheet" href="/assets/normalize.css">
+        <link rel="stylesheet" href="/assets/skeleton.css">
+        <link rel="stylesheet" href="/assets/main.css">
+
+        <link rel="shortcut icon" href="/favicon.ico">
+    </head>
+    <body>
+        <nav  class="white"  style="background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(/assets/.jpg)">
+    <div class="top">
+        <a href="/">Fred Adams</a>
+        <ul>
+            
+            <a  href="/">Home</a>
+            
+            <a  href="/code">Code</a>
+            
+            <a  href="/about">About</a>
+            
+
+        </ul>
+    </div>
+    <h1>The Struggles of Making Your Own Web Browser</h1>
+</nav>
+
+        <div class="container">
+            <div class="block post">
+    <div class="top">
+        <h1>The Struggles of Making Your Own Web Browser</h1>
+        <p>Published on 12 December, 2018</p>
+    </div>
+    <p>Hi. So a couple weeks ago (late November) I tried building my own web browser for a semi-ish-friend (I know, just a <strong>semi-ish</strong>-friend) of mine using a tool built by <a href="https://atom.io/">Atom</a> called <a href="https://electronjs.org/">Electron</a>, which allows devs to build cross-platform desktop apps using web technologies: specifically frontend technologies (HTML, CSS, JavaScript), and NodeJS for the backend, which allows you to run backend-like functions on the users machine.</p>
+
+<p>Electron is built with Chromium, which is the website processing engine that powers <a href="https://chrome.google.com/">Google Chrome</a>, and NodeJS to interact with the file system and the machine.</p>
+
+<p>When I started working on the web browser, I honestly thought that I could just work on building the UI and some cool features, but little did I know that I had some really annoying stuff ahead of me.</p>
+
+<p>So for the web browser, I used the HTML <code class="highlighter-rouge">webview</code> tag to show each webpage and tab. Webviews are pretty easy to use with JavaScript, and are quite effective for the purposes of this project.</p>
+
+<p>But unlike what I thought, webviews only display the website. Nothing more. I mean <strong>nothing</strong> more. They don’t allow for links to be opened in new tabs, and they don’t account for the numerous problems that I’ve encountered with website compatibility, for example the fact that I had to enable a bunch of web-security and node-sandbox features to get Google Drive working, and the fact that watching Netflix is near impossible without injecting a bunch of CDM scripts (yeah guys, switch to Hulu).</p>
+
+<p>And even after fixing most website compatibility issues (which I haven’t fully done yet in fact), there are some more things that need to be added, for example: printing a website, saving a website, saving history, saving cookies, context menus (options that show up when you right click), favicons (icon/logo that shows up on the top-left of the tab), and so much more.</p>
+
+<p>In addition, Electron doesn’t even have standard shortcuts like Cmd+C or Cmd+V built-in (at least with a custom menu-bar); you have to make them yourself, which is really annoying and very time consuming.</p>
+
+<p>And after you’ve done all that, then you can start working on the UI and features for your browser.</p>
+
+<p>In all, I spent literally upwards of 4 to 5 hours working on this browser, and it’s not even close to finished. I still haven’t fixed Netflix. Or something like 15 other really popular websites.</p>
+
+<p>So in the end, I have a new level of respect and love for the Google Chrome team. Also the Safari team. And maybe even the Internet Explorer team (although I think they’ve been disbanded or moved because IE has been discontinued).</p>
+
+<p>Anyway, I’ll hopefully be releasing this web browser within the next few days, and hopefully it’ll have most popular sites working, as well as a few cool features that set it apart from Chrome and other popular browsers.</p>
+
+<p>Stay tuned.</p>
+
+<p>Thanks for scrolling.</p>
+
+<p><em>- Fred Adams</em></p>
+
+</div>
+
+            <footer>
+    <p>&copy; Fred Adams <script>document.write(new Date().getFullYear());</script></p>
+    <ul>
+        <a href="mailto:xtrp127@gmail.com">Email</a>
+        <a href="https://github.com/xtrp/">GitHub</a>
+        <a href="https://dev.to/xtrp/">DEV</a>
+        <a href="https://stackoverflow.com/users/10007107/fred-adams">Stack Overflow</a>
+        <a href="https://instagram.com/xtrp127/">Instagram</a>
+    </ul>
+</footer>
+        </div>
+    </body>
+</html>

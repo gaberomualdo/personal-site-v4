@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Breeze: My Very Own Static-Site Generator | Fred Adams</title>
+        
+        <link rel="stylesheet" href="/assets/normalize.css">
+        <link rel="stylesheet" href="/assets/skeleton.css">
+        <link rel="stylesheet" href="/assets/main.css">
+
+        <link rel="shortcut icon" href="/favicon.ico">
+    </head>
+    <body>
+        <nav  class="white"  style="background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(/assets/.jpg)">
+    <div class="top">
+        <a href="/">Fred Adams</a>
+        <ul>
+            
+            <a  href="/">Home</a>
+            
+            <a  href="/code">Code</a>
+            
+            <a  href="/about">About</a>
+            
+
+        </ul>
+    </div>
+    <h1>Breeze: My Very Own Static-Site Generator</h1>
+</nav>
+
+        <div class="container">
+            <div class="block post">
+    <div class="top">
+        <h1>Breeze: My Very Own Static-Site Generator</h1>
+        <p>Published on 29 December, 2018</p>
+    </div>
+    <p>Around a year ago, I started experimenting with Jekyll, a static-site generator which uses Ruby and runs seemlessly on and with GitHub Pages.</p>
+
+<p>You might be wondering what a static-site generator is: it’s quite simply a script or program that takes a set of site files and compiles them into a site.</p>
+
+<p>For example, in Jekyll, you could say to include a file within another one; for example, the HTML file for the navbar (e.g. <code class="highlighter-rouge">nav.html</code>) within your homepage (e.g. <code class="highlighter-rouge">index.html</code>), where Jekyll would simply generate the resulting compiled <code class="highlighter-rouge">index.html</code> file with the contents of <code class="highlighter-rouge">nav.html</code> included.</p>
+
+<p>Of course, one could argue that static-site generators are useless, as the same results can be achieved with a database, for example PHP and SQL, or Node.js and MongoDB.</p>
+
+<p>However, there quite a few advantages to using static-site generators, namely that static-site generators are databaseless, making load times much faster, and the possibility of databases being hacked impossible as there is no database that can be hacked in the first place.</p>
+
+<p>Anyway, I tried building my own simple static-site generator myself, in Python.</p>
+
+<p>My idea was to build a tool that could run a lot like PHP; in PHP, you can simply insert a starting and closing tag within any <code class="highlighter-rouge">.PHP</code> file and execute PHP within the file.</p>
+
+<p>I built something quite similar, but instead of executing PHP code within a file, it executes Python code.</p>
+
+<p>And instead of using <code class="highlighter-rouge">&lt;?</code> and <code class="highlighter-rouge">?&gt;</code> as the starting and closing tags, my tool (called Breeze) uses <code class="highlighter-rouge">&lt;=</code> and <code class="highlighter-rouge">=&gt;</code>, which, personally, I think looks much cooler.</p>
+
+<p>In addition, my tool provides a way to have a “prerequisite” Python program for the site: a file that is run along with any executed Python code within a file, which is called <code class="highlighter-rouge">config.py</code>.</p>
+
+<p>Within <code class="highlighter-rouge">config.py</code>, any code can be run; although I personally recommend just using the file to add any variables or functions that will be used in embedded code inside files in the site.</p>
+
+<p>Anyway, I just wanted to share that with you all.</p>
+
+<p>Check out breeze on GitHub <a href="https://github.com/xtrp/breeze/">here</a></p>
+
+<p>Thanks for scrolling.</p>
+
+<p><em>- Fred Adams</em></p>
+
+</div>
+
+            <footer>
+    <p>&copy; Fred Adams <script>document.write(new Date().getFullYear());</script></p>
+    <ul>
+        <a href="mailto:xtrp127@gmail.com">Email</a>
+        <a href="https://github.com/xtrp/">GitHub</a>
+        <a href="https://dev.to/xtrp/">DEV</a>
+        <a href="https://stackoverflow.com/users/10007107/fred-adams">Stack Overflow</a>
+        <a href="https://instagram.com/xtrp127/">Instagram</a>
+    </ul>
+</footer>
+        </div>
+    </body>
+</html>

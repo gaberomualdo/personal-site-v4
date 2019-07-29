@@ -1,0 +1,21 @@
+title: Fred Adams
+author:
+  name: "Fred Adams"
+  github: "https://github.com/xtrp/"
+  instagram: "https://instagram.com/xtrp127/"
+  email: "mailto:xtrp127@gmail.com"
+  devto: "https://dev.to/xtrp/"
+  stackoverflow: "https://stackoverflow.com/users/10007107/fred-adams"
+
+sections:
+  - name: "Home"
+    file: ""
+  - name: "Code"
+    file: "code"
+  - name: "About"
+    file: "about"
+
+permalink: /:year/:month/:day/:title/
+
+plugins:
+ - jekyll-feed

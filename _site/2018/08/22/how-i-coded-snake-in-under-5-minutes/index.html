@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>How I Coded Snake in Under 5 Minutes | Fred Adams</title>
+        
+        <link rel="stylesheet" href="/assets/normalize.css">
+        <link rel="stylesheet" href="/assets/skeleton.css">
+        <link rel="stylesheet" href="/assets/main.css">
+
+        <link rel="shortcut icon" href="/favicon.ico">
+    </head>
+    <body>
+        <nav  class="white"  style="background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(/assets/.jpg)">
+    <div class="top">
+        <a href="/">Fred Adams</a>
+        <ul>
+            
+            <a  href="/">Home</a>
+            
+            <a  href="/code">Code</a>
+            
+            <a  href="/about">About</a>
+            
+
+        </ul>
+    </div>
+    <h1>How I Coded Snake in Under 5 Minutes</h1>
+</nav>
+
+        <div class="container">
+            <div class="block post">
+    <div class="top">
+        <h1>How I Coded Snake in Under 5 Minutes</h1>
+        <p>Published on 22 August, 2018</p>
+    </div>
+    <p>So a little while back I did a presentation where I programmed snake in front of around 50 people in under 5 minutes (I managed it in 4:42).</p>
+
+<p>The program was written from scratch in just HTML, CSS and Vanilla JS, all in one file.</p>
+
+<h3 id="so-what-did-i-do-to-go-so-quickly">So what did I do to go so quickly?</h3>
+
+<p>Well, I spent a while making the program as short as possible.</p>
+
+<p>I got rid of everything that wasn’t needed to make it work.</p>
+
+<p>I also put everything in one file - CSS in “style” tags, and JS in “script” tags.</p>
+
+<p>Furthermore, I tried to copy and paste as much as possible (and as fast as possible).</p>
+
+<p>Here are a list of things I did so I could write the code more quickly:</p>
+
+<ul>
+  <li>Put everything in one file</li>
+  <li>Copied and pasted as much as possible</li>
+  <li>Didn’t declare variables with <code class="highlighter-rouge">var</code> keyword (eg. instead of <code class="highlighter-rouge">var x = 0</code>, used <code class="highlighter-rouge">x=0</code>)</li>
+  <li>Didn’t align code with tabs</li>
+  <li>Didn’t write head and body tags, and DOCTYPE declaration</li>
+  <li>Used Emmet (package) shorthands</li>
+</ul>
+
+<p>So, here’s the code.</p>
+
+<p>First, I wrote the HTML element for the entire snake container, which would contain the snake and apples.</p>
+
+<p>I made the ID of this element “game,” so that it was easy to edit in the Javascript code.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">'game'</span><span class="nt">&gt;&lt;/div&gt;</span></code></pre></figure>
+
+<p>Next, I started writing the CSS.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;style&gt;&lt;/style&gt;</span></code></pre></figure>
+
+<p>I first reset the margin and padding of all elements, so that they don’t get in the way.</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="o">*</span> <span class="p">{</span>
+	<span class="nl">margin</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+	<span class="nl">padding</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Then, I style the game container.</p>
+
+<p>I set the background to black, the height to the height of the window, and the width to the same as the height, so that the game container is a square.</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nf">#game</span> <span class="p">{</span>
+	<span class="nl">background-color</span><span class="p">:</span> <span class="m">#000</span><span class="p">;</span>
+	<span class="nl">width</span><span class="p">:</span> <span class="m">100vh</span><span class="p">;</span>
+	<span class="nl">height</span><span class="p">:</span> <span class="m">100vh</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Next, I style the divs inside the game container.
+These divs will be the grid spaces of the snake body and apple.</p>
+
+<p>I set the width and height to 5% of the window height, so that it is 1/20 of the game container.</p>
+
+<p>Thus, there will be 20 grid spaces on each side, and 400 grid spaces in all (20 x 20 = 400).</p>
+
+<p>I also set their position to absolute, so that I can easily position them in the Javascript.</p>
+
+<p>Finally, I add a black border to add a grid-spacing effect.</p>
+
+<p>The black border adds size to the grid spaces, and to get rid of that extra space, I set the box sizing to border box.</p>
+
+<p>I also make the background green.</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nf">#game</span> <span class="nt">div</span> <span class="p">{</span>
+	<span class="nl">width</span><span class="p">:</span> <span class="m">5vh</span><span class="p">;</span>
+	<span class="nl">height</span><span class="p">:</span> <span class="m">5vh</span><span class="p">;</span>
+	<span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
+	<span class="nl">box-sizing</span><span class="p">:</span> <span class="n">border-box</span><span class="p">;</span>
+	<span class="nl">border</span><span class="p">:</span> <span class="m">2px</span> <span class="nb">solid</span> <span class="no">black</span><span class="p">;</span>
+	<span class="nl">background-color</span><span class="p">:</span> <span class="m">#0f0</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>The apple will have a background color of red, so I add that to my CSS.</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nf">#game</span> <span class="nt">div</span><span class="nc">.apple</span> <span class="p">{</span>
+	<span class="nl">background-color</span><span class="p">:</span> <span class="m">#f00</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Okay, now we’re done with the CSS.</p>
+
+<p>If you’re a decently fast typer, you should be able to write this portion and the HTML in a minute or so.</p>
+
+<p>So now we need to start the JS.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script&gt;&lt;/script&gt;</span></code></pre></figure>
+
+<p>To begin, I declare all the necessary variables.</p>
+
+<p>These will be:</p>
+
+<ul>
+  <li>My player (snake head) position variables (px and py)</li>
+  <li>My apple position variables (ax and ay)</li>
+  <li>My velocity variables for movement and direction (xv and yv)</li>
+  <li>My trail array holding the entire tail of the snake (everything but the head)</li>
+  <li>My gameover variable which checks if the game is over</li>
+</ul>
+
+<p>I ignore the var before the variable declaration, as it is not needed, and I try to use a single declaration for multiple variables when possible.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">px</span><span class="o">=</span><span class="nx">py</span><span class="o">=</span><span class="mi">9</span><span class="p">;</span>
+<span class="nx">ax</span><span class="o">=</span><span class="nx">ay</span><span class="o">=</span><span class="nx">xv</span><span class="o">=</span><span class="nx">yv</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="nx">trail</span><span class="o">=</span><span class="p">[{</span><span class="na">x</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span><span class="na">y</span><span class="p">:</span> <span class="mi">9</span><span class="p">}];</span>
+<span class="nx">gameover</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span></code></pre></figure>
+
+<p>Next, I add the arrow key event listeners.</p>
+
+<p>Here copy and paste is a really big help.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">document</span><span class="p">.</span><span class="nx">onkeydown</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span>
+	<span class="k">switch</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">keyCode</span><span class="p">){</span>
+		<span class="k">case</span> <span class="mi">37</span><span class="p">:</span>
+			<span class="nx">xv</span><span class="o">=-</span><span class="mi">1</span><span class="p">;</span><span class="nx">yv</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+			<span class="k">break</span><span class="p">;</span>
+		<span class="k">case</span> <span class="mi">39</span><span class="p">:</span>
+			<span class="nx">xv</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="nx">yv</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+			<span class="k">break</span><span class="p">;</span>
+		<span class="k">case</span> <span class="mi">38</span><span class="p">:</span>
+			<span class="nx">yv</span><span class="o">=-</span><span class="mi">1</span><span class="p">;</span><span class="nx">xv</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+			<span class="k">break</span><span class="p">;</span>
+		<span class="k">case</span> <span class="mi">40</span><span class="p">:</span>
+			<span class="nx">yv</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="nx">xv</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Now comes the main part of the game: the main game loop.</p>
+
+<p>The game loop is essentially a giant function that repeats over and over again.</p>
+
+<p>In the case of the snake game, I’m making the game loop repeat every 1/10 of a second, to make the snake move fast, but not <strong>too</strong> fast.</p>
+
+<p>We can use the setInterval function to achieve a game loop.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">setInterval</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+	<span class="c1">// Code Here</span>
+<span class="p">},</span><span class="mi">100</span><span class="p">);</span></code></pre></figure>
+
+<p>In the game loop, I start by adding the velocity to the snakes position, creating a moving effect.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">px</span> <span class="o">+=</span> <span class="nx">xv</span><span class="p">;</span>
+<span class="nx">py</span> <span class="o">+=</span> <span class="nx">yv</span><span class="p">;</span></code></pre></figure>
+
+<p>Then I add a couple of <code class="highlighter-rouge">if</code> statements to add the effect of the snake going through the walls.</p>
+
+<p>Again, copy and paste is very useful here.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">if</span><span class="p">(</span><span class="nx">px</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">){</span>
+	<span class="nx">px</span> <span class="o">=</span> <span class="mi">19</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">px</span> <span class="o">==</span> <span class="mi">20</span><span class="p">){</span>
+	<span class="nx">px</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">py</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">){</span>
+	<span class="nx">py</span> <span class="o">=</span> <span class="mi">19</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">py</span> <span class="o">==</span> <span class="mi">20</span><span class="p">){</span>
+	<span class="nx">py</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Next, I clear my game board and draw the apple.</p>
+
+<p>I use the style attribute to position the apple at the right position.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"game"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>
+
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"game"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">+=</span> <span class="s2">"&lt;div class='apple' style='left: "</span> <span class="o">+</span> <span class="nx">ax</span><span class="o">*</span><span class="mi">5</span> <span class="o">+</span> <span class="s2">"vh; top: "</span> <span class="o">+</span> <span class="nx">ay</span><span class="o">*</span><span class="mi">5</span> <span class="o">+</span> <span class="s2">"vh;'&gt;&lt;/div&gt;"</span><span class="p">;</span></code></pre></figure>
+
+<p>I then add my game over checking.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span><span class="p">(</span><span class="nx">gameover</span><span class="p">){</span>
+	<span class="nx">location</span><span class="p">.</span><span class="nx">reload</span><span class="p">();</span>
+	<span class="nx">alert</span><span class="p">(</span><span class="s2">"gameover :("</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Now, I loop through the entire trail, and draw each grid space of the snakes body.</p>
+
+<p>I use the .forEach function to quickly loop through the array.</p>
+
+<p>I also use this to check if the snakes head is touching it’s tail, and the snake has actually started moving.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">trail</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">item</span><span class="p">,</span><span class="nx">index</span><span class="p">){</span>
+	<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"game"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">+=</span> <span class="s2">"&lt;div style='left: "</span> <span class="o">+</span> <span class="nx">item</span><span class="p">.</span><span class="nx">x</span><span class="o">*</span><span class="mi">5</span> <span class="o">+</span> <span class="s2">"vh; top: "</span> <span class="o">+</span> <span class="nx">item</span><span class="p">.</span><span class="nx">y</span><span class="o">*</span><span class="mi">5</span> <span class="o">+</span> <span class="s2">"vh;'&gt;&lt;/div&gt;"</span><span class="p">;</span>
+	<span class="k">if</span><span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">x</span> <span class="o">==</span> <span class="nx">px</span> <span class="o">&amp;&amp;</span> <span class="nx">item</span><span class="p">.</span><span class="nx">y</span> <span class="o">==</span> <span class="nx">py</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="nx">xv</span> <span class="o">+</span> <span class="nx">yv</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">){</span>
+		<span class="nx">gameover</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">});</span></code></pre></figure>
+
+<p>To make the illusion that the snake is moving, we need to cut off the last part of its tail and add an extra grid space for its head.</p>
+
+<p>To do this, we’ll use the trail.shift and trail.push functions.</p>
+
+<p>But, when the snake eats an apple, we want it to grow, right? Well we can do that by only cutting off the last part of its tail when it didn’t eat an apple.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">if</span><span class="p">(</span><span class="nx">ax</span> <span class="o">==</span> <span class="nx">px</span> <span class="o">&amp;&amp;</span> <span class="nx">ay</span> <span class="o">==</span> <span class="nx">py</span><span class="p">){</span>
+	<span class="nx">ax</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">20</span><span class="p">);</span>
+	<span class="nx">ay</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">20</span><span class="p">);</span>
+<span class="p">}</span><span class="k">else</span><span class="p">{</span>
+	<span class="nx">trail</span><span class="p">.</span><span class="nx">shift</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="nx">trail</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span><span class="na">x</span><span class="p">:</span> <span class="nx">px</span><span class="p">,</span> <span class="na">y</span><span class="p">:</span> <span class="nx">py</span><span class="p">});</span></code></pre></figure>
+
+<p>Now we have a workable version of snake. This is the version I programmed in 5 minutes, but there are a few bugs to fix.</p>
+
+<p>The first one and main one is that if you try to go the opposite direction you’re currently in, you lose.</p>
+
+<p>This is because the program tries to make the head literally go backwards, which will collide with the snakes tail.</p>
+
+<p>All we have to do is not allow the direction change if the current direction is the opposite of the desired direction.</p>
+
+<p>Here’s the new code for the key event listener switch statement:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">case</span> <span class="mi">37</span><span class="p">:</span>
+	<span class="k">if</span><span class="p">(</span><span class="nx">xv</span><span class="o">!=</span><span class="mi">1</span><span class="p">){</span>
+		<span class="nx">xv</span><span class="o">=-</span><span class="mi">1</span><span class="p">;</span><span class="nx">yv</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="k">break</span><span class="p">;</span>
+<span class="k">case</span> <span class="mi">39</span><span class="p">:</span>
+	<span class="k">if</span><span class="p">(</span><span class="nx">xv</span><span class="o">!=-</span><span class="mi">1</span><span class="p">){</span>
+		<span class="nx">xv</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="nx">yv</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="k">break</span><span class="p">;</span>
+<span class="k">case</span> <span class="mi">38</span><span class="p">:</span>
+	<span class="k">if</span><span class="p">(</span><span class="nx">yv</span><span class="o">!=</span><span class="mi">1</span><span class="p">){</span>
+		<span class="nx">yv</span><span class="o">=-</span><span class="mi">1</span><span class="p">;</span><span class="nx">xv</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="k">break</span><span class="p">;</span>
+<span class="k">case</span> <span class="mi">40</span><span class="p">:</span>
+	<span class="k">if</span><span class="p">(</span><span class="nx">yv</span><span class="o">!=-</span><span class="mi">1</span><span class="p">){</span>
+		<span class="nx">yv</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="nx">xv</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+	<span class="p">}</span></code></pre></figure>
+
+<h3 id="okay-thats-it">Okay, That’s it!</h3>
+
+<p>Now all that’s left is to practice a few times and memorize the steps.</p>
+
+<p>If you want to download the code, go <a href="/assets/posts/how-i-coded-snake-in-under-5-minutes/how-i-coded-snake-in-under-5-minutes.html" download="snake.html">here</a>, and if you want to just play, go <a href="/assets/posts/how-i-coded-snake-in-under-5-minutes/how-i-coded-snake-in-under-5-minutes.html" target="_blank">here</a>.</p>
+
+<p>Thanks for scrolling.</p>
+
+<p><em>- Fred Adams</em></p>
+
+</div>
+
+            <footer>
+    <p>&copy; Fred Adams <script>document.write(new Date().getFullYear());</script></p>
+    <ul>
+        <a href="mailto:xtrp127@gmail.com">Email</a>
+        <a href="https://github.com/xtrp/">GitHub</a>
+        <a href="https://dev.to/xtrp/">DEV</a>
+        <a href="https://stackoverflow.com/users/10007107/fred-adams">Stack Overflow</a>
+        <a href="https://instagram.com/xtrp127/">Instagram</a>
+    </ul>
+</footer>
+        </div>
+    </body>
+</html>

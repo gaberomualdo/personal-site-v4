@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Running an HTTP Server from Your Phone | Fred Adams</title>
+        
+        <link rel="stylesheet" href="/assets/normalize.css">
+        <link rel="stylesheet" href="/assets/skeleton.css">
+        <link rel="stylesheet" href="/assets/main.css">
+
+        <link rel="shortcut icon" href="/favicon.ico">
+    </head>
+    <body>
+        <nav  class="white"  style="background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(/assets/.jpg)">
+    <div class="top">
+        <a href="/">Fred Adams</a>
+        <ul>
+            
+            <a  href="/">Home</a>
+            
+            <a  href="/code">Code</a>
+            
+            <a  href="/about">About</a>
+            
+
+        </ul>
+    </div>
+    <h1>Running an HTTP Server from Your Phone</h1>
+</nav>
+
+        <div class="container">
+            <div class="block post">
+    <div class="top">
+        <h1>Running an HTTP Server from Your Phone</h1>
+        <p>Published on 20 September, 2018</p>
+    </div>
+    <p>A few days ago, I published a post showing how to run an HTTP Server from the terminal using a simple Python command.</p>
+
+<p>For me, I use HTTP Servers because the website is broadcasted throughout the entire WiFi you are on, which makes it great to show a website to just people on your WiFi network.</p>
+
+<p>Because of this, I needed to run the HTTP Server at all times.</p>
+
+<p>I could run it on my computer and leave my computer on at all times, but that would be hard, so I decided to run it from my phone.</p>
+
+<p>In this post, I’ll be explaining how I ran the HTTP Server from my phone.</p>
+
+<p>Note that this post is for <strong>Android phones only</strong>, and will not work on iOS as it is not a Linux based operating system.</p>
+
+<h2 id="1-download-termux">1. Download Termux</h2>
+<p>Go to the Google Play store and download the app called Termux. Termux will allow us to run the terminal on our phone.</p>
+
+<h2 id="2-download-python">2. Download Python</h2>
+<p>Execute the following command in Termux:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>pkg <span class="nb">install </span>python</code></pre></figure>
+
+<p>This will install Python, and allow you to use Python to setup an HTTP Server.</p>
+
+<h2 id="3-getting-your-project">3. Getting Your Project</h2>
+<p>Before you start the HTTP Server, you need to get the code of the website you want to run the HTTP Server.</p>
+
+<p>For example, I wanted to run an HTTP Server with a chat website. First, I coded the chat website and put it on my Github.</p>
+
+<p>Then I ran the command <code class="highlighter-rouge">pkg install git</code> to install Git.</p>
+
+<p>After that, I ran the command <code class="highlighter-rouge">git clone https://github.com/username/project</code> to clone the project I wanted, and put it on my phone.</p>
+
+<h2 id="4-start-the-http-server">4. Start the HTTP Server</h2>
+<p>Now that you’ve installed Python and downloaded your code, you can run the HTTP Server:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>python <span class="nt">-m</span> http.server 8000</code></pre></figure>
+
+<p>If you’d like more information about what this does, check out <a href="/2018/09/17/running-a-http-server-from-the-terminal-using-python/">this post I wrote about HTTP Servers in Python</a>.</p>
+
+<h2 id="youre-done">You’re Done!</h2>
+
+<p>Thanks for scrolling.</p>
+
+<p><em>- Fred Adams</em></p>
+
+</div>
+
+            <footer>
+    <p>&copy; Fred Adams <script>document.write(new Date().getFullYear());</script></p>
+    <ul>
+        <a href="mailto:xtrp127@gmail.com">Email</a>
+        <a href="https://github.com/xtrp/">GitHub</a>
+        <a href="https://dev.to/xtrp/">DEV</a>
+        <a href="https://stackoverflow.com/users/10007107/fred-adams">Stack Overflow</a>
+        <a href="https://instagram.com/xtrp127/">Instagram</a>
+    </ul>
+</footer>
+        </div>
+    </body>
+</html>

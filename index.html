@@ -1,0 +1,53 @@
+---
+layout: default
+title: "Home"
+file: ""
+---
+
+<style>
+div.block#welcome > * {
+    display: block;
+    float: left;
+    width: 100%;
+}
+div.block#welcome > div.right > *:last-child {
+    margin-bottom: 0;
+}
+div.block#welcome > img:not(.mobile) {
+    display: none;
+}
+div.block#welcome > img.mobile {
+    margin-bottom: 1.5rem;
+}
+@media (min-width: 631px) {
+    div.block#welcome > img {
+        width: 35%;
+        margin-right: 2.5rem;
+    }
+    div.block#welcome > div.right {
+        width: calc(65% - 2.5rem);
+    }
+    div.block#welcome > img.mobile {
+        display: none;
+    }
+    div.block#welcome > img:not(.mobile) {
+        display: block;
+    }
+}
+</style>
+
+<div class="block" id="welcome">
+    <img src="{{ site.baseurl }}/assets/pages/me.png">
+    <img src="{{ site.baseurl }}/assets/pages/me_mobile.png" class="mobile">
+    <div class="right">
+        <h1 style="font-size: 4rem;">Hey, I'm Fred Adams!</h1>
+        <p>I am a passionate young developer, who is constantly building new things and experimenting with new programming languages and technologies.</p>
+        <p>I mainly program with web technologies such as JavaScript (client-side and Node.js), PHP, and of course HTML &amp; CSS. I'm focused on simply building something beautiful with code as a hobby, and learning new technologies to help achieve that. I've built hundreds of websites and programs, most of which are open-sourced!</p>
+        <p>This site includes <a href="{{ site.baseurl }}/code/">websites and programs</a> I've built and written, an <a href="{{ site.baseurl }}/about/">extended about page</a>, and lastly, my blog, where I speak about code and being a developer, right here on the <a href="{{ site.baseurl }}/">homepage</a>.</p>
+        <p class="last_updated">Last Updated on 14 June, 2019</p>
+    </div>
+</div>
+
+{% for post in site.posts %}
+{% include post_block.html %}
+{% endfor %}

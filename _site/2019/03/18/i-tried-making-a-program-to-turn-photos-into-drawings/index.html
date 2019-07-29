@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>I Tried Making a Program to Turn Photos Into Drawings | Fred Adams</title>
+        
+        <link rel="stylesheet" href="/assets/normalize.css">
+        <link rel="stylesheet" href="/assets/skeleton.css">
+        <link rel="stylesheet" href="/assets/main.css">
+
+        <link rel="shortcut icon" href="/favicon.ico">
+    </head>
+    <body>
+        <nav  class="white"  style="background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(/assets/.jpg)">
+    <div class="top">
+        <a href="/">Fred Adams</a>
+        <ul>
+            
+            <a  href="/">Home</a>
+            
+            <a  href="/code">Code</a>
+            
+            <a  href="/about">About</a>
+            
+
+        </ul>
+    </div>
+    <h1>I Tried Making a Program to Turn Photos Into Drawings</h1>
+</nav>
+
+        <div class="container">
+            <div class="block post">
+    <div class="top">
+        <h1>I Tried Making a Program to Turn Photos Into Drawings</h1>
+        <p>Published on 18 March, 2019</p>
+    </div>
+    <p>A couple weeks ago I wrote a pretty simple program using HTML5 Canvas and JavaScript to turn photos into drawings.</p>
+
+<p>The algorithm is quite simple, and the resulting drawings are meant to imitate impressionism, specifically that of the late 19th century, for example, Manet or Monet.</p>
+
+<p>I was originally going to write a program that made drawings that were “Picasso’s”, where each section of color would be converted into the nearest accurate shape, for example a quadrilateral that fit the section, or a triangle.</p>
+
+<p>Unfortunately, I realized that the algorithm for that would take a long time, and would significantly increase the already long load times that the algorithm took to run.</p>
+
+<p>So I settled with a simple algorithm which works with a simple simulation of the “magic wand tool”.</p>
+
+<p>Essentially, I have a function that can take a pixel, and run the magic wand tool on it. If you don’t know what the magic wand tool is, it’s simply a tool that allows you to select sections of the same color from a certain pixel.</p>
+
+<p>My algorithm simply selects all the sections of a photo using the magic wand tool and essentially standardizes the color there. So if it had a section of mainly red, it would make all the pixels in that section the same exact color of red.</p>
+
+<p>This algorithm works surprisingly well and manages to resemble impressionism on resulting drawings.</p>
+
+<p>Check out the code here: <a href="https://github.com/xtrp/gh">github.com/xtrp/gh</a>, or try it yourself here: <a href="https://xtrp.github.io/gh/">xtrp.github.io/gh/</a>.</p>
+
+<p>Thanks for scrolling.</p>
+
+<p><em>— Fred Adams</em></p>
+
+</div>
+
+            <footer>
+    <p>&copy; Fred Adams <script>document.write(new Date().getFullYear());</script></p>
+    <ul>
+        <a href="mailto:xtrp127@gmail.com">Email</a>
+        <a href="https://github.com/xtrp/">GitHub</a>
+        <a href="https://dev.to/xtrp/">DEV</a>
+        <a href="https://stackoverflow.com/users/10007107/fred-adams">Stack Overflow</a>
+        <a href="https://instagram.com/xtrp127/">Instagram</a>
+    </ul>
+</footer>
+        </div>
+    </body>
+</html>

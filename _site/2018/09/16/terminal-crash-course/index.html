@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Terminal (Git Bash) Crash Course | Fred Adams</title>
+        
+        <link rel="stylesheet" href="/assets/normalize.css">
+        <link rel="stylesheet" href="/assets/skeleton.css">
+        <link rel="stylesheet" href="/assets/main.css">
+
+        <link rel="shortcut icon" href="/favicon.ico">
+    </head>
+    <body>
+        <nav  class="white"  style="background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(/assets/.jpg)">
+    <div class="top">
+        <a href="/">Fred Adams</a>
+        <ul>
+            
+            <a  href="/">Home</a>
+            
+            <a  href="/code">Code</a>
+            
+            <a  href="/about">About</a>
+            
+
+        </ul>
+    </div>
+    <h1>Terminal (Git Bash) Crash Course</h1>
+</nav>
+
+        <div class="container">
+            <div class="block post">
+    <div class="top">
+        <h1>Terminal (Git Bash) Crash Course</h1>
+        <p>Published on 16 September, 2018</p>
+    </div>
+    <h2 id="the-importance-of-the-terminal">The Importance of The Terminal</h2>
+<p>The terminal or command line has been around since the start of computers; in fact, the first computers with screens were operated with just the command line and a keyboard.</p>
+
+<p>For programmers, the command line allows you to quickly set up project folder structures, and use Git.</p>
+
+<p>For any computer user, the command line gives you superior and ultimate control of your machine, with a wide array of commands that can execute functions that are otherwise hard to achieve in the classic GUI interface.</p>
+
+<h2 id="git-bash">Git Bash</h2>
+<p>Git Bash is a command line that is available for all platforms, and is preinstalled as the default terminal on macOS and Linux.</p>
+
+<p>Git Bash is arguably the most widely used command line, which is why I’ll be using it in this tutorial.</p>
+
+<p>If you are a Windows user and don’t have Git Bash installed, download it at <a href="https://gitforwindows.org/">gitforwindows.org/</a>.</p>
+
+<h2 id="opening-up-the-terminal">Opening up The Terminal</h2>
+<p>To open the Terminal, simply search for “Terminal” on macOS and Linux, or “Git Bash” on Windows, and open the Terminal or Git Bash application.</p>
+
+<p>Upon opening the terminal, you should see a prompt for you to execute a command that might say the name of your computer, then the dollar sign ($), which indicates that you are executing commands as a regular user (not a super user).</p>
+
+<h2 id="some-basic-terminal-commands">Some Basic Terminal Commands</h2>
+
+<h3 id="pwd--print-current-working-directory">pwd — print current working directory</h3>
+<p>The <code class="highlighter-rouge">pwd</code> command simply prints out the current working directory. The current working directory is the directory that you are in the terminal. For example, you could enter your documents folder, which would make your documents folder the current working directory.</p>
+
+<p>The <code class="highlighter-rouge">pwd</code> command has no extra options, and is executed by typing <code class="highlighter-rouge">pwd</code>. Try it!</p>
+
+<h3 id="cd--enter-and-exit-directories">cd — enter and exit directories</h3>
+<p>The <code class="highlighter-rouge">cd</code> command allows you to change your current working directory. For example, <code class="highlighter-rouge">cd desktop</code> will allow you to enter your desktop. To enter the parent directory, just type <code class="highlighter-rouge">cd ..</code>. For example, if your current working directory is your desktop, you can type <code class="highlighter-rouge">cd ..</code> to go back into your home directory.</p>
+
+<h3 id="ls--print-list-of-files-and-folders-in-a-directory">ls — print list of files and folders in a directory</h3>
+<p>The <code class="highlighter-rouge">ls</code> command prints all of the files and folders in a directory. By itself, the <code class="highlighter-rouge">ls</code> command will just print the files and folders in the current working directory. However, if you add a directory on the end, it will print the files and folders in that directory.</p>
+
+<p>For example, if you are in your home directory, <code class="highlighter-rouge">ls Desktop</code> will show all the files and folders in your desktop.</p>
+
+<p>You could also execute <code class="highlighter-rouge">ls</code> by itself, which will print all the files and folders in your home directory (if you are in your home directory).</p>
+
+<p>The <code class="highlighter-rouge">ls</code> command also has a few options, which include:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">-l</code> — adds extra information about files and folders.</li>
+  <li><code class="highlighter-rouge">-a</code> — shows hidden files and folders along with regular files and folders.</li>
+  <li><code class="highlighter-rouge">-t</code> — sorts files and folders by dates modified.</li>
+</ul>
+
+<p>To use these options, simply add them onto the end of the <code class="highlighter-rouge">ls</code> command, for example <code class="highlighter-rouge">ls -l</code>.</p>
+
+<p>You can also use multiple options at once, ex. <code class="highlighter-rouge">ls -l -t</code>, and even put them together to create a shorter command: <code class="highlighter-rouge">ls -lt</code>.</p>
+
+<h3 id="touch--create-a-file">touch — create a file</h3>
+<p>The <code class="highlighter-rouge">touch</code> command simply creates a new file of the specified name in your current working directory.</p>
+
+<p>For example, <code class="highlighter-rouge">touch test.txt</code> will create the file <code class="highlighter-rouge">test.txt</code> in your current working directory.</p>
+
+<h3 id="mkdir--create-a-directory-folder">mkdir — create a directory (folder)</h3>
+<p>The <code class="highlighter-rouge">mkdir</code> command simply creates a new directory (folder) of the specified name in your current working directory.</p>
+
+<p>For example, <code class="highlighter-rouge">mkdir myfolder</code> will create the directory <code class="highlighter-rouge">myfolder</code> in your current working directory.</p>
+
+<h3 id="rm--remove-or-delete-file-permanently">rm — remove or delete file (permanently)</h3>
+<p>The <code class="highlighter-rouge">rm</code> command permanently deletes the specified file, ex. <code class="highlighter-rouge">rm test.txt</code> would remove the file <code class="highlighter-rouge">test.txt</code>.</p>
+
+<p>To remove directories (folders), use the <code class="highlighter-rouge">-r</code> (recursive) option — ex. <code class="highlighter-rouge">rm -r myfolder</code> will delete the directory <code class="highlighter-rouge">myfolder</code>.</p>
+
+<h3 id="nano--edit-a-file">nano — edit a file</h3>
+<p>The <code class="highlighter-rouge">nano</code> command allows you to edit a file in an interactive text editor within the terminal.</p>
+
+<p>For example, <code class="highlighter-rouge">nano test.txt</code> will open up a text editor within the terminal, and allow you to edit the file <code class="highlighter-rouge">test.txt</code>.</p>
+
+<p>If the specified file in the <code class="highlighter-rouge">nano</code> command is not found, the specified file will be created, and the text editor will still open. This makes <code class="highlighter-rouge">nano</code> a really easy way to quickly create and edit a file.</p>
+
+<p>Within the nano text editor, there are many different functions, which I won’t specify in this tutorial. There are quite a few articles and tutorials online where you can learn how to use the nano text editor — I recommend <a href="https://www.howtogeek.com/howto/42980/the-beginners-guide-to-nano-the-linux-command-line-text-editor/">this article by How-To-Geek</a>.</p>
+
+<h3 id="mv--move-and-rename-a-file">mv — move and rename a file</h3>
+<p>The <code class="highlighter-rouge">mv</code> command allows you to move and rename files.</p>
+
+<p>First, specify the file you’d like to move, then, specify the destination, with the new name of the file at the end.</p>
+
+<p>For example, if you’d like to move the file <code class="highlighter-rouge">test.txt</code> into a folder called <code class="highlighter-rouge">myfolder</code>, just type <code class="highlighter-rouge">mv test.txt myfolder/test.txt</code>.</p>
+
+<p>As you can see, we added the name of the moved file to the end of the destination. This allows us to rename files, for example: <code class="highlighter-rouge">mv test.txt myfile.txt</code> would rename the file <code class="highlighter-rouge">test.txt</code> to the name <code class="highlighter-rouge">myfile.txt</code>.</p>
+
+<h3 id="cp--copy-and-rename-a-file">cp — copy and rename a file.</h3>
+<p>The <code class="highlighter-rouge">cp</code> command works exactly the same as the <code class="highlighter-rouge">mv</code> command, but instead of moving the file to the destination, it copies the file and puts it in the destination.</p>
+
+<h2 id="recap-of-commands">Recap of Commands</h2>
+<p>Here’s a quick recap of all the commands you’ve learned in this tutorial:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">pwd</code> — print current working directory</li>
+  <li><code class="highlighter-rouge">cd</code> — enter and exit directories</li>
+  <li><code class="highlighter-rouge">ls</code> — print list of files and folders in a directory</li>
+  <li><code class="highlighter-rouge">touch</code> — create a file</li>
+  <li><code class="highlighter-rouge">mkdir</code> — create a directory (folder)</li>
+  <li><code class="highlighter-rouge">rm</code> — remove or delete file (permanently)</li>
+  <li><code class="highlighter-rouge">nano</code> — edit a file</li>
+  <li><code class="highlighter-rouge">mv</code> — move and rename a file</li>
+  <li><code class="highlighter-rouge">cp</code> — copy and rename a file.</li>
+</ul>
+
+<p>Thanks for scrolling.</p>
+
+<p><em>- Fred Adams</em></p>
+
+</div>
+
+            <footer>
+    <p>&copy; Fred Adams <script>document.write(new Date().getFullYear());</script></p>
+    <ul>
+        <a href="mailto:xtrp127@gmail.com">Email</a>
+        <a href="https://github.com/xtrp/">GitHub</a>
+        <a href="https://dev.to/xtrp/">DEV</a>
+        <a href="https://stackoverflow.com/users/10007107/fred-adams">Stack Overflow</a>
+        <a href="https://instagram.com/xtrp127/">Instagram</a>
+    </ul>
+</footer>
+        </div>
+    </body>
+</html>

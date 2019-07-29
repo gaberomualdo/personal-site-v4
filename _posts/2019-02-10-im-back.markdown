@@ -1,0 +1,25 @@
+---
+date: 2019-02-10 12:12:12
+layout: post
+title: "I'm Back!"
+---
+
+Hi. So I realize I haven't posted on this blog in literally *a month*. I'm sorry.
+
+In the beginning of January, I built a few pretty great projects, such as my 2048 AI, [Jacob](https://xtrp.github.io/jacob/).
+
+In mid-January, I took a break from coding. Other things came up in my life, and coding was pushed away.
+
+But now, after around a month, I'm back. I haven't coded properly in a while, so I've got to catch up. My typing speed isn't as fast; I've forgotten some commands, but I'm so happy to be back writing code again.
+
+Getting coding again is my top priority right now. I want to focus on building something beautiful. Something bigger. Something better. And I won't let anyone or anything stop me.
+
+I'm going to start small, but I want to create something that's better than anything else I've made before. Anything else I made in 2018 or 2017 or 2016.
+
+I'm also hoping to post on this blog more. I realize I've said that quite a few times; but I'm serious. I want to find consistency in posting here.
+
+Regardless, I'm back, and I'll post any updates or new projects as they come.
+
+Thanks for scrolling.
+
+*- Fred Adams*

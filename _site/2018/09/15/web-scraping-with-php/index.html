@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Web Scraping with PHP | Fred Adams</title>
+        
+        <link rel="stylesheet" href="/assets/normalize.css">
+        <link rel="stylesheet" href="/assets/skeleton.css">
+        <link rel="stylesheet" href="/assets/main.css">
+
+        <link rel="shortcut icon" href="/favicon.ico">
+    </head>
+    <body>
+        <nav  class="white"  style="background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(/assets/.jpg)">
+    <div class="top">
+        <a href="/">Fred Adams</a>
+        <ul>
+            
+            <a  href="/">Home</a>
+            
+            <a  href="/code">Code</a>
+            
+            <a  href="/about">About</a>
+            
+
+        </ul>
+    </div>
+    <h1>Web Scraping with PHP</h1>
+</nav>
+
+        <div class="container">
+            <div class="block post">
+    <div class="top">
+        <h1>Web Scraping with PHP</h1>
+        <p>Published on 15 September, 2018</p>
+    </div>
+    <h2 id="what-is-web-scraping">What is Web Scraping?</h2>
+<p>Web scraping is where you scrape or get code from a website and parse it to put it in your own code.</p>
+
+<p>Web scraping is commonly used in APIs, and websites that need to use data from external sources.</p>
+
+<h2 id="using-php">Using PHP</h2>
+<p>If you haven’t used PHP before, download PHP and Apache before reading the rest of this post.</p>
+
+<h2 id="web-scraping-in-php">Web Scraping in PHP</h2>
+<p>In this tutorial, I’ll teach you how to do some simple web scraping using PHP.</p>
+
+<p>We’ll use PHP to get any Github users pinned repositories without using any external APIs.</p>
+
+<h3 id="setting-up-our-project-folder">Setting up Our Project Folder</h3>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">mkdir </span>pinnedreposcraper
+<span class="nv">$ </span><span class="nb">cd </span>pinnedreposcraper
+<span class="nv">$ </span><span class="nb">touch </span>index.php</code></pre></figure>
+
+<h3 id="getting-simple_html_domphp">Getting Simple_HTML_DOM.php</h3>
+<p>In this tutorial, we’ll be using a PHP library called Simple HTML DOM to send HTTP requests to websites and parse their code.</p>
+
+<p>First, download the Simple_HTML_DOM.php here: <a href="http://sourceforge.net/projects/simplehtmldom/">sourceforge.net/projects/simplehtmldom/</a>.</p>
+
+<p>Move the <code class="highlighter-rouge">Simple_HTML_DOM.php</code> file into the project folder.</p>
+
+<h3 id="using-simple-html-dom-in-our-php-file">Using Simple HTML DOM in our PHP File</h3>
+<p>First, we’ll require the <code class="highlighter-rouge">Simple_HTML_DOM.php</code> file in our <code class="highlighter-rouge">index.php</code> file.</p>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+
+<span class="k">require</span><span class="p">(</span><span class="s2">"simple_html_dom.php"</span><span class="p">);</span>
+
+<span class="cp">?&gt;</span></code></pre></figure>
+
+<h3 id="getting-the-page-of-the-specified-github-user">Getting the Page of the Specified Github User</h3>
+
+<p>Then, we’ll make a variable for the Github username we want to get the pinned repositories of, and get the code for their Github page using Simple HTML DOM’s <code class="highlighter-rouge">file_get_html</code> function.</p>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+
+<span class="k">require</span><span class="p">(</span><span class="s2">"simple_html_dom.php"</span><span class="p">);</span>
+
+<span class="nv">$gh_username</span> <span class="o">=</span> <span class="s2">"xtrp"</span><span class="p">;</span>
+<span class="nv">$gh_page</span> <span class="o">=</span> <span class="nx">file_get_html</span><span class="p">(</span><span class="s1">'https://github.com/'</span> <span class="o">.</span> <span class="nv">$gh_username</span><span class="p">);</span>
+
+<span class="cp">?&gt;</span></code></pre></figure>
+
+<h3 id="getting-the-pinned-repositories-and-parsing-them">Getting the Pinned Repositories and Parsing Them</h3>
+
+<p>Next, we’ll make an array for the users pinned repositories, and loop through the HTML list for the pinned repositories on their Github page.</p>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+
+<span class="k">require</span><span class="p">(</span><span class="s2">"simple_html_dom.php"</span><span class="p">);</span>
+
+<span class="nv">$gh_username</span> <span class="o">=</span> <span class="s2">"xtrp"</span><span class="p">;</span>
+<span class="nv">$gh_page</span> <span class="o">=</span> <span class="nx">file_get_html</span><span class="p">(</span><span class="s1">'https://github.com/'</span> <span class="o">.</span> <span class="nv">$gh_username</span><span class="p">);</span>
+
+<span class="nv">$pinned_repos</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="k">foreach</span> <span class="p">(</span><span class="nv">$gh_page</span><span class="o">-&gt;</span><span class="na">find</span><span class="p">(</span><span class="s1">'ol.js-pinned-repos-reorder-list li'</span><span class="p">)</span> <span class="k">as</span> <span class="nv">$repo</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nv">$reponame</span> <span class="o">=</span> <span class="nv">$repo</span><span class="o">-&gt;</span><span class="na">find</span><span class="p">(</span><span class="s1">'span a'</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">plaintext</span><span class="p">;</span>
+	<span class="nv">$repodescription</span> <span class="o">=</span> <span class="nv">$repo</span><span class="o">-&gt;</span><span class="na">find</span><span class="p">(</span><span class="s2">"p.pinned-repo-desc"</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">plaintext</span><span class="p">;</span>
+	<span class="nv">$repolink</span> <span class="o">=</span> <span class="s2">"https://github.com"</span> <span class="o">.</span> <span class="nv">$repo</span><span class="o">-&gt;</span><span class="na">find</span><span class="p">(</span><span class="s1">'span a'</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">getAttribute</span><span class="p">(</span><span class="s2">"href"</span><span class="p">);</span>
+	<span class="nv">$pinned_repos</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[</span>
+		<span class="s2">"name"</span> <span class="o">=&gt;</span> <span class="nv">$reponame</span><span class="p">,</span>
+		<span class="s2">"description"</span> <span class="o">=&gt;</span> <span class="nv">$repodescription</span><span class="p">,</span>
+		<span class="s2">"link"</span> <span class="o">=&gt;</span> <span class="nv">$repolink</span>
+	<span class="p">];</span>
+<span class="p">}</span>
+
+<span class="cp">?&gt;</span></code></pre></figure>
+
+<p>Here, we are using a PHP <code class="highlighter-rouge">foreach</code> statement to loop through the HTML list of pinned repositories, which we got by using the Simple HTML DOM <code class="highlighter-rouge">find</code> function, which allows us to get the HTML of any element using its CSS selector.</p>
+
+<p>Next, we got the name, link, and description of each pinned repository, and added them to the array of pinned repositories.</p>
+
+<p>Now that we have all of the pinned repositories in an organized list, we can use the data for whatever purposes we’d like.</p>
+
+<h3 id="example-use">Example Use</h3>
+<p>Here, I’ve simply used the PHP <code class="highlighter-rouge">echo</code> command to show each pinned repository in a readable format:</p>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+
+<span class="k">foreach</span> <span class="p">(</span><span class="nv">$pinned_repos</span> <span class="k">as</span> <span class="nv">$repo</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">echo</span> <span class="s2">"&lt;a href='"</span> <span class="o">.</span> <span class="nv">$repo</span><span class="p">[</span><span class="s2">"link"</span><span class="p">]</span> <span class="o">.</span> <span class="s2">"'&gt;"</span> <span class="o">.</span> <span class="nv">$repo</span><span class="p">[</span><span class="s2">"name"</span><span class="p">]</span> <span class="o">.</span> <span class="s2">"&lt;/a&gt;"</span><span class="p">;</span>
+	<span class="k">echo</span> <span class="s2">"&lt;p&gt;"</span> <span class="o">.</span> <span class="nv">$repo</span><span class="p">[</span><span class="s2">"description"</span><span class="p">]</span> <span class="o">.</span> <span class="s2">"&lt;/p&gt;&lt;br&gt;"</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cp">?&gt;</span></code></pre></figure>
+
+<h3 id="the-full-code">The Full Code</h3>
+<p>For those who want it, here is the full code of the <code class="highlighter-rouge">index.php</code> file (with the example use):</p>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+
+<span class="k">require</span><span class="p">(</span><span class="s2">"simple_html_dom.php"</span><span class="p">);</span>
+
+<span class="nv">$gh_username</span> <span class="o">=</span> <span class="s2">"xtrp"</span><span class="p">;</span>
+<span class="nv">$gh_page</span> <span class="o">=</span> <span class="nx">file_get_html</span><span class="p">(</span><span class="s1">'https://github.com/'</span> <span class="o">.</span> <span class="nv">$gh_username</span><span class="p">);</span>
+
+<span class="nv">$pinned_repos</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="k">foreach</span> <span class="p">(</span><span class="nv">$gh_page</span><span class="o">-&gt;</span><span class="na">find</span><span class="p">(</span><span class="s1">'ol.js-pinned-repos-reorder-list li'</span><span class="p">)</span> <span class="k">as</span> <span class="nv">$repo</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nv">$reponame</span> <span class="o">=</span> <span class="nv">$repo</span><span class="o">-&gt;</span><span class="na">find</span><span class="p">(</span><span class="s1">'span a'</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">plaintext</span><span class="p">;</span>
+	<span class="nv">$repodescription</span> <span class="o">=</span> <span class="nv">$repo</span><span class="o">-&gt;</span><span class="na">find</span><span class="p">(</span><span class="s2">"p.pinned-repo-desc"</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">plaintext</span><span class="p">;</span>
+	<span class="nv">$repolink</span> <span class="o">=</span> <span class="s2">"https://github.com"</span> <span class="o">.</span> <span class="nv">$repo</span><span class="o">-&gt;</span><span class="na">find</span><span class="p">(</span><span class="s1">'span a'</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">getAttribute</span><span class="p">(</span><span class="s2">"href"</span><span class="p">);</span>
+	<span class="nv">$pinned_repos</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[</span>
+		<span class="s2">"name"</span> <span class="o">=&gt;</span> <span class="nv">$reponame</span><span class="p">,</span>
+		<span class="s2">"description"</span> <span class="o">=&gt;</span> <span class="nv">$repodescription</span><span class="p">,</span>
+		<span class="s2">"link"</span> <span class="o">=&gt;</span> <span class="nv">$repolink</span>
+	<span class="p">];</span>
+<span class="p">}</span>
+
+<span class="k">foreach</span> <span class="p">(</span><span class="nv">$pinned_repos</span> <span class="k">as</span> <span class="nv">$repo</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">echo</span> <span class="s2">"&lt;a href='"</span> <span class="o">.</span> <span class="nv">$repo</span><span class="p">[</span><span class="s2">"link"</span><span class="p">]</span> <span class="o">.</span> <span class="s2">"'&gt;"</span> <span class="o">.</span> <span class="nv">$repo</span><span class="p">[</span><span class="s2">"name"</span><span class="p">]</span> <span class="o">.</span> <span class="s2">"&lt;/a&gt;"</span><span class="p">;</span>
+	<span class="k">echo</span> <span class="s2">"&lt;p&gt;"</span> <span class="o">.</span> <span class="nv">$repo</span><span class="p">[</span><span class="s2">"description"</span><span class="p">]</span> <span class="o">.</span> <span class="s2">"&lt;/p&gt;&lt;br&gt;"</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cp">?&gt;</span></code></pre></figure>
+
+<p>Thanks for scrolling.</p>
+
+<p><em>- Fred Adams</em></p>
+
+</div>
+
+            <footer>
+    <p>&copy; Fred Adams <script>document.write(new Date().getFullYear());</script></p>
+    <ul>
+        <a href="mailto:xtrp127@gmail.com">Email</a>
+        <a href="https://github.com/xtrp/">GitHub</a>
+        <a href="https://dev.to/xtrp/">DEV</a>
+        <a href="https://stackoverflow.com/users/10007107/fred-adams">Stack Overflow</a>
+        <a href="https://instagram.com/xtrp127/">Instagram</a>
+    </ul>
+</footer>
+        </div>
+    </body>
+</html>

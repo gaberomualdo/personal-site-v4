@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Cross Site Scripting (XSS) Attacks | Fred Adams</title>
+        
+        <link rel="stylesheet" href="/assets/normalize.css">
+        <link rel="stylesheet" href="/assets/skeleton.css">
+        <link rel="stylesheet" href="/assets/main.css">
+
+        <link rel="shortcut icon" href="/favicon.ico">
+    </head>
+    <body>
+        <nav  class="white"  style="background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(/assets/.jpg)">
+    <div class="top">
+        <a href="/">Fred Adams</a>
+        <ul>
+            
+            <a  href="/">Home</a>
+            
+            <a  href="/code">Code</a>
+            
+            <a  href="/about">About</a>
+            
+
+        </ul>
+    </div>
+    <h1>Cross Site Scripting (XSS) Attacks</h1>
+</nav>
+
+        <div class="container">
+            <div class="block post">
+    <div class="top">
+        <h1>Cross Site Scripting (XSS) Attacks</h1>
+        <p>Published on 17 August, 2018</p>
+    </div>
+    <p>Cross Site Scripting, or XSS attacks are a very common type of attack hackers can use to inject code on to your website, if you don’t have the proper protection.</p>
+
+<p>XSS attacks are extremely common. In fact, according to High-Tech Bridge, a web security company, Cross Site Scripting attacks account for around 80% of all website security flaws.</p>
+
+<h3 id="what-is-xss">What is XSS?</h3>
+
+<p>XSS is a technique hackers use to inject code into your website — similar to SQL Injections.</p>
+
+<p>XSS takes advantage of the JavaScript <code class="highlighter-rouge">.innerHTML</code> and jQuery <code class="highlighter-rouge">.html()</code> properties.</p>
+
+<p>Consider the following situation:</p>
+
+<p>You maintain a video sharing website, where on each video, there is a comments section, where a user can post a comment.</p>
+
+<p>When the website is loaded, each comment is put on the page using the following code:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">comments</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">comment</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">commentSectionElement</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">+=</span> <span class="nx">comment</span><span class="p">;</span>
+<span class="p">});</span></code></pre></figure>
+
+<p>Here, for each comment, the comment is added to the HTML of the comments section.</p>
+
+<p>Note that we are using the JavaScript <code class="highlighter-rouge">.innerHTML</code> property to do this.</p>
+
+<p>This code should be fine for regular users and comments, but hackers can take advantage of the fact that we are using the JavaScript <code class="highlighter-rouge">.innerHTML</code> property, because they can post a comment with code inside of it, and since the <code class="highlighter-rouge">.innerHTML</code> property updates the HTML (code) of an element, the comment will be run as code.</p>
+
+<p>For example, hackers can post the comment “<code class="highlighter-rouge">&lt;script&gt;alert('XSS!')&lt;/script&gt;</code>”,  will just alert the message “XSS!” to any user that views the comment.</p>
+
+<p>That’s not very malicious, but imagine a much worse case, where the hacker posts a comment on a popular video that steals the users usernames and passwords and sends them to the hackers database.</p>
+
+<p>Now you’re in big trouble. Millions of users that viewed that video would have their authentication info stolen.</p>
+
+<h3 id="how-to-protect-your-website-from-xss-attacks">How to protect your website from XSS attacks</h3>
+
+<p>The easiest way to protect your website from XSS attacks is to use the JavaScript <code class="highlighter-rouge">.innerText</code> or <code class="highlighter-rouge">.textContent</code> properties, or the jQuery option, <code class="highlighter-rouge">.text()</code>.</p>
+
+<p>These just change the text of an HTML element — they don’t change the code.</p>
+
+<p>For example, if we used the <code class="highlighter-rouge">.innerText</code> property in our comments section code, when the hacker tried to post the malicious comment, and the comment would just show the code itself, not run it. Instead of showing a blank comment, it would display the code.</p>
+
+<h3 id="recap">Recap</h3>
+
+<ul>
+  <li>Cross Site Scripting (XSS) attacks are where a hacker injects HTML into your site</li>
+  <li>XSS attacks take advantage of the <code class="highlighter-rouge">.innerHTML</code> and <code class="highlighter-rouge">.html()</code> properties</li>
+  <li>To prevent XSS attacks, use <code class="highlighter-rouge">.innerText</code> or <code class="highlighter-rouge">.text()</code></li>
+</ul>
+
+<p>Thanks for scrolling.</p>
+
+<p><em>- Fred Adams</em></p>
+
+</div>
+
+            <footer>
+    <p>&copy; Fred Adams <script>document.write(new Date().getFullYear());</script></p>
+    <ul>
+        <a href="mailto:xtrp127@gmail.com">Email</a>
+        <a href="https://github.com/xtrp/">GitHub</a>
+        <a href="https://dev.to/xtrp/">DEV</a>
+        <a href="https://stackoverflow.com/users/10007107/fred-adams">Stack Overflow</a>
+        <a href="https://instagram.com/xtrp127/">Instagram</a>
+    </ul>
+</footer>
+        </div>
+    </body>
+</html>
