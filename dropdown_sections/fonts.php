@@ -1,8 +1,8 @@
 ---
 layout: default
-title: "Code"
-file: "code"
-permalink: "/code/index.php"
+title: "Fonts"
+file: "fonts"
+permalink: "/fonts/index.php"
 ---
 
 <div class="block" id="introduction">
@@ -11,5 +11,3 @@ permalink: "/code/index.php"
     <p>Below is every open-sourced bundle of pixels I've built since February 27, 2018. Check out what I've done! And by the way, you can also see all of these on my <a href="https://github.com/xtrp/" target="_blank">GitHub Profile</a>.</p>
     <p class="last_updated">Last Updated on 14 June, 2019</p>
 </div>
-
-<?php include "projects_list.html" ?>
