@@ -1,10 +1,16 @@
 <footer>
-    <p>&copy; {{ site.author.name }} <script>document.write(new Date().getFullYear());</script></p>
+	<!-- Copyright Statement with author name, copyright symbol, and current year -->
+    <p>&copy; {{ site.author_name }} {{ site.time | date: '%Y' }}</p>
+    
+    <!-- Display Social Links -->
     <ul>
-        <a href="{{ site.author.email }}">Email</a>
-        <a href="{{ site.author.github }}">GitHub</a>
-        <a href="{{ site.author.devto }}">DEV</a>
-        <a href="{{ site.author.stackoverflow }}">Stack Overflow</a>
-        <a href="{{ site.author.instagram }}">Instagram</a>
+    	<!-- Loop though each social link and display with corresponding SVG -->
+        {% for social_link in site.social_media_links %}
+        
+        <a href="{{ social_link }}">
+        	{{ site.social_media_svgs[forloop.index0] }}
+        </a>
+
+        {% endfor %}
     </ul>
 </footer>
