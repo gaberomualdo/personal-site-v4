@@ -7,7 +7,7 @@
     	<!-- Loop though each social link and display with corresponding SVG -->
         {% for social_link in site.social_media_links %}
         
-        <a href="{{ social_link }}">
+        <a href="{{ social_link }}" target="_blank">
         	{{ site.social_media_svgs[forloop.index0] }}
         </a>
 

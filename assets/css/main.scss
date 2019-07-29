@@ -2,33 +2,11 @@
 ---
 
 /* imports */
+@import "normalize";
+@import "skeleton";
+@import "globals";
 @import "nav";
 @import "footer";
-
-/* CONTAINER */
-body {
-    text-align: center;
-    background-color: #fff;
-}
-div.container {
-    display: inline-block;
-    box-sizing: border-box;
-    width: 900px;
-    text-align: left;
-    padding: 2.5rem 0;
-    padding-top: 5rem;
-}
-
-@media (max-width: 950px) {
-    div.container {
-        width: 100%;
-    }
-}
-@media (max-width: 630px) {
-    div.container {
-        padding-top: 4rem;
-    }
-}
 
 /* GRID AND CONTENT BLOCKS */
 div.block {

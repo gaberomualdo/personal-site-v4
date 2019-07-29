@@ -1,0 +1,35 @@
+/* SASS variables */
+$tablet-width: 950px;
+$mobile-width: 630px;
+
+/* default: every element in navbar and footer has no margin or padding */
+nav, footer {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/* CONTAINER */
+body {
+    text-align: center;
+    background-color: #fff;
+}
+div.container {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 900px;
+    text-align: left;
+    padding-top: 5rem;
+}
+
+@media (max-width: 950px) {
+    div.container {
+        width: 100%;
+    }
+}
+@media (max-width: 630px) {
+    div.container {
+        padding-top: 4rem;
+    }
+}
