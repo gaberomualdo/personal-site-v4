@@ -1,12 +1,8 @@
-<nav {% if page.file == "" or page.layout == "post" or page.file == "404" %} class="white" {% endif %} style="background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url({{ site.baseurl }}/assets/{{ page.file }}.jpg)">
-    <div class="top">
-        <a href="{{ site.baseurl }}/">{{ site.title }}</a>
-        <ul>
-            {% for section in site.sections %}
-            <a {% if section.file == page.file %} class="active" {% endif %} href="{{ site.baseurl }}/{{ section.file }}">{{ section.name }}</a>
-            {% endfor %}
-
-        </ul>
-    </div>
-    <h1>{{ page.title }}</h1>
+<nav class="white">
+    <a href="{{ site.baseurl }}/">{{ site.title }}</a>
+    <ul>
+        {% for section in site.sections %}
+        <a {% if section.fie == page.file %} class="active" {% endif %} href="{{ site.baseurl }}/{{ section.file }}">{{ section.name }}</a>
+        {% endfor %}
+    </ul>
 </nav>

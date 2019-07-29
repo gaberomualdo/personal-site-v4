@@ -26,8 +26,6 @@ sections:
    directory: ""
  - name: "About"
    directory: "about"
- - name: "About"
-   directory: "about"
 
 # similar to sections, this variable simply defines a
 # list of sections that are to be shown within the
@@ -37,8 +35,14 @@ dropdown_sections:
    directory: "code"
  - name: "Fonts"
    directory: "fonts"
+ - name: "Music"
+   directory: "music"
  - name: "Resume"
    directory: "resume"
+
+# sass configuration
+sass:
+ style: compressed
 
 # this variable defines the default directory for posts and pages
 permalink: /:year/:month/:day/:title/

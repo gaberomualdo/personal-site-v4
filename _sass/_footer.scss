@@ -1,0 +1,55 @@
+div.container > footer {
+    margin-top: 0;
+    padding-top: 2.5rem;
+    border-top: 1px solid #e8e8e8;
+    min-height: 5rem;
+    display: block;
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+    overflow: auto;
+}
+div.container > footer p, div.container > footer ul, div.container > footer ul a {
+    min-height: 2.5rem;
+    line-height: 2.5rem;
+    font-size: 1.625rem;
+    display: block;
+}
+div.container > footer p {
+    float: left;
+    margin-bottom: 1rem;
+}
+div.container > footer ul {
+    float: right;
+    margin-bottom: 0;
+}div.container > footer ul a {
+
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+@media (max-width: 950px) {
+    div.container > footer {
+        padding: 0 3.75rem;
+        padding-top: 2.5rem;
+    }
+}
+@media (max-width: 630px) {
+    div.container > footer {
+        padding: 0 2.5rem;
+        padding-top: 2rem;
+        zoom: 85%;
+        text-align: center;
+    }
+    div.container > footer > * {
+        display: block;
+        float: none;
+        width: 100%;
+        overflow: auto;
+    }
+    div.container > footer ul a {
+        margin: 0.5rem;
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+}

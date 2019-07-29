@@ -1,0 +1,140 @@
+nav {
+    display: block;
+    float: left;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    text-align: left;
+    padding: 2.5rem calc((100% - 900px) / 2);
+    box-sizing: border-box;
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+}
+nav > div.top {
+    height: 4rem;
+    width: 100%;
+    display: block;
+    float: left;
+}
+nav > div.top > a {
+    display: block;
+    float: left;
+    line-height: 4rem;
+    font-size: 4rem;
+    color: #fff;
+    font-weight: 300;
+    cursor: pointer;
+    text-decoration: none;
+}
+nav > div.top ul {
+    display: block;
+    float: right;
+    height: 4rem;
+    font-size: 0;
+}
+nav > div.top ul a {
+    display: inline-block;
+    height: 4rem;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 1.625rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.075rem;
+    line-height: calc(4rem - 4px);
+    padding: 0 calc((4rem - 1.625rem) / 2);
+    border: 1px solid transparent;
+    margin: 0 0.5rem;
+    transition: border-color 0.25s;
+    cursor: pointer;
+}
+nav > div.top ul a:hover {
+    border-color: rgba(255,255,255,0.5);
+}
+nav > div.top ul a.active {
+    border-color: #fff;
+}
+nav > div.top ul a:first-child {
+    margin-left: 0;
+}
+nav > div.top ul a:last-child {
+    margin-right: 0;
+}
+
+nav > h1 {
+    margin: 0;
+    margin: 2.5rem 0;
+    margin-top: 5rem;
+    display: block;
+    width: 100%;
+    float: left;
+    height: 6rem;
+    line-height: 6rem;
+    font-size: 6rem;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+}
+
+nav.white {
+    background-image: none !important;
+    background-color: #fff;
+    box-shadow: 0 0 1rem rgba(0,0,0,0.25);
+    color: #333;
+}
+nav.white * {
+    color: #333 !important;
+}
+nav.white > div.top ul a:hover {
+    border-color: rgba(51,51,51,0.5);
+}
+nav.white > div.top ul a.active {
+    border-color: #333;
+}
+nav.white > h1 {
+    display: none;
+}
+
+@media (max-width: 950px) {
+    nav {
+        padding: 2rem !important;
+    }
+}
+@media (max-width: 730px) {
+    nav > div.top {
+        height: auto;
+    }
+    nav > div.top ul {
+        height: auto;
+        overflow: auto;
+        margin: 0;
+    }
+    nav > div.top ul a {
+        zoom: 90%;
+    }
+    nav > div.top ul a:first-child {
+        display: none;
+    }
+    nav > div.top ul a:nth-child(2) {
+        margin-left: 0;
+    }
+}
+@media (max-width: 630px) {
+    nav > div.top > a {
+        color: transparent !important;
+        width: 4rem;
+        height: 4rem;
+        background-image: url(icon.png);
+        background-size: 80%;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        box-shadow: 0 0 0.5rem rgba(0,0,0,0.25);
+        background-color: #fff;
+    }
+    nav > div.top ul a {
+        margin-right: 0.125rem;
+    }
+}
