@@ -1,6 +1,6 @@
 /* footer styles */
 
-div.container > footer {
+body > div.container > footer {
     padding: 2.5rem 0;
     border-top: 1px solid #e8e8e8;
     min-height: calc(7.5rem + 1px);
@@ -18,11 +18,19 @@ div.container > footer {
 
     p, ul {
         height: 2.5rem;
-        font-size: 1.75rem;
+        font-size: 1.875rem;
+        margin-bottom: 2.5rem;
 
         @media (max-width: $mobile-width) {
-            float: none;
-            display: inline-block;
+            clear: both;
+            float: none !important;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* make sure the last element has no margin-bottom */
+        &:last-child {
+            margin-bottom: 0;
         }
     }
     p {
@@ -40,17 +48,30 @@ div.container > footer {
             display: inline-flex;
             margin-left: 2.5rem;
             box-sizing: border-box;
+            transition: fill 0.1s ease-in-out;
+            fill: #ccc;
 
-            &:hover svg {
-                fill: #777;
+            /* first element should have no left margin */
+            &:first-child {
+                margin-left: 0;
             }
 
+            /* SVG and hover effect */
             svg {
-                transition: fill 0.1s ease-in-out;
-                fill: #ccc;
                 width: 100%;
                 height: 100%;
             }
+
+            &:hover {
+                fill: #777;
+            }
         }
+    }
+}
+
+/* mobile browser specific styles */
+body.mobile > div.container > footer {
+    ul > a {
+        fill: #bbb;
     }
 }

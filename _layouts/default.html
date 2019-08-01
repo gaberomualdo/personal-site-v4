@@ -14,9 +14,13 @@ footer, main content, and container element.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        <!-- Page Title -->
+        <!-- Page Title — is site title if page is the homepage, else, includes page title as well -->
+        {% if page.title == "Home" %}
+        <title>{{ site.title }}</title>
+        {% else %}
         <title>{{ page.title }}: {{ site.title }}</title>
-        
+        {% endif %}
+
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,400i,600,700,900&display=swap" rel="stylesheet">
 
@@ -27,28 +31,40 @@ footer, main content, and container element.
         {% seo title=false %}
 
         <!-- Favicon and Favicon Config -->
-        <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
-        <link rel="icon" type="image/png" sizes="192x192"  href="/assets/favicon/android-icon-192x192.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
-        <link rel="manifest" href="/manifest.json">
+        <link rel="apple-touch-icon" sizes="57x57" href="{{ site.baseurl }}/assets/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="{{ site.baseurl }}/assets/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="{{ site.baseurl }}/assets/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="{{ site.baseurl }}/assets/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="{{ site.baseurl }}/assets/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="{{ site.baseurl }}/assets/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="{{ site.baseurl }}/assets/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="{{ site.baseurl }}/assets/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/assets/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="{{ site.baseurl }}/assets/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/assets/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="{{ site.baseurl }}/assets/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/assets/favicon/favicon-16x16.png">
+        <link rel="manifest" href="{{ site.baseurl }}/manifest.json">
         <meta name="msapplication-TileColor" content="#ffffff">
-        <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
+        <meta name="msapplication-TileImage" content="{{ site.baseurl }}/assets/favicon/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
     </head>
+
+    <!-- don't display body until site is loaded and JS displays it -->
     <body>
-        <!-- IE Unsupported Notice -->
-        <!--[if IE]>
         
+        <!-- JavaScript disabled error message -->
+        <noscript>
+            <div class="error_box">
+                <strong>Please Enable JavaScript</strong> &mdash; some features on this site may not work without JavaScript.
+            </div>
+        </noscript>
+
+        <!-- using IE error message -->
+        <!--[if IE]>
+        <div class="error_box">
+            <strong>Internet Explorer not Supported </strong> &mdash; some features on this site may not work using IE. Please switch to an alternative, like <a href="https://www.google.com/chrome/" target="_blank">Chrome</a>
+        </div>
         <![endif]-->
 
         <!-- include navigation bar at the top -->
@@ -62,5 +78,8 @@ footer, main content, and container element.
             <!-- include footer at the end -->
             {% include footer.html %}
         </div>
+
+        <!-- scripts — scripts are put in HEAD to provide preload styles for BODY tag -->
+        <script src="{{ site.baseurl }}/assets/js/script.js"></script>
     </body>
 </html>

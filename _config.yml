@@ -22,9 +22,9 @@ social_media_svgs:
 # within the navigation bar. The directory variable shows
 # the location, like this: "/[directory]/"
 sections:
- - name: "Home"
+ - title: "Home"
    directory: ""
- - name: "About"
+ - title: "About"
    directory: "about"
 
 # similar to sections, this variable simply defines a
