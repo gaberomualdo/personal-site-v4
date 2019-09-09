@@ -16,7 +16,7 @@ class Request {
 		}
 
 		// split URI into directories, and store in variable
-		$this->$SPLIT_REQUEST_URI = explode("/",$this->getRequestURI());
+		$this->SPLIT_REQUEST_URI = explode("/",$this->getRequestURI());
 	}
 
 	// getter methods for variables
