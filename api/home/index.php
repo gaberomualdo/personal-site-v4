@@ -3,7 +3,7 @@
 This API route returns any and all info for the homepage ("/"), such as info on the welcome card, etc.
 */
 
-header("Content-Type: application/json");
+include_once("../api_template.php");
 
 (function(){
     $home_opening_card = json_decode(file_get_contents("../../content/home/home_opening_card.json"));
