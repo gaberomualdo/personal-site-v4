@@ -17,6 +17,10 @@ xtrp.io is built with MVC architecture, and has separate directories for the rou
 
 There are several other files within the main directory, such as ```favicon.ico``` and ```robots.txt```, but those are pretty self-explanatory.
 
+## Languages, Technologies, and Resources Used
+
+ - [Parsedown](https://github.com/erusev/parsedown) by erusev on GitHub. Used for parsing markdown to HTML.
+
 ## Credits
 
 xtrp.io was built by Fred Adams. All rights are reserved, and the code and/or other files that are part of xtrp.io are explicitly copyrighted and not available for reuse, redistribution, modification, or resell.

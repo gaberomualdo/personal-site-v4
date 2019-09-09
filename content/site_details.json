@@ -1,0 +1,15 @@
+{
+    "full_title": "Fred Adams - Full Stack Web-Developer",
+    "title": "Fred Adams",
+    "description": "I make stuff with code. Mostly websites, but some apps and programs as well. I also love fonts.",
+    
+    "author": {
+        "name": "Fred Adams",
+        "social_urls": {
+            "github": "https://github.com/xtrp/",
+            "instagram": "https://instagram.com/xtrp127/",
+            "devto": "https://dev.to/xtrp/",
+            "stackoverflow": "https://stackoverflow.com/users/10007107/fred-adams"
+        }
+    }
+}
