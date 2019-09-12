@@ -5,11 +5,11 @@
     
     "author": {
         "name": "Fred Adams",
-        "social_urls": {
-            "github": "https://github.com/xtrp/",
-            "instagram": "https://instagram.com/xtrp127/",
-            "devto": "https://dev.to/xtrp/",
-            "stackoverflow": "https://stackoverflow.com/users/10007107/fred-adams"
-        }
+        "social_urls": [
+            {"name": "GitHub", "url": "https://github.com/xtrp/", "theme_color": "#24292E"},
+            {"name": "Instagram", "url": "https://instagram.com/xtrp127/", "theme_color": "#E1306C"},
+            {"name": "DEV.to", "url": "https://dev.to/xtrp/", "theme_color": "#2188ff"},
+            {"name": "Stack Overflow", "url": "https://stackoverflow.com/users/10007107/fred-adams", "theme_color": "#F48024"}
+        ]
     }
 }
