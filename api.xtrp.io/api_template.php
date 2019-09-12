@@ -7,7 +7,7 @@ This file defines a template for each API route file, which includes a JSON head
 header("Content-Type: application/json");
 
 // ParseDown for converting Markdown to HTML
-include_once("../../resources/parsedown/Parsedown.php");
+include_once("../resources/parsedown/Parsedown.php");
 $Parsedown = new Parsedown();
 
 // function for extracting JSON of Markdown HTML, and included metadata from contents of markdown file

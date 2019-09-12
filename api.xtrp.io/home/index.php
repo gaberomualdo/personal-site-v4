@@ -31,7 +31,7 @@ include_once("../api_template.php");
     $total_blocks = sortListOfBlocksByDate($total_blocks);
     
     // opening card
-    $home_opening_card = json_decode(file_get_contents("../../content/home/home_opening_card.json"));
+    $home_opening_card = json_decode(file_get_contents("../content/home/home_opening_card.json"));
     
     // return everything as JSON
     echo json_encode([
