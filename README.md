@@ -10,10 +10,10 @@ xtrp.io is built with MVC architecture, and has separate directories for the rou
 
  - ```api.xtrp.io``` &mdash; the **model** of the site. Handles communication with the "database", and returns information as JSON. It is not an official API, and is only used by the site itself.
    - ```content``` &mdash; publishable content such as blog posts, lists of projects, etc. This acts as the database for the site.
+   - ```resources``` &mdash; any backend resources used by the API.
  - ```views``` &mdash; the **view** of the site, which includes frontend HTML templates to be accessed by controllers.
    - ```assets``` &mdash; the static frontend assets for the site, such as favicons, scripts, and stylesheets.
  - ```controller``` &mdash; the **controller** of the site. This includes all the controllers for each of the unique pages, such as the homepage, blog page, post pages, etc.
- - ```resources``` &mdash; any backend resources used by the model, view, or controller.
  - ```index.php``` &mdash; this is the entry point of the site. It calls the router, and subsequently, the controllers and views.
 
 There are several other files within the main directory, such as ```favicon.ico``` and ```robots.txt```, but those are pretty self-explanatory.
