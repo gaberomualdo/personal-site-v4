@@ -31,7 +31,11 @@ class Router {
 				if(!in_array($this->requestObj->getRequestMethod() . ": " . $this->requestObj->getRequestURI(), $this->routedURIs)) {
 					$function();
 				}
-
+				break;
+			case "is_using_ie":
+				if (strpos($this->requestObj->getUserAgent(), "MSIE") !== false) {
+					$function();
+				}
 		}
 	}
 

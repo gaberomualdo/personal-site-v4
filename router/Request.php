@@ -8,7 +8,7 @@ class Request {
 	// constructor: get server variables and save to class, and split request uri into array of directories
 	public function __construct() {
 		// variable for server vars to save in class
-		$serverVariablesToSave = array("REQUEST_URI", "REQUEST_METHOD", "REQUEST_TIME", "SERVER_NAME");
+		$serverVariablesToSave = array("REQUEST_URI", "REQUEST_METHOD", "REQUEST_TIME", "SERVER_NAME", "HTTP_USER_AGENT");
 		
 		// loop through each server variable to save and store value in class with corresponding key
 		foreach($serverVariablesToSave as $variable) {
@@ -34,6 +34,10 @@ class Request {
 
 	public function getServerName() {
 		return $this->SERVER_NAME;
+	}
+
+	public function getUserAgent() {
+		return $this->HTTP_USER_AGENT;
 	}
 }
 
