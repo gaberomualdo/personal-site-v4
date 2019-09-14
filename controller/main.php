@@ -58,9 +58,17 @@ $router->get("/feed/", function() {
 
 // errors
 $router->error("method_not_allowed", function() {
-    include_once "views/method_not_allowed.php";
+    // error view, with method not allowed variables
+    $error_code = "method_not_allowed";
+    $error_title = "Method Not Allowed";
+    $error_description = "Sorry, it seems that the method " . $request->getRequestMethod() . " is not available for this URL. Return to <a href='/'>home</a> or try a different method.";
+    include_once "views/error.php";
 });
 $router->error("page_not_found", function() {
+    // error view, with page not found variables
+    $error_code = "page_not_found";
+    $error_title = "Page Not Found";
+    $error_description = "Sorry, it seems that this URL is pointing to a page that does not exist. Return to <a href='/'>home</a> or try another URL.";
     include_once "views/page_not_found.php";
 });
 
