@@ -6,27 +6,42 @@ $routes = [
     [
         "route" => "/",
         "api_route" => "https://api.xtrp.io/home/",
-        "view_filename" => "home.php"
+        "view_filename" => "home.php",
+        "title" => "Home",
+        "priority" => "0.9",
+        "updated" => "weekly"
     ],
     [
         "route" => "/about/",
         "api_route" => "https://api.xtrp.io/about/",
-        "view_filename" => "about.php"
+        "view_filename" => "about.php",
+        "title" => "About",
+        "priority" => "0.6",
+        "updated" => "monthly"
     ],
     [
         "route" => "/blog/",
         "api_route" => "https://api.xtrp.io/blog/",
-        "view_filename" => "blog.php"
+        "view_filename" => "blog.php",
+        "title" => "Blog",
+        "priority" => "0.8",
+        "updated" => "weekly"
     ],
     [
         "route" => "/code/",
         "api_route" => "https://api.xtrp.io/code/",
-        "view_filename" => "code.php"
+        "view_filename" => "code.php",
+        "title" => "Code",
+        "priority" => "0.8",
+        "updated" => "weekly"
     ],
     [
         "route" => "/resume/",
         "api_route" => "https://api.xtrp.io/resume/",
-        "view_filename" => "resume.php"
+        "view_filename" => "resume.php",
+        "title" => "Résumé",
+        "priority" => "0.6",
+        "updated" => "monthly"
     ]
 ];
 
@@ -35,12 +50,60 @@ foreach($routes as $route) {
     $router->get($route["route"], function() use( &$route ) {
         // get site details data from api/site_details/ and store in var
         $site_details = json_decode(file_get_contents("https://api.xtrp.io/site_details/"), true);
-            
-        // get data from api/about/ and store in var
+        
+        // get page details and store in var
+        
+        // page title
+        $page_title = $route["title"];
+        if($page_title == "Home") {
+            $page_title = $site_details["full_title"];
+        }else {
+            $page_title .= " | " . $site_details["full_title"];
+        }
+        
+        $page_details = ["title" => $page_title, "description" => $site_details["description"]];
+
+        // get data from api and store in var
         $page_data = json_decode(file_get_contents($route["api_route"]), true);
 
         // display view
         include_once "views/" . $route["view_filename"];
+    });
+}
+
+// blog posts!
+
+// variable for list of posts with URLs and dates, to be used in sitemap
+$blog_post_urls_and_dates = [];
+
+// list of post objs
+$blog_posts = json_decode(file_get_contents("https://api.xtrp.io/blog/"), true);
+
+// loop through each post, add data to $blog_post_urls_and_dates, and route corresponding post path
+foreach($blog_posts as $post) {
+    $post_url = "/blog/" . str_replace("-", "/", $post["last_updated"]) . "/" . $post["filename"] . "/";
+    $post_date = $post["last_updated"];
+    array_push($blog_post_urls_and_dates, ["url" => $post_url, "last_updated" => $post_date]);
+
+    // route path
+    $router->get($post_url, function() use( &$post ) {
+        // get site details data from api/site_details/ and store in var
+        $site_details = json_decode(file_get_contents("https://api.xtrp.io/site_details/"), true);
+
+        // post preview: first 200 chars in post content
+        $post_preview = $post["content"];
+        if(strlen($post_preview) > 200) {
+            $post_preview = substr($post_preview, 0, 200) . "...";
+        }
+        
+        // get page details and store in var
+        $page_details = ["title" => $post["title"], "description" => $post_preview];
+        
+        // get page data and store in var
+        $page_data = $post;
+
+        // display view
+        include_once "views/blog_post.php";
     });
 }
 
@@ -54,6 +117,14 @@ $router->get("/feed/", function() {
 
     // include rss feed view
     include_once "views/feed.php";
+});
+
+// Sitemap XML
+$router->get("/sitemap/", function() {
+    $page_data = ["main_pages" => $routes, "blog_posts" => $blog_post_urls_and_dates];
+
+    // include sitemap view
+    include_once "views/sitemap.php";
 });
 
 // errors
