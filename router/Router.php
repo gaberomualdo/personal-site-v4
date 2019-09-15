@@ -21,14 +21,16 @@ class Router {
 		// switch case for error codes
 		switch ($name) {
 			case "method_not_allowed":
-				// if method is indeed not allowed, run function passed as argument
+				// if method is indeed not allowed, run function and set 405 header
 				if(!in_array($this->requestObj->getRequestMethod(), $this->supportedMethods)) {
+					http_response_code(405);
 					$function();
 				}
 				break;
 			case "page_not_found":
-				// if page is indeed not in routedURIs, run function
+				// if page is indeed not in routedURIs, run function and set 404 header
 				if(!in_array($this->requestObj->getRequestMethod() . ": " . $this->requestObj->getRequestURI(), $this->routedURIs)) {
+					http_response_code(404);
 					$function();
 				}
 				break;
