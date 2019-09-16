@@ -1,3 +1,5 @@
+<?php $filename = "home"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 

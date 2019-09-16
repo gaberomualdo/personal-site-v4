@@ -1,3 +1,5 @@
+<?php $filename = "blog"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 

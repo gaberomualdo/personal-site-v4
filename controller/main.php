@@ -133,6 +133,16 @@ $router->error("method_not_allowed", function() {
     $error_code = "method_not_allowed";
     $error_title = "Method Not Allowed";
     $error_description = "Sorry, it seems that the method " . $request->getRequestMethod() . " is not available for this URL. Return to <a href='/'>home</a> or try a different method.";
+    
+    // get site details data from api/site_details/ and store in var
+    $site_details = json_decode(file_get_contents("https://api.xtrp.io/site_details/"), true);
+
+    // get page details and store in var
+    $page_details = ["title" => $error_title, "description" => $error_description];
+    
+    // get page data and store in var
+    $page_data = ["error_code" => $error_code, "error_title" => $error_title, "error_description" => $error_description];
+
     include_once "views/error.php";
 });
 
@@ -141,6 +151,16 @@ $router->error("is_using_ie", function() {
     $error_code = "using_ie";
     $error_title = "Internet Explorer Not Supported";
     $error_description = "Sorry, you are using Internet Explorer, which is not supported for this website. Try downloading a different browser such as <a href='https://www.google.com/chrome/'>Google Chrome</a>.";
+    
+    // get site details data from api/site_details/ and store in var
+    $site_details = json_decode(file_get_contents("https://api.xtrp.io/site_details/"), true);
+
+    // get page details and store in var
+    $page_details = ["title" => $error_title, "description" => $error_description];
+    
+    // get page data and store in var
+    $page_data = ["error_code" => $error_code, "error_title" => $error_title, "error_description" => $error_description];
+    
     include_once "views/error.php";
 });
 

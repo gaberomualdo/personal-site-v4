@@ -1,3 +1,5 @@
+<?php $filename = "about"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 

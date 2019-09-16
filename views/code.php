@@ -1,3 +1,5 @@
+<?php $filename = "code"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 

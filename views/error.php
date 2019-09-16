@@ -1,3 +1,5 @@
+<?php $filename = "error"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
