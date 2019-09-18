@@ -1,6 +1,6 @@
-<?php $filename = "blog"; ?>
-
 <?php include __DIR__ . "/assets/php/vars.php" ?>
+
+<?php $filename = "blog"; ?>
 
 <!DOCTYPE html>
 <html lang="en">

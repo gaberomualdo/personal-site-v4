@@ -3,7 +3,7 @@
 This API route returns any and all info for the homepage ("/"), such as info on the welcome card, etc.
 */
 
-$api_routes["/"] = function() {
+$api_routes["/home/"] = function() {
     // declare global vars
     global $api_routes;
 
