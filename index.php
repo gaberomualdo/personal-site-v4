@@ -1,4 +1,5 @@
 <?php
+
 /* Router class */
 include_once("router/Request.php");
 include_once("router/Router.php");
