@@ -4,7 +4,7 @@
 <script>
 <?php
 echo "console.log('site_details');console.log(`";
-var_dump($page_details);
+var_dump($site_details);
 echo "`);";
 
 echo "console.log('page_details');console.log(`";
