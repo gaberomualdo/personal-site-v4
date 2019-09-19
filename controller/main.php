@@ -1,6 +1,11 @@
 <?php
 // this file has controllers for the site
 
+// display errors, VERY IMPORTANT
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 // include api
 include_once __DIR__ . "/../api/main.php";
 
