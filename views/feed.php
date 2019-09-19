@@ -15,7 +15,8 @@ $latest_blog_post_datetime = "2019-09-18";
 
 if($page_data["blog_posts"] && count($page_data["blog_posts"]) > 0){
    $latest_blog_post_datetime = date("c", strtotime($page_data["blog_posts"][0]["last_updated"]));
-};
+}
+
 $site_title = $site_details["full_title"];
 $site_author_name = $site_details["author"]["name"];
 
@@ -37,7 +38,7 @@ echo <<<EOT
     <rights> (c) {$current_full_year} {$site_author_name} </rights>
 EOT;
 
-if($page_data["blog_posts"]) {
+if($page_data["blog_posts"] && count($page_data["blog_posts"]) > 0) {
     // loop through posts and add RSS
     foreach($page_data["blog_posts"] as $post) {
         $post_title = $post["title"];
