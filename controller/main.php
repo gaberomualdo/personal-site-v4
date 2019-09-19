@@ -111,6 +111,7 @@ foreach($blog_posts as $post) {
         // declare use of global vars
         global $page_data;
         global $page_details;
+        global $site_details;
 
         // post preview: first 300 chars in post content
         $post_preview = strip_tags($post["content"]);
