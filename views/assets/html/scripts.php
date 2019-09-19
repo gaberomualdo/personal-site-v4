@@ -2,7 +2,7 @@
 <script src="/views/assets/js/pages/<?=$filename ?>.js"></script>
 
 <script>
-
+<?php
 echo "console.log('site_details');console.log(JSON.parse(`";
 var_dump($site_details);
 echo "`));";
@@ -18,5 +18,5 @@ echo "`));";
 echo "console.log('filename');console.log(JSON.parse(`";
 var_dump($filename);
 echo "`));";
-
+?>
 </script>
