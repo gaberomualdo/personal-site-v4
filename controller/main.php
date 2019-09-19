@@ -114,7 +114,7 @@ foreach($blog_posts as $post) {
 
         // post preview: first 300 chars in post content
         $post_preview = strip_tags($post["content"]);
-        $post_preview = str_replace(PHP_EOL, '', $post_preview);
+        $post_preview = str_replace(PHP_EOL, ' ', $post_preview);
         if(strlen($post_preview) > 300) {
             $post_preview = substr($post_preview, 0, 300) . "...";
         }
