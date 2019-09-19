@@ -8,9 +8,6 @@
 -->
 
 <head>
-    <?php // manifest file ?>
-    <link rel="manifest" href="/manifest.json" type="application/manifest+json">
-
     <?php // humans.txt ?>
     <link type="text/plain" rel="author" href="/humans.txt">
 
@@ -77,6 +74,25 @@
 
     gtag('config', '<?=$site_details["ganalytics_id"] ?>');
     </script>
+
+    <?php // favicon ?>
+    <link rel="apple-touch-icon" sizes="57x57" href="/views/assets/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/views/assets/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/views/assets/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/views/assets/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/views/assets/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/views/assets/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/views/assets/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/views/assets/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/views/assets/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/views/assets/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/views/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/views/assets/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/views/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/views/assets/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 
     <?php // finally, CSS! ?>
     <link rel="stylesheet" href="/views/assets/css/main.css">
