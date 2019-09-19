@@ -3,15 +3,15 @@
 
 <script>
 <?php
-echo "console.log('site_details');console.log(JSON.parse(`";
-echo json_encode($site_details);
-echo "`));";
-
-echo "console.log('page_details');console.log(JSON.parse(`";
+echo "console.log('site_details');console.log(`";
 var_dump($page_details);
 echo "`));";
 
-echo "console.log('page_data');console.log(JSON.parse(`";
+echo "console.log('page_details');console.log(`";
+var_dump($page_details);
+echo "`));";
+
+echo "console.log('page_data');console.log(`";
 var_dump($page_data);
 echo "`));";
 
