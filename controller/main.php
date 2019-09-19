@@ -107,10 +107,10 @@ foreach($blog_posts as $post) {
         global $page_data;
         global $page_details;
 
-        // post preview: first 200 chars in post content
+        // post preview: first 300 chars in post content
         $post_preview = strip_tags($post["content"]);
-        if(strlen($post_preview) > 200) {
-            $post_preview = substr($post_preview, 0, 200) . "...";
+        if(strlen($post_preview) > 300) {
+            $post_preview = substr($post_preview, 0, 300) . "...";
         }
         
         // get page details and store in var
@@ -128,6 +128,7 @@ foreach($blog_posts as $post) {
 $router->get("/feed/", function() {
     // declare use of global vars
     global $api_routes;
+    global $page_data;
     
     // all blog posts
     $page_data = ["blog_posts" =>  $api_routes["/blog/"]()["posts"]];

@@ -20,7 +20,6 @@ $site_title = $site_details["full_title"];
 $site_author_name = $site_details["author"]["name"];
 
 // return RSS feed
-//header("Content-type: text/xml");
 
 echo <<<EOT
 <?xml version='1.0' encoding='UTF-8'?>
@@ -43,7 +42,7 @@ if($page_data["blog_posts"]) {
     foreach($page_data["blog_posts"] as $post) {
         $post_title = $post["title"];
         $post_url = "/blog/" . str_replace("-", "/", $post["last_updated"]) . "/" . $post["filename"] . "/";
-        $post_content = $post["content"];
+        $post_content = html_entity_decode($post["content"], null, "UTF-8");
         $post_datetime = date("c", strtotime($post["last_updated"]));
 
         echo <<<EOT
@@ -51,7 +50,7 @@ if($page_data["blog_posts"]) {
             <title type="html">{$post["title"]}</title>
             <link href="{$post_url}" rel="alternate" type="text/html" title="{$post_title}"/>
             <published>{$post_datetime}</published>
-            <id>{$post_url}/id>
+            <id>{$post_url}</id>
             
             <content type="html" xml:base="{$post_url}"> {$post_content} </content>
             
