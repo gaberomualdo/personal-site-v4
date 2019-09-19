@@ -120,7 +120,7 @@ foreach($blog_posts as $post) {
         }
         
         // get page details and store in var
-        $page_details = ["title" => $post["title"], "description" => $post_preview];
+        $page_details = ["title" => $post["title"] . " | " . $site_details["full_title"], "description" => $post_preview];
         
         // get page data and store in var
         $page_data = $post;
