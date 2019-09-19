@@ -44,15 +44,15 @@ foreach($page_data["blog_posts"] as $post) {
 
     echo '
     <entry>
-        <title>{$post_title}</title>
-        <link href="{$post_url}" rel="alternate" type="text/html" title="{$post_title}" />
-        <published>{$post_datetime}</published>
-        <id>{$post_url}</id>
+        <title>' . $post_title . '</title>
+        <link href="' . $post_url . '" rel="alternate" type="text/html" title="' . $post_title . '" />
+        <published>' . $post_datetime . '</published>
+        <id>' . $post_url . '</id>
         
-        <content type="html" xml:base="{$post_url}"> {$post_content} </content>
+        <content type="html" xml:base="' . $post_url . '">' . $post_content . '</content>
         
         <author>
-            <name>{$site_author_name}</name>
+            <name>' . $site_author_name . '</name>
         </author>
     </entry>
     ';
