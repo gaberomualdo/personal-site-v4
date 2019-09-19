@@ -15,7 +15,7 @@ $latest_blog_post_datetime = "2019-09-18";
 
 if($page_data["blog_posts"] && count($page_data["blog_posts"]) > 0){
    $latest_blog_post_datetime = date("c", strtotime($page_data["blog_posts"][0]["last_updated"]));
-}
+};
 $site_title = $site_details["full_title"];
 $site_author_name = $site_details["author"]["name"];
 
@@ -47,8 +47,8 @@ if($page_data["blog_posts"]) {
 
         echo <<<EOT
         <entry>
-            <title type="html">{$post["title"]}</title>
-            <link href="{$post_url}" rel="alternate" type="text/html" title="{$post_title}"/>
+            <title>{$post_title}</title>
+            <link href="{$post_url}" rel="alternate" type="text/html" title="{$post_title}" />
             <published>{$post_datetime}</published>
             <id>{$post_url}</id>
             
@@ -60,7 +60,7 @@ if($page_data["blog_posts"]) {
         </entry>
         EOT;
     }
-}
+};
 
 // end of feed
 echo "</feed>";
