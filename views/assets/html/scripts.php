@@ -8,11 +8,11 @@ echo json_encode($site_details);
 echo "`));";
 
 echo "console.log('page_details');console.log(JSON.parse(`";
-echo json_encode($page_details);
+var_dump($page_details);
 echo "`));";
 
 echo "console.log('page_data');console.log(JSON.parse(`";
-echo json_encode($page_data);
+var_dump($page_data);
 echo "`));";
 
 echo "console.log('filename: " . $filename . "');";
