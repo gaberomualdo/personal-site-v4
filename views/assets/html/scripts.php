@@ -15,8 +15,6 @@ echo "console.log('page_data');console.log(JSON.parse(`";
 echo json_encode($page_data);
 echo "`));";
 
-echo "console.log('filename');console.log(JSON.parse(`";
-echo json_encode($filename);
-echo "`));";
+echo "console.log('filename: " . $filename . "');";
 ?>
 </script>
