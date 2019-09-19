@@ -42,7 +42,7 @@ foreach($page_data["blog_posts"] as $post) {
     $post_content = html_entity_decode($post["content"], null, "UTF-8");
     $post_datetime = date("c", strtotime($post["last_updated"]));
 
-    echo <<<EOT
+    echo '
     <entry>
         <title>{$post_title}</title>
         <link href="{$post_url}" rel="alternate" type="text/html" title="{$post_title}" />
@@ -55,7 +55,7 @@ foreach($page_data["blog_posts"] as $post) {
             <name>{$site_author_name}</name>
         </author>
     </entry>
-    EOT;
+    ';
 }
 
 // end of feed
