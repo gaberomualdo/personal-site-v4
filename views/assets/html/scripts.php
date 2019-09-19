@@ -4,19 +4,19 @@
 <script>
 <?php
 echo "console.log('site_details');console.log(JSON.parse(`";
-var_dump($site_details);
+echo json_encode($site_details);
 echo "`));";
 
 echo "console.log('page_details');console.log(JSON.parse(`";
-var_dump($page_details);
+echo json_encode($page_details);
 echo "`));";
 
 echo "console.log('page_data');console.log(JSON.parse(`";
-var_dump($page_data);
+echo json_encode($page_data);
 echo "`));";
 
 echo "console.log('filename');console.log(JSON.parse(`";
-var_dump($filename);
+echo json_encode($filename);
 echo "`));";
 ?>
 </script>
