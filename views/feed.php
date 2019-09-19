@@ -61,7 +61,7 @@ if($page_data["blog_posts"] && count($page_data["blog_posts"]) > 0) {
         </entry>
         EOT;
     }
-};
+}
 
 // end of feed
 echo "</feed>";
