@@ -94,6 +94,9 @@
     <meta name="msapplication-TileImage" content="/views/assets/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
+    <?php // prism stylesheet ?>
+    <link rel="stylesheet" href="/views/resources/prism/prism.css">
+
     <?php // finally, CSS! ?>
     <link rel="stylesheet" href="/views/assets/css/main.css">
     <link rel="stylesheet" href="/views/assets/css/pages/<?=$filename ?>.css">
