@@ -1,4 +1,5 @@
 <?php include __DIR__ . "/assets/php/vars.php" ?>
+<?php include __DIR__ . "/assets/php/generate_blog_block.php" ?>
 
 <?php $filename = "blog_post"; ?>
 
@@ -11,7 +12,12 @@
         <div class="container">
             <?php include __DIR__ . "/assets/html/nav.php" ?>
 
-    
+            <ul class="block_list">
+                <?php // blog post ?>
+                <?php
+                echo generate_blog_block($page_data, true);
+                ?>
+            </ul>
 
             <?php include __DIR__ . "/assets/html/footer.php" ?>
             <?php include __DIR__ . "/assets/html/scripts.php" ?>
