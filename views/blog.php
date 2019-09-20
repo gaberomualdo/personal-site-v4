@@ -1,4 +1,5 @@
 <?php include __DIR__ . "/assets/php/vars.php" ?>
+<?php include __DIR__ . "/assets/php/generate_blog_block.php" ?>
 
 <?php $filename = "blog"; ?>
 
@@ -16,11 +17,12 @@
                 <?php // intro card ?>
                 <div class="block intro">
                     <div class="content">
-                        
+                        <h1 class="big_title title">Blog</h1>
+                        <?php echo $page_data["intro"]["content"]; ?>
                     </div>
                 </div>
 
-                <?php // a buncha blocks ?>
+                <?php // blog post blocks ?>
                 <?php
                 foreach($page_data["posts"] as $block) {
                     echo generate_blog_block($block);

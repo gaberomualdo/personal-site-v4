@@ -1,5 +1,7 @@
 <?php
 
+// this function takes in an object of a blog post and returns a "block" with all the blog post details, etc.
+
 function generate_blog_block($block) {
     // HTML to return
     $HTMLToReturn = "";

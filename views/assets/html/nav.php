@@ -1,5 +1,5 @@
 <div class="nav_background <?php
-if($filename!="home") {
+if($filename!="home" && $filename!="error") {
     if($filename!="blog_post"){
         echo "photo_" . $filename . "";
     } else if (array_key_exists("photo_url", $page_data)) {
@@ -9,7 +9,7 @@ if($filename!="home") {
 ?>"></div>
 
 <nav <?php
-if($filename!="home") {
+if($filename!="home" && $filename!="error") {
     if($filename!="blog_post"){
         echo "class='photo'";
     } else if (array_key_exists("photo_url", $page_data)) {

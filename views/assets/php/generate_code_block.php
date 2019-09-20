@@ -1,5 +1,7 @@
 <?php
 
+// this function takes in an object of a coding project and returns a "block" with all the project details, etc.
+
 function generate_code_block($block) {
     // HTML to return
     $HTMLToReturn = "";

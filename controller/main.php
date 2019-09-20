@@ -163,6 +163,7 @@ $router->error("method_not_allowed", function() {
     global $request;
     global $page_data;
     global $page_details;
+    global $site_details;
 
     // error view, with method not allowed variables
     $error_code = "method_not_allowed";
@@ -170,7 +171,7 @@ $router->error("method_not_allowed", function() {
     $error_description = "Sorry, it seems that the method " . $request->getRequestMethod() . " is not available for this URL. Return to <a href='/'>home</a> or try a different method.";
     
     // get page details and store in var
-    $page_details = ["title" => $error_title, "description" => $error_description];
+    $page_details = ["title" => $error_title . " | " . $site_details["full_title"], "description" => $error_description];
     
     // get page data and store in var
     $page_data = ["error_code" => $error_code, "error_title" => $error_title, "error_description" => $error_description];
@@ -182,6 +183,7 @@ $router->error("is_using_ie", function() {
     // declare use of global vars
     global $page_data;
     global $page_details;
+    global $site_details;
 
     // error view, with method not allowed variables
     $error_code = "using_ie";
@@ -189,7 +191,7 @@ $router->error("is_using_ie", function() {
     $error_description = "Sorry, you are using Internet Explorer, which is not supported for this website. Try downloading a different browser such as <a href='https://www.google.com/chrome/'>Google Chrome</a>.";
 
     // get page details and store in var
-    $page_details = ["title" => $error_title, "description" => $error_description];
+    $page_details = ["title" => $error_title . " | " . $site_details["full_title"], "description" => $error_description];
     
     // get page data and store in var
     $page_data = ["error_code" => $error_code, "error_title" => $error_title, "error_description" => $error_description];
@@ -201,6 +203,7 @@ $router->error("page_not_found", function() {
     // declare use of global vars
     global $page_data;
     global $page_details;
+    global $site_details;
 
     // error view, with page not found variables
     $error_code = "page_not_found";
@@ -208,7 +211,7 @@ $router->error("page_not_found", function() {
     $error_description = "Sorry, it seems that this URL is pointing to a page that does not exist. Return to <a href='/'>home</a> or try another URL.";
 
     // get page details and store in var
-    $page_details = ["title" => $error_title, "description" => strip_tags($error_description)];
+    $page_details = ["title" => $error_title . " | " . $site_details["full_title"], "description" => strip_tags($error_description)];
     
     // get page data and store in var
     $page_data = ["error_code" => $error_code, "error_title" => $error_title, "error_description" => $error_description];

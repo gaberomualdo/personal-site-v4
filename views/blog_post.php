@@ -11,6 +11,8 @@
         <div class="container">
             <?php include __DIR__ . "/assets/html/nav.php" ?>
 
+    
+
             <?php include __DIR__ . "/assets/html/footer.php" ?>
             <?php include __DIR__ . "/assets/html/scripts.php" ?>
         </div>
