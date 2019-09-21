@@ -15,7 +15,7 @@
                 <?php // about card ?>
                 <div class="block about">
                     <div class="content">
-                        <h1 class="big_title title"><?php echo $page_details["title"]; ?></h1>
+                        <h1 class="big_title title">About</h1>
                         <?php echo $page_data["content"]; ?>
                     </div>
                 </div>

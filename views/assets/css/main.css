@@ -2,6 +2,9 @@
 * {
     outline: none;
 }
+svg {
+    fill: var(--text-color);
+}
 
 /* css variables */
 :root {
@@ -35,7 +38,7 @@ body > div.container, body > nav {
 @media only screen and (max-width: 1000px) {
     body > div.container, body > nav {
         padding-left: 1.75rem;
-        padding-right: 1.75em;
+        padding-right: 1.75rem;
     }
 }
 
@@ -205,5 +208,41 @@ body > nav:not(.links_shown) > button.mobile_link_toggler svg.close_icon {
     }
     body > nav.links_shown > ul.links > a:not(:last-child) {
         border-bottom: 1px solid var(--light-color);
+    }
+}
+
+/* footer */
+body > div.container > footer {
+    display: block;
+    height: auto;
+    overflow: hidden;
+    min-height: 6rem;
+    padding: 1.5rem 0;
+    box-sizing: border-box;
+    border-top: 1px solid var(--light-color);
+}
+body > div.container > footer > * {
+    height: 3rem;
+    line-height: 3rem;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+body > div.container > footer > ul.links {
+    float: right;
+}
+body > div.container > footer > ul.links > a:not(:first-child) {
+    margin-left: 1rem;
+}
+
+@media only screen and (max-width: 500px) {
+    body > div.container > footer > * {
+        width: 100%;
+        clear: both;
+        text-align: center;
+    }
+    body > div.container > footer > *:not(:last-child) {
+        margin-bottom: 0.5rem;
     }
 }

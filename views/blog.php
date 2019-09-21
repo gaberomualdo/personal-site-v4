@@ -17,7 +17,7 @@
                 <?php // intro card ?>
                 <div class="block intro">
                     <div class="content">
-                        <h1 class="big_title title"><?php echo $page_details["title"]; ?></h1>
+                        <h1 class="big_title title">Blog</h1>
                         <?php echo $page_data["intro"]["content"]; ?>
                     </div>
                 </div>
