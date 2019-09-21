@@ -8,10 +8,10 @@
 
     <?php include __DIR__ . "/assets/html/head.php" ?>
 
-    <body>
-        <div class="container">
-            <?php include __DIR__ . "/assets/html/nav.php" ?>
+    <body class="loading">
+        <?php include __DIR__ . "/assets/html/nav.php" ?>
 
+        <div class="container">
             <ul class="block_list">
                 <?php // blog post ?>
                 <?php
@@ -20,8 +20,9 @@
             </ul>
 
             <?php include __DIR__ . "/assets/html/footer.php" ?>
-            <?php include __DIR__ . "/assets/html/scripts.php" ?>
         </div>
+
+        <?php include __DIR__ . "/assets/html/scripts.php" ?>
     </body>
 
 </html>

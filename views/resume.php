@@ -7,10 +7,10 @@
 
     <?php include __DIR__ . "/assets/html/head.php" ?>
 
-    <body>
-        <div class="container">
-            <?php include __DIR__ . "/assets/html/nav.php" ?>
+    <body class="loading">
+        <?php include __DIR__ . "/assets/html/nav.php" ?>
 
+        <div class="container">
             <div class="resume_container">
                 <div class="row top">
                     <p class="last_updated"><?php echo date("F j, Y", strtotime($page_data["content"]["last_updated"])); ?></p>
@@ -84,8 +84,9 @@
             </div>
 
             <?php include __DIR__ . "/assets/html/footer.php" ?>
-            <?php include __DIR__ . "/assets/html/scripts.php" ?>
         </div>
+
+        <?php include __DIR__ . "/assets/html/scripts.php" ?>
     </body>
 
 </html>

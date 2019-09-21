@@ -1,0 +1,209 @@
+/* global */
+* {
+    outline: none;
+}
+
+/* css variables */
+:root {
+    --light-color: #CFD8DC;
+    --lighter-color: #ECEFF1;
+
+    --medium-color: #B0BEC5;
+
+    --text-color: #455A64;
+    
+    --dark-text-color: #37474F;
+    --darker-text-color: #3C3E3F;
+    
+    --medium-text-color: #607D8B;
+
+    --light-text-color: #78909C;
+    --lighter-text-color: #90A4AE;
+}
+
+/* highlight color */
+::selection {
+    background-color: var(--light-color);
+}
+
+/* container and navbar paddings */
+body > div.container, body > nav {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 calc((100% - 950px) / 2);
+}
+@media only screen and (max-width: 1000px) {
+    body > div.container, body > nav {
+        padding-left: 1.75rem;
+        padding-right: 1.75em;
+    }
+}
+
+/* container and body */
+body {
+    background-color: #ffffff;
+    color: var(--text-color);
+}
+body.loading * {
+    transition: none !important;
+}
+body > div.container {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    padding-top: 2.5rem;
+}
+
+/* navbar */
+body > nav {
+    display: block;
+    float: left;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    box-shadow: 0 0 1rem rgba(38,50,56,0.2);
+    background-color: #ffffff;
+    transition: padding-top 0.15s ease-in-out, padding-bottom 0.15s ease-in-out;
+    color: var(--dark-text-color);
+}
+body > nav.not_top {
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
+}
+
+/* nav elements */
+body > nav > * {
+    margin: 0;
+    height: 4rem;
+    display: block;
+    float: left;
+}
+
+/* nav title */
+body > nav > a.title {
+    line-height: 4rem;
+    font-size: 4rem;
+    font-weight: 300;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* nav links */
+body > nav > ul.links {
+    float: right;
+    overflow: hidden;
+    height: auto;
+    font-size: 0;
+}
+
+body > nav > ul.links > a {
+    display: inline-block;
+    height: 4rem;
+    box-sizing: border-box;
+    color: inherit;
+    font-size: 1.625rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.075rem;
+    line-height: calc(4rem - 4px);
+    padding: 0 calc((4rem - 1.625rem) / 2);
+    border: 1px solid transparent;
+    margin: 0 0.5rem;
+    transition: border-color 0.25s;
+    border-radius: 3px;
+}
+body > nav > ul.links > a:hover {
+    border-color: var(--medium-color);
+    color: inherit;
+    text-decoration: none;
+}
+body > nav > ul.links > a.active {
+    border-color: var(--dark-text-color);
+}
+body > nav > ul.links > a:first-child {
+    margin-left: 0;
+}
+body > nav > ul.links > a:last-child {
+    margin-right: 0;
+}
+
+/* mobile links toggler btn */
+body > nav > button.mobile_link_toggler {
+    display: block;
+    box-sizing: border-box;
+    float: right;
+    height: 4rem;
+    width: calc(4rem - (0.625rem * 2));
+    background-color: transparent;
+    border: none;
+    padding: 0.625rem 0;
+    display: none;
+}
+body > nav > button.mobile_link_toggler svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: var(--dark-text-color);
+}
+
+/* functionality (at least for icon display) */
+body > nav.links_shown > button.mobile_link_toggler svg.menu_icon {
+    display: none;
+}
+body > nav:not(.links_shown) > button.mobile_link_toggler svg.close_icon {
+    display: none;
+}
+
+/* navbar mobile */
+@media only screen and (max-width: 780px) {
+    body > nav > ul.links {
+        width: 100%;
+        clear: both;
+        text-align: right;
+        margin-top: 1.25rem;
+        transition: height 0.25s ease-in-out;
+    }
+    body > nav > ul.links > a {
+        margin-top: 1rem;
+    }
+    body > nav > ul.links > a:first-child {
+        margin-top: 0;
+    }
+
+    /* toggler functionality */
+    body > nav > button.mobile_link_toggler {
+        display: block;
+    }
+    body > nav:not(.links_shown) > ul.links {
+        display: none;
+    }
+}
+
+/* navbar mobile small */
+@media only screen and (max-width: 500px) {
+    body > nav.links_shown {
+        height: 100vh;
+        box-sizing: none;
+    }
+    body > nav.links_shown > ul.links {
+        margin-top: 3.75rem;
+    }
+    body > nav.links_shown > ul.links > a {
+        width: 100%;
+        border: none;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+        height: 5.5rem;
+        line-height: 5.5rem;
+        box-sizing: border-box;
+        width: 100%;
+        padding-left: 1.5rem;
+        border-radius: 0;
+    }
+    body > nav.links_shown > ul.links > a:not(:last-child) {
+        border-bottom: 1px solid var(--light-color);
+    }
+}

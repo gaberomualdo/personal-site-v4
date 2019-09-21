@@ -97,6 +97,10 @@
     <?php // prism stylesheet ?>
     <link rel="stylesheet" href="/views/resources/prism/prism.css">
 
+    <?php // skeleton stylesheets ?>
+    <link rel="stylesheet" href="/views/resources/skeleton/normalize.css">
+    <link rel="stylesheet" href="/views/resources/skeleton/skeleton.css">
+    
     <?php // finally, CSS! ?>
     <link rel="stylesheet" href="/views/assets/css/main.css">
     <link rel="stylesheet" href="/views/assets/css/pages/<?=$filename ?>.css">

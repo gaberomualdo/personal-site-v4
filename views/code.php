@@ -8,16 +8,16 @@
 
     <?php include __DIR__ . "/assets/html/head.php" ?>
 
-    <body>
-        <div class="container">
-            <?php include __DIR__ . "/assets/html/nav.php" ?>
+    <body class="loading">
+        <?php include __DIR__ . "/assets/html/nav.php" ?>
 
+        <div class="container">
             <?php // blocks ?>
             <ul class="block_list">
                 <?php // intro card ?>
                 <div class="block intro">
                     <div class="content">
-                        <h1 class="big_title title">Code</h1>
+                        <h1 class="big_title title"><?php echo $page_details["title"]; ?></h1>
                         <?php echo $page_data["intro"]["content"] ?>
                     </div>
                 </div>
@@ -31,8 +31,9 @@
             </ul>
 
             <?php include __DIR__ . "/assets/html/footer.php" ?>
-            <?php include __DIR__ . "/assets/html/scripts.php" ?>
         </div>
+
+        <?php include __DIR__ . "/assets/html/scripts.php" ?>
     </body>
 
 </html>
