@@ -7,6 +7,6 @@
 
 I am a passionate full-stack developer, and you can check out my site at the root of this server, xtrp.io. I encourage you to check my site out, and contact me there!
 
-I, Fred Adams, was the sole builder of this site, and it is open sourced on GitHub at github.com/xtrp/xtrp.io-v4. This site was built with HTML, CSS, PHP, and my own MVC system I built myself. A few resources were also used, which can be found in the resources folders on the repo. I will not list those resources now, as they may be updated in the near future.
+I, Fred Adams, was the sole builder of this site, and it is open sourced on GitHub at github.com/xtrp/xtrp.io-v4. This site was built with HTML, CSS, PHP, and my own MVC system I built myself. A few resources were also used, which can be found in the README file at xtrp.io/README.md. I will not list those resources now, as they may be updated in the near future.
 
 This text file was last updated on September 16, 2019.
