@@ -306,5 +306,5 @@ body > div.nav_background.photo {
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), var(--photo-url);
+    background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), var(--photo-url);
 }
