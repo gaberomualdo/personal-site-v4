@@ -100,6 +100,9 @@
     <?php // skeleton stylesheets ?>
     <link rel="stylesheet" href="/views/resources/skeleton/normalize.css">
     <link rel="stylesheet" href="/views/resources/skeleton/skeleton.css">
+
+    <?php // animatecss stylesheet ?>
+    <link rel="stylesheet" href="/views/resources/animatecss/animate.css">
     
     <?php // finally, CSS! ?>
     <link rel="stylesheet" href="/views/assets/css/main.css">

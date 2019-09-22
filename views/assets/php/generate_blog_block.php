@@ -7,9 +7,9 @@ function generate_blog_block($block, $full_block = false) {
     $HTMLToReturn = "";
 
     // block opening tag and photo class is added correspondingly
-    $HTMLToReturn .= "<div class='block";
+    $HTMLToReturn .= "<div class='post_block block";
     if(array_key_exists("photo_url", $block) && !$full_block) {
-        $HTMLToReturn .= " photo'><img src='" . $block["photo_url"] . "'>";
+        $HTMLToReturn .= " photo'><div class='image_container'><img src='" . $block["photo_url"] . "' alt='" . $block["title"] . "'></div>";
     } else {
         $HTMLToReturn .= "'>";
     }

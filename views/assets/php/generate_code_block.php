@@ -7,9 +7,9 @@ function generate_code_block($block) {
     $HTMLToReturn = "";
 
     // block opening tag and photo class is added correspondingly
-    $HTMLToReturn .= "<div class='block";
+    $HTMLToReturn .= "<div class='post_block block";
     if(array_key_exists("photo_url", $block)) {
-        $HTMLToReturn .= " photo'><img src='" . $block["photo_url"] . "'>";
+        $HTMLToReturn .= " photo'><div class='image_container'><img src='" . $block["photo_url"] . "' alt='" . $block["title"] . "'></div>";
     } else {
         $HTMLToReturn .= "'>";
     }
@@ -47,7 +47,7 @@ function generate_code_block($block) {
     // content
     $HTMLToReturn .= '
     <div class="content">
-        <div class="type_label blog">blog</div>
+        <div class="type_label code">code</div>
         <div class="top">
             <h1 class="title"><a href="' . $block_url . '">' . $block_title . '</a></h1>
             <ul class="details">
