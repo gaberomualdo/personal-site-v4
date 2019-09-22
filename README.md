@@ -8,7 +8,7 @@
 
 xtrp.io is built with MVC architecture, and has separate directories for the routers, models, controllers, and views. A detailed list of directories and main files and their usages is below:
 
- - ```api``` &mdash; the **model** of the site. Handles communication with the "database", and returns information as JSON. It is not an official API, and is only used by the site itself. The code for this part of xtrp.io is not stored on this repo, but a separate one, [here](https://github.com/xtrp/api.xtrp.io/).
+ - ```api``` &mdash; the **model** of the site. Handles communication with the "database", and returns information as JSON.
    - ```content``` &mdash; publishable content such as blog posts, lists of projects, etc. This acts as the database for the site.
    - ```resources``` &mdash; any backend resources used by the API.
  - ```views``` &mdash; the **view** of the site, which includes frontend HTML templates to be accessed by controllers.
