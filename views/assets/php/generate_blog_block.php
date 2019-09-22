@@ -30,6 +30,12 @@ function generate_blog_block($block, $full_block = false) {
         $block_title_HTML = '<h1 class="title"><a href="' . $block_url . '">' . $block_title . '</a></h1>';
     }
 
+    // content class is "post_content" if full block
+    $content_class = "";
+    if($full_block) {
+        $content_class = "post_content";
+    }
+
     // block opening tag and photo class is added correspondingly
     $HTMLToReturn .= "<div class='post_block block";
     if(array_key_exists("photo_url", $block) && !$full_block) {
@@ -40,7 +46,7 @@ function generate_blog_block($block, $full_block = false) {
 
     // content
     $HTMLToReturn .= '
-    <div class="content">
+    <div class="content ' . $content_class . '">
         <a class="type_label blog" href="/blog/">blog</a>
         <div class="top">
             ' . $block_title_HTML . '

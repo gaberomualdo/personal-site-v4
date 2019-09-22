@@ -14,7 +14,7 @@
             <ul class="block_list">
                 <?php // about card ?>
                 <div class="block about">
-                    <div class="content">
+                    <div class="content post_content">
                         <h1 class="big_title title">About</h1>
                         <?php echo $page_data["content"]; ?>
                     </div>

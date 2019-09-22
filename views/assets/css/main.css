@@ -340,6 +340,7 @@ body > div.container > ul.block_list > .block > .content {
     box-sizing: border-box;
     padding: 3.5rem;
     padding-top: 4rem;
+    overflow: hidden;
 }
 body > div.container > ul.block_list > .block > .content > *:last-child {
     margin-bottom: 0;
@@ -349,7 +350,7 @@ body > div.container > ul.block_list > .block > .content > *:last-child {
 @media only screen and (max-width: 500px) {
     body > div.container > ul.block_list > .block > .content {
         padding: 2.5rem;
-        padding-top: 4rem;
+        padding-top: 4.5rem;
     }
 }
 
@@ -503,3 +504,32 @@ body > div.container > ul.block_list > .block.post_block > .content > div.top > 
         font-size: 1.4rem;
     }
 }
+
+/* post content */
+body > div.container > ul.block_list > .block > .content.post_content {
+    font-size: 1.58rem;
+}
+body > div.container > ul.block_list > .block > .content.post_content > h1,
+body > div.container > ul.block_list > .block > .content.post_content > h2,
+body > div.container > ul.block_list > .block > .content.post_content > h4,
+body > div.container > ul.block_list > .block > .content.post_content > h5,
+body > div.container > ul.block_list > .block > .content.post_content > h6,
+body > div.container > ul.block_list > .block > .content.post_content > *:not(.top) h1,
+body > div.container > ul.block_list > .block > .content.post_content > *:not(.top) h2,
+body > div.container > ul.block_list > .block > .content.post_content > *:not(.top) h4,
+body > div.container > ul.block_list > .block > .content.post_content > *:not(.top) h5,
+body > div.container > ul.block_list > .block > .content.post_content > *:not(.top) h6 {
+    font-weight: 600;
+}
+body > div.container > ul.block_list > .block > .content.post_content > h1,
+body > div.container > ul.block_list > .block > .content.post_content > *:not(.top) h1 {
+    color: var(--dark-text-color);
+}
+
+
+body > div.container > ul.block_list > .block > .content.post_content h1 { font-size: 4.5rem; }
+body > div.container > ul.block_list > .block > .content.post_content h2 { font-size: 3.35rem; }
+body > div.container > ul.block_list > .block > .content.post_content h3 { font-size: 2.85rem; }
+body > div.container > ul.block_list > .block > .content.post_content h4 { font-size: 2.25rem; }
+body > div.container > ul.block_list > .block > .content.post_content h5 { font-size: 1.85rem; }
+body > div.container > ul.block_list > .block > .content.post_content h6 { font-size: 1.7rem; }

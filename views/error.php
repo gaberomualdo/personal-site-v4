@@ -14,7 +14,7 @@
             <ul class="block_list">
                 <?php // error card ?>
                 <div class="block error">
-                    <div class="content">
+                    <div class="content post_content">
                         <?php // error image ?>
                         <div class="left">
                             <img src="/views/assets/img/error_image.png" alt="Error Picture of Person Shrugging Emoji" class="error_picture">

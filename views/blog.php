@@ -16,7 +16,7 @@
             <ul class="block_list">
                 <?php // intro card ?>
                 <div class="block intro">
-                    <div class="content">
+                    <div class="content post_content">
                         <h1 class="big_title title">Blog</h1>
                         <?php echo $page_data["intro"]["content"]; ?>
                     </div>

@@ -208,7 +208,7 @@ $router->error("page_not_found", function() {
     // error view, with page not found variables
     $error_code = "page_not_found";
     $error_title = "Page Not Found";
-    $error_description = "Sorry, it seems that this URL is pointing to a page that does not exist. Return to <a href='/'>home</a> or try another URL.";
+    $error_description = "Sorry, it seems that this URL is pointing to a page that does not exist. Return to <a href='/'>Home</a> or try another URL.";
 
     // get page details and store in var
     $page_details = ["title" => $error_title . " | " . $site_details["full_title"], "description" => strip_tags($error_description)];
