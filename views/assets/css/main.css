@@ -54,7 +54,6 @@ body > div.container {
     width: 100%;
     height: auto;
     overflow: hidden;
-    padding-top: 2.5rem;
 }
 
 /* navbar */
@@ -70,6 +69,7 @@ body > nav {
     background-color: #ffffff;
     transition: padding-top 0.15s ease-in-out, padding-bottom 0.15s ease-in-out;
     color: var(--dark-text-color);
+    z-index: 999999;
 }
 body > nav.not_top {
     padding-top: 1.75rem;
@@ -244,6 +244,35 @@ body > nav.photo:not(.links_shown):not(.not_top) > ul.links > a.active {
     }
 }
 
+/* nav background */
+body > div.nav_background:not(.photo) {
+    display: none;
+}
+
+body > div.nav_background.photo.photo_about {
+    --photo-url: url(/views/assets/img/about_page.jpg);
+}
+body > div.nav_background.photo.photo_blog {
+    --photo-url: url(/views/assets/img/blog_page.jpg);
+}
+body > div.nav_background.photo.photo_code {
+    --photo-url: url(/views/assets/img/code_page.jpg);
+}
+body > div.nav_background.photo.photo_resume {
+    --photo-url: url(/views/assets/img/resume_page.jpg);
+}
+
+body > div.nav_background.photo {
+    height: 50rem;
+    width: 100%;
+    display: block;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), var(--photo-url);
+}
+
 /* footer */
 body > div.container > footer {
     display: block;
@@ -280,31 +309,32 @@ body > div.container > footer > ul.links > a:not(:first-child) {
     }
 }
 
-/* nav background */
-body > div.nav_background:not(.photo) {
-    display: none;
+/* block list */
+body > div.container {
+    padding-top: 6rem;
 }
 
-body > div.nav_background.photo.photo_about {
-    --photo-url: url(/views/assets/img/about_page.jpg);
-}
-body > div.nav_background.photo.photo_blog {
-    --photo-url: url(/views/assets/img/blog_page.jpg);
-}
-body > div.nav_background.photo.photo_code {
-    --photo-url: url(/views/assets/img/code_page.jpg);
-}
-body > div.nav_background.photo.photo_resume {
-    --photo-url: url(/views/assets/img/resume_page.jpg);
+body > nav.photo ~ div.container {
+    margin-top: -31rem;
+    z-index: 9999;
+    display: block;
 }
 
-body > div.nav_background.photo {
-    height: 45rem;
+/* blocks */
+body > div.container > ul.block_list > .block {
     width: 100%;
     display: block;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), var(--photo-url);
+    height: auto;
+    overflow: hidden;
+    box-shadow: 0 0 1rem rgba(38,50,56,0.2);
+    box-sizing: border-box;
+    border-radius: 1rem;
+    margin-bottom: 4.5rem;
+    background-color: #ffffff;
+}
+body > div.container > ul.block_list > .block > .content {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    padding: 3.5rem;
 }

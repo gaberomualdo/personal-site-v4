@@ -25,6 +25,7 @@ There are several other files within the main directory, such as ```favicon.ico`
  - [PrismJS](https://prismjs.com/) by [many open source contributors](https://github.com/PrismJS/prism/graphs/contributors) on GitHub. Used for syntax highlighting on blog posts.
  - [Normalize.css](https://necolas.github.io/normalize.css/) by necolas on GitHub. Used for fast and responsive CSS resets.
  - [Skeleton](http://getskeleton.com) by dhg on GitHub. Used as a CSS boilerplate file for the site.
+ - [Animate.css](https://daneden.github.io/animate.css/) by daneden on GitHub. Used for easy CSS animations.
 
 ## Credits
 
