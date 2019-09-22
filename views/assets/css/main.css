@@ -240,7 +240,7 @@ body > nav.photo:not(.links_shown):not(.not_top) > ul.links > a.active {
         border-radius: 0;
     }
     body > nav.links_shown > ul.links > a:not(:last-child) {
-        border-bottom: 1px solid var(--light-color);
+        border-bottom: 1px solid rgba(38,50,56,0.2);
     }
 }
 
