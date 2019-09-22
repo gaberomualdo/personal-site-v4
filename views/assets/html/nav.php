@@ -1,9 +1,9 @@
 <div class="nav_background <?php
 if($filename!="home" && $filename!="error") {
     if($filename!="blog_post"){
-        echo "photo_" . $filename . "";
+        echo "photo photo_" . $filename . "";
     } else if (array_key_exists("photo_url", $page_data)) {
-        echo "photo_blog_post\" style=\"--photo-url: url('" . $page_data["photo_url"] . "')";
+        echo "photo photo_blog_post\" style=\"--photo-url: url('" . $page_data["photo_url"] . "')";
     }
 }
 ?>"></div>

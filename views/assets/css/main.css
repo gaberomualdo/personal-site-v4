@@ -105,7 +105,7 @@ body > nav > ul.links > a {
     display: inline-block;
     height: 4rem;
     box-sizing: border-box;
-    color: inherit;
+    color: var(--dark-text-color);
     font-size: 1.625rem;
     text-decoration: none;
     text-transform: uppercase;
@@ -119,7 +119,6 @@ body > nav > ul.links > a {
 }
 body > nav > ul.links > a:hover {
     border-color: var(--medium-color);
-    color: inherit;
     text-decoration: none;
 }
 body > nav > ul.links > a.active {
@@ -144,7 +143,7 @@ body > nav > button.mobile_link_toggler {
     padding: 0.625rem 0;
     display: none;
 }
-body > nav > button.mobile_link_toggler svg {
+body > nav > button.mobile_link_toggler > svg {
     display: block;
     width: 100%;
     height: 100%;
@@ -152,15 +151,49 @@ body > nav > button.mobile_link_toggler svg {
 }
 
 /* functionality (at least for icon display) */
-body > nav.links_shown > button.mobile_link_toggler svg.menu_icon {
+body > nav.links_shown > button.mobile_link_toggler > svg.menu_icon {
     display: none;
 }
-body > nav:not(.links_shown) > button.mobile_link_toggler svg.close_icon {
+body > nav:not(.links_shown) > button.mobile_link_toggler > svg.close_icon {
     display: none;
+}
+
+/* navbar with photo */
+body > nav.photo {
+    transition: padding-top 0.15s ease-in-out, padding-bottom 0.15s ease-in-out, color 0.25s ease-in-out, box-shadow 0.25s ease-in-out, background-color 0.25s ease-in-out;
+    position: fixed;
+}
+body > nav.photo > button.mobile_link_toggler > svg {
+    transition: fill 0.25s ease-in-out;
+}
+body > nav.photo > ul.links > a {
+    transition: border-color 0.25s, color 0.25s ease-in-out;
+}
+
+body > nav.photo:not(.links_shown):not(.not_top) {
+    color: #ffffff;
+    box-shadow: none;
+    background-color: transparent;
+}
+body > nav.photo:not(.links_shown):not(.not_top) > button.mobile_link_toggler > svg {
+    fill: #ffffff;
+}
+body > nav.photo:not(.links_shown):not(.not_top) > ul.links > a {
+    color: #ffffff;
+}
+body > nav.photo:not(.links_shown):not(.not_top) > ul.links > a:hover {
+    border-color: rgba(255, 255, 255, 0.45);
+}
+body > nav.photo:not(.links_shown):not(.not_top) > ul.links > a.active {
+    border-color: #ffffff;
 }
 
 /* navbar mobile */
 @media only screen and (max-width: 780px) {
+    body > nav {
+        padding-top: 1.75rem;
+        padding-bottom: 1.75rem;
+    }
     body > nav > ul.links {
         width: 100%;
         clear: both;
@@ -188,7 +221,7 @@ body > nav:not(.links_shown) > button.mobile_link_toggler svg.close_icon {
 @media only screen and (max-width: 500px) {
     body > nav.links_shown {
         height: 100vh;
-        box-sizing: none;
+        box-shadow: none;
     }
     body > nav.links_shown > ul.links {
         margin-top: 3.75rem;
@@ -245,4 +278,33 @@ body > div.container > footer > ul.links > a:not(:first-child) {
     body > div.container > footer > *:not(:last-child) {
         margin-bottom: 0.5rem;
     }
+}
+
+/* nav background */
+body > div.nav_background:not(.photo) {
+    display: none;
+}
+
+body > div.nav_background.photo.photo_about {
+    --photo-url: url(/views/assets/img/about_page.jpg);
+}
+body > div.nav_background.photo.photo_blog {
+    --photo-url: url(/views/assets/img/blog_page.jpg);
+}
+body > div.nav_background.photo.photo_code {
+    --photo-url: url(/views/assets/img/code_page.jpg);
+}
+body > div.nav_background.photo.photo_resume {
+    --photo-url: url(/views/assets/img/resume_page.jpg);
+}
+
+body > div.nav_background.photo {
+    height: 45rem;
+    width: 100%;
+    display: block;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), var(--photo-url);
 }
