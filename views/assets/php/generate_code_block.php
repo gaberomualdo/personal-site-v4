@@ -6,14 +6,6 @@ function generate_code_block($block) {
     // HTML to return
     $HTMLToReturn = "";
 
-    // block opening tag and photo class is added correspondingly
-    $HTMLToReturn .= "<div class='post_block block";
-    if(array_key_exists("photo_url", $block)) {
-        $HTMLToReturn .= " photo'><div class='image_container'><img src='" . $block["photo_url"] . "' alt='" . $block["title"] . "'></div>";
-    } else {
-        $HTMLToReturn .= "'>";
-    }
-
     // variables
     $block_title = $block["title"];
     $block_content = $block["content"];
@@ -44,10 +36,18 @@ function generate_code_block($block) {
         $block_url = $block["blog_post_url"];
     }
 
+    // block opening tag and photo class is added correspondingly
+    $HTMLToReturn .= "<div class='post_block block";
+    if(array_key_exists("photo_url", $block)) {
+        $HTMLToReturn .= " photo'><a class='image_container' href='" . $block_url . "'><img src='" . $block["photo_url"] . "' alt='" . $block_title . "'></a>";
+    } else {
+        $HTMLToReturn .= "'>";
+    }
+
     // content
     $HTMLToReturn .= '
     <div class="content">
-        <div class="type_label code">code</div>
+        <a class="type_label code" href="/code/">code</a>
         <div class="top">
             <h1 class="title"><a href="' . $block_url . '">' . $block_title . '</a></h1>
             <ul class="details">
@@ -58,7 +58,7 @@ function generate_code_block($block) {
                 ' . $block_details . '
             </ul>
         </div>
-        <p>' . $block_content . '</p>
+        ' . $block_content . '
     </div>
     </div>
     ';
