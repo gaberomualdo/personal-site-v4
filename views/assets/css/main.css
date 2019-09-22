@@ -339,8 +339,10 @@ body > div.container > ul.block_list > .block > .content {
     display: block;
     box-sizing: border-box;
     padding: 3.5rem;
-    padding-top: 4rem;
     overflow: hidden;
+}
+body > div.container > ul.block_list > .block > .content.with_label {
+    padding-top: 4rem;
 }
 body > div.container > ul.block_list > .block > .content > *:last-child {
     margin-bottom: 0;
@@ -350,6 +352,8 @@ body > div.container > ul.block_list > .block > .content > *:last-child {
 @media only screen and (max-width: 500px) {
     body > div.container > ul.block_list > .block > .content {
         padding: 2.5rem;
+    }
+    body > div.container > ul.block_list > .block > .content.with_label {
         padding-top: 4.5rem;
     }
 }
@@ -533,3 +537,12 @@ body > div.container > ul.block_list > .block > .content.post_content h3 { font-
 body > div.container > ul.block_list > .block > .content.post_content h4 { font-size: 2.25rem; }
 body > div.container > ul.block_list > .block > .content.post_content h5 { font-size: 1.85rem; }
 body > div.container > ul.block_list > .block > .content.post_content h6 { font-size: 1.7rem; }
+
+/* post content big title */
+body > div.container > ul.block_list > .block > .content.post_content > h1.big_title {
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    font-size: 5.25rem;
+}

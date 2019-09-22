@@ -46,7 +46,7 @@ function generate_blog_block($block, $full_block = false) {
 
     // content
     $HTMLToReturn .= '
-    <div class="content ' . $content_class . '">
+    <div class="content with_label ' . $content_class . '">
         <a class="type_label blog" href="/blog/">blog</a>
         <div class="top">
             ' . $block_title_HTML . '
