@@ -273,6 +273,14 @@ body > div.nav_background.photo {
     background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), var(--photo-url);
 }
 
+/* nav background mobile */
+@media only screen and (max-width: 500px) {
+    body > div.nav_background.photo {
+        background-attachment: scroll;
+        background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), var(--photo-url);
+    }
+}
+
 /* footer */
 body > div.container > footer {
     display: block;
@@ -475,10 +483,10 @@ body > div.container > ul.block_list > .block.post_block > .content > div.top > 
 }
 
 body > div.container > ul.block_list > .block.post_block > .content > div.top > ul.details > li > svg {
-    height: 2.5rem;
-    width: 2.75rem;
+    height: 2.25rem;
+    width: 2.25rem;
     box-sizing: border-box;
-    padding: 0.125rem;
+    margin: 0.125rem;
     fill: var(--medium-color);
 }
 body > div.container > ul.block_list > .block.post_block > .content > div.top > ul.details > li > p {
