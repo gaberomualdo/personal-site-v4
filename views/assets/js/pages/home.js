@@ -1,4 +1,4 @@
-/* onload, display welcome header animation followed by social url and text animations */
+/* display welcome header animation followed by social url and text animations */
 window.addEventListener("load", () => {
     document.querySelector("body > div.container > ul.block_list > .block.welcome > .content > div.text > div.top > div.right > h1.catchy_header").classList.add("animation_shown");
 

@@ -4,7 +4,7 @@
 <?php $filename = "code"; ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: http://ogp.me/ns#">
 
     <?php include __DIR__ . "/assets/html/head.php" ?>
 

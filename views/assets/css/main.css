@@ -263,7 +263,7 @@ body > div.nav_background.photo.photo_resume {
 }
 
 body > div.nav_background.photo {
-    height: 50rem;
+    height: 55rem;
     width: 100%;
     display: block;
     background-size: cover;
@@ -304,6 +304,9 @@ body > div.container > footer > ul.links {
 }
 body > div.container > footer > ul.links > a:not(:first-child) {
     margin-left: 1rem;
+}
+body > div.container > footer > ul.links > a {
+    font-weight: 600;
 }
 
 @media only screen and (max-width: 500px) {
@@ -402,11 +405,9 @@ body > div.container > ul.block_list > .block.post_block.photo > .content {
     body > div.container > ul.block_list > .block.post_block {
         flex-direction: column;
     }
-    body > div.container > ul.block_list > .block.post_block.photo > .image_container {
-        flex-basis: 50%;
-    }
+    body > div.container > ul.block_list > .block.post_block.photo > .image_container,
     body > div.container > ul.block_list > .block.post_block.photo > .content {
-        flex-basis: 50%;
+        flex-basis: auto;
     }
 }
 
@@ -450,10 +451,10 @@ body > div.container > ul.block_list > .block.post_block > .content > div.top {
 }
 
 body > div.container > ul.block_list > .block.post_block > .content > div.top > h1.title {
-    font-size: 4rem;
+    font-size: 3.9rem;
     line-height: 1.3;
     font-weight: 600;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.65rem;
 }
 body > div.container > ul.block_list > .block.post_block > .content > div.top > h1.title > a {
     color: inherit;
@@ -517,40 +518,82 @@ body > div.container > ul.block_list > .block.post_block > .content > div.top > 
     }
 }
 
+/* post block text content */
+body > div.container > ul.block_list > .block.post_block > .content > .text_content {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    float: left;
+}
+body > div.container > ul.block_list > .block.post_block > .content > .text_content *:last-child {
+    margin-bottom: 0;
+}
+
+body > div.container > ul.block_list > .block.post_block > .content > .text_content.preview_text {
+    font-size: 1.6rem;
+}
+body > div.container > ul.block_list > .block.post_block > .content > .text_content:not(.preview_text) {
+    margin-top: 1rem;
+}
+
+
+
 /* post content */
-body > div.container > ul.block_list > .block > .content.post_content {
-    font-size: 1.58rem;
+body > div.container .post_content {
+    font-size: 1.67rem;
+    font-family: "Source Serif Pro", Georgia, 'Times New Roman', Times, serif;
 }
-body > div.container > ul.block_list > .block > .content.post_content > h1,
-body > div.container > ul.block_list > .block > .content.post_content > h2,
-body > div.container > ul.block_list > .block > .content.post_content > h4,
-body > div.container > ul.block_list > .block > .content.post_content > h5,
-body > div.container > ul.block_list > .block > .content.post_content > h6,
-body > div.container > ul.block_list > .block > .content.post_content > *:not(.top) h1,
-body > div.container > ul.block_list > .block > .content.post_content > *:not(.top) h2,
-body > div.container > ul.block_list > .block > .content.post_content > *:not(.top) h4,
-body > div.container > ul.block_list > .block > .content.post_content > *:not(.top) h5,
-body > div.container > ul.block_list > .block > .content.post_content > *:not(.top) h6 {
+
+body > div.container .post_content a {
+    font-weight: bold;
+}
+
+body > div.container .post_content > h1,
+body > div.container .post_content > h2,
+body > div.container .post_content > h3,
+body > div.container .post_content > h4,
+body > div.container .post_content > h5,
+body > div.container .post_content > h6,
+body > div.container .post_content > *:not(.top) h1,
+body > div.container .post_content > *:not(.top) h2,
+body > div.container .post_content > *:not(.top) h3,
+body > div.container .post_content > *:not(.top) h4,
+body > div.container .post_content > *:not(.top) h5,
+body > div.container .post_content > *:not(.top) h6 {
     font-weight: 600;
+    font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-body > div.container > ul.block_list > .block > .content.post_content > h1,
-body > div.container > ul.block_list > .block > .content.post_content > *:not(.top) h1 {
+body > div.container .post_content > h1,
+body > div.container .post_content > *:not(.top) h1 {
     color: var(--dark-text-color);
 }
 
 
-body > div.container > ul.block_list > .block > .content.post_content h1 { font-size: 4.5rem; }
-body > div.container > ul.block_list > .block > .content.post_content h2 { font-size: 3.35rem; }
-body > div.container > ul.block_list > .block > .content.post_content h3 { font-size: 2.85rem; }
-body > div.container > ul.block_list > .block > .content.post_content h4 { font-size: 2.25rem; }
-body > div.container > ul.block_list > .block > .content.post_content h5 { font-size: 1.85rem; }
-body > div.container > ul.block_list > .block > .content.post_content h6 { font-size: 1.7rem; }
+body > div.container .post_content h1 { font-size: 4.5rem; }
+body > div.container .post_content h2 { font-size: 3.45rem; }
+body > div.container .post_content h3 { font-size: 2.8rem; }
+body > div.container .post_content h4 { font-size: 2.2rem; }
+body > div.container .post_content h5 { font-size: 1.85rem; }
+body > div.container .post_content h6 { font-size: 1.6rem; }
+
+body > div.container > .post_content > img,
+body > div.container > .post_content > *:not(.top) img {
+    max-width: 100%;
+}
 
 /* post content big title */
-body > div.container > ul.block_list > .block > .content.post_content > h1.big_title {
+body > div.container .post_content > h1.big_title {
     text-align: center;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05rem;
     font-size: 5.25rem;
+    font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* mobile font size for EVERYTHING, VERY IMPORTANT */
+@media only screen and (max-width: 550px) {
+    html {
+        font-size: 56.5% !important;
+    }
 }

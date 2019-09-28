@@ -5,7 +5,7 @@
 <?php $filename = "home"; ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: http://ogp.me/ns#">
 
     <?php include __DIR__ . "/assets/html/head.php" ?>
 
@@ -17,7 +17,7 @@
             <ul class="block_list">
                 <?php // welcome card ?>
                 <div class="block welcome">
-                    <div class="content post_content">
+                    <div class="content">
                         <div class="picture">
                             <img class="default_view" alt="Welcome Photo" src="<?=$page_data["home_opening_card"]["card_image_url"]["laptop_view"]?>">
                         </div>
@@ -32,7 +32,7 @@
                                         // create catchy header HTML
 
                                         // catchy header text
-                                        $text_to_display = "Hey, I'm " . $site_details["author"]["name"] . "!";
+                                        $text_to_display = "Hi, I'm " . $site_details["author"]["name"] . "!";
 
                                         // text split into words
                                         $words_to_display = explode(" ", $text_to_display);
@@ -52,7 +52,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="text_content animated" style="opacity: 0;">
+                            <div class="text_content post_content animated" style="opacity: 0;">
                                 <?=$page_data["home_opening_card"]["card_HTML"]?>
                             </div>
                         </div>

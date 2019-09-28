@@ -38,8 +38,8 @@ function generate_code_block($block) {
 
     // block opening tag and photo class is added correspondingly
     $HTMLToReturn .= "<div class='post_block block";
-    if(array_key_exists("photo_url", $block)) {
-        $HTMLToReturn .= " photo'><a class='image_container' href='" . $block_url . "'><img src='" . $block["photo_url"] . "' alt='" . $block_title . "'></a>";
+    if(array_key_exists("thumbnail_url", $block)) {
+        $HTMLToReturn .= " photo'><a class='image_container' href='" . $block_url . "'><img src='" . $block["thumbnail_url"] . "' alt='" . $block_title . "'></a>";
     } else {
         $HTMLToReturn .= "'>";
     }
@@ -58,7 +58,7 @@ function generate_code_block($block) {
                 ' . $block_details . '
             </ul>
         </div>
-        ' . $block_content . '
+        <div class="text_content post_content preview_text">' . $block_content . '</div>
     </div>
     </div>
     ';

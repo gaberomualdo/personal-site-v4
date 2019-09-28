@@ -49,7 +49,7 @@ foreach($page_data["blog_posts"] as $post) {
         <published>' . $post_datetime . '</published>
         <id>' . $post_url . '</id>
         
-        <content type="html" xml:base="' . $post_url . '">' . $post_content . '</content>
+        <content type="html" xml:base="' . $post_url . '"><![CDATA[' . $post_content . ']]></content>
         
         <author>
             <name>' . $site_author_name . '</name>
