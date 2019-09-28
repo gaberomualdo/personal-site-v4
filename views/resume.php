@@ -14,15 +14,15 @@
             <ul class="block_list">
                 <div class="resume_container block post_content">
                     <div class="row top_area content">
-                        <p class="last_updated"><?php echo date("F j, Y", strtotime($page_data["content"]["last_updated"])); ?></p>
-                        <div class="col">
+                        <div class="col image">
                             <img src="<?php echo $page_data["content"]["photo_url"]; ?>" alt="Picture of Me">
                         </div>
-                        <div class="col">
+                        <div class="col main">
                             <h1 class="name"><?php echo $page_data["content"]["name"]; ?></h1>
-                            <h2 class="job_description"><?php echo $page_data["content"]["description"]; ?></h2>
+                            <h4 class="job_description"><?php echo $page_data["content"]["description"]; ?></h4>
                             <p class="description"><?php echo $page_data["content"]["detailed_description_text"]; ?></p>
                         </div>
+                        <p class="last_updated"><?php echo date("F j, Y", strtotime($page_data["content"]["last_updated"])); ?></p>
                     </div>
                     <div class="row socials content">
                         <div class="col">

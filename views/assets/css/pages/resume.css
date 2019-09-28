@@ -1,0 +1,84 @@
+/* resume container and direct children */
+body > div.container > ul.block_list > div.resume_container, body > div.container > ul.block_list > div.resume_container > * {
+    position: relative;
+}
+
+/* rows and cols in resume */
+body > div.container > ul.block_list > div.resume_container > div.row {
+    display: block;
+    height: auto;
+    overflow: hidden;
+    width: 100%;
+}
+body > div.container > ul.block_list > div.resume_container > div.row div.col {
+    width: 50%;
+    display: block;
+    height: auto;
+    overflow: hidden;
+    float: left;
+    box-sizing: border-box;
+}
+body > div.container > ul.block_list > div.resume_container > div.row div.col:nth-child(odd) {
+    padding-right: 1.75rem;
+}
+body > div.container > ul.block_list > div.resume_container > div.row div.col:nth-child(even) {
+    padding-left: 1.75rem;
+}
+
+/* top area of resume */
+body > div.container > ul.block_list > div.resume_container > div.row.top_area > p.last_updated {
+    position: absolute;
+    top: 2.5rem;
+    right: 3rem;
+    color: var(--light-text-color);
+}
+body > div.container > ul.block_list > div.resume_container > div.row.top_area > div.col.image {
+    width: 20rem;
+    font-size: 0;
+}
+body > div.container > ul.block_list > div.resume_container > div.row.top_area > div.col.image > img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    padding: 0.5rem;
+    border: 1px solid var(--light-color);
+    box-sizing: border-box;
+}
+
+body > div.container > ul.block_list > div.resume_container > div.row.top_area > div.col.main {
+    width: calc(100% - 20rem);
+}
+body > div.container > ul.block_list > div.resume_container > div.row.top_area > div.col.main > h1.name {
+    font-size: 4.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark-text-color);
+}
+body > div.container > ul.block_list > div.resume_container > div.row.top_area > div.col.main > h4.job_description {
+    font-size: 2rem;
+    color: var(--lighter-text-color);
+    font-weight: normal;
+    padding-left: 0.1rem;
+}
+body > div.container > ul.block_list > div.resume_container > div.row.top_area > div.col.main > p.description {
+    font-size: 1.45rem;
+    margin-bottom: 0;
+}
+
+/* social urls section */
+body > div.container > ul.block_list > div.resume_container > div.row.socials {
+    background-color: var(--lightest-color);
+}
+body > div.container > ul.block_list > div.resume_container > div.row.socials > div.col {
+    width: 33%;
+    padding: 0;
+    height: 4rem;
+}
+body > div.container > ul.block_list > div.resume_container > div.row.socials > div.col:not(:last-child) {
+    padding-right: 2rem;
+}
+
+body > div.container > ul.block_list > div.resume_container > div.row.socials > div.col > * {
+    display: block;
+    float: left;
+    margin: 0;
+}
