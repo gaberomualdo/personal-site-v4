@@ -5,7 +5,9 @@ This file defines a template for each API route file, and libraries used. It inc
 
 // ParseDown for converting Markdown to HTML
 include_once __DIR__ . "/resources/parsedown/Parsedown.php";
-$Parsedown = new Parsedown();
+include_once __DIR__ . "/resources/parsedown/ParsedownExtra.php";
+
+$Parsedown = new ParsedownExtra();
 
 // function for extracting object of Markdown HTML, and included metadata from contents of markdown file
 function extractObjectFromMarkdownFile($file_contents) {

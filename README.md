@@ -21,7 +21,7 @@ There are several other files within the main directory, such as ```favicon.ico`
 
 ## Languages, Technologies, and Resources Used
 
- - [Parsedown](https://github.com/erusev/parsedown) by erusev on GitHub. Used for parsing markdown to HTML.
+ - [Parsedown](https://github.com/erusev/parsedown) and [ParsedownExtra](https://github.com/erusev/parsedown-extra) by erusev on GitHub. Used for parsing markdown to HTML.
  - [PrismJS](https://prismjs.com/) by [many open source contributors](https://github.com/PrismJS/prism/graphs/contributors) on GitHub. Used for syntax highlighting on blog posts.
  - [Normalize.css](https://necolas.github.io/normalize.css/) by necolas on GitHub. Used for fast and responsive CSS resets.
  - [Skeleton](http://getskeleton.com) by dhg on GitHub. Used as a CSS boilerplate file for the site.
