@@ -1,5 +1,8 @@
-// remove loading class from body when page is loaded
+// remove loading class from body when page is loaded, and fire oncroll event when loaded
 window.addEventListener("load", () => {
+    // fire onscroll event on window
+    window.dispatchEvent(new Event("scroll"));
+
     document.body.classList.remove("loading");
 });
 

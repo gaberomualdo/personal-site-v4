@@ -12,8 +12,8 @@
 
         <div class="container">
             <ul class="block_list">
-                <div class="resume_container block">
-                    <div class="row top">
+                <div class="resume_container block post_content">
+                    <div class="row top_area content">
                         <p class="last_updated"><?php echo date("F j, Y", strtotime($page_data["content"]["last_updated"])); ?></p>
                         <div class="col">
                             <img src="<?php echo $page_data["content"]["photo_url"]; ?>" alt="Picture of Me">
@@ -24,7 +24,7 @@
                             <p class="description"><?php echo $page_data["content"]["detailed_description_text"]; ?></p>
                         </div>
                     </div>
-                    <div class="row socials">
+                    <div class="row socials content">
                         <div class="col">
                             <?php echo $page_data["content"]["social_links"][0]["logo"]; echo "<p>" . $page_data["content"]["social_links"][0]["name"] . "</p>"; ?>
                         </div>
@@ -35,7 +35,7 @@
                             <?php echo $page_data["content"]["social_links"][2]["logo"]; echo "<p>" . $page_data["content"]["social_links"][2]["name"] . "</p>"; ?>
                         </div>
                     </div>
-                    <div class="row main">
+                    <div class="row main content">
                         <div class="col left">
                             <div class="skills">
                                 <h1>Tech Skills</h1>

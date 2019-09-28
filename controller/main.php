@@ -112,6 +112,7 @@ foreach($blog_posts as $post) {
         global $page_data;
         global $page_details;
         global $site_details;
+        global $blog_posts;
 
         // post preview: first 300 chars in post content
         $post_preview = strip_tags($post["content"]);
@@ -123,8 +124,18 @@ foreach($blog_posts as $post) {
         // get page details and store in var
         $page_details = ["title" => $post["title"] . " | " . $site_details["full_title"], "description" => $post_preview];
         
+        // choose 6 random posts to put in the "more from fred" section
+        $more_posts_indices = array_rand($blog_posts, 6);
+        $more_posts = [];
+        foreach($more_posts_indices as $more_post_index) {
+            $current_more_post = $blog_posts[$more_post_index];
+            $current_more_post_url = "/blog/" . str_replace("-", "/", $current_more_post["last_updated"]) . "/" . $current_more_post["filename"] . "/";
+            array_push($more_posts, [ "title" => $current_more_post["title"], "url" => $current_more_post_url ]);
+        }
+
         // get page data and store in var
         $page_data = $post;
+        $page_data["more_posts"] = $more_posts;
 
         // display view
         include_once __DIR__ . "/../views/blog_post.php";
