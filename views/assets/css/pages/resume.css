@@ -152,6 +152,14 @@ body > div.container > ul.block_list > div.resume_container > div.row.main > div
     font-weight: normal;
     margin-bottom: 1.5rem;
 }
+body > div.container > ul.block_list > div.resume_container a.natural_link {
+    font-weight: inherit;
+    color: inherit;
+    text-decoration: none;
+}
+body > div.container > ul.block_list > div.resume_container a.natural_link:hover {
+    text-decoration: underline;
+}
 body > div.container > ul.block_list > div.resume_container > div.row.main > div.col.right > li > p.description {
     font-size: 1.5rem;
 }

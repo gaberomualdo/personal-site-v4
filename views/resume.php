@@ -30,20 +30,19 @@
                         <p class="last_updated"><?php echo date("F Y", strtotime($page_data["content"]["last_updated"])); ?></p>
                     </div>
                     <div class="row socials content">
-                        <div class="col">
-                            <?php echo $page_data["content"]["social_links"][0]["logo"]; echo "<p>" . $page_data["content"]["social_links"][0]["name"] . "</p>"; ?>
-                        </div>
-                        <div class="col">
-                            <?php echo $page_data["content"]["social_links"][1]["logo"]; echo "<p>" . $page_data["content"]["social_links"][1]["name"] . "</p>"; ?>
-                        </div>
-                        <div class="col">
-                            <?php echo $page_data["content"]["social_links"][2]["logo"]; echo "<p>" . $page_data["content"]["social_links"][2]["name"] . "</p>"; ?>
-                        </div>
+                    <?php
+                    foreach($page_data["content"]["social_links"] as $link) {
+                        echo "<div class='col'>";
+                        echo $link["logo"];
+                        echo "<p><a class='natural_link' href='" . $link["url"] . "' target='_blank'>" . $link["name"] . "</a></p>";
+                        echo "</div>";
+                    }
+                    ?>
                     </div>
                     <div class="row main content">
                         <div class="col left">
                             <div class="skills">
-                                <h1 class="title">Tech Skills</h1>
+                                <h1 class="title">Technical Skills</h1>
                                 <ul class="section">
                                     <h2 class="subtitle">Frontend</h2>
                                     <?php
@@ -79,10 +78,10 @@
                             </ul>
                         </div>
                         <div class="col right">
-                            <h1 class="title">Notable Projects</h1>
+                            <h1 class="title">Projects</h1>
                             <?php
                             foreach($page_data["content"]["notable_projects"] as $project) {
-                                echo "<li><h2 class='name'>" . $project["name"] . "</h2><h4 class='link'>" . $project["url"] . "</h4><p class='description'>" . $project["description"] . "</p></li>";
+                                echo "<li><h2 class='name'>" . $project["name"] . "</h2><h4 class='link'><a class='natural_link' href='" . $project["url"] . "' target='_blank'>" . $project["url"] . "</a></h4><p class='description'>" . $project["description"] . "</p></li>";
                             }
                             ?>
                         </div>
