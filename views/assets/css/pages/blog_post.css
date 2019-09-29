@@ -1,7 +1,7 @@
 /* more from Fred section */
 body > div.container > ul.block_list > div.block.more_posts_block > div.content > h1.title {
     font-weight: 600;
-    font-size: 4rem;
+    font-size: 3.9rem;
     border-bottom: 1px solid var(--light-color);
     padding-bottom: 0.5rem;
 }
@@ -20,8 +20,9 @@ body > div.container > ul.block_list > div.block.more_posts_block > div.content 
     box-sizing: border-box;
     text-align: left;
     font-size: 1.65rem;
-    line-height: 3.5rem;
-    height: 3.5rem;
+    line-height: 2.5rem;
+    padding: 0.5rem 0;
+    min-height: 3.5rem;
     font-weight: 600;
     opacity: 1;
 }
@@ -30,4 +31,19 @@ body > div.container > ul.block_list > div.block.more_posts_block > div.content 
 }
 body > div.container > ul.block_list > div.block.more_posts_block > div.content > ul.post_list a:nth-child(even) {
     padding-left: 1.5rem;
+}
+
+@media only screen and (max-width: 780px) {
+    body > div.container > ul.block_list > div.block.more_posts_block > div.content > ul.post_list a {
+        width: 100%;
+        padding-left: 0 !important;
+    }
+    body > div.container > ul.block_list > div.block.more_posts_block > div.content > h1.title {
+        font-size: 3.5rem;
+    }
+}
+@media only screen and (max-width: 550px) {
+    body > div.container > ul.block_list > div.block.more_posts_block > div.content > h1.title {
+        font-size: 3rem;
+    }
 }
