@@ -27,7 +27,7 @@
                             <h4 class="job_description"><?php echo $page_data["content"]["description"]; ?></h4>
                             <p class="description"><?php echo $page_data["content"]["detailed_description_text"]; ?></p>
                         </div>
-                        <p class="last_updated"><?php echo date("F j, Y", strtotime($page_data["content"]["last_updated"])); ?></p>
+                        <p class="last_updated"><?php echo date("F Y", strtotime($page_data["content"]["last_updated"])); ?></p>
                     </div>
                     <div class="row socials content">
                         <div class="col">
