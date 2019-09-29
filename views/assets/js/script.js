@@ -27,3 +27,12 @@ if ('serviceWorker' in navigator) {
         console.log("Service Worker Register Failure: ", err);
     });
 }
+
+// add target="_blank" attribute to post content links if link is not on current domain
+Array.from(
+    document.querySelectorAll("body > div.container .post_content a")
+).forEach((link) => {
+    if(!link.hasAttribute("target") && link.hostname != window.location.hostname) {
+        link.setAttribute("target", "_blank");
+    }
+});
