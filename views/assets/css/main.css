@@ -380,6 +380,12 @@ body > div.container > ul.block_list > .block {
     background-color: #ffffff;
 }
 
+@media only screen and (max-width: 550px) {
+    body > div.container > ul.block_list > .block {
+        margin-bottom: 2rem;
+    }
+}
+
 /* block content */
 body > div.container > ul.block_list > .block > .content {
     width: 100%;
@@ -398,10 +404,10 @@ body > div.container > ul.block_list > .block > .content > *:last-child {
 /* block content mobile */
 @media only screen and (max-width: 500px) {
     body > div.container > ul.block_list > .block > .content {
-        padding: 2.5rem;
+        padding: 2rem;
     }
     body > div.container > ul.block_list > .block > .content.less_padding_on_mobile {
-        padding: 2rem;
+        padding: 1.75rem;
     }
     body > div.container > ul.block_list > .block > .content.with_label {
         padding-top: 4.5rem;
@@ -586,8 +592,6 @@ body > div.container > ul.block_list > .block.post_block > .content > .text_cont
     max-width: 100%;
     display: inline-block;
 }
-
-
 
 /* post content */
 body > div.container .post_content {
