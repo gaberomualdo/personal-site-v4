@@ -62,8 +62,7 @@
             }
             ?>
         ],
-        "description": "<?=$site_details["description"] ?>",
-        "headline": "<?=$site_details["full_title"] ?>"
+        "description": "<?=$site_details["description"] ?>"
     }
     </script>
 
