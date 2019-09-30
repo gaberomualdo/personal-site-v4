@@ -44,32 +44,26 @@
 
     <script type="application/ld+json">
     {
-        "sameAs": [
-            <?php
-            foreach($site_details["author"]["social_urls"] as $social_url) {
-                echo '"' . $social_url["url"] . '",
-                ';
-            }
-            ?>
-        ],
-        "@type":"WebSite",
-        "url":"https://xtrp.io/",
-        "publisher":
-        {"@type":"Organization",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "/views/assets/favicon/favicon.png"
-            },
-            "name": "<?=$site_details["author"]["name"] ?>"
-        },
+        "@type": "WebSite",
+        "@context": "http://schema.org",
+        "url": "https://xtrp.io/",
         "name": "<?=$site_details["author"]["name"] ?>",
         "author": {
             "@type": "Person",
             "name": "<?=$site_details["author"]["name"] ?>"
         },
+        "sameAs": [
+            <?php
+            foreach($site_details["author"]["social_urls"] as $index => $social_url) {
+                if($index > 0) {
+                    echo ",";
+                }
+                echo '"' . $social_url["url"] . '"';
+            }
+            ?>
+        ],
         "description": "<?=$site_details["description"] ?>",
-        "headline": "<?=$site_details["full_title"] ?>",
-        "@context":"http://schema.org"
+        "headline": "<?=$site_details["full_title"] ?>"
     }
     </script>
 
