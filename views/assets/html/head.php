@@ -109,6 +109,6 @@
     <link rel="stylesheet" href="/views/resources/animatecss/animate.css">
     
     <?php // finally, CSS! ?>
-    <link rel="stylesheet" href="/views/assets/css/main.min.css">
+    <link rel="stylesheet" href="/views/assets/css/main.css">
     <link rel="stylesheet" href="/views/assets/css/pages/<?=$filename ?>.css">
 </head>
