@@ -66,7 +66,7 @@ body > nav {
     top: 0;
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
-    box-shadow: 0 0 1rem rgba(38,50,56,0.2);
+    box-shadow: 0 0 0.85rem rgba(38,50,56,0.2);
     background-color: #ffffff;
     transition: padding-top 0.15s, padding-bottom 0.15s;
     color: var(--dark-text-color);
@@ -75,6 +75,13 @@ body > nav {
 body > nav.not_top {
     padding-top: 1.75rem;
     padding-bottom: 1.75rem;
+}
+
+/* nav box-shadow mobile */
+@media only screen and (max-width: 550px) {
+    body > nav {
+        box-shadow: 0 0 0.5rem rgba(38,50,56,0.2);
+    }
 }
 
 /* nav elements */
@@ -387,7 +394,7 @@ body > div.container > ul.block_list > .block {
     display: block;
     height: auto;
     overflow: hidden;
-    box-shadow: 0 0 1rem rgba(38,50,56,0.2);
+    box-shadow: 0 0 0.85rem rgba(38,50,56,0.2);
     box-sizing: border-box;
     border-radius: 0.85rem;
     margin-bottom: 4.5rem;
@@ -397,7 +404,9 @@ body > div.container > ul.block_list > .block {
 @media only screen and (max-width: 550px) {
     body > div.container > ul.block_list > .block {
         margin-bottom: 3rem;
+        box-shadow: 0 0 0.5rem rgba(38,50,56,0.2);
     }
+    
 }
 
 /* block content */
@@ -696,17 +705,3 @@ body > div.container .post_content > h1.big_title {
         font-size: 56.5% !important;
     }
 }
-
-/* mobile borders instead of box-shadows for EVERYTHING, ALSO VERY IMPORTANT */
-/*@media only screen and (max-width: 550px) {
-    body > nav, body > div.container > ul.block_list > .block {
-        box-shadow: none;
-    }
-    
-    body > nav {
-        border-bottom: 1px solid var(--light-color);
-    }
-    body > div.container > ul.block_list > .block {
-        border: 1px solid var(--light-color);
-    }
-}*/
