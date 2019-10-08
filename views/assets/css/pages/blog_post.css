@@ -1,3 +1,7 @@
+/* photo should be large */
+body > div.nav_background.photo {
+    background-size: cover;
+}
 /* more from Fred section */
 body > div.container > ul.block_list > div.block.more_posts_block > div.content > h1.title {
     font-weight: 600;

@@ -125,12 +125,18 @@ foreach($blog_posts as $post) {
         $page_details = ["title" => $post["title"] . " | " . $site_details["full_title"], "description" => $post_preview];
         
         // choose 6 random posts to put in the "more from fred" section
-        $more_posts_indices = array_rand($blog_posts, 6);
+        shuffle($blog_posts);
+        $current_blog_post_index = 0;
         $more_posts = [];
-        foreach($more_posts_indices as $more_post_index) {
-            $current_more_post = $blog_posts[$more_post_index];
-            $current_more_post_url = "/blog/" . str_replace("-", "/", $current_more_post["last_updated"]) . "/" . $current_more_post["filename"] . "/";
-            array_push($more_posts, [ "title" => $current_more_post["title"], "url" => $current_more_post_url ]);
+        while(count($more_posts) < 6) {
+            $current_more_post = $blog_posts[$current_blog_post_index];
+
+            if($current_more_post["title"] != $post["title"]) {
+                $current_more_post_url = "/blog/" . str_replace("-", "/", $current_more_post["last_updated"]) . "/" . $current_more_post["filename"] . "/";
+                array_push($more_posts, [ "title" => $current_more_post["title"], "url" => $current_more_post_url ]);
+            }
+            
+            $current_blog_post_index++;
         }
 
         // get page data and store in var

@@ -21,6 +21,9 @@ body > div.container > ul.block_list > div.block.error > div.content > div.right
     box-sizing: border-box;
     padding-left: 4rem;
 }
+body > div.container > ul.block_list > div.block.error > div.content > div.right > *:last-child {
+    margin-bottom: 0;
+}
 
 /* mobile */
 @media only screen and (max-width: 780px) {
@@ -37,6 +40,15 @@ body > div.container > ul.block_list > div.block.error > div.content > div.right
     body > div.container > ul.block_list > div.block.error > div.content > div.right {
         width: 100%;
     }
+
+    body > div.container > ul.block_list > div.block.error > div.content > div.left {
+        text-align: center;
+    }
+    body > div.container > ul.block_list > div.block.error > div.content > div.left > img {
+        width: auto;
+        display: inline-block;
+    }
+
     body > div.container > ul.block_list > div.block.error > div.content > div.right {
         padding-left: 0;
         padding-top: 2.5rem;

@@ -33,16 +33,10 @@ function generate_blog_block($block, $full_block = false) {
         $block_title_HTML = '<h1 class="title"><a href="' . $block_url . '">' . $block_title . '</a></h1>';
     }
 
-    // text content class is "preview_text" if not full block
-    $text_content_class = "";
-    if(!$full_block) {
-        $text_content_class = "preview_text";
-    }
-
-    // content class is "less_padding_on_mobile" if full block
+    // content class is "blog_post_full_content" if full block
     $content_class = "";
     if($full_block) {
-        $content_class = "less_padding_on_mobile";
+        $content_class = "blog_post_full_content";
     }
 
     // block opening tag and photo class is added correspondingly
@@ -70,7 +64,7 @@ function generate_blog_block($block, $full_block = false) {
                 </li>
             </ul>
         </div>
-        <div class="text_content post_content ' . $text_content_class .'">' . $block_preview . '</div>
+        <div class="text_content post_content">' . $block_preview . '</div>
     </div>
     </div>
     ';

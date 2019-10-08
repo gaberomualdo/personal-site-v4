@@ -9,7 +9,6 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
 code[class*="language-"],
 pre[class*="language-"] {
 	color: black;
-	font-size: 1em;
 	text-align: left;
 	white-space: pre;
 	word-spacing: normal;
