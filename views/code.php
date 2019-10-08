@@ -24,8 +24,21 @@
 
                 <?php // projects blocks ?>
                 <?php
-                foreach($page_data["projects"] as $block) {
-                    echo generate_code_block($block);
+                // if there are less than 15, simply display; if not, display 15, and then use client-side JS to progressively show more
+                if(count($page_data["projects"]) <= 15) {
+                    foreach($page_data["projects"] as $block) {
+                        echo generate_code_block($block);
+                    }
+                }else {
+                    for($i = 0; $i < 15; $i++) {
+                        echo generate_code_block($page_data["projects"][$i]);
+                    }
+
+                    echo "<script>let postBlocksToLoadOnScroll = [";
+                    for($n = 15; $n < count($page_data["projects"]); $n++) {
+                        echo "\"" . base64_encode(generate_code_block($page_data["projects"][$n])) . "\", ";
+                    }
+                    echo "];</script>";
                 }
                 ?>
             </ul>

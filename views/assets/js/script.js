@@ -36,3 +36,29 @@ Array.from(
         link.setAttribute("target", "_blank");
     }
 });
+
+// load post blocks on scroll functionality
+if(typeof postBlocksToLoadOnScroll !== 'undefined') {
+    window.addEventListener("scroll", () => {
+        const scrollHeight = Math.max( document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );
+        const scrollPixelsFromTop = window.pageYOffset + window.innerHeight;
+
+        console.log("scroll height: " + scrollHeight);
+        console.log("scroll pixels from top: " + scrollPixelsFromTop);
+
+        // if 5rem from bottom of page, load more blocks
+        if(scrollHeight - scrollPixelsFromTop < (10 * parseFloat(getComputedStyle(document.documentElement).fontSize)) ){
+            if(postBlocksToLoadOnScroll.length <= 15) {
+                postBlocksToLoadOnScroll.forEach((blockInBase64) => {
+                    document.querySelector("body > div.container > ul.block_list").innerHTML += atob(blockInBase64);
+                });
+                postBlocksToLoadOnScroll = [];
+            }else {
+                for(let i = 0; i < 15; i++) {
+                    document.querySelector("body > div.container > ul.block_list").innerHTML += atob(postBlocksToLoadOnScroll[i]);
+                }
+                postBlocksToLoadOnScroll = postBlocksToLoadOnScroll.slice(15);
+            }
+        }
+    });
+}

@@ -61,12 +61,36 @@
 
                 <?php // a buncha blocks ?>
                 <?php
-                foreach($page_data["blocks"] as $block) {
-                    if($block["type"] == "code") {
-                        echo generate_code_block($block);
-                    } else if ($block["type"] == "blog") {
-                        echo generate_blog_block($block);
+                // if there are less than 15, simply display; if not, display 15, and then use client-side JS to progressively show more
+                if(count($page_data["blocks"]) <= 15) {
+                    foreach($page_data["blocks"] as $block) {
+                        if($block["type"] == "code") {
+                            echo generate_code_block($block);
+                        } else if ($block["type"] == "blog") {
+                            echo generate_blog_block($block);
+                        }
                     }
+                }else {
+                    for($i = 0; $i < 15; $i++) {
+                        if($page_data["blocks"][$i]["type"] == "code") {
+                            echo generate_code_block($page_data["blocks"][$i]);
+                        } else if ($page_data["blocks"][$i]["type"] == "blog") {
+                            echo generate_blog_block($page_data["blocks"][$i]);
+                        }
+                    }
+
+                    echo "<script>let postBlocksToLoadOnScroll = [";
+                    for($n = 15; $n < count($page_data["blocks"]); $n++) {
+                        $block_HTML;
+                        if($page_data["blocks"][$n]["type"] == "code") {
+                            $block_HTML = generate_code_block($page_data["blocks"][$n]);
+                        } else if ($page_data["blocks"][$n]["type"] == "blog") {
+                            $block_HTML = generate_blog_block($page_data["blocks"][$n]);
+                        }
+
+                        echo "\"" . base64_encode($block_HTML) . "\", ";
+                    }
+                    echo "];</script>";
                 }
                 ?>
             </ul>
