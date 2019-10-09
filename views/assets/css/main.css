@@ -234,9 +234,6 @@ body > nav.photo:not(.links_shown):not(.not_top) > ul.links > a.active {
     body > nav.links_shown > ul.links {
         margin-top: 3.75rem;
     }
-    body > nav:not(.links_shown) > ul.links > a {
-        color: transparent !important;
-    }
     body > nav.links_shown > ul.links > a {
         width: 100%;
         border: none;
@@ -249,7 +246,6 @@ body > nav.photo:not(.links_shown):not(.not_top) > ul.links > a.active {
         width: 100%;
         padding-left: 1.5rem;
         border-radius: 0;
-        color: var(--dark-text-color);
     }
     body > nav.links_shown > ul.links > a:not(:last-child) {
         border-bottom: 1px solid rgba(38,50,56,0.2);
