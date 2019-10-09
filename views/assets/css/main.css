@@ -64,17 +64,16 @@ body > nav {
     overflow: hidden;
     position: sticky;
     top: 0;
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     box-shadow: 0 0 0.85rem rgba(38,50,56,0.2);
     background-color: #ffffff;
-    transition: padding-top 0.15s, padding-bottom 0.15s;
     color: var(--dark-text-color);
     z-index: 999999;
 }
-body > nav.not_top {
-    padding-top: 1.75rem;
-    padding-bottom: 1.75rem;
+body > nav.photo.not_top {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 /* nav box-shadow mobile */
@@ -170,6 +169,8 @@ body > nav:not(.links_shown) > button.mobile_link_toggler > svg.close_icon {
 body > nav.photo {
     transition: padding-top 0.15s ease-in-out, padding-bottom 0.15s ease-in-out, color 0.25s ease-in-out, box-shadow 0.25s ease-in-out, background-color 0.25s ease-in-out;
     position: fixed;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
 }
 body > nav.photo > button.mobile_link_toggler > svg {
     transition: fill 0.25s ease-in-out;
@@ -199,15 +200,14 @@ body > nav.photo:not(.links_shown):not(.not_top) > ul.links > a.active {
 /* navbar mobile */
 @media only screen and (max-width: 780px) {
     body > nav {
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
+        padding-top: 1.5rem !important;
+        padding-bottom: 1.5rem !important;
     }
     body > nav > ul.links {
         width: 100%;
         clear: both;
         text-align: right;
         margin-top: 1.25rem;
-        transition: height 0.25s ease-in-out;
     }
     body > nav > ul.links > a {
         margin-top: 1rem;
@@ -234,6 +234,9 @@ body > nav.photo:not(.links_shown):not(.not_top) > ul.links > a.active {
     body > nav.links_shown > ul.links {
         margin-top: 3.75rem;
     }
+    body > nav:not(.links_shown) > ul.links > a {
+        color: transparent !important;
+    }
     body > nav.links_shown > ul.links > a {
         width: 100%;
         border: none;
@@ -246,6 +249,7 @@ body > nav.photo:not(.links_shown):not(.not_top) > ul.links > a.active {
         width: 100%;
         padding-left: 1.5rem;
         border-radius: 0;
+        color: var(--dark-text-color);
     }
     body > nav.links_shown > ul.links > a:not(:last-child) {
         border-bottom: 1px solid rgba(38,50,56,0.2);
