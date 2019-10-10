@@ -3,6 +3,7 @@ window.addEventListener("load", () => {
     // fire onscroll event on window
     window.dispatchEvent(new Event("scroll"));
 
+    // remove loading class from body
     document.body.classList.remove("loading");
 });
 
