@@ -1,9 +1,9 @@
-<div class="nav_background <?php
+<div class="nav_background lazy_load <?php
 if($filename!="home" && $filename!="error") {
     if($filename!="blog_post"){
-        echo "photo photo_" . $filename . "";
+        echo "photo photo_" . $filename . "\" data-bg=\"var(--dark-overlay), url('/views/assets/img/" . $filename . "_page.jpg')";
     } else if (array_key_exists("photo_url", $page_data)) {
-        echo "photo photo_blog_post\" style=\"--photo-url: url('" . $page_data["photo_url"] . "')";
+        echo "photo photo_blog_post\" style=\"--photo-url: url('/api/image_resize.php?p=" . $page_data["photo_url"] . "')\" data-bg=\"var(--dark-overlay), url('" . $page_data["photo_url"] . "')";
     }
 }
 ?>"></div>

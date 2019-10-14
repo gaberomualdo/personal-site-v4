@@ -3,12 +3,13 @@ const lazyLoadInstance = new LazyLoad({
     elements_selector: ".lazy_load"
 });
 
-// remove loading class from body when page is loaded, and fire oncroll event when DOM loaded
-// fire onscroll event on window
-window.dispatchEvent(new Event("scroll"));
+// remove loading class from body when page is loaded, and fire oncroll event on window when DOM loaded, and lazyload
+window.addEventListener("load", () => {
+    window.dispatchEvent(new Event("scroll"));
 
-// remove loading class from body
-document.body.classList.remove("loading");
+    // remove loading class from body
+    document.body.classList.remove("loading");
+});
 
 // add "not_top" to nav when has scrolled from top of page
 window.addEventListener("scroll", () => {

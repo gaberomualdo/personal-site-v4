@@ -1242,7 +1242,9 @@ class Parsedown
             'element' => array(
                 'name' => 'img',
                 'attributes' => array(
-                    'src' => $Link['element']['attributes']['href'],
+                    'data-src' => $Link['element']['attributes']['href'],
+                    'src' => '/api/image_resize.php?p=' . $Link['element']['attributes']['href'],
+                    'class' => 'lazy_load',
                     'alt' => $Link['element']['text'],
                 ),
             ),

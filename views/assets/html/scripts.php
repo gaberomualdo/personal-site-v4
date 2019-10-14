@@ -6,6 +6,7 @@ if($filename == "blog_post") {
 ?>
 
 <?php // lazyload scripts ?>
+<script src="https://cdn.jsdelivr.net/npm/intersection-observer@0.7.0/intersection-observer.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.1.0/dist/lazyload.min.js"></script>
 
 <?php // main scripts ?>

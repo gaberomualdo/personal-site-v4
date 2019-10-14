@@ -260,36 +260,37 @@ body > div.nav_background:not(.photo) {
 }
 
 body > div.nav_background.photo.photo_about {
-    --photo-url: url(/views/assets/img/about_page.jpg);
+    --photo-url: url("/api/image_resize.php?p=/views/assets/img/about_page.jpg");
 }
 body > div.nav_background.photo.photo_blog {
-    --photo-url: url(/views/assets/img/blog_page.jpg);
+    --photo-url: url("/api/image_resize.php?p=/views/assets/img/blog_page.jpg");
 }
 body > div.nav_background.photo.photo_code {
-    --photo-url: url(/views/assets/img/code_page.jpg);
+    --photo-url: url("/api/image_resize.php?p=/views/assets/img/code_page.jpg");
 }
 body > div.nav_background.photo.photo_resume {
-    --photo-url: url(/views/assets/img/resume_page.jpg);
+    --photo-url: url("/api/image_resize.php?p=/views/assets/img/resume_page.jpg");
 }
 
 body > div.nav_background.photo {
+    --dark-overlay: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55));
     height: 42.5rem;
     width: 100%;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), var(--photo-url);
+    background-image: var(--dark-overlay), var(--photo-url);
 }
 
 /* nav background mobile */
 @media only screen and (max-width: 550px) {
     body > div.nav_background.photo {
         background-attachment: scroll;
-        background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), var(--photo-url);
+        --dark-overlay: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45));
     }
     body > div.nav_background.photo.photo_blog_post {
-        background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), var(--photo-url);
+        --dark-overlay: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
     }
 }
 
