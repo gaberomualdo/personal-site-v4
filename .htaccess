@@ -6,3 +6,5 @@ RewriteRule ^.*$ /index.php [L,QSA]
 
 RewriteCond %{HTTPS} !=on
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
+
+AddOutputFilterByType DEFLATE text/html text/css text/plain image/gif text/javascript application/javascript application/x-httpd-fastphp
