@@ -20,7 +20,7 @@
                     </div>
                     <div class="row top_area content">
                         <div class="col image">
-                            <img src="/api/image_resize.php?p=<?php echo $page_data["content"]["photo_url"]; ?>" data-src="<?php echo $page_data["content"]["photo_url"]; ?>" class="lazy_load" alt="Picture of Me">
+                            <img src="<?php echo $page_data["content"]["photo_url"]; ?>" alt="Picture of Me">
                         </div>
                         <div class="col main">
                             <h1 class="name"><?php echo $page_data["content"]["name"]; ?></h1>

@@ -18,8 +18,8 @@ function generate_blog_block($block, $full_block = false) {
     if(!$full_block) {
         $block_preview = strip_tags($block["content"]);
         $block_preview = str_replace(PHP_EOL, ' ', $block_preview);
-        if(strlen($block_preview) > 400) {
-            $block_preview = substr($block_preview, 0, 400) . "... <a class='expand_post_preview' href='" . $block_url . "'>(more)</a>";
+        if(strlen($block_preview) > 300) {
+            $block_preview = substr($block_preview, 0, 300) . "... <a class='expand_post_preview' href='" . $block_url . "'>(more)</a>";
         }
         $block_preview = "<p>" . $block_preview . "</p>";
     } else {

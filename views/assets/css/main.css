@@ -260,16 +260,16 @@ body > div.nav_background:not(.photo) {
 }
 
 body > div.nav_background.photo.photo_about {
-    --photo-url: url("/api/image_resize.php?p=/views/assets/img/about_page.jpg");
+    --photo-url: url("/views/assets/img/about_page_small.jpg");
 }
 body > div.nav_background.photo.photo_blog {
-    --photo-url: url("/api/image_resize.php?p=/views/assets/img/blog_page.jpg");
+    --photo-url: url("/views/assets/img/blog_page_small.jpg");
 }
 body > div.nav_background.photo.photo_code {
-    --photo-url: url("/api/image_resize.php?p=/views/assets/img/code_page.jpg");
+    --photo-url: url("/views/assets/img/code_page_small.jpg");
 }
 body > div.nav_background.photo.photo_resume {
-    --photo-url: url("/api/image_resize.php?p=/views/assets/img/resume_page.jpg");
+    --photo-url: url("/api/image_resize.php?p=/views/assets/img/resume_page_small.jpg");
 }
 
 body > div.nav_background.photo {
