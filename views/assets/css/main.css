@@ -9,19 +9,10 @@ svg {
 /* css variables */
 :root {
     --light-color: #CFD8DC;
-    --lighter-color: #ECEFF1;
-    --lightest-color: #f3f5f6;
-
     --medium-color: #B0BEC5;
 
     --text-color: #455A64;
-    
-    --dark-text-color: #37474F;
-    --darker-text-color: #3C3E3F;
-    
-    --medium-text-color: #607D8B;
-
-    --light-text-color: #78909C;
+    --dark-text-color: #37474F;    
     --lighter-text-color: #90A4AE;
 }
 
@@ -59,7 +50,6 @@ body > div.container {
 
 /* navbar */
 body > nav {
-    display: block;
     float: left;
     overflow: hidden;
     position: sticky;
@@ -281,7 +271,6 @@ body > div.nav_background.photo.photo_resume {
 body > div.nav_background.photo {
     height: 42.5rem;
     width: 100%;
-    display: block;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -302,7 +291,6 @@ body > div.nav_background.photo {
 
 /* footer */
 body > div.container > footer {
-    display: block;
     height: auto;
     overflow: hidden;
     min-height: 6rem;
@@ -378,7 +366,6 @@ body > div.container {
 body > nav.photo ~ div.container {
     margin-top: -27.5rem;
     z-index: 9999;
-    display: block;
 }
 
 /* blocklist mobile */
@@ -391,7 +378,6 @@ body > nav.photo ~ div.container {
 /* blocks */
 body > div.container > ul.block_list > .block {
     width: 100%;
-    display: block;
     height: auto;
     overflow: hidden;
     box-shadow: 0 0 0.85rem rgba(38,50,56,0.2);
@@ -412,7 +398,6 @@ body > div.container > ul.block_list > .block {
 /* block content */
 body > div.container > ul.block_list > .block > .content {
     width: 100%;
-    display: block;
     box-sizing: border-box;
     padding: 3.5rem;
     overflow: hidden;

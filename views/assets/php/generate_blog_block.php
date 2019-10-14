@@ -41,8 +41,8 @@ function generate_blog_block($block, $full_block = false) {
 
     // block opening tag and photo class is added correspondingly
     $HTMLToReturn .= "<div class='post_block block";
-    if(array_key_exists("thumbnail_url", $block) && !$full_block) {
-        $HTMLToReturn .= " photo'><a class='image_container' href='" . $block_url . "'><img src='" . $block["thumbnail_url"] . "' alt='" . $block_title . "'></a>";
+    if(array_key_exists("thumbnail_url", $block) && array_key_exists("thumbnail_small_url", $block) && !$full_block) {
+        $HTMLToReturn .= " photo'><a class='image_container' href='" . $block_url . "'><img class='lazy_load' src='" . $block["thumbnail_small_url"] . "' data-src='" . $block["thumbnail_url"] . "' alt='" . $block_title . "'></a>";
     } else {
         $HTMLToReturn .= "'>";
     }

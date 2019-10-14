@@ -98,17 +98,16 @@
     <meta name="msapplication-TileImage" content="/views/assets/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
-    <?php // prism stylesheet ?>
-    <link rel="stylesheet" href="/views/resources/prism/prism.css">
-
     <?php // skeleton stylesheets ?>
-    <link rel="stylesheet" href="/views/resources/skeleton/normalize.css">
-    <link rel="stylesheet" href="/views/resources/skeleton/skeleton.css">
-
-    <?php // animatecss stylesheet ?>
-    <link rel="stylesheet" href="/views/resources/animatecss/animate.css">
+    <link rel="stylesheet" href="/views/resources/skeleton/normalize.min.css">
+    <link rel="stylesheet" href="/views/resources/skeleton/skeleton.min.css">
     
     <?php // finally, CSS! ?>
     <link rel="stylesheet" href="/views/assets/css/main.css">
-    <link rel="stylesheet" href="/views/assets/css/pages/<?=$filename ?>.css">
+    <?php
+    // only add page js if exists
+    if(in_array($filename . ".css", scandir(dirname(__FILE__) . "/../css/pages/"))) {
+        echo '<link rel="stylesheet" href="/views/assets/css/pages/' . $filename . '.css">';
+    }
+    ?>
 </head>

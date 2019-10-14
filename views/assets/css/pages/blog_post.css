@@ -1,3 +1,6 @@
+/* prism stylesheet (used for syntax highlighting */
+@import "/views/resources/prism/prism.css";
+
 /* photo should be large */
 body > div.nav_background.photo {
     background-size: cover;

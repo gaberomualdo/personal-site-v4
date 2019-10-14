@@ -1,3 +1,11 @@
+/* animate CSS stylesheet */
+@import "/views/resources/animatecss/animate.css";
+
+/* CSS variables */
+:root {
+    --lighter-color: #ECEFF1;
+}
+
 /* welcome card columns */
 body > div.container > ul.block_list > .block.welcome > .content > div {
     display: block;
