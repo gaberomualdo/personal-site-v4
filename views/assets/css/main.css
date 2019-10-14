@@ -33,6 +33,12 @@ body > div.container, body > nav {
         padding-right: 1.75rem;
     }
 }
+@media only screen and (max-width: 550px) {
+    body > div.container, body > nav {
+        padding-left: 1.3rem;
+        padding-right: 1.3rem;
+    }
+}
 
 /* container and body */
 body {
@@ -54,14 +60,12 @@ body > nav {
     overflow: hidden;
     position: sticky;
     top: 0;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
     box-shadow: 0 0 0.85rem rgba(38,50,56,0.2);
     background-color: #ffffff;
     color: var(--dark-text-color);
     z-index: 999999;
 }
-body > nav.photo.not_top {
+body > nav:not(.photo), body > nav.photo.not_top {
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
@@ -190,8 +194,8 @@ body > nav.photo:not(.links_shown):not(.not_top) > ul.links > a.active {
 /* navbar mobile */
 @media only screen and (max-width: 780px) {
     body > nav {
-        padding-top: 1.5rem !important;
-        padding-bottom: 1.5rem !important;
+        padding-top: 1.3rem !important;
+        padding-bottom: 1.3rem !important;
     }
     body > nav > ul.links {
         width: 100%;
@@ -349,7 +353,7 @@ body > div.container > footer > ul.links > a {
 }
 @media only screen and (max-width: 550px) {
     body > div.container > footer {
-        margin-top: 3.75rem;
+        margin-top: 2.75rem;
     }
     body > div.container > footer > * {
         width: 100% !important;
@@ -371,7 +375,7 @@ body > nav.photo ~ div.container {
 /* blocklist mobile */
 @media only screen and (max-width: 550px) {
     body > div.container {
-        padding-top: 3.75rem;
+        padding-top: 2.75rem;
     }
 }
 
@@ -383,13 +387,13 @@ body > div.container > ul.block_list > .block {
     box-shadow: 0 0 0.85rem rgba(38,50,56,0.2);
     box-sizing: border-box;
     border-radius: 0.85rem;
-    margin-bottom: 4.5rem;
+    margin-bottom: 3.25rem;
     background-color: #ffffff;
 }
 
 @media only screen and (max-width: 550px) {
     body > div.container > ul.block_list > .block {
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
         box-shadow: 0 0 0.5rem rgba(38,50,56,0.2);
     }
     
@@ -413,12 +417,11 @@ body > div.container > ul.block_list > .block > .content > *:last-child {
 @media only screen and (max-width: 550px) {
     body > div.container > ul.block_list > .block > .content {
         padding: 2rem;
+        padding-top: 2rem !important;
     }
     body > div.container > ul.block_list > .block > .content.blog_post_full_content {
         padding: 1.5rem;
-    }
-    body > div.container > ul.block_list > .block > .content.with_label {
-        padding-top: 2rem;
+        padding-top: 1.5rem !important;
     }
 }
 

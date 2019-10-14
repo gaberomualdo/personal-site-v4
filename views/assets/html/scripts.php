@@ -1,5 +1,9 @@
-<?php // prism scripts ?>
-<script src="/views/resources/prism/prism.js"></script>
+<?php // prism scripts, only add for blog_post page ?>
+<?php
+if($filename == "blog_post") {
+    echo '<script src="/views/resources/prism/prism.js"></script>';
+}
+?>
 
 <?php // lazyload scripts ?>
 <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.1.0/dist/lazyload.min.js"></script>

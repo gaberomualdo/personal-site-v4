@@ -19,12 +19,12 @@
                 <div class="block welcome">
                     <div class="content">
                         <div class="picture">
-                            <img class="default_view" alt="Welcome Photo" src="<?=$page_data["home_opening_card"]["card_image_url"]["laptop_view"]?>">
+                            <img class="default_view lazy_load" alt="Welcome Photo" src="<?=$page_data["home_opening_card"]["card_image_url"]["laptop_view"]?>">
                         </div>
                         <div class="text">
                             <div class="top">
                                 <div class="left">
-                                    <img class="mobile_view" alt="Welcome Photo" src="<?=$page_data["home_opening_card"]["card_image_url"]["mobile_view"]?>">
+                                    <img class="mobile_view lazy_load" alt="Welcome Photo" data-src="<?=$page_data["home_opening_card"]["card_image_url"]["mobile_view"]?>">
                                 </div>
                                 <div class="right">
                                     <h1 class="catchy_header">

@@ -1,6 +1,6 @@
 // lazy loading functionality with LazyLoad library
 const lazyLoadInstance = new LazyLoad({
-    elements_selector: "img.lazy_load"
+    elements_selector: ".lazy_load"
 });
 
 // remove loading class from body when page is loaded, and fire oncroll event when DOM loaded
