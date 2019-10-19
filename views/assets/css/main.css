@@ -269,6 +269,9 @@ body > div.nav_background.photo {
     background-repeat: no-repeat;
     background-image: var(--dark-overlay), var(--photo-url);
 }
+body > div.nav_background.photo.photo_blog_post {
+    --dark-overlay: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6));
+}
 
 /* nav background mobile */
 @media only screen and (max-width: 550px) {
