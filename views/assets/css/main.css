@@ -276,6 +276,7 @@ body > div.nav_background.photo.photo_blog_post {
 /* nav background mobile */
 @media only screen and (max-width: 550px) {
     body > div.nav_background.photo {
+        height: 37.5rem;
         background-attachment: scroll;
         --dark-overlay: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45));
     }
@@ -367,6 +368,9 @@ body > nav.photo ~ div.container {
 @media only screen and (max-width: 550px) {
     body > div.container {
         padding-top: 2.75rem;
+    }
+    body > nav.photo ~ div.container {
+        margin-top: -22.5rem;
     }
 }
 
