@@ -1,14 +1,12 @@
-// lazy loading functionality with LazyLoad library
-const lazyLoadInstance = new LazyLoad({
-    elements_selector: ".lazy_load"
-});
-
 // remove loading class from body when page is loaded, and fire oncroll event on window when DOM loaded, and lazyload
 window.addEventListener("load", () => {
     window.dispatchEvent(new Event("scroll"));
 
     // remove loading class from body
     document.body.classList.remove("loading");
+
+    // lazyload
+    lazyload.update(".lazy_load");
 });
 
 // add "not_top" to nav when has scrolled from top of page
@@ -55,7 +53,7 @@ if(typeof postBlocksToLoadOnScroll !== 'undefined') {
                     document.querySelector("body > div.container > ul.block_list").innerHTML += atob(blockInBase64);
 
                     // refresh lazy loading
-                    lazyLoadInstance.update();
+                    lazyload.update(".lazy_load");
                 });
                 postBlocksToLoadOnScroll = [];
             }else {
@@ -63,7 +61,7 @@ if(typeof postBlocksToLoadOnScroll !== 'undefined') {
                     document.querySelector("body > div.container > ul.block_list").innerHTML += atob(postBlocksToLoadOnScroll[i]);
 
                     // refresh lazy loading
-                    lazyLoadInstance.update();
+                    lazyload.update(".lazy_load");
                 }
                 postBlocksToLoadOnScroll = postBlocksToLoadOnScroll.slice(15);
             }

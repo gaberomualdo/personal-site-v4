@@ -259,19 +259,6 @@ body > div.nav_background:not(.photo) {
     display: none;
 }
 
-body > div.nav_background.photo.photo_about {
-    --photo-url: url("/views/assets/img/about_page_small.jpg");
-}
-body > div.nav_background.photo.photo_blog {
-    --photo-url: url("/views/assets/img/blog_page_small.jpg");
-}
-body > div.nav_background.photo.photo_code {
-    --photo-url: url("/views/assets/img/code_page_small.jpg");
-}
-body > div.nav_background.photo.photo_resume {
-    --photo-url: url("/api/image_resize.php?p=/views/assets/img/resume_page_small.jpg");
-}
-
 body > div.nav_background.photo {
     --dark-overlay: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55));
     height: 42.5rem;

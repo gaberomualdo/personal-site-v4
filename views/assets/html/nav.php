@@ -1,7 +1,7 @@
 <div class="nav_background <?php
 if($filename!="home" && $filename!="error") {
     if($filename!="blog_post"){
-        echo "lazy_load photo photo_" . $filename . "\" data-bg=\"var(--dark-overlay), url('/views/assets/img/" . $filename . "_page.jpg')";
+        echo "lazy_load photo photo_" . $filename . "\" style=\"--photo-url: url('/views/assets/img/" . $filename . "_page.jpg')";
     } else if (array_key_exists("photo_url", $page_data)) {
         echo "photo photo_blog_post\" style=\"--photo-url: url('" . $page_data["photo_url"] . "')";
     }
