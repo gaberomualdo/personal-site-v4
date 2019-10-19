@@ -10,7 +10,8 @@ function generate_code_block($block) {
     $block_title = $block["title"];
     $block_content = $block["content"];
     $block_url = "";
-    $block_details = '';
+    $block_details = "";
+    $main_link_extra_attributes = "";
 
     // calculate block url and details
     if(array_key_exists("blog_post_url", $block)) {
@@ -26,6 +27,7 @@ function generate_code_block($block) {
         <p><a target="_blank" href="' . $block["github_url"] . '">GitHub</a></p></li>
         ' . $block_details;
         $block_url = $block["github_url"];
+        $main_link_extra_attributes = "target='_blank'";
     }
     if(array_key_exists("website_url", $block)) {
         $block_details = '
@@ -33,12 +35,13 @@ function generate_code_block($block) {
         <p><a target="_blank" href="' . $block["website_url"] . '">Website</a></p></li>
         ' . $block_details;
         $block_url = $block["website_url"];
+        $main_link_extra_attributes = "target='_blank'";
     }
 
     // block opening tag and photo class is added correspondingly
     $HTMLToReturn .= "<div class='post_block block";
     if(array_key_exists("thumbnail_url", $block) && array_key_exists("thumbnail_small_url", $block)) {
-        $HTMLToReturn .= " photo'><a class='image_container' href='" . $block_url . "'><img class='lazy_load' src='" . $block["thumbnail_small_url"] . "' data-src='" . $block["thumbnail_url"] . "' alt='" . $block_title . "'></a>";
+        $HTMLToReturn .= " photo'><a " . $main_link_extra_attributes . " class='image_container' href='" . $block_url . "'><img class='lazy_load' src='" . $block["thumbnail_small_url"] . "' data-src='" . $block["thumbnail_url"] . "' alt='" . $block_title . "'></a>";
     } else {
         $HTMLToReturn .= "'>";
     }
@@ -48,7 +51,7 @@ function generate_code_block($block) {
     <div class="content with_label">
         <a class="type_label code" href="/code/">code</a>
         <div class="top">
-            <h1 class="title"><a href="' . $block_url . '">' . $block_title . '</a></h1>
+            <h1 class="title"><a ' . $main_link_extra_attributes . ' href="' . $block_url . '">' . $block_title . '</a></h1>
             <ul class="details">
                 ' . $block_details . '
             </ul>
