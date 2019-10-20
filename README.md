@@ -1,5 +1,7 @@
 # xtrp.io
 
+![Site Demo GIF](site_demo.gif)
+
 ## Description
 
 [xtrp.io](https://xtrp.io/) is my personal website, where you can find my [blog](https://xtrp.io/blog/), [projects](https://xtrp.io/code/), and more. It is completely open-sourced, as this repository! xtrp.io is built with MVC architecture with PHP. It is not built with any PHP framework of any kind, and implements its own API (model), controllers, views, and routing system.
