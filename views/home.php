@@ -59,6 +59,20 @@
                     </div>
                 </div>
 
+                <noscript>
+                    <style>
+                        body > div.container > ul.block_list > .block.welcome > .content > div.text > div.text_content.animated {
+                            opacity: 1 !important;
+                        }
+                        body > div.container > ul.block_list > .block.welcome > .content > div.text > div.top > div.right > ul.social_links.animated {
+                            opacity: 1 !important;
+                        }
+                        body > div.container > ul.block_list > .block.welcome > .content > div.text > div.top > div.right > h1.catchy_header > span.word_container > span.word_animated {
+                            transform: translateY(0) !important;
+                        }
+                    </style>
+                </noscript>
+
                 <?php // a buncha blocks ?>
                 <?php
                 // if there are less than 15, simply display; if not, display 15, and then use client-side JS to progressively show more

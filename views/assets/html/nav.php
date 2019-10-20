@@ -8,15 +8,20 @@ if($filename!="home" && $filename!="error") {
 }
 ?>"></div>
 
-<nav <?php
+<nav class='not_top <?php
 if($filename!="home" && $filename!="error") {
     if($filename!="blog_post"){
-        echo "class='photo'";
+        echo "photo";
     } else if (array_key_exists("photo_url", $page_data)) {
-        echo "class='photo'";
+        echo "photo";
     }
 }
-?>>
+?>'>
+
+    <script>
+        document.querySelector("body > nav").classList.remove("not_top");
+    </script>
+    
     <a class="title" href="/">
         <?=$site_details["title"] ?>
     </a>
