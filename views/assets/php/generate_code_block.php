@@ -56,7 +56,7 @@ function generate_code_block($block) {
                 ' . $block_details . '
             </ul>
         </div>
-        <div class="text_content post_content preview_text">' . $block_content . '</div>
+        <div class="text_content post_content preview_text code_block_content">' . $block_content . '</div>
     </div>
     </div>
     ';
