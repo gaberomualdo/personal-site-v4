@@ -16,10 +16,9 @@ function generate_blog_block($block, $full_block = false) {
     $block_preview;
 
     if(!$full_block) {
-        $block_preview = strip_tags($block["content"]);
-        $block_preview = str_replace(PHP_EOL, ' ', $block_preview);
-        if(strlen($block_preview) > 300) {
-            $block_preview = substr($block_preview, 0, 300) . "... <a class='expand_post_preview' href='" . $block_url . "'>(more)</a>";
+        $block_preview = $block["preview_text"];
+        if(strlen($block_preview) > 175) {
+            $block_preview = substr($block_preview, 0, 175) . "...";
         }
         $block_preview = "<p>" . $block_preview . "</p>";
     } else {
@@ -49,8 +48,7 @@ function generate_blog_block($block, $full_block = false) {
 
     // content
     $HTMLToReturn .= '
-    <div class="content with_label ' . $content_class . '">
-        <a class="type_label blog" href="/blog/">blog</a>
+    <div class="content ' . $content_class . '">
         <div class="top">
             ' . $block_title_HTML . '
             <ul class="details">

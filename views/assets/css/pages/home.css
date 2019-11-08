@@ -1,6 +1,11 @@
 /* animate CSS stylesheet */
 @import "/views/resources/animatecss/animate.css";
 
+/* welcome card */
+body > div.container {
+    margin-top: 6.75rem;
+}
+
 /* welcome card columns */
 body > div.container > ul.block_list > .block.welcome > .content > div {
     display: block;
@@ -11,9 +16,9 @@ body > div.container > ul.block_list > .block.welcome > .content > div {
 
 /* welcome card picture */
 body > div.container > ul.block_list > .block.welcome > .content > div.picture {
-    width: 28rem;
+    width: 24rem;
     box-sizing: border-box;
-    padding: 0 3rem;
+    padding: 0 2rem;
 }
 body > div.container > ul.block_list > .block.welcome > .content > div.picture > img {
     width: 100%;
@@ -23,9 +28,12 @@ body > div.container > ul.block_list > .block.welcome > .content > div.picture >
 
 /* welcome card text area */
 body > div.container > ul.block_list > .block.welcome > .content > div.text {
-    width: calc(100% - 28rem);
+    width: calc(100% - 24rem);
     box-sizing: border-box;
     padding-left: 4rem;
+}
+body > div.container > ul.block_list > .block.welcome > .content > div.text p {
+    margin-bottom: 2.25rem;
 }
 body > div.container > ul.block_list > .block.welcome > .content > div.text > div.text_content > *:last-child {
     margin-bottom: 0;

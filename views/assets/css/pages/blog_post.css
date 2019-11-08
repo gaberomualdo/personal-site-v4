@@ -5,6 +5,25 @@
 body > div.nav_background.photo {
     background-size: cover;
 }
+
+/* large title */
+body > div.container > ul.block_list > .block.post_block > .content > div.top > h1.title {
+    font-size: 4.2rem;
+    color: var(--dark-text-color);
+}
+
+/* meta section margin */
+body > div.container > ul.block_list > .block.post_block > .content > div.top {
+    margin-bottom: 3.5rem;
+}
+
+/* post content */
+body > div.container .post_content {
+    font-size: 1.85rem;
+    line-height: 1.75;
+    width: calc(100% - 10rem) !important;
+}
+
 /* more from Fred section */
 body > div.container > ul.block_list > div.block.more_posts_block > div.content > h1.title {
     font-weight: 600;

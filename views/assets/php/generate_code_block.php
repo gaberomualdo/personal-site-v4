@@ -48,8 +48,7 @@ function generate_code_block($block) {
 
     // content
     $HTMLToReturn .= '
-    <div class="content with_label">
-        <a class="type_label code" href="/code/">code</a>
+    <div class="content">
         <div class="top">
             <h1 class="title"><a ' . $main_link_extra_attributes . ' href="' . $block_url . '">' . $block_title . '</a></h1>
             <ul class="details">
