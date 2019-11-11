@@ -144,8 +144,9 @@ foreach($blog_posts as $post) {
         $page_data = $post;
         $page_data["more_posts"] = $more_posts;
 
-        $all_projects = $api_routes["/code/"]()["projects"];
-        $page_data["featured_project"] = $all_projects[array_rand($all_projects)];
+        /* for featured projects block (not yet implemented): */
+        /*$all_projects = $api_routes["/code/"]()["projects"];
+        $page_data["featured_project"] = $all_projects[array_rand($all_projects)];*/
 
         // display view
         include_once __DIR__ . "/../views/blog_post.php";
