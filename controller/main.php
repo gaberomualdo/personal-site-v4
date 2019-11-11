@@ -113,6 +113,7 @@ foreach($blog_posts as $post) {
         global $page_details;
         global $site_details;
         global $blog_posts;
+        global $api_routes;
 
         // post preview: first 300 chars in post content
         $post_preview = strip_tags($post["content"]);
@@ -128,7 +129,7 @@ foreach($blog_posts as $post) {
         shuffle($blog_posts);
         $current_blog_post_index = 0;
         $more_posts = [];
-        while(count($more_posts) < 6) {
+        while(count($more_posts) < 3) {
             $current_more_post = $blog_posts[$current_blog_post_index];
 
             if($current_more_post["title"] != $post["title"]) {
@@ -142,6 +143,9 @@ foreach($blog_posts as $post) {
         // get page data and store in var
         $page_data = $post;
         $page_data["more_posts"] = $more_posts;
+
+        $all_projects = $api_routes["/code/"]()["projects"];
+        $page_data["featured_project"] = $all_projects[array_rand($all_projects)];
 
         // display view
         include_once __DIR__ . "/../views/blog_post.php";

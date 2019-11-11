@@ -1,6 +1,5 @@
 <?php include __DIR__ . "/assets/php/vars.php" ?>
-<?php include __DIR__ . "/assets/php/generate_code_block.php" ?>
-<?php include __DIR__ . "/assets/php/generate_blog_block.php" ?>
+<?php include __DIR__ . "/assets/php/generate_blocks.php" ?>
 
 <?php $filename = "home"; ?>
 

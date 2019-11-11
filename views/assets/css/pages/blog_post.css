@@ -1,6 +1,71 @@
 /* prism stylesheet (used for syntax highlighting */
 @import "/views/resources/prism/prism.css";
 
+/* side block list */
+body > div.container > ul.side_block_list {
+    display: none;
+}
+
+@media only screen and (min-width: 1275px) {
+    body > div.container {
+        padding-right: calc(((100% - 950px) / 2) - 150px);
+        position: relative;
+    }
+    
+    body > div.container > footer, body > div.container > ul.block_list {
+        width: calc(100% - 150px);
+    }
+    body > div.container > ul.block_list {
+        display: block;
+        float: left;
+    }
+    body > div.container .post_content {
+        width: calc(100% - 150px) !important;
+    }
+    body > div.container > ul.side_block_list {
+        display: block;
+    }
+}
+
+body > div.container > ul.side_block_list {
+    float: right;
+    position: sticky;
+    top: 0;
+    right: calc(((100% - 950px) / 2) - 150px);
+    height: 50rem;
+    z-index: 9999;
+    margin-top: 27.5rem; 
+    top: 0;
+    margin-left: -150px;
+    width: 300px;
+}
+body > div.container > ul.side_block_list.fixed {
+    position: fixed;
+    margin-top: 12rem;
+}
+
+body > div.container > ul.side_block_list > .side_block {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    box-shadow: 0 0 0.75rem rgba(38,50,56,0.2);
+    border: 1px solid var(--lighter-color);
+    box-sizing: border-box;
+    border-radius: 0.85rem;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    background-color: #ffffff;
+}
+body > div.container > ul.side_block_list > .side_block > h1.title {
+    display: block;
+    font-size: 2.25rem;
+    line-height: 1.25;
+    letter-spacing: -0.035rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.25rem;
+}
+
 /* photo should be large */
 body > div.nav_background.photo {
     background-size: cover;
@@ -21,7 +86,6 @@ body > div.container > ul.block_list > .block.post_block > .content > div.top {
 body > div.container .post_content {
     font-size: 1.85rem;
     line-height: 1.75;
-    width: calc(100% - 10rem) !important;
 }
 
 /* more from Fred section */

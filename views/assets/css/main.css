@@ -60,6 +60,9 @@ body > div.container {
     height: auto;
     overflow: hidden;
 }
+body > div.container {
+    margin-top: 6.75rem;
+}
 
 /* navbar */
 body > nav {
@@ -304,6 +307,7 @@ body > div.container > footer {
     border-top: 1px solid var(--light-color);
     position: relative;
     background-color: #ffffff;
+    clear: both;
 }
 body > div.container > footer > * {
     height: 3rem;
