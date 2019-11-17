@@ -13,12 +13,10 @@
 
         <div class="container">
             <ul class="side_block_list">
-                <div class="side_block">
-                    <h1 class="title">On This Site...</h1>
-                    <ul>
-                        <a href="">About</a>
-                    </ul>
-                </div>
+                <?php
+                //echo generate_author_block();
+                echo generate_on_this_site_block(true);
+                ?>
             </ul>
             <ul class="block_list">
                 <?php

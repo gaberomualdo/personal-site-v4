@@ -1,6 +1,6 @@
 <?php
 
-function generate_share_post_block($block) {
+/*function generate_share_post_block($block) {
     global $page_data;
 
     return '
@@ -24,6 +24,6 @@ function generate_share_post_block($block) {
         </div>
     </div>
     ';
-}
+}*/
 
 ?>

@@ -56,7 +56,7 @@ body > div.container > ul.side_block_list > .side_block {
     padding: 1.5rem;
     background-color: #ffffff;
 }
-body > div.container > ul.side_block_list > .side_block > h1.title {
+body > div.container > ul.side_block_list > .side_block > div.content > h1.title {
     display: block;
     font-size: 2.25rem;
     line-height: 1.25;
@@ -64,6 +64,33 @@ body > div.container > ul.side_block_list > .side_block > h1.title {
     font-weight: 600;
     margin-bottom: 0.5rem;
     padding-bottom: 0.25rem;
+}
+body > div.container > ul.side_block_list > .side_block > div.content > ul.link_list {
+    display: block;
+    width: 100%;
+    height: 3.5rem;
+    overflow: hidden;
+    margin: 0;
+    font-size: 0;
+}
+body > div.container > ul.side_block_list > .side_block > div.content > ul.link_list > a {
+    height: 3.5rem;
+    text-align: center;
+    line-height: 3.5rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    display: inline-block;
+    box-sizing: border-box;
+}
+body > div.container > ul.side_block_list > .side_block > div.content > ul.link_list > a:not(:last-child) {
+    border-right: 1px solid var(--light-color);
+}
+body > div.container > ul.side_block_list > .side_block > div.content > ul.link_list > a:hover {
+    background-color: var(--lighter-color);
+}
+
+body > div.container > ul.side_block_list > .side_block.on_this_site_block > div.content > ul.link_list > a {
+    width: 25%;
 }
 
 /* photo should be large */

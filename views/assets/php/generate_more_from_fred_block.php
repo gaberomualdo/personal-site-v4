@@ -1,12 +1,9 @@
 <?php
 
-function generate_more_from_fred_block($side_block) {
+function generate_more_from_fred_block() {
     global $page_data;
 
     $block_class = "block";
-    if($side_block) {
-        $block_class = "side_block";
-    }
     
     $more_posts_HTML = "";
 

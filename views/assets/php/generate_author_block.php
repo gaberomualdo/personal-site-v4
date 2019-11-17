@@ -2,7 +2,7 @@
 
 function generate_author_block() {
     global $page_data;
-    global $site_data;
+    global $site_details;
 
     $social_links_HTML = "";
     foreach($site_details["author"]["social_urls"] as $social_url) {
@@ -22,7 +22,7 @@ function generate_author_block() {
                 </div>
             </div>
             <p>
-            
+                ' . $site_details["description"] . '
             </p>
         </div>
     </div>
