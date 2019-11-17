@@ -14,7 +14,7 @@
         <div class="container">
             <ul class="side_block_list">
                 <?php
-                //echo generate_author_block();
+                echo generate_author_block();
                 echo generate_on_this_site_block(true);
                 ?>
             </ul>

@@ -52,7 +52,7 @@ body > div.container > ul.side_block_list > .side_block {
     border: 1px solid var(--lighter-color);
     box-sizing: border-box;
     border-radius: 0.85rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     padding: 1.5rem;
     background-color: #ffffff;
 }
@@ -89,8 +89,68 @@ body > div.container > ul.side_block_list > .side_block > div.content > ul.link_
     background-color: var(--lighter-color);
 }
 
+/* for specific side blocks */
 body > div.container > ul.side_block_list > .side_block.on_this_site_block > div.content > ul.link_list > a {
     width: 25%;
+}
+
+body > div.container > ul.side_block_list > .side_block.author_block > div.content > div.top_area {
+    display: block;
+    overflow: hidden;
+    height: auto;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+body > div.container > ul.side_block_list > .side_block.author_block > div.content > div.top_area > * {
+    display: block;
+    float: left;
+}
+body > div.container > ul.side_block_list > .side_block.author_block > div.content > div.top_area > div.left {
+    height: 6.5rem;
+    width: 6.5rem;
+    margin-right: 1.5rem;
+    padding: 0.25rem;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 1px solid var(--lighter-color);
+}
+body > div.container > ul.side_block_list > .side_block.author_block > div.content > div.top_area > div.left > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+body > div.container > ul.side_block_list > .side_block.author_block > div.content > div.top_area > div.right {
+    width: calc(100% - 8rem);
+}
+body > div.container > ul.side_block_list > .side_block.author_block > div.content > div.top_area > div.right > h1 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    height: 3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+body > div.container > ul.side_block_list > .side_block.author_block > div.content > div.top_area > div.right > div.social_links {
+    height: 3rem;
+    padding: 0.5rem 0;
+    box-sizing: border-box;
+}
+body > div.container > ul.side_block_list > .side_block.author_block > div.content > div.top_area > div.right > div.social_links > a {
+    display: inline-block;
+    height: 2rem;
+    margin-right: 1.25rem;
+}
+body > div.container > ul.side_block_list > .side_block.author_block > div.content > div.top_area > div.right > div.social_links > a > svg {
+    height: 100%;
+    width: auto;
+    fill: var(--medium-color) !important;
+    transition: fill 0.1s ease-in-out;
+}
+body > div.container > ul.side_block_list > .side_block.author_block > div.content > div.top_area > div.right > div.social_links > a:hover > svg {
+    fill: var(--text-color) !important;
+}
+body > div.container > ul.side_block_list > .side_block.author_block > div.content > p {
+    font-size: 1.45rem;
+    margin-bottom: 0;
 }
 
 /* photo should be large */

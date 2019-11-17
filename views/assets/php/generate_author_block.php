@@ -10,10 +10,12 @@ function generate_author_block() {
     }
 
     return '
-    <div class="side_block more_posts_block">
+    <div class="side_block author_block">
         <div class="content">
             <div class="top_area">
-                <img class="left" alt="Fred Adams Picture" src="/api/content/static_files/profile_picture.png">
+                <div class="left">
+                    <img alt="Fred Adams Picture" src="/api/content/static_files/profile_picture.png">
+                </div>
                 <div class="right">
                     <h1>Fred Adams</h1>
                     <div class="social_links">
