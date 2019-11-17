@@ -17,8 +17,8 @@ function generate_blog_block($block, $full_block = false) {
 
     if(!$full_block) {
         $block_preview = $block["preview_text"];
-        if(strlen($block_preview) > 175) {
-            $block_preview = substr($block_preview, 0, 175) . "...";
+        if(strlen($block_preview) > 170) {
+            $block_preview = substr($block_preview, 0, 170) . "...";
         }
         $block_preview = "<p>" . $block_preview . "</p>";
     } else {

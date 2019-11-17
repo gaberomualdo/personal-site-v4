@@ -138,6 +138,9 @@ body > div.container > ul.side_block_list > .side_block.author_block > div.conte
     font-weight: 600;
     margin-bottom: 0.5rem;
 }
+body > div.container > ul.side_block_list > .side_block.author_block > div.content > div.top_area > div.right > h1 > a {
+    color: inherit;
+}
 body > div.container > ul.side_block_list > .side_block.author_block > div.content > div.top_area > div.right > div.social_links {
     height: 3rem;
     padding: 0.5rem 0;

@@ -6,12 +6,12 @@ if($filename == "blog_post") {
 ?>
 
 <?php // main scripts ?>
-<script src="/views/assets/js/script.js?v=2"></script>
+<script src="/views/assets/js/script.js?v=3"></script>
 <?php
 // only add page js if exists
 if(in_array($filename . ".js", scandir(dirname(__FILE__) . "/../js/pages/"))) {
-    echo '<script src="/views/assets/js/pages/' . $filename . '.js?v=2"></script>';
+    echo '<script src="/views/assets/js/pages/' . $filename . '.js?v=3"></script>';
 }
 ?>
 <?php // lazyload scripts ?>
-<script src="/views/assets/js/lazyload.js?v=2"></script>
+<script src="/views/assets/js/lazyload.js?v=3"></script>

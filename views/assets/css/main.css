@@ -235,7 +235,7 @@ body > nav.photo:not(.links_shown):not(.not_top) > ul.links > a.active {
         transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
     }
     body > nav.links_shown {
-        box-shadow: 0 0 0.5rem rgba(38,50,56,0.2), 0 0 0 100vh rgba(0,0,0,0.45);
+        box-shadow: 0 0 0.5rem rgba(38,50,56,0.2), 0 0 0 100vh rgba(0,0,0,0.75);
     }
     body > nav.links_shown > ul.links {
         margin-top: 2.25rem;
