@@ -583,7 +583,7 @@ body > div.container > ul.block_list > .block.post_block > .content > div.top > 
 /* post block mobile */
 @media only screen and (max-width: 780px) {
     body > div.container > ul.block_list > .block.post_block > .content > div.top > h1.title {
-        font-size: 3.5rem;
+        font-size: 3.5rem !important;
     }
 }
 @media only screen and (max-width: 550px) {
@@ -602,7 +602,7 @@ body > div.container > ul.block_list > .block.post_block > .content > div.top > 
     }
 
     body > div.container > ul.block_list > .block.post_block > .content > div.top > h1.title {
-        font-size: 3rem;
+        font-size: 3.25rem !important;
     }
     body > div.container > ul.block_list > .block.post_block > .content > div.top > ul.details > li > p {
         font-size: 1.4rem;

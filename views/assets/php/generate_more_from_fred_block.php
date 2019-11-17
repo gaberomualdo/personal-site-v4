@@ -9,7 +9,7 @@ function generate_more_from_fred_block() {
 
     // loop through more posts and add HTML to var
     foreach($page_data["more_posts"] as $more_post) {
-        $more_posts_HTML .= "<a href='" . $more_post["url"] . "'>" . $more_post["title"] . "</a>";
+        $more_posts_HTML .= "<a href='" . $more_post["url"] . "'>" . $more_post["title"] . " &rarr;</a>";
     }
     
     return '

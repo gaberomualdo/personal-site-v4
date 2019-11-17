@@ -74,9 +74,6 @@
 
                 <?php // a buncha blocks ?>
                 <?php
-                // on this site block
-                echo generate_on_this_site_block(false);
-
                 // if there are less than 15, simply display; if not, display 15, and then use client-side JS to progressively show more
                 if(count($page_data["blocks"]) <= 15) {
                     foreach($page_data["blocks"] as $block) {

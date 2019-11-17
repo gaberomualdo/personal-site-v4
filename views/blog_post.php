@@ -15,14 +15,18 @@
             <ul class="side_block_list">
                 <?php
                 echo generate_author_block();
-                echo generate_on_this_site_block(true);
+                if(rand(0,1) == 0) {
+                    echo generate_share_post_block($page_data);
+                }else {
+                    echo generate_on_this_site_block(true);
+                }
                 ?>
             </ul>
             <ul class="block_list">
                 <?php
                 // blog post
                 echo generate_blog_block($page_data, true);
-                echo generate_more_from_fred_block(false);                
+                echo generate_more_from_fred_block(false);        
                 ?>
 
                 
@@ -32,6 +36,28 @@
         </div>
 
         <?php include __DIR__ . "/assets/html/scripts.php" ?>
+        <script>
+
+        // some code taken from user Dean Taylor from https://stackoverflow.com/questions/400212/how-do-i-copy-to-the-clipboard-in-javascript
+        const copyURL = (url) => {
+            var textArea = document.createElement("textarea");
+            textArea.value = url;
+            textArea.style.position="fixed";  //avoid scrolling to bottom
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+
+            try {
+                var successful = document.execCommand('copy');
+            } catch (err) {
+                console.error('Fallback: Oops, unable to copy', err);
+            }
+
+            document.body.removeChild(textArea);
+        }
+
+
+        </script>
     </body>
 
 </html>
