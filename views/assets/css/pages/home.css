@@ -13,7 +13,7 @@ body > div.container > ul.block_list > .block.welcome > .content > div {
 body > div.container > ul.block_list > .block.welcome > .content > div.picture {
     width: 28rem;
     box-sizing: border-box;
-    padding: 0 4rem;
+    padding: 0 3.5rem;
 }
 body > div.container > ul.block_list > .block.welcome > .content > div.picture > img {
     width: 100%;
