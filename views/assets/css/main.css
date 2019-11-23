@@ -266,13 +266,15 @@ body > div.nav_background:not(.photo) {
 
 body > div.nav_background.photo {
     --dark-overlay: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55));
-    height: 42.5rem;
+    height: 45.5rem;
     width: 100%;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-image: var(--dark-overlay), var(--photo-url);
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10rem), 0 100%);
+    
 }
 body > div.nav_background.photo.photo_blog_post {
     --dark-overlay: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6));
@@ -363,10 +365,11 @@ body > div.container > footer > ul.links > a {
 /* block list */
 body > div.container {
     padding-top: 6rem;
+    position: relative;
 }
 
 body > nav.photo ~ div.container {
-    margin-top: -27.5rem;
+    margin-top: -30.5rem;
     z-index: 9999;
 }
 

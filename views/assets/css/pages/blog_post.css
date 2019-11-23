@@ -9,7 +9,6 @@ body > div.container > ul.side_block_list {
 @media only screen and (min-width: 1275px) {
     body > div.container {
         padding-right: calc(((100% - 950px) / 2) - 150px);
-        position: relative;
     }
     
     body > div.container > footer, body > div.container > ul.block_list {
