@@ -274,7 +274,6 @@ body > div.nav_background.photo {
     background-repeat: no-repeat;
     background-image: var(--dark-overlay), var(--photo-url);
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10rem), 0 100%);
-    
 }
 body > div.nav_background.photo.photo_blog_post {
     --dark-overlay: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6));
