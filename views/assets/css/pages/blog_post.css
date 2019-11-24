@@ -47,7 +47,7 @@ body > div.container > ul.side_block_list > .side_block {
     width: 100%;
     height: auto;
     overflow: hidden;
-    box-shadow: 0 0 0.75rem rgba(38,50,56,0.2);
+    box-shadow: 0 0.15rem 0.85rem rgba(38,50,56,0.2);
     border: 1px solid var(--lighter-color);
     box-sizing: border-box;
     border-radius: 0.85rem;
