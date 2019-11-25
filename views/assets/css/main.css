@@ -542,7 +542,7 @@ body > div.container > ul.block_list > .block.post_block > .content > div.top > 
 }
 body > div.container > ul.block_list > .block.post_block > .content > div.top > h1.title > a:hover {
     color: var(--link-color);
-    transform: translateY(-0.05rem);
+    transform: translateY(-0.1rem);
     display: inline-block;
 }
 
