@@ -23,7 +23,6 @@ script {
     --lighter-text-color: #90A4AE;
 
     --link-color: #2288FF;
-    --link-color: #2288FF;
 }
 
 /* highlight color */
@@ -537,10 +536,14 @@ body > div.container > ul.block_list > .block.post_block > .content > div.top > 
 body > div.container > ul.block_list > .block.post_block > .content > div.top > h1.title > a {
     color: inherit;
     text-decoration: none;
-    transition: color .2s;
+    transition: color .2s, transform .2s;
+    transform: translateY(0);
+    backface-visibility: hidden;
 }
 body > div.container > ul.block_list > .block.post_block > .content > div.top > h1.title > a:hover {
     color: var(--link-color);
+    transform: translateY(-0.05rem);
+    display: inline-block;
 }
 
 body > div.container > ul.block_list > .block.post_block > .content > div.top > ul.details {
