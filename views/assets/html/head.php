@@ -103,11 +103,11 @@
     <link rel="stylesheet" href="/views/resources/skeleton/skeleton.min.css?v=3">
     
     <?php // finally, CSS! ?>
-    <link rel="stylesheet" href="/views/assets/css/main.css?v=3">
+    <link rel="stylesheet" href="/views/assets/css/main.css?v=5">
     <?php
     // only add page js if exists
     if(in_array($filename . ".css", scandir(dirname(__FILE__) . "/../css/pages/"))) {
-        echo '<link rel="stylesheet" href="/views/assets/css/pages/' . $filename . '.css?v=4">';
+        echo '<link rel="stylesheet" href="/views/assets/css/pages/' . $filename . '.css?v=5">';
     }
     ?>
 </head>

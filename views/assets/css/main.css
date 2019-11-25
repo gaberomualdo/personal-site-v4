@@ -21,6 +21,9 @@ script {
     --text-color: #455A64;
     --dark-text-color: #37474F;    
     --lighter-text-color: #90A4AE;
+
+    --link-color: #2288FF;
+    --link-color: #2288FF;
 }
 
 /* highlight color */
@@ -446,12 +449,20 @@ body > div.container > ul.block_list > .block.post_block.photo > .image_containe
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 22.5%;
+    overflow: hidden;
 }
 body > div.container > ul.block_list > .block.post_block.photo > .image_container > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
+    transition: transform .2s, opacity .2s;
+    backface-visibility: hidden;
+    opacity: 0.925;
+}
+body > div.container > ul.block_list > .block.post_block.photo > .image_container:hover > img {
+    transform: scale(1.08);
+    opacity: 1;
 }
 body > div.container > ul.block_list > .block.post_block.photo > .content {
     flex-shrink: 1;
@@ -525,6 +536,11 @@ body > div.container > ul.block_list > .block.post_block > .content > div.top > 
 }
 body > div.container > ul.block_list > .block.post_block > .content > div.top > h1.title > a {
     color: inherit;
+    text-decoration: none;
+    transition: color .2s;
+}
+body > div.container > ul.block_list > .block.post_block > .content > div.top > h1.title > a:hover {
+    color: var(--link-color);
 }
 
 body > div.container > ul.block_list > .block.post_block > .content > div.top > ul.details {

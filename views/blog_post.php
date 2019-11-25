@@ -15,11 +15,8 @@
             <ul class="side_block_list">
                 <?php
                 echo generate_author_block();
-                if(rand(0,1) == 0) {
-                    echo generate_share_post_block($page_data);
-                }else {
-                    echo generate_on_this_site_block(true);
-                }
+                echo generate_share_post_block($page_data);
+                echo generate_on_this_site_block(true);
                 ?>
             </ul>
             <ul class="block_list">
