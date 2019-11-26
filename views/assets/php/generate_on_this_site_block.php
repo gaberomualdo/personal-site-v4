@@ -11,10 +11,10 @@ function generate_on_this_site_block($side_block) {
         <div class="content">
             <h1 class="title">On This Site</h1>
             <ul class="link_list">
-                <a href="/about/">About</a>
-                <a href="/blog/">Blog</a>
-                <a href="/code/">Code</a>
-                <a href="/resume/">Résumé</a>
+                <a href="/about/"><p>About</p></a>
+                <a href="/blog/"><p>Blog</p></a>
+                <a href="/code/"><p>Code</p></a>
+                <a href="/resume/"><p>Resume</p></a>
             </ul>
         </div>
     </div>

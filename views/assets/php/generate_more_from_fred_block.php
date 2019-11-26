@@ -7,9 +7,11 @@ function generate_more_from_fred_block() {
     
     $more_posts_HTML = "";
 
+    $theme_colors = array("#2188ff", "#27ae60", "#e67e22");
+
     // loop through more posts and add HTML to var
-    foreach($page_data["more_posts"] as $more_post) {
-        $more_posts_HTML .= "<a href='" . $more_post["url"] . "'>" . $more_post["title"] . " &rarr;</a>";
+    foreach($page_data["more_posts"] as $key => $more_post) {
+        $more_posts_HTML .= "<a class='btn_text' style='--theme-color: " . $theme_colors[$key] . ";' href='" . $more_post["url"] . "'>" . $more_post["title"] . " &nbsp;&rarr;</a>";
     }
     
     return '

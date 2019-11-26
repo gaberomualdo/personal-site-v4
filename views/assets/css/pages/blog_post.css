@@ -82,16 +82,35 @@ body > div.container > ul.side_block_list > .side_block > div.content > ul.link_
     box-sizing: border-box;
     cursor: pointer;
     vertical-align: top;
+    overflow: hidden;
+    color: var(--link-color);
+    transition: background-color .2s;
+}
+body > div.container > ul.side_block_list > .side_block > div.content > ul.link_list > a > p {
+    backface-visibility: hidden s;
+    transition: transform .2s, color .2s;
 }
 body > div.container > ul.side_block_list > .side_block > div.content > ul.link_list > a > svg {
     height: 2rem;
     margin: 0.7rem 0;
+    backface-visibility: hidden;
+    transition: transform .2s, fill .2s;
+}
+body > div.container > ul.side_block_list > .side_block > div.content > ul.link_list > a:hover > * {
+    transform: scale(1.15);
+}
+body > div.container > ul.side_block_list > .side_block > div.content > ul.link_list > a:active > * {
+    transform: scale(1);
+}
+body > div.container > ul.side_block_list > .side_block > div.content > ul.link_list > a:hover > svg {
+    fill: var(--link-color);
 }
 body > div.container > ul.side_block_list > .side_block > div.content > ul.link_list > a:not(:last-child) {
     border-right: 1px solid var(--light-color);
 }
 body > div.container > ul.side_block_list > .side_block > div.content > ul.link_list > a:hover {
-    background-color: var(--lighter-color);
+    background-color: #f5f5f5;
+    font-weight: 600;
 }
 
 /* for specific side blocks */
@@ -139,25 +158,37 @@ body > div.container > ul.side_block_list > .side_block.author_block > div.conte
 }
 body > div.container > ul.side_block_list > .side_block.author_block > div.content > div.top_area > div.right > h1 > a {
     color: inherit;
+    text-decoration: none;
+    transition: transform .15s, color .15s;
+    display: inline-block;
+}
+body > div.container > ul.side_block_list > .side_block.author_block > div.content > div.top_area > div.right > h1 > a:hover {
+    transform: translateY(-1px);
+    color: var(--link-color);
+}
+body > div.container > ul.side_block_list > .side_block.author_block > div.content > div.top_area > div.right > h1 > a:active {
+    transform: translateY(0px);
 }
 body > div.container > ul.side_block_list > .side_block.author_block > div.content > div.top_area > div.right > div.social_links {
     height: 3rem;
-    padding: 0.5rem 0;
+    padding: 0.45rem 0;
     box-sizing: border-box;
 }
 body > div.container > ul.side_block_list > .side_block.author_block > div.content > div.top_area > div.right > div.social_links > a {
     display: inline-block;
-    height: 2rem;
+    height: 2.1rem;
     margin-right: 1.25rem;
 }
 body > div.container > ul.side_block_list > .side_block.author_block > div.content > div.top_area > div.right > div.social_links > a > svg {
     height: 100%;
     width: auto;
     fill: var(--medium-color) !important;
-    transition: fill 0.1s ease-in-out;
+    transition: fill .15s, transform .15s;
+    backface-visibility: hidden;
 }
 body > div.container > ul.side_block_list > .side_block.author_block > div.content > div.top_area > div.right > div.social_links > a:hover > svg {
     fill: var(--text-color) !important;
+    transform: scale(1.08);
 }
 body > div.container > ul.side_block_list > .side_block.author_block > div.content > p {
     font-size: 1.45rem;
@@ -200,11 +231,14 @@ body > div.container > ul.block_list > div.block.more_posts_block > div.content 
     padding: 0;
     overflow: hidden;
     height: auto;
+    padding: 2rem;
+    padding-top: 1.5rem;
+    box-sizing: border-box;
 }
 body > div.container > ul.block_list > div.block.more_posts_block > div.content > ul.link_list a {
     display: block;
     float: left;
-    width: 100%;
+    clear: both;
     box-sizing: border-box;
     text-align: left;
     font-size: 1.75rem;
@@ -213,15 +247,18 @@ body > div.container > ul.block_list > div.block.more_posts_block > div.content 
     min-height: 4.5rem;
     font-weight: 600;
     text-decoration: none;
+    margin-bottom: 1.5rem;
 }
-body > div.container > ul.block_list > div.block.more_posts_block > div.content > ul.link_list a:hover {
+/*body > div.container > ul.block_list > div.block.more_posts_block > div.content > ul.link_list a:hover {
     background-color: var(--lighter-color);
-}
+}*/
 
 @media only screen and (max-width: 780px) {
-    body > div.container > ul.block_list > div.block.more_posts_block > div.content > ul.post_list a {
+    body > div.container > ul.block_list > div.block.more_posts_block > div.content > ul.link_list {
+        padding: 1rem !important;
+    }
+    body > div.container > ul.block_list > div.block.more_posts_block > div.content > ul.link_list a {
         width: 100%;
-        padding-left: 0 !important;
     }
     body > div.container > ul.block_list > div.block.more_posts_block > div.content > h1.title {
         font-size: 3.5rem;

@@ -1,0 +1,29 @@
+body > div.container {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+body > div.container {
+    margin-top: 6.75rem;
+}
+
+/* block list */
+body > div.container {
+    padding-top: 6rem;
+    position: relative;
+}
+
+body > nav.photo ~ div.container {
+    margin-top: -30.5rem;
+    z-index: 9999;
+}
+
+/* blocklist mobile */
+@media only screen and (max-width: 550px) {
+    body > div.container {
+        padding-top: 2.75rem;
+    }
+    body > nav.photo ~ div.container {
+        margin-top: -22.5rem;
+    }
+}
