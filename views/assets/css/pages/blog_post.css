@@ -96,11 +96,14 @@ body > div.container > ul.side_block_list > .side_block > div.content > ul.link_
     backface-visibility: hidden;
     transition: transform .2s, fill .2s;
 }
-body > div.container > ul.side_block_list > .side_block > div.content > ul.link_list > a:hover > * {
+body > div.container > ul.side_block_list > .side_block > div.content > ul.link_list > a:hover > svg {
     transform: scale(1.15);
 }
+body > div.container > ul.side_block_list > .side_block > div.content > ul.link_list > a:hover > p {
+    transform: scale(1.1);
+}
 body > div.container > ul.side_block_list > .side_block > div.content > ul.link_list > a:active > * {
-    transform: scale(1);
+    transform: scale(1) !important;
 }
 body > div.container > ul.side_block_list > .side_block > div.content > ul.link_list > a:hover > svg {
     fill: var(--link-color);

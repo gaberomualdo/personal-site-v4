@@ -159,6 +159,9 @@ body > div.container > ul.block_list > .block.post_block > .content > div.top > 
     transform: translateY(-0.1rem);
     display: inline-block;
 }
+body > div.container > ul.block_list > .block.post_block > .content > div.top > h1.title > a:active {
+    transform: translateY(-0.025rem);
+}
 
 body > div.container > ul.block_list > .block.post_block > .content > div.top > ul.details {
     min-height: 2.5rem;
