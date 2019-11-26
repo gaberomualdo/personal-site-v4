@@ -33,6 +33,9 @@ body > div.container .post_content > img,
 body > div.container .post_content > *:not(.top) img {
     max-width: 100%;
 }
+body > div.container .post_content img {
+    border-radius: 3px;
+}
 
 /* post content with on mobile */
 @media only screen and (max-width: 550px) {

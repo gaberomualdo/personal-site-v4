@@ -127,12 +127,12 @@ body > div.container > ul.block_list > .block.welcome > .content > div.text > di
     color: var(--theme-color);
     text-decoration: none;
     text-transform: uppercase;
-    height: 2rem;
-    line-height: calc(2rem - 1.5px);
+    height: 2.2rem;
+    line-height: calc(2.2rem - 1px);
     padding: 0 0.9rem;
-    font-size: 1.3rem;
+    font-size: 1.375rem;
     border: 1px solid var(--theme-color);
-    border-radius: 1rem;
+    border-radius: 1.1rem;
     box-sizing: border-box;
     opacity: 0.9;
     transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out, opacity 0.25s ease-in-out;
