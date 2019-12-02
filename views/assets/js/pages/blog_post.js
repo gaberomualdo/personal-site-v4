@@ -24,4 +24,4 @@ const checkSideBlockPositionType = () => {
     }
 }
 window.addEventListener("scroll", checkSideBlockPositionType);
-window.addEventListener("load", checkSideBlockPositionTypeFirstTime);
+checkSideBlockPositionTypeFirstTime();
