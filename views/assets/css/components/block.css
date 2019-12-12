@@ -77,6 +77,9 @@ body > div.container > ul.block_list > .block.post_block.photo > .image_containe
     transform: scale(1.08);
     opacity: 1;
 }
+body > div.container > ul.block_list > .block.post_block.photo > .image_container:active > img {
+    transform: scale(1.04);
+}
 body > div.container > ul.block_list > .block.post_block.photo > .content {
     flex-shrink: 1;
     flex-basis: 72.5%;
