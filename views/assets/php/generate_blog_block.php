@@ -27,7 +27,7 @@ function generate_blog_block($block, $full_block = false) {
     
     $block_date = date("F j, Y", strtotime($block["last_updated"]));
 
-    $block_min_read = ceil(str_word_count(strip_tags($block["content"])) / 200);
+    $block_min_read = ceil(str_word_count(strip_tags($block["content"])) / 275);
 
     $block_title_HTML = '<h1 class="title">' . $block_title . '</h1>';
     if(!$full_block) {

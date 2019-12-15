@@ -39,7 +39,7 @@ body > div.container .post_content img {
 
 /* post content with on mobile */
 @media only screen and (max-width: 550px) {
-    body > div.container .post_content { font-size: 1.55rem; }
+    body > div.container .post_content { font-size: 1.55rem !important; }
 
     body > div.container .post_content h1 { font-size: 4rem; }
     body > div.container .post_content h2 { font-size: 3rem; }
