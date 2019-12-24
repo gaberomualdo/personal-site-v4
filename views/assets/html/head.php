@@ -26,18 +26,21 @@
     <meta name="author" content="<?=$site_details["author"]["name"] ?>">
     <meta name="description" content="<?=$page_details["description"] ?>">
     
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="twitter:title" content="<?=$page_details["title"] ?>">
+    <meta name="twitter:description" content="<?=$page_details["description"] ?>">
 
     <meta property="og:title" content="<?=$page_details["title"] ?>">
     <meta property="og:site_name" content="<?=$site_details["full_title"] ?>">
     <meta property="og:description" content="<?=$page_details["description"] ?>">
-    <meta property="og:url" content="<?=$request->getRequestURI() ?>">
 
     <?php // add OpenGraph image if applicable ?>
     <?php
     if($filename == "blog_post") {
         if (array_key_exists("thumbnail_url", $page_data)) {
-            echo "<meta property='og:image' content='" . $request->getServerName() . $page_data["thumbnail_url"] . "'>";
+            echo "<meta property='og:image' content='https://" . $request->getServerName() . $page_data["thumbnail_url"] . "'>";
+            echo "<meta name='twitter:image' content='https://" . $request->getServerName() . $page_data["thumbnail_url"] . "'>";
         }
     }
     ?>
