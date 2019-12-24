@@ -1,7 +1,7 @@
 <?php
 
 function generate_on_this_site_block($side_block) {
-    $block_class = "block";
+    /*$block_class = "block";
     if($side_block) {
         $block_class = "side_block";
     }
@@ -18,7 +18,7 @@ function generate_on_this_site_block($side_block) {
             </ul>
         </div>
     </div>
-    ';
+    ';*/
 }
 
 ?>

@@ -26,6 +26,12 @@ function generate_author_block() {
             <p>
                 ' . $site_details["description"] . '
             </p>
+            <ul class="link_list">
+                <a href="/about/"><p>About</p></a>
+                <a href="/blog/"><p>Blog</p></a>
+                <a href="/code/"><p>Code</p></a>
+                <a href="/resume/"><p>Resume</p></a>
+            </ul>
         </div>
     </div>
     ';

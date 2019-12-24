@@ -117,7 +117,53 @@ body > div.container > ul.side_block_list > .side_block > div.content > ul.link_
 }
 
 /* for specific side blocks */
-body > div.container > ul.side_block_list > .side_block.on_this_site_block > div.content > ul.link_list > a {
+body > div.container > ul.side_block_list > .side_block.another_post_block {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+body > div.container > ul.side_block_list > .side_block.another_post_block:hover > div.content > h1 {
+    color: var(--link-color);
+    transform: scale(1.02);
+}
+body > div.container > ul.side_block_list > .side_block.another_post_block:active > div.content > h1 {
+    transform: scale(1);
+}
+body > div.container > ul.side_block_list > .side_block.another_post_block > div.image_container {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 35%;
+    overflow: hidden;
+    border-right: 1px solid var(--lighter-color);
+}
+body > div.container > ul.side_block_list > .side_block.another_post_block > div.image_container > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+body > div.container > ul.side_block_list > .side_block.another_post_block > div.content {
+    padding: 1.25rem 1.5rem;
+    flex-shrink: 1;
+    flex-basis: 65%;
+}
+body > div.container > ul.side_block_list > .side_block.another_post_block > div.content > h1 {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-size: 1.65rem;
+    line-height: 1.5;
+    backface-visibility: hidden;
+    transition: color .2s, transform .2s;
+}
+
+
+body > div.container > ul.side_block_list > .side_block.author_block > div.content > ul.link_list {
+    margin-top: 1.25rem;
+}
+body > div.container > ul.side_block_list > .side_block.author_block > div.content > ul.link_list > a {
     width: 25%;
 }
 body > div.container > ul.side_block_list > .side_block.share_post_block > div.content > ul.link_list > a {
@@ -192,6 +238,9 @@ body > div.container > ul.side_block_list > .side_block.author_block > div.conte
 body > div.container > ul.side_block_list > .side_block.author_block > div.content > div.top_area > div.right > div.social_links > a:hover > svg {
     fill: var(--text-color) !important;
     transform: scale(1.08);
+}
+body > div.container > ul.side_block_list > .side_block.author_block > div.content > div.top_area > div.right > div.social_links > a:active > svg {
+    transform: scale(1);
 }
 body > div.container > ul.side_block_list > .side_block.author_block > div.content > p {
     font-size: 1.45rem;

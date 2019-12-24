@@ -134,7 +134,7 @@ foreach($blog_posts as $post) {
 
             if($current_more_post["title"] != $post["title"]) {
                 $current_more_post_url = "/blog/" . str_replace("-", "/", $current_more_post["last_updated"]) . "/" . $current_more_post["filename"] . "/";
-                array_push($more_posts, [ "title" => $current_more_post["title"], "url" => $current_more_post_url ]);
+                array_push($more_posts, [ "title" => $current_more_post["title"], "url" => $current_more_post_url, "thumbnail_url" => $current_more_post["thumbnail_url"] ]);
             }
             
             $current_blog_post_index++;

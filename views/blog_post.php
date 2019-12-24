@@ -16,7 +16,8 @@
                 <?php
                 echo generate_author_block();
                 echo generate_share_post_block($page_data);
-                echo generate_on_this_site_block(true);
+                echo generate_another_post_block(0);
+                echo generate_another_post_block(1);
                 ?>
             </ul>
             <ul class="block_list">
