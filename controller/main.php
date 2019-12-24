@@ -125,7 +125,7 @@ foreach($blog_posts as $post) {
         // get page details and store in var
         $page_details = ["title" => $post["title"] . " | " . $site_details["full_title"], "description" => $post_preview];
         
-        // choose 6 random posts to put in the "more from fred" section
+        // choose 3 random posts to put in the "more from fred" section
         shuffle($blog_posts);
         $current_blog_post_index = 0;
         $more_posts = [];

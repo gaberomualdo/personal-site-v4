@@ -1,4 +1,5 @@
 <?php include __DIR__ . "/assets/php/vars.php" ?>
+<?php include __DIR__ . "/assets/php/generate_blocks.php" ?>
 
 <?php $filename = "about"; ?>
 
@@ -19,6 +20,10 @@
                         <?php echo $page_data["content"]; ?>
                     </div>
                 </div>
+
+                <?php
+                echo generate_more_from_fred_block(false);
+                ?>
             </ul>
 
             <?php include __DIR__ . "/assets/html/footer.php" ?>
