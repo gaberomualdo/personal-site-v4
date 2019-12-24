@@ -1,13 +1,13 @@
-@import "misc/global.css?v=1";
-@import "misc/container_paddings.css?v=1";
-@import "misc/body_default.css?v=1";
+@import "misc/global.css?v=2";
+@import "misc/container_paddings.css?v=2";
+@import "misc/body_default.css?v=2";
 
-@import "components/nav.css?v=1";
-@import "components/footer.css?v=1";
-@import "components/container.css?v=1";
-@import "components/block.css?v=1";
+@import "components/nav.css?v=2";
+@import "components/footer.css?v=2";
+@import "components/container.css?v=2";
+@import "components/block.css?v=2";
 
-@import "components/text_button.css?v=1";
+@import "components/text_button.css?v=2";
 
-@import "misc/post_content.css?v=1";
-@import "misc/anything_else_at_the_end.css?v=1";
+@import "misc/post_content.css?v=2";
+@import "misc/anything_else_at_the_end.css?v=2";
