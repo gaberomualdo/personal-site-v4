@@ -27,6 +27,7 @@ xtrp.io is built with MVC architecture, and has separate directories for the rou
    - ```assets``` &mdash; the static frontend assets for the site, such as favicons, scripts, and stylesheets.
    - ```resources``` &mdash; any frontend resources used by views, for example, Modernizr.js or a CSS plugin.
  - ```controller``` &mdash; the **controller** of the site. This includes all the controllers for each of the unique pages, such as the homepage, blog page, post pages, etc.
+ - ```static``` &mdash; any static pages (HTML and frontend code) of the site that are not dynamically generated with PHP.
  - ```index.php``` &mdash; this is the entry point of the site. It calls the router, and subsequently, the controllers and views.
 
 There are several other files within the main directory, such as ```favicon.ico``` and ```robots.txt```, but those are pretty self-explanatory.

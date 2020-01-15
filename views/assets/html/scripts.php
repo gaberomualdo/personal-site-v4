@@ -15,3 +15,9 @@ if(in_array($filename . ".js", scandir(dirname(__FILE__) . "/../js/pages/"))) {
 ?>
 <?php // lazyload scripts ?>
 <script src="/views/assets/js/lazyload.js?v=3"></script>
+
+<?php // cookies banner ?>
+<script src="https://private.xtrp.io/projects/cookies_insert/cookiesBanner.js"></script>
+<script>
+__createCookiesBanner(925, 16, "xtrp.io");
+</script>
