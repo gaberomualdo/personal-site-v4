@@ -11,6 +11,10 @@
     <body class="loading">
         <?php include __DIR__ . "/assets/html/nav.php" ?>
 
+        <div class="scroll_progress_bar_container">
+            <div class="scroll_progress_bar"></div>
+        </div>
+
         <div class="container">
             <ul class="side_block_list">
                 <?php
@@ -25,9 +29,7 @@
                 // blog post
                 echo generate_blog_block($page_data, true);
                 echo generate_more_from_fred_block(false);        
-                ?>
-
-                
+                ?>                
             </ul>
 
             <?php include __DIR__ . "/assets/html/footer.php" ?>
@@ -40,7 +42,7 @@
         const copyURL = (url) => {
             var textArea = document.createElement("textarea");
             textArea.value = url;
-            textArea.style.position="fixed";  //avoid scrolling to bottom
+            textArea.style.position = "fixed"; // avoid scrolling to bottom
             document.body.appendChild(textArea);
             textArea.focus();
             textArea.select();
@@ -48,12 +50,11 @@
             try {
                 var successful = document.execCommand('copy');
             } catch (err) {
-                console.error('Fallback: Oops, unable to copy', err);
+                console.error('Copy failed.', err);
             }
 
             document.body.removeChild(textArea);
         }
-
 
         </script>
     </body>

@@ -285,3 +285,25 @@ body > div.container .post_content {
         font-size: 3.25rem;
     }
 }
+
+/* scroll progress bar */
+
+/* progress bar container */
+body > div.scroll_progress_bar_container {
+    --progress-height: .4rem;
+    --progress-color: var(--link-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--progress-height);
+    z-index: 9999999999;
+}
+
+/* progress bar */
+body > div.scroll_progress_bar_container > div.scroll_progress_bar {
+    height: var(--progress-height);
+    background-color: var(--progress-color);
+    width: 0%;
+    float: left;
+}
