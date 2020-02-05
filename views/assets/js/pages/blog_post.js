@@ -26,12 +26,12 @@ checkSideBlockPositionTypeFirstTime();
 
 // scroll progress bar functionality
 (() => {
-    // variables for progress bar and post container elements
-    const progressContainerEl = document.querySelector("body > div.scroll_progress_bar_container");
-    const progressBarEl = document.querySelector("body > div.scroll_progress_bar_container > div.scroll_progress_bar");
-
     // function to check scroll position and update scroll progress bar accordingly
     const updateScrollProgressBar = () => {
+        // variables for progress bar and post container elements
+        const progressContainerEl = document.querySelector("body > div.scroll_progress_bar_container");
+        const progressBarEl = document.querySelector("body > div.scroll_progress_bar_container > div.scroll_progress_bar");
+
         // get full scroll height
         const scrollHeight = document.body.scrollHeight - window.innerHeight;
         // get current scroll position
@@ -39,7 +39,10 @@ checkSideBlockPositionTypeFirstTime();
         
         // get scroll percentage and set width of progress bar
         const scrollPercentage = (scrollPosition / scrollHeight) * 100;
+        console.log(progressBarEl)
         progressBarEl.style.width = scrollPercentage + "%";
+        
+        console.log(scrollPosition + "/" + scrollHeight)
     }
 
     // bind window onload and onscroll events to update scroll progress bar width
