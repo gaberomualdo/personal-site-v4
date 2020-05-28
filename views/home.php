@@ -1,15 +1,15 @@
-<?php include __DIR__ . "/assets/php/vars.php" ?>
-<?php include __DIR__ . "/assets/php/generate_blocks.php" ?>
+<?php include __DIR__ . "/_config.php" ?>
+<?php include get_path_of_function("generate_blocks.php") ?>
 
 <?php $filename = "home"; ?>
 
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns#">
 
-    <?php include __DIR__ . "/assets/html/head.php" ?>
+    <?php include get_path_of_include('head.php'); ?>
 
     <body class="loading">
-        <?php include __DIR__ . "/assets/html/nav.php" ?>
+        <?php include get_path_of_include("nav.php") ?>
 
         <div class="container">
             <?php // blocks ?>
@@ -94,10 +94,10 @@
                 ?>
             </ul>
 
-            <?php include __DIR__ . "/assets/html/footer.php" ?>
+            <?php include get_path_of_include("footer.php") ?>
         </div>
 
-        <?php include __DIR__ . "/assets/html/scripts.php" ?>
+        <?php include get_path_of_include("scripts.php") ?>
     </body>
 
 </html>

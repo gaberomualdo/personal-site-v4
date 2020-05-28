@@ -108,8 +108,8 @@
     <?php // finally, CSS! ?>
     <link rel="stylesheet" href="/views/assets/css/main.css?v=11">
     <?php
-    // only add page js if exists
-    if(in_array($filename . ".css", scandir(dirname(__FILE__) . "/../css/pages/"))) {
+    // only add page CSS if exists
+    if(in_array($filename . ".css", scandir(resolve_from_root("/views/assets/css/pages/")))) {
         echo '<link rel="stylesheet" href="/views/assets/css/pages/' . $filename . '.css?v=11">';
     }
     ?>

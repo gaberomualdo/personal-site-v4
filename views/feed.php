@@ -3,8 +3,8 @@
 // header
 header("Content-type: text/xml");
 
-// vars include
-include __DIR__ . "/assets/php/vars.php";
+// include config
+include __DIR__ . "/_config.php";
 
 // vars
 $current_full_year = date("Y");

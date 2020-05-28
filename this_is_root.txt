@@ -1,0 +1,3 @@
+This file is used by the 'views/_config.php' program to determine that the parent directory of this file is the root of the site.
+
+WARNING: do not name any other files in this repo 'this_is_root.txt'.

@@ -9,7 +9,7 @@ if($filename == "blog_post") {
 <script src="/views/assets/js/script.js?v=3"></script>
 <?php
 // only add page js if exists
-if(in_array($filename . ".js", scandir(dirname(__FILE__) . "/../js/pages/"))) {
+if(in_array($filename . ".js", scandir(resolve_from_root("/views/assets/js/pages/")))) {
     echo '<script src="/views/assets/js/pages/' . $filename . '.js?v=3"></script>';
 }
 ?>

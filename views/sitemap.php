@@ -3,8 +3,8 @@
 // XML type header
 header("Content-type: text/xml");
 
-// vars include
-include __DIR__ . "/assets/php/vars.php";
+// config include
+include __DIR__ . "/_config.php";
 
 // start of sitemap
 echo <<<EOT
