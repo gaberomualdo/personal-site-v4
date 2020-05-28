@@ -6,7 +6,7 @@ function generate_author_block() {
 
     $social_links_HTML = "";
     foreach($site_details["author"]["social_urls"] as $social_url) {
-        $social_links_HTML .= "<a href='" . $social_url["url"] . "' target='_blank'>" . $social_url["svg"] . "</a>";
+        $social_links_HTML .= "<a rel='nofollow noreferrer' href='" . $social_url["url"] . "' target='_blank'>" . $social_url["svg"] . "</a>";
     }
 
     return '
