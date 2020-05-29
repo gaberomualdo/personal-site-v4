@@ -9,9 +9,6 @@ include "blocks/generate_share_post_block.php";
 include "blocks/generate_another_post_block.php";
 
 /*
-@REMOVED
-include "blocks/generate_on_this_site_block.php";
-
 @TODO implement:
 include "blocks/generate_featured_project_block.php";
 */
