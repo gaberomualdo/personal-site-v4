@@ -1,8 +1,0 @@
-/* container and body */
-body {
-    background-color: #ffffff;
-    color: var(--text-color);
-}
-body.loading * {
-    transition: none !important;
-}
