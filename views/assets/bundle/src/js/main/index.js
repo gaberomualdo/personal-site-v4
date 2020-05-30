@@ -1,3 +1,8 @@
+// css
+import '../../css/normalize.min.css';
+import '../../css/skeleton.min.css';
+import '../../css/main.css';
+
 const lazyload = require('./lazyload');
 
 __createCookiesBanner(925, 16, 'xtrp.io');

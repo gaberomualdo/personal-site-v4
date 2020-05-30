@@ -1,0 +1,69 @@
+/* footer */
+body > div.container > footer {
+    height: auto;
+    overflow: hidden;
+    min-height: 6rem;
+    padding: 1.5rem 0;
+    box-sizing: border-box;
+    border-top: 1px solid var(--light-color);
+    position: relative;
+    background-color: #ffffff;
+    clear: both;
+}
+body > div.container > footer > * {
+    height: 3rem;
+    line-height: 3rem;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+body > div.container > footer > p {
+    position: absolute;
+    width: 33.33%;
+    text-align: center;
+    left: 33.33%;
+}
+body > div.container > footer > ul.links {
+    width: 33.33%;
+}
+body > div.container > footer > ul.links.left {
+    float: left;
+    text-align: left;
+}
+body > div.container > footer > ul.links.right {
+    float: right;
+    text-align: right;
+}
+body > div.container > footer > ul.links > a:not(:first-child) {
+    margin-left: 1rem;
+}
+body > div.container > footer > ul.links > a {
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 780px) {
+    body > div.container > footer > p {
+        width: auto;
+        float: left;
+        clear: both;
+        position: static;
+    }
+    body > div.container > footer > ul.links {
+        float: right !important;
+        width: auto;
+        clear: right;
+    }
+    body > div.container > footer > *:not(:last-child) {
+        margin-bottom: 0.5rem;
+    }
+}
+@media only screen and (max-width: 550px) {
+    body > div.container > footer {
+        margin-top: 2.75rem;
+    }
+    body > div.container > footer > * {
+        width: 100% !important;
+        clear: both !important;
+        text-align: center !important;
+    }
+}

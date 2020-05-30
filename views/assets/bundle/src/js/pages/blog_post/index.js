@@ -1,3 +1,6 @@
+// css
+import '../../../css/pages/blog-post.css';
+
 import './prism';
 
 const ClipboardJS = require('clipboard');

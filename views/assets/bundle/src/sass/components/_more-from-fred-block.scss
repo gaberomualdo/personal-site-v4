@@ -1,0 +1,35 @@
+/* more from Fred section */
+body > div.container > ul.block_list > div.block.more_posts_block > div.content > h1.title {
+    font-weight: 600;
+    font-size: 3.9rem;
+    border-bottom: 1px solid var(--light-color);
+    padding-bottom: 0.5rem;
+}
+body > div.container > ul.block_list > div.block.more_posts_block > div.content > ul.link_list {
+    width: 100%;
+    margin: 0;
+    margin-top: 2rem;
+    padding: 0;
+    overflow: hidden;
+    height: auto;
+    padding: 2rem;
+    padding-top: 1.5rem;
+    box-sizing: border-box;
+}
+body > div.container > ul.block_list > div.block.more_posts_block > div.content > ul.link_list a {
+    display: block;
+    float: left;
+    clear: both;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 1.75rem;
+    line-height: 3rem;
+    padding: 0.75rem 1.5rem;
+    min-height: 4.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    margin-bottom: 1.5rem;
+}
+/*body > div.container > ul.block_list > div.block.more_posts_block > div.content > ul.link_list a:hover {
+    background-color: var(--lighter-color);
+}*/

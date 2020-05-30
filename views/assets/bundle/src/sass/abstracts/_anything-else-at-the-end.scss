@@ -1,0 +1,16 @@
+/* code block content has less margin, and span is smaller and not displayed */
+body > div.container .code_block_content > p {
+    margin-bottom: 0;
+    font-size: 105%;
+}
+body > div.container .code_block_content span {
+    font-size: 80%;
+    display: none;
+}
+
+/* mobile font size for EVERYTHING, VERY IMPORTANT */
+@media only screen and (max-width: 550px) {
+    html {
+        font-size: 56.5% !important;
+    }
+}

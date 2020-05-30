@@ -100,17 +100,13 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/views/assets/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-
-    <?php // skeleton stylesheets ?>
-    <link rel="stylesheet" href="/views/resources/skeleton/normalize.min.css?v=10">
-    <link rel="stylesheet" href="/views/resources/skeleton/skeleton.min.css?v=10">
     
-    <?php // finally, CSS! ?>
-    <link rel="stylesheet" href="/views/assets/css/main.css?v=11">
+    <?php // CSS! ?>
+    <link rel="stylesheet" href="/views/assets/bundle/dist/main.css">
     <?php
     // only add page CSS if exists
-    if(in_array($filename . ".css", scandir(resolve_from_root("/views/assets/css/pages/")))) {
-        echo '<link rel="stylesheet" href="/views/assets/css/pages/' . $filename . '.css?v=11">';
+    if(file_exists(resolve_from_root("/views/assets/bundle/dist/" . $filename . "/main.css"))) {
+        echo '<link rel="stylesheet" href="/views/assets/bundle/dist/' . $filename . '/main.css">';
     }
     ?>
 </head>

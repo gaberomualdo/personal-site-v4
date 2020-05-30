@@ -1,3 +1,6 @@
+// css
+import '../../../css/pages/home.css';
+
 /* display welcome header animation followed by social url and text animations */
 window.addEventListener('load', () => {
   document

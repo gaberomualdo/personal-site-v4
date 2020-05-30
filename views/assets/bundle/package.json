@@ -6,7 +6,8 @@
   "author": "Fred Adams <xtrp@xtrp.io>",
   "license": "UNLICENSED",
   "scripts": {
-    "build": "concurrently --kill-others \"webpack\""
+    "build": "concurrently --kill-others \"webpack\" \"npm run build:sass\"",
+    "build:sass": "node-sass -w src/sass -o src/css"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",

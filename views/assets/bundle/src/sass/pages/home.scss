@@ -1,0 +1,246 @@
+/* animate CSS stylesheet */
+@import '../vendor/animate';
+
+/* welcome card columns */
+body > div.container > ul.block_list > .block.welcome > .content > div {
+  display: block;
+  float: left;
+  height: auto;
+  overflow: hidden;
+}
+
+/* welcome card picture */
+body > div.container > ul.block_list > .block.welcome > .content > div.picture {
+  width: 28rem;
+  box-sizing: border-box;
+  padding: 0 3.5rem;
+}
+body > div.container > ul.block_list > .block.welcome > .content > div.picture > img {
+  width: 100%;
+  height: auto;
+  border: none;
+}
+
+/* welcome card text area */
+body > div.container > ul.block_list > .block.welcome > .content > div.text {
+  width: calc(100% - 28rem);
+  box-sizing: border-box;
+  padding-left: 4rem;
+}
+body > div.container > ul.block_list > .block.welcome > .content > div.text p {
+  margin-bottom: 2.25rem;
+}
+body > div.container > ul.block_list > .block.welcome > .content > div.text > div.text_content > *:last-child {
+  margin-bottom: 0;
+}
+
+/* welcome card tablet */
+@media only screen and (max-width: 860px) {
+  body > div.container > ul.block_list > .block.welcome > .content > div.picture {
+    padding: 0;
+    width: 22rem;
+  }
+  body > div.container > ul.block_list > .block.welcome > .content > div.text {
+    width: calc(100% - 22rem);
+  }
+}
+
+/* top of text area */
+body > div.container > ul.block_list > .block.welcome > .content > div.text > div.top {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+body > div.container > ul.block_list > .block.welcome > .content > div.text > div.top > div {
+  float: left;
+}
+
+body > div.container > ul.block_list > .block.welcome > .content > div.text > div.top > div.left {
+  display: none;
+  width: 8.5rem;
+  height: auto;
+  overflow: hidden;
+}
+body > div.container > ul.block_list > .block.welcome > .content > div.text > div.top > div.left > img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  padding: 0.15rem;
+  border: 1px solid var(--lighter-color);
+  box-sizing: border-box;
+  display: block;
+}
+
+body > div.container > ul.block_list > .block.welcome > .content > div.text > div.top > div.right {
+  display: block;
+  width: 100%;
+  float: left;
+  min-height: 8.25rem;
+}
+
+/* catchy header with EPIC animation! */
+body > div.container > ul.block_list > .block.welcome > .content > div.text > div.top > div.right > h1.catchy_header {
+  font-size: 0;
+  line-height: 1.3;
+  overflow: hidden;
+  margin-bottom: 0;
+  font-weight: 600;
+  padding: 0.25rem 0;
+}
+
+/* container for animated text */
+body > div.container > ul.block_list > .block.welcome > .content > div.text > div.top > div.right > h1.catchy_header > span.word_container {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0;
+  height: calc(4.5rem * 1.3);
+}
+
+/* animated text (each word) */
+body
+  > div.container
+  > ul.block_list
+  > .block.welcome
+  > .content
+  > div.text
+  > div.top
+  > div.right
+  > h1.catchy_header
+  > span.word_container
+  > span.word_animated {
+  transform: translateY(110%);
+  display: inline-block;
+  transition: transform 0.8s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-transform 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+  margin-bottom: 0;
+  font-size: 4.5rem;
+}
+
+/* add spacing (spaces) between each word */
+body
+  > div.container
+  > ul.block_list
+  > .block.welcome
+  > .content
+  > div.text
+  > div.top
+  > div.right
+  > h1.catchy_header
+  > span.word_container:not(:last-child) {
+  margin-right: 0.75rem;
+}
+
+/* when animation is triggered on load */
+body
+  > div.container
+  > ul.block_list
+  > .block.welcome
+  > .content
+  > div.text
+  > div.top
+  > div.right
+  > h1.catchy_header.animation_shown
+  > span.word_container
+  > span.word_animated {
+  transform: translateY(0px);
+}
+
+/* social urls */
+body > div.container > ul.block_list > .block.welcome > .content > div.text > div.top > div.right > ul.social_links {
+  margin: 0;
+  margin-bottom: 2.25rem;
+}
+
+body > div.container > ul.block_list > .block.welcome > .content > div.text > div.top > div.right > ul.social_links > a {
+  color: var(--theme-color);
+  text-decoration: none;
+  text-transform: uppercase;
+  height: 2.1rem;
+  line-height: calc(2.1rem - 1.5px);
+  padding: 0 0.9rem;
+  font-size: 1.375rem;
+  border: 1px solid var(--theme-color);
+  border-radius: 1.05rem;
+  box-sizing: border-box;
+  opacity: 0.9;
+  transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out, opacity 0.25s ease-in-out;
+  display: inline-block;
+  margin-top: 1rem;
+}
+body > div.container > ul.block_list > .block.welcome > .content > div.text > div.top > div.right > ul.social_links > a:not(:last-child) {
+  margin-right: 0.75rem;
+}
+body > div.container > ul.block_list > .block.welcome > .content > div.text > div.top > div.right > ul.social_links > a:hover {
+  color: #ffffff;
+  background-color: var(--theme-color);
+  opacity: 1;
+}
+
+/* welcome card mobile */
+@media only screen and (max-width: 780px) {
+  body > div.container > ul.block_list > .block.welcome > .content > div.picture {
+    display: none;
+  }
+  body > div.container > ul.block_list > .block.welcome > .content > div.text {
+    width: 100%;
+    padding-left: 0;
+  }
+  body > div.container > ul.block_list > .block.welcome > .content > div.text > div.top > div.left {
+    display: block;
+  }
+  body > div.container > ul.block_list > .block.welcome > .content > div.text > div.top > div.right {
+    width: calc(100% - 8.5rem);
+    box-sizing: border-box;
+    padding-left: 1.75rem;
+  }
+
+  body > div.container > ul.block_list > .block.welcome > .content > div.text > div.top > div.right > h1.catchy_header > span.word_container {
+    height: calc(3.75rem * 1.35);
+  }
+  body
+    > div.container
+    > ul.block_list
+    > .block.welcome
+    > .content
+    > div.text
+    > div.top
+    > div.right
+    > h1.catchy_header
+    > span.word_container
+    > span.word_animated {
+    font-size: 3.75rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  body > div.container > ul.block_list > .block.welcome > .content > div.text > div.top > div.right {
+    width: calc(100% - 8.5rem);
+  }
+
+  body > div.container > ul.block_list > .block.welcome > .content > div.text > div.top > div.right > h1.catchy_header > span.word_container {
+    height: calc(3.25rem * 1.35);
+  }
+  body
+    > div.container
+    > ul.block_list
+    > .block.welcome
+    > .content
+    > div.text
+    > div.top
+    > div.right
+    > h1.catchy_header
+    > span.word_container
+    > span.word_animated {
+    font-size: 3.25rem;
+  }
+}
+
+/* actual text of welcome card */
+@media only screen and (max-width: 500px) {
+  body > div.container > ul.block_list > .block.welcome > .content > div.text > div.text_content .no_display_on_mobile {
+    display: none;
+  }
+  body > div.container > ul.block_list > .block.welcome > .content > div.text > div.text_content .no_margin_bottom_on_mobile {
+    margin-bottom: 0;
+  }
+}

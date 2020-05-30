@@ -1,0 +1,31 @@
+/* global */
+* {
+    outline: none;
+}
+svg {
+    fill: var(--text-color);
+}
+
+/* don't display script tags? (don't know why this happens though) */
+script {
+    display: none !important;
+}
+
+/* css variables */
+:root {
+    --light-color: #CFD8DC;
+    --lightish-color: #dde3e6;
+    --lighter-color: #ECEFF1;
+    --medium-color: #B0BEC5;
+
+    --text-color: #455A64;
+    --dark-text-color: #37474F;    
+    --lighter-text-color: #90A4AE;
+
+    --link-color: #2288FF;
+}
+
+/* highlight color */
+::selection {
+    background-color: var(--light-color);
+}

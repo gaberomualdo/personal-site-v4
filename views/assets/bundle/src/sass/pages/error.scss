@@ -1,0 +1,56 @@
+/* error block */
+body > div.container > ul.block_list > div.block.error > div.content > div {
+  display: block;
+  float: left;
+  height: auto;
+  overflow: hidden;
+}
+
+/* style left image area */
+body > div.container > ul.block_list > div.block.error > div.content > div.left {
+  width: 20rem;
+}
+body > div.container > ul.block_list > div.block.error > div.content > div.left > img {
+  width: 100%;
+  height: auto;
+}
+
+/* style right text area */
+body > div.container > ul.block_list > div.block.error > div.content > div.right {
+  width: calc(100% - 20rem);
+  box-sizing: border-box;
+  padding-left: 4rem;
+}
+body > div.container > ul.block_list > div.block.error > div.content > div.right > *:last-child {
+  margin-bottom: 0;
+}
+
+/* mobile */
+@media only screen and (max-width: 780px) {
+  body > div.container > ul.block_list > div.block.error > div.content > div.left {
+    width: 15rem;
+  }
+  body > div.container > ul.block_list > div.block.error > div.content > div.right {
+    width: calc(100% - 15rem);
+    padding-left: 2.5rem;
+  }
+}
+@media only screen and (max-width: 550px) {
+  body > div.container > ul.block_list > div.block.error > div.content > div.left,
+  body > div.container > ul.block_list > div.block.error > div.content > div.right {
+    width: 100%;
+  }
+
+  body > div.container > ul.block_list > div.block.error > div.content > div.left {
+    text-align: center;
+  }
+  body > div.container > ul.block_list > div.block.error > div.content > div.left > img {
+    width: auto;
+    display: inline-block;
+  }
+
+  body > div.container > ul.block_list > div.block.error > div.content > div.right {
+    padding-left: 0;
+    padding-top: 2.5rem;
+  }
+}
