@@ -21,6 +21,11 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="white">
     <meta name="format-detection" content="telephone=no">
 
+    <?php // preconnect third-party domains ?>
+    <link rel="preconnect" href="https://www.googletagmanager.com/">
+    <link rel="preconnect" href="https://private.xtrp.io/">
+
+
     <?php // SEO :) ?>
     <meta name="robots" content="index, follow">
     <meta name="author" content="<?=$site_details["author"]["name"] ?>">
