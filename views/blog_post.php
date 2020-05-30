@@ -36,27 +36,6 @@
         </div>
 
         <?php include get_path_of_include("scripts.php") ?>
-        <script>
-
-        // some code taken from user Dean Taylor from https://stackoverflow.com/questions/400212/how-do-i-copy-to-the-clipboard-in-javascript
-        const copyURL = (url) => {
-            var textArea = document.createElement("textarea");
-            textArea.value = url;
-            textArea.style.position = "fixed"; // avoid scrolling to bottom
-            document.body.appendChild(textArea);
-            textArea.focus();
-            textArea.select();
-
-            try {
-                var successful = document.execCommand('copy');
-            } catch (err) {
-                console.error('Copy failed.', err);
-            }
-
-            document.body.removeChild(textArea);
-        }
-
-        </script>
     </body>
 
 </html>

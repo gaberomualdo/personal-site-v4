@@ -1,3 +1,9 @@
+import './prism';
+
+const ClipboardJS = require('clipboard');
+
+new ClipboardJS('[data-clipboard-action]');
+
 // all parent elements of IMG tags in text content will have the class of "image_container"
 Array.from(document.querySelectorAll('body > div.container > ul.block_list > .block.post_block > .content > .text_content img')).forEach(
   (imageElement) => {
@@ -29,7 +35,6 @@ checkSideBlockPositionTypeFirstTime();
   // function to check scroll position and update scroll progress bar accordingly
   const updateScrollProgressBar = () => {
     // variables for progress bar and post container elements
-    const progressContainerEl = document.querySelector('body > div.scroll_progress_bar_container');
     const progressBarEl = document.querySelector('body > div.scroll_progress_bar_container > div.scroll_progress_bar');
 
     // get full scroll height
@@ -39,10 +44,7 @@ checkSideBlockPositionTypeFirstTime();
 
     // get scroll percentage and set width of progress bar
     const scrollPercentage = (scrollPosition / scrollHeight) * 100;
-    console.log(progressBarEl);
     progressBarEl.style.width = scrollPercentage + '%';
-
-    console.log(scrollPosition + '/' + scrollHeight);
   };
 
   // bind window onload and onscroll events to update scroll progress bar width

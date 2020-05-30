@@ -1,5 +1,7 @@
 const lazyload = require('./lazyload');
 
+__createCookiesBanner(925, 16, 'xtrp.io');
+
 // remove loading class from body when page is loaded, and fire oncroll event on window when DOM loaded, and lazyload
 window.addEventListener('load', () => {
   window.dispatchEvent(new Event('scroll'));
