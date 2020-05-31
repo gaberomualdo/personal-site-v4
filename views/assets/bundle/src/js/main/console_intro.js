@@ -18,7 +18,7 @@ window.addEventListener('load', () => {
   const separator = '-'.repeat(Math.max(interestedInWorkingText.length, asciiText[0].length));
   console.log(separator);
 
-  console.log(fullText.join('\n'));
+  console.log('%c' + fullText.join('\n'), 'font-family: monospace;');
 
   // social links logged with theme color!
   __siteSocialLinks.forEach((link) => {
@@ -34,6 +34,6 @@ window.addEventListener('load', () => {
   console.log(separator);
 
   // interested in working with me text
-  console.log(interestedInWorkingText);
+  console.log('%c' + interestedInWorkingText, 'font-weight: bold;');
   console.log(separator);
 });
