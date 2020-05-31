@@ -5,7 +5,7 @@
 <script>const __siteSocialLinks = [<?php
 
 $all_links = $site_details["author"]["social_urls"];
-array_push($all_links, [ "url" => $request->getServerName(), "name" => "Website", "theme_color" => "#555555" ]);
+array_push($all_links, [ "url" => $request->getServerName(), "name" => "Website", "theme_color" => "#3498db" ]);
 
 foreach($all_links as $link) {
     echo "{ name: '" . $link['name'] . "', url: '" . $link['url'] . "', theme: '" . $link['theme_color'] . "' },";
