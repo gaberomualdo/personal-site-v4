@@ -31,8 +31,8 @@ class Router {
 				// if page is indeed not in routedURIs, run function and set 404 header
 				if(!in_array($this->requestObj->getRequestMethod() . ": " . $this->requestObj->getRequestURI(), $this->routedURIs)) {
 					echo "<!--";
-					var_dump($this->$requestObj);
-					var_dump($this->$routedURIs);
+					var_dump($this->requestObj);
+					var_dump($this->routedURIs);
 					echo "-->";
 					http_response_code(404);
 					$function();
@@ -54,8 +54,8 @@ class Router {
 				// if passed target URI is equal to current URI, then run passed function, and add URI and method to $routedURIs variable
 				if($arguments[0] == $this->requestObj->getRequestURI()) {
 					$arguments[1]();
-					array_push($this->routedURIs, (strtoupper($name) . ": " . $arguments[0]));
 				}
+				array_push($this->routedURIs, (strtoupper($name) . ": " . $arguments[0]));
 			}
 		}
 	}
