@@ -1,18 +1,5 @@
 <?php
 
-echo "<!--";
-var_dump($_SERVER['HTTPS']);
-echo "-->";
-
-/* redirect HTTP to HTTPS */
-if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
-    echo "Redirect from HTTP to HTTPS";
-    $location = 'https://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
-    header('HTTP/1.1 301 Moved Permanently');
-    header('Location: ' . $location);
-    exit();
-}
-
 /* Router class */
 include_once("router/Request.php");
 include_once("router/Router.php");
