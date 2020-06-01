@@ -18,6 +18,10 @@ class Router {
 
 	/* this is the error handler, which handles errors, such as page_not_found, and method_not_allowed. It should always be defined (called) after all other routes have been defined. */
 	public function error($name, $function) {
+		echo "<!--";
+		var_dump($this->requestObj);
+		var_dump($this->routedURIs);
+		echo "-->";
 		// switch case for error codes
 		switch ($name) {
 			case "method_not_allowed":
@@ -30,10 +34,6 @@ class Router {
 			case "page_not_found":
 				// if page is indeed not in routedURIs, run function and set 404 header
 				if(!in_array($this->requestObj->getRequestMethod() . ": " . $this->requestObj->getRequestURI(), $this->routedURIs)) {
-					echo "<!--";
-					var_dump($this->requestObj);
-					var_dump($this->routedURIs);
-					echo "-->";
 					http_response_code(404);
 					$function();
 				}
@@ -53,6 +53,10 @@ class Router {
 			if(strtoupper($name) == $this->requestObj->getRequestMethod()) {
 				// if passed target URI is equal to current URI, then run passed function, and add URI and method to $routedURIs variable
 				if($arguments[0] == $this->requestObj->getRequestURI()) {
+					echo "<!--";
+					var_dump($this->requestObj);
+					var_dump($this->routedURIs);
+					echo "-->";
 					$arguments[1]();
 				}
 				array_push($this->routedURIs, (strtoupper($name) . ": " . $arguments[0]));
