@@ -1,7 +1,10 @@
 window.addEventListener('load', () => {
-  // text
-  const interestedInWorkingText = ' Interested in working with me? Shoot me an email at xtrp@xtrp.io. ';
-  const beforeText = [' Built by...'];
+  const logToConsole = (text, customStyle = '', options = {}) => {
+    console.log('%c' + (options.isSeparator ? '' : ' ') + text, customStyle + ' font-size: 120%;');
+  };
+
+  const interestedInWorkingText = 'Interested in working with me? Shoot me an email at xtrp@xtrp.io. ';
+  const beforeText = ['Built by...'];
   const asciiText = [
     '  ______            _               _                     ',
     ' |  ____|          | |     /\\      | |                    ',
@@ -15,25 +18,25 @@ window.addEventListener('load', () => {
   const fullText = beforeText.concat(asciiText);
 
   // log '=====...' separators
-  const separator = '-'.repeat(Math.max(interestedInWorkingText.length, asciiText[0].length));
-  console.log(separator);
+  const separator = '-'.repeat(Math.max(interestedInWorkingText.length, asciiText[0].length) + 1);
+  logToConsole(separator, '', { isSeparator: true });
 
-  console.log('%c' + fullText.join('\n'), 'font-family: monospace;');
+  logToConsole(fullText.join('\n'), 'font-family: monospace;');
 
   // social links logged with theme color!
   __siteSocialLinks.forEach((link) => {
-    console.log(
-      `%c ${link.name}: ${link.url
+    logToConsole(
+      `${link.name}: ${link.url
         .replace(/http:\/\//g, '')
         .replace(/https:\/\//g, '')
         .replace(/mailto:/g, '')}`,
-      `color: ${link.theme}`
+      `color: ${link.theme};`
     );
   });
 
-  console.log(separator);
+  logToConsole(separator, '', { isSeparator: true });
 
   // interested in working with me text
-  console.log('%c' + interestedInWorkingText, 'font-weight: bold;');
-  console.log(separator);
+  logToConsole(interestedInWorkingText, 'font-weight: bold;');
+  logToConsole(separator, '', { isSeparator: true });
 });
