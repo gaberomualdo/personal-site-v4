@@ -30,6 +30,7 @@ class Router {
 			case "page_not_found":
 				// if page is indeed not in routedURIs, run function and set 404 header
 				if(!in_array($this->requestObj->getRequestMethod() . ": " . $this->requestObj->getRequestURI(), $this->routedURIs)) {
+					echo "from router";
 					http_response_code(404);
 					$function();
 				}

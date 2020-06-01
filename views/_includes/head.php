@@ -16,7 +16,6 @@
     <link rel="preconnect" href="https://www.googletagmanager.com/">
     <link rel="preconnect" href="https://private.xtrp.io/">
 
-
     <?php // SEO :) ?>
     <meta name="robots" content="index, follow">
     <meta name="author" content="<?=$site_details["author"]["name"] ?>">
