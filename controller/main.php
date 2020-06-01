@@ -63,6 +63,26 @@ $site_details = $api_routes["/site_details/"]();
 $page_details;
 $page_data;
 
+$router->error("is_using_ie", function() {
+    // declare use of global vars
+    global $page_data;
+    global $page_details;
+    global $site_details;
+
+    // error view, with method not allowed variables
+    $error_code = "using_ie";
+    $error_title = "Internet Explorer Not Supported";
+    $error_description = "Sorry, you are using Internet Explorer, which is not supported for this website. Try downloading a different browser such as <a href='https://www.google.com/chrome/'>Google Chrome</a>.";
+
+    // get page details and store in var
+    $page_details = ["title" => $error_title . " | " . $site_details["full_title"], "description" => $error_description];
+    
+    // get page data and store in var
+    $page_data = ["error_code" => $error_code, "error_title" => $error_title, "error_description" => $error_description];
+    
+    include_once __DIR__ . "/../views/error.php";
+});
+
 // for each route, add to router and display view
 foreach($routes as $route) {
     $router->get($route["route"], function() use( &$route ) {
@@ -198,26 +218,6 @@ $router->error("method_not_allowed", function() {
     // get page data and store in var
     $page_data = ["error_code" => $error_code, "error_title" => $error_title, "error_description" => $error_description];
 
-    include_once __DIR__ . "/../views/error.php";
-});
-
-$router->error("is_using_ie", function() {
-    // declare use of global vars
-    global $page_data;
-    global $page_details;
-    global $site_details;
-
-    // error view, with method not allowed variables
-    $error_code = "using_ie";
-    $error_title = "Internet Explorer Not Supported";
-    $error_description = "Sorry, you are using Internet Explorer, which is not supported for this website. Try downloading a different browser such as <a href='https://www.google.com/chrome/'>Google Chrome</a>.";
-
-    // get page details and store in var
-    $page_details = ["title" => $error_title . " | " . $site_details["full_title"], "description" => $error_description];
-    
-    // get page data and store in var
-    $page_data = ["error_code" => $error_code, "error_title" => $error_title, "error_description" => $error_description];
-    
     include_once __DIR__ . "/../views/error.php";
 });
 
