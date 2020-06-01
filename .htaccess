@@ -1,10 +1,10 @@
 RewriteEngine On
 
 RewriteCond %{HTTPS} !=on
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,NE] 
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE] 
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^.*$ /index.php [QSA]
+RewriteRule ^.*$ /index.php [L,QSA]
 
 AddOutputFilterByType DEFLATE text/html text/css text/plain image/gif text/javascript application/javascript application/x-httpd-fastphp
