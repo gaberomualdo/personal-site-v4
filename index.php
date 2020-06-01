@@ -1,5 +1,9 @@
 <?php
 
+echo "<!--";
+var_dump($_SERVER['HTTPS']);
+echo "-->";
+
 /* redirect HTTP to HTTPS */
 if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
     echo "Redirect from HTTP to HTTPS";
