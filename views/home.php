@@ -45,7 +45,7 @@
                                     <ul class="social_links animated" style="opacity: 0;">
                                         <?php
                                         foreach($site_details["author"]["social_urls"] as $social_url) {
-                                            echo "<a href='" . $social_url["url"] . "' style='--theme-color: " . $social_url["theme_color"] . ";' target='_blank'>" . $social_url["name"] . "</a>";
+                                            echo "<a rel='noreferrer' href='" . $social_url["url"] . "' style='--theme-color: " . $social_url["theme_color"] . ";' target='_blank'>" . $social_url["name"] . "</a>";
                                         }
                                         ?>
                                     </ul>

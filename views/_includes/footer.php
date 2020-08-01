@@ -10,7 +10,7 @@
     <ul class="links left">
         <?php
         foreach($site_details["author"]["other_urls"] as $social_url) {
-            echo "<a href='" . $social_url["url"] . "'>" . $social_url["name"] . "</a>";
+            echo "<a rel='noreferrer' href='" . $social_url["url"] . "'>" . $social_url["name"] . "</a>";
         }
         ?>
     </ul>
