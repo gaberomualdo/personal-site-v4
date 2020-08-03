@@ -17,7 +17,7 @@ function generate_more_from_fred_block() {
     return '
     <div class="' . $block_class . ' more_posts_block">
         <div class="content">
-            <h1 class="title">More from Fred</h1>
+            <h1 class="title">More from Gabriel</h1>
             <ul class="link_list">
                 ' . $more_posts_HTML . '
             </ul>

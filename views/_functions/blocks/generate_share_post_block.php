@@ -4,7 +4,7 @@ function generate_share_post_block($block) {
     global $request;
     global $page_data;
 
-    $text_to_share = urlencode('Check out this article I just read by Fred Adams!') . '%0A%0A' . urlencode($block["title"]) . '%0A' . urlencode($_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
+    $text_to_share = urlencode('Check out this article I just read by Gabriel Romualdo!') . '%0A%0A' . urlencode($block["title"]) . '%0A' . urlencode($_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
 
     return '
     <div class="side_block share_post_block">

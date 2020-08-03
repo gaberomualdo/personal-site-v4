@@ -14,10 +14,10 @@ function generate_author_block() {
         <div class="content">
             <div class="top_area">
                 <div class="left">
-                    <img alt="Fred Adams Picture" src="/api/content/static_files/profile_picture.png">
+                    <img alt="Gabriel Romualdo Picture" src="/api/content/static_files/profile_picture.png">
                 </div>
                 <div class="right">
-                    <h1><a href="/about/">Fred Adams</a></h1>
+                    <h1><a href="/about/">Gabriel Romualdo</a></h1>
                     <div class="social_links">
                         ' . $social_links_HTML . '
                     </div>
