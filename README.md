@@ -48,4 +48,4 @@ xtrp.io is built with HTML, CSS, vanilla JavaScript, and plain PHP, with an MVC 
 
 ## Credits
 
-xtrp.io was built by Fred Adams. All rights are reserved, and the code and/or other files that are part of xtrp.io are explicitly copyrighted and not available for reuse, redistribution, modification, or resell.
+xtrp.io was built by Gabriel Romualdo. All rights are reserved, and the code and/or other files that are part of xtrp.io are explicitly copyrighted and not available for reuse, redistribution, modification, or resell.

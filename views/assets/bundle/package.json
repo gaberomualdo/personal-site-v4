@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Bundled assets (with webpack) for xtrp.io",
   "main": "index.js",
-  "author": "Fred Adams <xtrp@xtrp.io>",
+  "author": "Gabriel Romualdo <xtrp@xtrp.io>",
   "license": "UNLICENSED",
   "scripts": {
     "build": "concurrently --kill-others \"webpack\" \"npm run build:sass\"",
