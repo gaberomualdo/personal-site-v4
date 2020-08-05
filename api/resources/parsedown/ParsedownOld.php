@@ -17,7 +17,7 @@ class Parsedown
 {
     # ~
 
-    const version = '1.7.4';
+    const version = '1.7.3';
 
     # ~
 
@@ -1489,41 +1489,22 @@ class Parsedown
             }
         }
 
-        $permitRawHtml = false;
-
         if (isset($Element['text']))
-        {
-            $text = $Element['text'];
-        }
-        // very strongly consider an alternative if you're writing an
-        // extension
-        elseif (isset($Element['rawHtml']))
-        {
-            $text = $Element['rawHtml'];
-            $allowRawHtmlInSafeMode = isset($Element['allowRawHtmlInSafeMode']) && $Element['allowRawHtmlInSafeMode'];
-            $permitRawHtml = !$this->safeMode || $allowRawHtmlInSafeMode;
-        }
-
-        if (isset($text))
         {
             $markup .= '>';
 
-            if (!isset($Element['nonNestables']))
+            if (!isset($Element['nonNestables'])) 
             {
                 $Element['nonNestables'] = array();
             }
 
             if (isset($Element['handler']))
             {
-                $markup .= $this->{$Element['handler']}($text, $Element['nonNestables']);
-            }
-            elseif (!$permitRawHtml)
-            {
-                $markup .= self::escape($text, true);
+                $markup .= $this->{$Element['handler']}($Element['text'], $Element['nonNestables']);
             }
             else
             {
-                $markup .= $text;
+                $markup .= self::escape($Element['text'], true);
             }
 
             $markup .= '</'.$Element['name'].'>';
