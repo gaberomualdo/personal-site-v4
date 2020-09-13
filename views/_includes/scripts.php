@@ -14,10 +14,10 @@ foreach($all_links as $link) {
 ?>];</script>
 
 <?php // main scripts ?>
-<script src="/views/assets/bundle/dist/main.js"></script>
+<script src="/views/assets/bundle/dist/main.js?v=1"></script>
 <?php
 // only add page js if exists
 if(file_exists(resolve_from_root("/views/assets/bundle/dist/" . $filename . "/index.js"))) {
-    echo '<script src="/views/assets/bundle/dist/' . $filename . '/index.js"></script>';
+    echo '<script src="/views/assets/bundle/dist/' . $filename . '/index.js?v=1"></script>';
 }
 ?>

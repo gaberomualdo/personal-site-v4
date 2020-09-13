@@ -97,11 +97,11 @@
     <meta name="theme-color" content="#ffffff">
     
     <?php // CSS! ?>
-    <link rel="stylesheet" href="/views/assets/bundle/dist/main.css">
+    <link rel="stylesheet" href="/views/assets/bundle/dist/main.css?v=1">
     <?php
     // only add page CSS if exists
     if(file_exists(resolve_from_root("/views/assets/bundle/dist/" . $filename . "/main.css"))) {
-        echo '<link rel="stylesheet" href="/views/assets/bundle/dist/' . $filename . '/main.css">';
+        echo '<link rel="stylesheet" href="/views/assets/bundle/dist/' . $filename . '/main.css?v=1">';
     }
     ?>
 </head>
