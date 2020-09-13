@@ -37,13 +37,17 @@
                                         $words_to_display = explode(" ", $text_to_display);
 
                                         // loop through words and echo generated HTML
+                                        $animation_delay = "";
+
                                         foreach ($words_to_display as $index => $word) {
-                                            echo '<span class="word_container"><span class="word_animated" style="transition-delay: ' . (0.2 + (0.1 * $index)) . 's;">' . $word . '</span></span> ';
+                                            $animation_delay = (0.2 + (0.1 * $index)) . 's';
+                                            echo '<span class="word_container"><span class="word_animated" style="animation-delay: ' . $animation_delay . ';">' . $word . '</span></span> ';
                                         }
                                         ?>
                                     </h1>
-                                    <ul class="social_links animated" style="opacity: 0;">
+                                    <ul class="social_links animated fadeIn" style="animation-delay: <?php echo $animation_delay; ?>;">
                                         <?php
+                                        
                                         foreach($site_details["author"]["social_urls"] as $social_url) {
                                             echo "<a rel='noreferrer' href='" . $social_url["url"] . "' style='--theme-color: " . $social_url["theme_color"] . ";' target='_blank'>" . $social_url["name"] . "</a>";
                                         }
@@ -51,7 +55,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="text_content post_content animated" style="opacity: 0;">
+                            <div class="text_content post_content animated fadeIn" style="animation-delay: <?php echo (0.2 + (0.1 * count($words_to_display))) ?>s;">
                                 <?=$page_data["home_opening_card"]["card_HTML"]?>
                             </div>
                         </div>
