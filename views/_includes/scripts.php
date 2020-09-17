@@ -13,11 +13,14 @@ foreach($all_links as $link) {
 
 ?>];</script>
 
-<?php // main scripts ?>
-<script src="/views/assets/bundle/dist/main.js?v=1"></script>
 <?php
+// main scripts
+$main_js_file_url = '/views/assets/bundle/dist/main.js';
+echo '<script src="' . $main_js_file_url . '?v=' . filemtime(resolve_from_root($main_js_file_url)) . '"></script>';
+
 // only add page js if exists
-if(file_exists(resolve_from_root("/views/assets/bundle/dist/" . $filename . "/index.js"))) {
-    echo '<script src="/views/assets/bundle/dist/' . $filename . '/index.js?v=1"></script>';
+$js_file_url = "/views/assets/bundle/dist/" . $filename . "/index.js";
+if(file_exists(resolve_from_root($js_file_url))) {
+    echo '<script src="' . $js_file_url .'?v=' . filemtime(resolve_from_root($js_file_url)) . '"></script>';
 }
 ?>

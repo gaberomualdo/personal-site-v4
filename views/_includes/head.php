@@ -96,12 +96,15 @@
     <meta name="msapplication-TileImage" content="/views/assets/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     
-    <?php // CSS! ?>
-    <link rel="stylesheet" href="/views/assets/bundle/dist/main.css?v=1">
     <?php
+    // CSS!
+    $main_css_file_url = '/views/assets/bundle/dist/main.css';
+    echo '<link rel="stylesheet" href="' . $main_css_file_url . '?v=' . filemtime(resolve_from_root($main_css_file_url)) . '">';
+    
     // only add page CSS if exists
-    if(file_exists(resolve_from_root("/views/assets/bundle/dist/" . $filename . "/main.css"))) {
-        echo '<link rel="stylesheet" href="/views/assets/bundle/dist/' . $filename . '/main.css?v=1">';
+    $css_file_url = "/views/assets/bundle/dist/" . $filename . "/main.css";
+    if(file_exists(resolve_from_root($css_file_url))) {
+        echo '<link rel="stylesheet" href="' . $css_file_url . '?v=' . filemtime(resolve_from_root($css_file_url)) . '">';
     }
     ?>
 </head>
