@@ -548,6 +548,8 @@ body > div.scroll_progress_bar_container > div.scroll_progress_bar {
   border-radius: 3px;
 }
 
+/* blockquote */
+
 .blog_post_full_content blockquote {
   border-left: 0.4rem solid rgba(39, 174, 96, 0.9);
   background-color: rgba(39, 174, 96, 0.085);
@@ -563,4 +565,14 @@ body > div.scroll_progress_bar_container > div.scroll_progress_bar {
 }
 .blog_post_full_content blockquote strong {
   font-weight: 600;
+}
+
+/* hr */
+.blog_post_full_content hr {
+  background: var(--light-color);
+  border: none;
+  display: block;
+  height: 1px;
+  width: 100%;
+  margin: 1.6em auto;
 }
