@@ -35,7 +35,7 @@ if($filename!="home" && $filename!="error") {
         <a href="/" <?php if($filename=="home"){ echo "class='active'"; } ?>>Home</a>
         <a href="/about/" <?php if($filename=="about"){ echo "class='active'"; } ?>>About</a>
         <a href="/blog/" <?php if($filename=="blog"){ echo "class='active'"; } ?>>Blog</a>
-        <a href="/code/" <?php if($filename=="code"){ echo "class='active'"; } ?>>Code</a>
+        <a href="/projects/" <?php if($filename=="code"){ echo "class='active'"; } ?>>Projects</a>
         <a href="/resume/" <?php if($filename=="resume"){ echo "class='active'"; } ?>>Résumé</a>
     </ul>
 </nav>

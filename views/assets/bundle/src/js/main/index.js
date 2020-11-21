@@ -70,7 +70,7 @@ if (typeof postBlocksToLoadOnScroll !== 'undefined') {
     if (scrollHeight - scrollPixelsFromTop < 10 * parseFloat(getComputedStyle(document.documentElement).fontSize)) {
       if (postBlocksToLoadOnScroll.length <= 15) {
         postBlocksToLoadOnScroll.forEach((blockInBase64) => {
-          document.querySelector('body > div.container > ul.block_list').innerHTML += atob(blockInBase64);
+          document.querySelector('body > div.container > div.block_list').innerHTML += atob(blockInBase64);
 
           // refresh lazy loading
           lazyload.update('.lazy_load');
@@ -78,7 +78,7 @@ if (typeof postBlocksToLoadOnScroll !== 'undefined') {
         postBlocksToLoadOnScroll = [];
       } else {
         for (let i = 0; i < 15; i++) {
-          document.querySelector('body > div.container > ul.block_list').innerHTML += atob(postBlocksToLoadOnScroll[i]);
+          document.querySelector('body > div.container > div.block_list').innerHTML += atob(postBlocksToLoadOnScroll[i]);
 
           // refresh lazy loading
           lazyload.update('.lazy_load');

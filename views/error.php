@@ -11,7 +11,7 @@
         <?php include get_path_of_include("nav.php") ?>
 
         <div class="container">
-            <ul class="block_list">
+            <div class="block_list">
                 <?php // error card ?>
                 <div class="block error">
                     <div class="content post_content">
@@ -27,7 +27,7 @@
                         </div>
                     </div>
                 </div>
-            </ul>
+            </div>
 
             <?php include get_path_of_include("footer.php") ?>
         </div>

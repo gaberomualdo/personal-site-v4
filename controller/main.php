@@ -36,10 +36,10 @@ $routes = [
         "updated" => "weekly"
     ],
     [
-        "route" => "/code/",
+        "route" => "/projects/",
         "api_route" => "/code/",
         "view_filename" => "code.php",
-        "title" => "Code",
+        "title" => "Projects",
         "priority" => "0.8",
         "updated" => "weekly"
     ],
@@ -197,6 +197,13 @@ $router->get("/sitemap/", function() {
 
     // include sitemap view
     include_once __DIR__ . "/../views/sitemap.php";
+});
+
+// /code/ redirect to /projects/
+$router->get("/code/", function() {
+    // redirect to /projects/
+    header('Location: /projects/', true, 301); // 301 status code means redirect is permanent
+    die();
 });
 
 // errors

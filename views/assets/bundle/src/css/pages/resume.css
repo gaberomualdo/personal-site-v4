@@ -5,20 +5,20 @@
 }
 
 /* resume container and direct children */
-body > div.container > ul.block_list > div.resume_container,
-body > div.container > ul.block_list > div.resume_container > * {
+body > div.container > div.block_list > div.resume_container,
+body > div.container > div.block_list > div.resume_container > * {
   position: relative;
 }
 
 /* rows and cols in resume */
-body > div.container > ul.block_list > div.resume_container > div.row {
+body > div.container > div.block_list > div.resume_container > div.row {
   display: block;
   height: auto;
   overflow: hidden;
   width: 100%;
 }
 
-body > div.container > ul.block_list > div.resume_container > div.row div.col {
+body > div.container > div.block_list > div.resume_container > div.row div.col {
   width: 50%;
   display: block;
   height: auto;
@@ -27,31 +27,31 @@ body > div.container > ul.block_list > div.resume_container > div.row div.col {
   box-sizing: border-box;
 }
 
-body > div.container > ul.block_list > div.resume_container > div.row div.col:nth-child(odd) {
+body > div.container > div.block_list > div.resume_container > div.row div.col:nth-child(odd) {
   padding-right: 1.75rem;
 }
 
-body > div.container > ul.block_list > div.resume_container > div.row div.col:nth-child(even) {
+body > div.container > div.block_list > div.resume_container > div.row div.col:nth-child(even) {
   padding-left: 1.75rem;
 }
 
 /* top area of resume */
-body > div.container > ul.block_list > div.resume_container > div.row.top_area {
+body > div.container > div.block_list > div.resume_container > div.row.top_area {
   position: relative;
 }
-body > div.container > ul.block_list > div.resume_container > div.row.top_area > p.last_updated {
+body > div.container > div.block_list > div.resume_container > div.row.top_area > p.last_updated {
   position: absolute;
   top: 2.5rem;
   right: 3rem;
   color: var(--light-text-color);
 }
 
-body > div.container > ul.block_list > div.resume_container > div.row.top_area > div.col.image {
+body > div.container > div.block_list > div.resume_container > div.row.top_area > div.col.image {
   width: 20rem;
   font-size: 0;
 }
 
-body > div.container > ul.block_list > div.resume_container > div.row.top_area > div.col.image > img {
+body > div.container > div.block_list > div.resume_container > div.row.top_area > div.col.image > img {
   width: 100%;
   height: auto;
   border-radius: 50%;
@@ -60,29 +60,29 @@ body > div.container > ul.block_list > div.resume_container > div.row.top_area >
   box-sizing: border-box;
 }
 
-body > div.container > ul.block_list > div.resume_container > div.row.top_area > div.col.main {
+body > div.container > div.block_list > div.resume_container > div.row.top_area > div.col.main {
   width: calc(100% - 20rem);
 }
 
-body > div.container > ul.block_list > div.resume_container > div.row.top_area > div.col.main > h1.name {
+body > div.container > div.block_list > div.resume_container > div.row.top_area > div.col.main > h1.name {
   font-size: 4.5rem;
   margin-bottom: 0.5rem;
   color: var(--dark-text-color);
 }
 
-body > div.container > ul.block_list > div.resume_container > div.row.top_area > div.col.main > h4.job_description {
+body > div.container > div.block_list > div.resume_container > div.row.top_area > div.col.main > h4.job_description {
   font-size: 2rem;
   color: var(--lighter-text-color);
   font-weight: normal;
   padding-left: 0.1rem;
 }
 
-body > div.container > ul.block_list > div.resume_container > div.row.top_area > div.col.main > p.description {
+body > div.container > div.block_list > div.resume_container > div.row.top_area > div.col.main > p.description {
   font-size: 1.5rem;
   margin-bottom: 0;
 }
 
-body > div.container > ul.block_list > div.resume_container > div.row.top_area .socials {
+body > div.container > div.block_list > div.resume_container > div.row.top_area .socials {
   /* display: flex;
   margin-top: 1rem;
   justify-content: space-between; */
@@ -90,12 +90,12 @@ body > div.container > ul.block_list > div.resume_container > div.row.top_area .
   bottom: 0.5rem;
   right: 0.5rem;
 }
-body > div.container > ul.block_list > div.resume_container > div.row.top_area .socials a {
+body > div.container > div.block_list > div.resume_container > div.row.top_area .socials a {
   font-weight: normal;
   text-decoration: none;
   color: inherit;
 }
-/* body > div.container > ul.block_list > div.resume_container > div.row.top_area .socials a {
+/* body > div.container > div.block_list > div.resume_container > div.row.top_area .socials a {
   padding: 0.75rem 1.25rem;
   background-color: var(--bg-color);
 
@@ -107,7 +107,7 @@ body > div.container > ul.block_list > div.resume_container > div.row.top_area .
 } */
 
 /* quote section */
-body > div.container > ul.block_list > div.resume_container > div.row.quote {
+body > div.container > div.block_list > div.resume_container > div.row.quote {
   background-color: var(--lightest-color);
   /*padding-top: 1.5rem;*/
   padding-top: 2.25rem;
@@ -116,23 +116,23 @@ body > div.container > ul.block_list > div.resume_container > div.row.quote {
   font-size: 2rem;
   text-align: center;
 }
-body > div.container > ul.block_list > div.resume_container > div.row.quote .quote_content {
+body > div.container > div.block_list > div.resume_container > div.row.quote .quote_content {
   margin-bottom: 0.75rem;
 }
-body > div.container > ul.block_list > div.resume_container > div.row.quote .attribution {
+body > div.container > div.block_list > div.resume_container > div.row.quote .attribution {
   opacity: 0.7;
   font-size: 85%;
 }
 
 /* social urls section */
-body > div.container > ul.block_list > div.resume_container > div.row.socials {
+body > div.container > div.block_list > div.resume_container > div.row.socials {
   border-top: 1px solid var(--light-color);
   border-bottom: 1px solid var(--light-color);
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
 
-body > div.container > ul.block_list > div.resume_container > div.row.socials > div.col {
+body > div.container > div.block_list > div.resume_container > div.row.socials > div.col {
   width: 33%;
   padding: 0;
   height: 2.5rem;
@@ -140,22 +140,22 @@ body > div.container > ul.block_list > div.resume_container > div.row.socials > 
   text-align: center;
 }
 
-body > div.container > ul.block_list > div.resume_container > div.row.socials > div.col:not(:last-child) {
+body > div.container > div.block_list > div.resume_container > div.row.socials > div.col:not(:last-child) {
   padding-right: 2rem;
 }
 
-body > div.container > ul.block_list > div.resume_container > div.row.socials > div.col > * {
+body > div.container > div.block_list > div.resume_container > div.row.socials > div.col > * {
   display: inline-block;
   vertical-align: top;
   margin: 0;
 }
 
-body > div.container > ul.block_list > div.resume_container > div.row.socials > div.col > svg {
+body > div.container > div.block_list > div.resume_container > div.row.socials > div.col > svg {
   height: 100%;
   width: auto;
 }
 
-body > div.container > ul.block_list > div.resume_container > div.row.socials > div.col > p {
+body > div.container > div.block_list > div.resume_container > div.row.socials > div.col > p {
   font-size: 1.65rem;
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
     sans-serif;
@@ -164,122 +164,122 @@ body > div.container > ul.block_list > div.resume_container > div.row.socials > 
 }
 
 /* bottom row */
-body > div.container > ul.block_list > div.resume_container > div.row.main h1.title {
+body > div.container > div.block_list > div.resume_container > div.row.main h1.title {
   font-size: 3.75rem;
   border-bottom: 1px solid var(--light-color);
   padding-bottom: 0.5rem;
 }
 
-body > div.container > ul.block_list > div.resume_container > div.row.main h2.subtitle {
+body > div.container > div.block_list > div.resume_container > div.row.main h2.subtitle {
   font-size: 3rem;
   margin-bottom: 1.5rem;
 }
 
-body > div.container > ul.block_list > div.resume_container > div.row.main div.col:nth-child(odd) {
+body > div.container > div.block_list > div.resume_container > div.row.main div.col:nth-child(odd) {
   padding-right: 2.25rem;
 }
 
-body > div.container > ul.block_list > div.resume_container > div.row.main div.col:nth-child(even) {
+body > div.container > div.block_list > div.resume_container > div.row.main div.col:nth-child(even) {
   padding-left: 2.25rem;
 }
 
-body > div.container > ul.block_list > div.resume_container > div.row.main span.separator {
+body > div.container > div.block_list > div.resume_container > div.row.main span.separator {
   display: block;
   margin-bottom: 1rem;
 }
-body > div.container > ul.block_list > div.resume_container > div.row.main span.li-separator {
+body > div.container > div.block_list > div.resume_container > div.row.main span.li-separator {
   display: block;
   height: 1.75rem;
 }
 
 /* left column of bottom row */
-body > div.container > ul.block_list > div.resume_container > div.row.main > div.col.left ul,
-body > div.container > ul.block_list > div.resume_container > div.row.main > div.col.right ul {
+body > div.container > div.block_list > div.resume_container > div.row.main > div.col.left ul,
+body > div.container > div.block_list > div.resume_container > div.row.main > div.col.right ul {
   margin: 0;
 }
 
-body > div.container > ul.block_list > div.resume_container > div.row.main > div.col.left ul.section:not(:first-child) {
+body > div.container > div.block_list > div.resume_container > div.row.main > div.col.left ul.section:not(:first-child) {
   margin-top: 3rem;
 }
-body > div.container > ul.block_list > div.resume_container > div.row.main > div.col.left ul.section li {
+body > div.container > div.block_list > div.resume_container > div.row.main > div.col.left ul.section li {
   font-size: 85%;
 }
 
-body > div.container > ul.block_list > div.resume_container > div.row.main > div.col.left ul li,
-body > div.container > ul.block_list > div.resume_container > div.row.main ul.education li,
-body > div.container > ul.block_list > div.resume_container > div.row.main ul.activities li {
+body > div.container > div.block_list > div.resume_container > div.row.main > div.col.left ul li,
+body > div.container > div.block_list > div.resume_container > div.row.main ul.education li,
+body > div.container > div.block_list > div.resume_container > div.row.main ul.activities li {
   font-size: 1.5rem;
   margin-left: 2rem;
 }
 
-body > div.container > ul.block_list > div.resume_container > div.row.main > div.col.left li span,
-body > div.container > ul.block_list > div.resume_container > div.row.main ul.education li span,
-body > div.container > ul.block_list > div.resume_container > div.row.main ul.activities li span {
+body > div.container > div.block_list > div.resume_container > div.row.main > div.col.left li span,
+body > div.container > div.block_list > div.resume_container > div.row.main ul.education li span,
+body > div.container > div.block_list > div.resume_container > div.row.main ul.activities li span {
   opacity: 0.8;
 }
 
-body > div.container > ul.block_list > div.resume_container > div.row.main > div.col.left ul:not(:first-child) {
+body > div.container > div.block_list > div.resume_container > div.row.main > div.col.left ul:not(:first-child) {
   margin-top: 2.5rem;
 }
 
-body > div.container > ul.block_list > div.resume_container > div.row.main ul.volunteer_experience > li {
+body > div.container > div.block_list > div.resume_container > div.row.main ul.volunteer_experience > li {
   margin-left: 0 !important;
 }
-body > div.container > ul.block_list > div.resume_container > div.row.main ul.volunteer_experience > li > h2.name {
+body > div.container > div.block_list > div.resume_container > div.row.main ul.volunteer_experience > li > h2.name {
   font-size: 2.25rem;
   letter-spacing: -0.05rem;
   line-height: 1.5;
   margin-bottom: 1.5rem;
 }
-body > div.container > ul.block_list > div.resume_container > div.row.main ul.volunteer_experience > li > p.description {
+body > div.container > div.block_list > div.resume_container > div.row.main ul.volunteer_experience > li > p.description {
   font-size: 1.5rem;
 }
 
 /* right column */
-body > div.container > ul.block_list > div.resume_container > div.row.main ul.projects {
+body > div.container > div.block_list > div.resume_container > div.row.main ul.projects {
   list-style: none;
 }
 
-body > div.container > ul.block_list > div.resume_container > div.row.main ul.projects > li:not(:last-child) {
+body > div.container > div.block_list > div.resume_container > div.row.main ul.projects > li:not(:last-child) {
   margin-bottom: 2.5rem;
 }
 
-body > div.container > ul.block_list > div.resume_container > div.row.main ul.projects > li > h2.name {
+body > div.container > div.block_list > div.resume_container > div.row.main ul.projects > li > h2.name {
   font-size: 3rem;
   margin-bottom: 0.25rem;
 }
 
-body > div.container > ul.block_list > div.resume_container > div.row.main ul.projects > li > h4.link {
+body > div.container > div.block_list > div.resume_container > div.row.main ul.projects > li > h4.link {
   font-size: 2rem;
   color: var(--lighter-text-color);
   font-weight: normal;
   margin-bottom: 1.5rem;
 }
 
-body > div.container > ul.block_list > div.resume_container a.natural_link {
+body > div.container > div.block_list > div.resume_container a.natural_link {
   font-weight: inherit;
   color: inherit;
   text-decoration: none;
 }
 
-body > div.container > ul.block_list > div.resume_container a.natural_link:hover {
+body > div.container > div.block_list > div.resume_container a.natural_link:hover {
   text-decoration: underline;
 }
 
-body > div.container > ul.block_list > div.resume_container > div.row.main ul.projects > li > p.description {
+body > div.container > div.block_list > div.resume_container > div.row.main ul.projects > li > p.description {
   font-size: 1.5rem;
 }
 
 /* resume mobile */
-body > div.container > ul.block_list > div.resume_container > div.mobile {
+body > div.container > div.block_list > div.resume_container > div.mobile {
   display: none;
 }
 
 @media only screen and (max-width: 780px) {
-  body > div.container > ul.block_list > div.resume_container > * {
+  body > div.container > div.block_list > div.resume_container > * {
     display: none !important;
   }
-  body > div.container > ul.block_list > div.resume_container > div.mobile {
+  body > div.container > div.block_list > div.resume_container > div.mobile {
     display: block !important;
   }
 }

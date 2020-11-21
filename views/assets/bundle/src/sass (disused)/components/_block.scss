@@ -1,0 +1,264 @@
+/* blocks */
+body > div.container > ul.block_list > .block {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  box-shadow: 0 0.15rem 0.9rem rgba(38, 50, 56, 0.2);
+  /*border: 1px solid var(--lighter-color);*/
+  box-sizing: border-box;
+  border-radius: 0.85rem;
+  margin-bottom: 3rem;
+  background-color: #ffffff;
+}
+
+@media only screen and (max-width: 550px) {
+  body > div.container > ul.block_list > .block {
+    margin-bottom: 2rem;
+  }
+}
+
+/* block content */
+body > div.container > ul.block_list > .block > .content {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 2.8rem 3.3rem;
+  overflow: hidden;
+}
+body > div.container > ul.block_list > .block > .content > *:last-child {
+  margin-bottom: 0;
+}
+
+/* block content mobile */
+@media only screen and (max-width: 550px) {
+  body > div.container > ul.block_list > .block > .content {
+    padding: 2rem;
+    padding-top: 2rem !important;
+  }
+  body > div.container > ul.block_list > .block > .content.blog_post_full_content {
+    padding: 1.5rem;
+    padding-top: 1.5rem !important;
+  }
+}
+
+/* intro block */
+@media only screen and (max-width: 550px) {
+  body > div.container > ul.block_list > .block.intro .no_display_on_mobile {
+    display: none;
+  }
+  body > div.container > ul.block_list > .block.intro .no_margin_bottom_on_mobile {
+    margin-bottom: 0;
+  }
+}
+
+/* post block */
+body > div.container > ul.block_list > .block.post_block {
+  display: flex;
+  flex-direction: row;
+}
+
+/* post block with photo */
+body > div.container > ul.block_list > .block.post_block.photo > .image_container {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 22.5%;
+  overflow: hidden;
+}
+body > div.container > ul.block_list > .block.post_block.photo > .image_container > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.2s, opacity 0.2s;
+  backface-visibility: hidden;
+  opacity: 0.925;
+}
+body > div.container > ul.block_list > .block.post_block.photo > .image_container:hover > img {
+  transform: scale(1.08);
+  opacity: 1;
+}
+body > div.container > ul.block_list > .block.post_block.photo > .image_container:active > img {
+  transform: scale(1.04);
+}
+body > div.container > ul.block_list > .block.post_block.photo > .content {
+  flex-shrink: 1;
+  flex-basis: 72.5%;
+}
+
+/* post block mobile */
+@media only screen and (max-width: 800px) {
+  body > div.container > ul.block_list > .block.post_block.photo > .image_container {
+    flex-basis: 40%;
+  }
+  body > div.container > ul.block_list > .block.post_block.photo > .content {
+    flex-basis: 60%;
+  }
+}
+@media only screen and (max-width: 690px) {
+  body > div.container > ul.block_list > .block.post_block {
+    flex-direction: column;
+  }
+  body > div.container > ul.block_list > .block.post_block.photo > .image_container,
+  body > div.container > ul.block_list > .block.post_block.photo > .content {
+    flex-basis: auto;
+  }
+}
+
+/* post block content */
+body > div.container > ul.block_list > .block.post_block > .content {
+  position: relative;
+}
+
+/* type label */
+body > div.container > ul.block_list > .block.post_block > .content > .type_label {
+  position: absolute;
+  top: 1.8rem;
+  right: 2rem;
+  line-height: 1;
+  padding: 0 0.9rem;
+  border-radius: 1.1rem;
+  height: 2.2rem;
+  line-height: 2.2rem;
+  font-size: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.15s ease-in-out;
+  display: none;
+}
+body > div.container > ul.block_list > .block.post_block > .content > .type_label.blog {
+  background-color: #2188ff;
+}
+body > div.container > ul.block_list > .block.post_block > .content > .type_label.blog:hover {
+  background-color: #006ae5;
+}
+body > div.container > ul.block_list > .block.post_block > .content > .type_label.code {
+  background-color: #e74c3c;
+}
+body > div.container > ul.block_list > .block.post_block > .content > .type_label.code:hover {
+  background-color: #c0392b;
+}
+
+/* top meta area */
+body > div.container > ul.block_list > .block.post_block > .content > div.top {
+  border-bottom: 1px solid var(--light-color);
+  margin-bottom: 2rem;
+}
+
+body > div.container > ul.block_list > .block.post_block > .content > div.top > h1.title {
+  font-size: 3.25rem;
+  line-height: 1.4;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+body > div.container > ul.block_list > .block.post_block > .content > div.top > h1.title > a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s, transform 0.2s;
+  transform: translateY(0);
+  backface-visibility: hidden;
+}
+body > div.container > ul.block_list > .block.post_block > .content > div.top > h1.title > a:hover {
+  color: var(--link-color);
+  transform: translateY(-0.1rem);
+  display: inline-block;
+}
+body > div.container > ul.block_list > .block.post_block > .content > div.top > h1.title > a:active {
+  transform: translateY(-0.025rem);
+}
+
+body > div.container > ul.block_list > .block.post_block > .content > div.top > ul.details {
+  min-height: 2.5rem;
+  list-style: none;
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+  color: var(--lighter-text-color);
+  font-size: 0;
+  padding-bottom: 0.75rem;
+}
+
+body > div.container > ul.block_list > .block.post_block > .content > div.top > ul.details > li {
+  display: inline-block;
+  margin: 0;
+  margin-top: 0.65rem;
+  height: 2.5rem;
+}
+body > div.container > ul.block_list > .block.post_block > .content > div.top > ul.details > li:not(:last-child) {
+  margin-right: 2rem;
+}
+body > div.container > ul.block_list > .block.post_block > .content > div.top > ul.details > li > * {
+  display: block;
+  float: left;
+  margin: 0;
+}
+
+body > div.container > ul.block_list > .block.post_block > .content > div.top > ul.details > li > svg {
+  height: 2.25rem;
+  width: 2.25rem;
+  box-sizing: border-box;
+  margin: 0.125rem;
+  fill: var(--medium-color);
+}
+body > div.container > ul.block_list > .block.post_block > .content > div.top > ul.details > li > p {
+  margin-left: 0.5rem;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+body > div.container > ul.block_list > .block.post_block > .content > div.top > ul.details > li > p > a {
+  color: inherit;
+  font-weight: bold;
+}
+body > div.container > ul.block_list > .block.post_block > .content > div.top > ul.details > li > p > a:hover {
+  color: var(--text-color);
+}
+
+/* post block mobile */
+@media only screen and (max-width: 780px) {
+  body > div.container > ul.block_list > .block.post_block > .content > div.top > h1.title {
+    font-size: 3.5rem !important;
+  }
+}
+@media only screen and (max-width: 550px) {
+  body > div.container > ul.block_list > .block.post_block > .content:not(.blog_post_full_content) > div.top {
+    /*margin-bottom: 0;*/
+    margin-bottom: 0.75rem;
+    /*border-bottom: none;*/
+    border-bottom: 1px solid var(--lighter-color);
+  }
+  /*body > div.container > ul.block_list > .block.post_block > .content:not(.blog_post_full_content) > div.text_content {
+        display: none;
+    }*/
+  /*body > div.container > ul.block_list > .block.post_block > .content:not(.blog_post_full_content) > div.top > ul.details {
+        padding-bottom: 0;
+    }*/
+  body > div.container > ul.block_list > .block.post_block > .content:not(.blog_post_full_content) > div.top > ul.details > li {
+    margin-top: 1.25rem;
+  }
+
+  body > div.container > ul.block_list > .block.post_block > .content > div.top > h1.title {
+    font-size: 3.25rem !important;
+  }
+  body > div.container > ul.block_list > .block.post_block > .content > div.top > ul.details > li > p {
+    font-size: 1.4rem;
+  }
+}
+
+/* post block text content */
+body > div.container > ul.block_list > .block.post_block > .content > .text_content {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  float: left;
+}
+body > div.container > ul.block_list > .block.post_block > .content > .text_content *:last-child {
+  margin-bottom: 0;
+}
+
+body > div.container > ul.block_list > .block.post_block > .content:not(.blog_post_full_content) > .text_content {
+  margin-top: 1rem;
+}
+
+body > div.container > ul.block_list > .block.post_block > .content > .text_content img {
+  display: block;
+  max-width: 100%;
+  margin: 3rem auto;
+}

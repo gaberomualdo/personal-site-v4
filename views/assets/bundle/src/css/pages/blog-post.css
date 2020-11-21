@@ -208,10 +208,10 @@ body > div.container > ul.side_block_list {
     padding-right: calc(((100% - 950px) / 2) - 150px);
   }
   body > div.container > footer,
-  body > div.container > ul.block_list {
+  body > div.container > div.block_list {
     width: calc(100% - 150px);
   }
-  body > div.container > ul.block_list {
+  body > div.container > div.block_list {
     display: block;
     float: left;
   }
@@ -483,13 +483,13 @@ body > div.nav_background.photo {
 }
 
 /* large title */
-body > div.container > ul.block_list > .block.post_block > .content > div.top > h1.title {
+body > div.container > div.block_list > .block.post_block > .content > div.top > h1.title {
   font-size: 4.2rem;
   color: var(--dark-text-color);
 }
 
 /* meta section margin */
-body > div.container > ul.block_list > .block.post_block > .content > div.top {
+body > div.container > div.block_list > .block.post_block > .content > div.top {
   margin-bottom: 3.5rem;
 }
 
@@ -500,19 +500,19 @@ body > div.container .post_content {
 }
 
 @media only screen and (max-width: 780px) {
-  body > div.container > ul.block_list > div.block.more_posts_block > div.content > ul.link_list {
+  body > div.container > div.block_list > div.block.more_posts_block > div.content > ul.link_list {
     padding: 1rem !important;
   }
-  body > div.container > ul.block_list > div.block.more_posts_block > div.content > ul.link_list a {
+  body > div.container > div.block_list > div.block.more_posts_block > div.content > ul.link_list a {
     width: 100%;
   }
-  body > div.container > ul.block_list > div.block.more_posts_block > div.content > h1.title {
+  body > div.container > div.block_list > div.block.more_posts_block > div.content > h1.title {
     font-size: 3.5rem;
   }
 }
 
 @media only screen and (max-width: 550px) {
-  body > div.container > ul.block_list > div.block.more_posts_block > div.content > h1.title {
+  body > div.container > div.block_list > div.block.more_posts_block > div.content > h1.title {
     font-size: 3.25rem;
   }
 }

@@ -12,7 +12,7 @@
         <?php include get_path_of_include("nav.php") ?>
 
         <div class="container">
-            <ul class="block_list">
+            <div class="block_list">
                 <?php // about card ?>
                 <div class="block about">
                     <div class="content post_content">
@@ -24,7 +24,7 @@
                 <?php
                 echo generate_more_from_fred_block(false);
                 ?>
-            </ul>
+            </div>
 
             <?php include get_path_of_include("footer.php") ?>
         </div>

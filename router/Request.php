@@ -15,7 +15,7 @@ class Request {
 			return substr( $haystack, -$length ) === $needle;
 		} // from https://stackoverflow.com/questions/834303/startswith-and-endswith-functions-in-php
 
-		// variable for server vars to save in class
+		// some server vars to save in class (not all of the variables for the class)
 		$serverVariablesToSave = array("REQUEST_METHOD", "REQUEST_TIME", "SERVER_NAME", "HTTP_USER_AGENT");
 		
 		// loop through each server variable to save and store value in class with corresponding key

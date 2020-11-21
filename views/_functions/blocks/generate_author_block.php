@@ -29,8 +29,8 @@ function generate_author_block() {
             <ul class="link_list">
                 <a href="/about/"><p>About</p></a>
                 <a href="/blog/"><p>Blog</p></a>
-                <a href="/code/"><p>Code</p></a>
-                <a href="/resume/"><p>Resume</p></a>
+                <a href="/projects/"><p>Projects</p></a>
+                <a href="/resume/"><p>Résumé</p></a>
             </ul>
         </div>
     </div>

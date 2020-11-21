@@ -11,12 +11,12 @@
         <?php include get_path_of_include("nav.php") ?>
 
         <div class="container">
-            <ul class="block_list">
+            <div class="block_list">
                 <div class="resume_container block post_content">
                     <div class="mobile content post_content">
                         <h1 class="big_title">Résumé</h1>
-                        <a href="<?php echo $page_data["content"]["png_version_url"]; ?>" download="Fred_Adams_Résumé.png">Download Résumé (PNG)</a><br>
-                        <a href="<?php echo $page_data["content"]["pdf_version_url"]; ?>" download="Fred_Adams_Résumé.pdf">Download Résumé (PDF)</a>
+                        <a href="<?php echo $page_data["content"]["png_version_url"]; ?>" download="Gabriel Romualdo's Résumé.png">Download Résumé (PNG)</a><br>
+                        <a href="<?php echo $page_data["content"]["pdf_version_url"]; ?>" download="Gabriel Romualdo's Résumé.pdf">Download Résumé (PDF)</a>
                     </div>
                     <div class="row top_area content">
                         <div class="col image">
@@ -37,7 +37,7 @@
                                 ?>
                             </div>
                         </div>
-                        <p class="last_updated"><a href="<?php echo $page_data["content"]["pdf_version_url"]; ?>" download="Fred_Adams_Résumé.pdf">Download as PDF</a></p>
+                        <p class="last_updated"><a href="<?php echo $page_data["content"]["pdf_version_url"]; ?>" download="Gabriel Romualdo's Résumé.pdf">Download as PDF</a></p>
                     </div>
                     <div class="row socials content" style="display:block">
                         <?php
@@ -127,7 +127,7 @@
                         </div>
                     </div>
                 </div>
-            </ul>
+            </div>
 
             <?php include get_path_of_include("footer.php") ?>
         </div>

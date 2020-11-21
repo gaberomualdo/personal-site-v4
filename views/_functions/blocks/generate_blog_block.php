@@ -6,6 +6,18 @@ function generate_blog_block($block, $full_block = false) {
     // define global variables
     global $site_details;
 
+    // determine whether blog post is 'new' or not
+    
+    $block_is_new = false;
+    $new_days_cap = 10;
+    $s_in_day = (60 * 60 * 24);
+
+    $current_time = time();
+    $block_time = strtotime($block["last_updated"]);
+    if(($current_time - $block_time) / $s_in_day < $new_days_cap) {
+        $block_is_new = true;
+    }
+
     // HTML to return
     $HTMLToReturn = "";
 
@@ -78,6 +90,7 @@ function generate_blog_block($block, $full_block = false) {
                     <p>' . $block_date . '</p>
                 </li>
                 ' . $min_read_detail_section . '
+                ' . ($block_is_new ? '<li class="type_label new">New</li>' : '') . '
             </ul>
         </div>
         <div class="text_content post_content">' . $block_preview . '</div>

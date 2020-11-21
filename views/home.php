@@ -1,5 +1,6 @@
-<?php include __DIR__ . "/_config.php" ?>
-<?php include get_path_of_function("generate_blocks.php") ?>
+<?php include __DIR__ . "/_config.php"; ?>
+<?php include get_path_of_function("generate_blocks.php"); ?>
+<?php include get_path_of_function("create_paginated_blocks.php"); ?>
 
 <?php $filename = "home"; ?>
 
@@ -13,7 +14,7 @@
 
         <div class="container">
             <?php // blocks ?>
-            <ul class="block_list">
+            <div class="block_list">
                 <?php // welcome card ?>
                 <div class="block welcome">
                     <div class="content">
@@ -62,41 +63,17 @@
                     </div>
                 </div>
 
-                <noscript>
-                    <style>
-                        body > div.container > ul.block_list > .block.welcome > .content > div.text > div.text_content.animated {
-                            opacity: 1 !important;
-                        }
-                        body > div.container > ul.block_list > .block.welcome > .content > div.text > div.top > div.right > ul.social_links.animated {
-                            opacity: 1 !important;
-                        }
-                        body > div.container > ul.block_list > .block.welcome > .content > div.text > div.top > div.right > h1.catchy_header > span.word_container > span.word_animated {
-                            transform: translateY(0) !important;
-                        }
-                    </style>
-                </noscript>
-
                 <?php // a buncha blocks ?>
                 <?php
-                // if there are less than 15, simply display; if not, display 15, and then use client-side JS to progressively show more
-                if(count($page_data["blocks"]) <= 15) {
-                    foreach($page_data["blocks"] as $block) {
-                        echo generate_blog_block($block);
-                    }
-                }else {
-                    for($i = 0; $i < 15; $i++) {
-                        echo generate_blog_block($page_data["blocks"][$i]);
-                    }
-
-                    echo "<script>let postBlocksToLoadOnScroll = [";
-                    for($n = 15; $n < count($page_data["blocks"]); $n++) {
-                        $block_HTML = generate_blog_block($page_data["blocks"][$n]);
-                        echo "\"" . base64_encode($block_HTML) . "\", ";
-                    }
-                    echo "];</script>";
+                $query_params = $request->getQueryParams();
+                if(array_key_exists('page', $query_params) && is_numeric($query_params['page'])) {
+                    $current_page = intval($query_params['page']);
+                    create_paginated_blocks($page_data["blocks"], "blog", 15, $current_page);
+                } else {
+                    create_paginated_blocks($page_data["blocks"], "blog", 15, 1);
                 }
                 ?>
-            </ul>
+            </div>
 
             <?php include get_path_of_include("footer.php") ?>
         </div>

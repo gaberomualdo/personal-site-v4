@@ -24,13 +24,13 @@
                 echo generate_another_post_block(1);
                 ?>
             </ul>
-            <ul class="block_list">
+            <div class="block_list">
                 <?php
                 // blog post
                 echo generate_blog_block($page_data, true);
                 echo generate_more_from_fred_block(false);        
                 ?>                
-            </ul>
+            </div>
 
             <?php include get_path_of_include("footer.php") ?>
         </div>
