@@ -1,9 +1,3 @@
-/* CSS variables */
-:root {
-  --lightest-color: #f3f5f6;
-  --light-text-color: #78909c;
-}
-
 /* resume container and direct children */
 body > div.container > div.block_list > div.resume_container,
 body > div.container > div.block_list > div.resume_container > * {

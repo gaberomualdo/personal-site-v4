@@ -27,11 +27,18 @@
                 $query_params = $request->getQueryParams();
                 if(array_key_exists('page', $query_params) && is_numeric($query_params['page'])) {
                     $current_page = intval($query_params['page']);
-                    create_paginated_blocks($page_data["projects"], "code", 15, $current_page);
+                    create_paginated_blocks($page_data["projects"], "projects", 15, $current_page);
                 } else {
-                    create_paginated_blocks($page_data["projects"], "code", 15, 1);
+                    create_paginated_blocks($page_data["projects"], "projects", 15, 1);
                 }
                 ?>
+                <noscript><style> .block.project .slide-down.open + *, .block.project .slide-down:not(.open) + * { height: auto !important; } </style></noscript>
+                <div class="info-container">
+                    <div class="info">
+                        <p>Some of my projects aren't yet included here.</p>
+                        <p>You can see these other projects on <a href="https://github.com/xtrp/" rel="noreferrer" target="_blank">my GitHub profile</a>.</p>
+                    </div>
+                </div>
             </div>
 
             <?php include get_path_of_include("footer.php") ?>

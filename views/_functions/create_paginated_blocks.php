@@ -8,6 +8,8 @@ function create_paginated_blocks($blocks, $block_type, $perpage, $currentpage) {
       echo generate_blog_block($block);
     } else if ($type == "code") {
       echo generate_code_block($block);
+    } else if ($type == "projects") {
+      echo generate_projects_block($block);
     }
   }
 

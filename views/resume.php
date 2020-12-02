@@ -30,7 +30,6 @@
                                 <?php
                                 foreach($page_data["content"]["social_links"] as $link) {
                                     echo "<a style='--color: " . $link["color"] . ";--bg-color: " . $link["bgcolor"] . ";' href='" . $link["url"] . "' target='_blank'>";
-                                    //echo "<span>" . $link["social_name"] . ": </span><strong>" . $link["name"] . "</strong>";
                                     echo "<strong>" . $link["social_name"] . ": </strong><span>" . $link["name"] . "</span>";
                                     echo "</a>";
                                 }

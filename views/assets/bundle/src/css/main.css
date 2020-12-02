@@ -22,6 +22,8 @@ script {
   --dark-text-color: #37474f;
   --lighter-text-color: #90a4ae;
   --link-color: #2288ff;
+  --lightest-color: #f3f5f6;
+  --light-text-color: #78909c;
 }
 
 /* highlight color */
@@ -420,7 +422,8 @@ body > div.container > div.block_list {
 }
 
 /* bug fixes */
-body > div.container > div.block_list ul {
+body > div.container > div.block_list ul,
+body > div.container > div.block_list ol {
   margin: 1.5rem 0 1.5rem 3rem;
   margin-bottom: 2.5rem;
 }

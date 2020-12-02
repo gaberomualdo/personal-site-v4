@@ -1,0 +1,285 @@
+.projects-container .row {
+  display: flex;
+}
+.block.project {
+  flex: 1 1 100%;
+  overflow: hidden;
+  box-shadow: 0 0.15rem 0.9rem rgba(38, 50, 56, 0.2);
+  box-sizing: border-box;
+  border-radius: 0.85rem;
+  margin-bottom: 3rem;
+  background-color: #fff;
+}
+.block.project:not(:last-child) {
+  margin-right: 1.5rem;
+}
+.block.project > * {
+  padding: 2.8rem 3.3rem;
+}
+.block.project > .meta {
+  background-color: var(--lightest-color);
+  text-align: center;
+  padding: 0;
+}
+.block.project > .meta .inner {
+  padding: 2.2rem 1.5rem;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+.block.project > .meta *:not(a) {
+  cursor: default;
+}
+.block.project > .meta > * {
+  display: block;
+  margin: 0;
+}
+.block.project > .meta h1 {
+  font-weight: 600;
+  font-size: 4.5rem;
+  margin-bottom: 0.5rem;
+}
+.block.project > .meta a {
+  font-weight: 600;
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  font-size: 1.65rem;
+  padding: 1.1rem 1.35rem;
+  border-radius: 4px;
+  height: auto;
+  line-height: 1.2;
+  font-weight: 600;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+.block.project > .meta a:hover {
+  text-decoration: none !important;
+  background-color: rgba(0, 0, 0, 0.075);
+  border-color: rgba(0, 0, 0, 0.6);
+}
+.block.project > .meta p {
+  font-size: 1.5rem;
+  font-size: 2rem;
+  color: var(--lighter-text-color);
+  font-weight: 400;
+  letter-spacing: -0.05rem;
+  line-height: 1.35;
+  margin-bottom: 1.75rem;
+}
+
+/* light meta */
+.block.project.light > .meta {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  --overlay: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  position: relative;
+  transition: background-image 0.2s;
+}
+.block.project.light > .meta .inner {
+  transition: backdrop-filter 0.2s;
+}
+@media only screen and (max-width: 800px) {
+  .block.project.light > .meta {
+    --overlay: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35));
+  }
+  .block.project.light > .meta .inner {
+    backdrop-filter: blur(3px);
+  }
+}
+.block.project.light > .meta * {
+  color: #ffffff;
+}
+.block.project.light > .meta p {
+  opacity: 0.75;
+}
+.block.project.light > .meta a {
+  opacity: 0.9;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+.block.project.light > .meta a:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.block.project > .main {
+  text-align: center;
+  font-size: 0;
+}
+.block.project > .main > .inner {
+  display: inline-block;
+  width: auto;
+  overflow: hidden;
+  text-align: left;
+}
+.block.project > .main .list.centered {
+  text-align: center;
+}
+.block.project > .main .list.centered .inner {
+  display: inline-block;
+}
+.block.project > .main .list {
+  --line-height: 2.5rem;
+  font-size: 1.6rem;
+  margin-bottom: 1.4rem;
+}
+.block.project > .main .list:last-child {
+  margin-bottom: 0;
+}
+.block.project > .main .list.bullets {
+  font-family: 'Source Serif Pro', Georgia, Times New Roman, Times, serif;
+  font-size: 1.45rem;
+}
+.block.project > .main .list .li {
+  display: block;
+  overflow: hidden;
+}
+.block.project > .main .list.centered .li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.block.project > .main .list.bullets li:not(:last-child) {
+  margin-bottom: 0.75rem;
+}
+.block.project > .main .list a {
+  font-weight: 600;
+}
+.block.project > .main .list .li *,
+.block.project > .main .list li {
+  min-height: var(--line-height);
+  line-height: var(--line-height);
+}
+.block.project > .main .list .li * {
+  display: block;
+  float: left;
+  margin: 0;
+}
+.block.project > .main .list .li .icon {
+  width: 5rem;
+  position: relative;
+}
+.block.project > .main .list .li .icon svg {
+  width: 2rem;
+  height: 2rem;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.block.project > .main .list .li p {
+  max-width: calc(100% - 5rem);
+  text-align: left;
+}
+
+@media only screen and (max-width: 800px) {
+  .block.project > .main .list .li .icon {
+    width: 3.5rem;
+  }
+  .block.project > .main .list .li .icon svg {
+    left: 0;
+    transform: translate(0%, -50%);
+  }
+  .block.project > .main .list .li p {
+    max-width: calc(100% - 3.5rem);
+  }
+}
+
+/* icon colors */
+.block.project > .main .list .li.with_theme * {
+  color: var(--theme-color);
+}
+.block.project > .main .list .li.with_theme a:hover {
+  color: var(--theme-color-dark);
+}
+.block.project > .main .list .li.with_theme svg {
+  fill: var(--theme-color);
+}
+.block.project > .main .list .li.with_theme.github {
+  --theme-color: #8e44ad;
+  --theme-color-dark: #703688;
+}
+.block.project > .main .list .li.tools svg {
+  fill: var(--text-color);
+}
+
+/* slide down button */
+.block.project .slide-down {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  --height: 4rem;
+  height: var(--height);
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 0;
+  margin-bottom: 0;
+  transition: margin-bottom 0.2s;
+  border-bottom: 1px solid var(--light-color);
+  display: none;
+  margin-bottom: 1.5rem;
+}
+.block.project .slide-down.open {
+  margin-bottom: 2.5rem;
+}
+.block.project .slide-down p {
+  float: left;
+  height: var(--height);
+  line-height: var(--height);
+  margin: 0;
+}
+.block.project .slide-down svg {
+  float: right;
+  height: 1.75rem;
+  width: 1.75rem;
+  margin-top: calc((var(--height) - 1.75rem) / 2);
+  transition: transform 0.2s;
+  transform: rotate(0deg);
+}
+
+/* When disabling slide down functionality */
+@media only screen and (min-width: 801px) {
+  .block.project .slide-down + * {
+    height: auto !important;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .block.project .slide-down {
+    display: block;
+  }
+  .block.project .slide-down.open svg {
+    transform: rotate(45deg);
+  }
+  .block.project .slide-down + * {
+    transition: height 0.2s;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .block.project .slide-down:not(.open) + * {
+    height: 0 !important;
+  }
+}
+
+/* info */
+.info-container {
+  text-align: center;
+}
+.info-container .info {
+  display: inline-block;
+  margin: 0.9rem 0px 1.15rem;
+  padding: 1.35rem 1.85rem;
+  background-color: var(--lighter-color);
+  border-radius: 4px;
+  text-align: left;
+}
+.info-container .info p {
+  margin: 0;
+  line-height: 1.35;
+  font-size: 1.65rem;
+}
+.info-container .info p:not(:last-child) {
+  margin-bottom: 0.75rem;
+}
+.info-container .info a {
+  font-weight: 600;
+}
