@@ -198,16 +198,13 @@ body > div.container > div.block_list > div.resume_container > div.row.main > di
 body > div.container > div.block_list > div.resume_container > div.row.main > div.col.left ul.section li {
   font-size: 85%;
 }
-
-body > div.container > div.block_list > div.resume_container > div.row.main > div.col.left ul li,
-body > div.container > div.block_list > div.resume_container > div.row.main ul.education li,
-body > div.container > div.block_list > div.resume_container > div.row.main ul.activities li {
+body > div.container > div.block_list > div.resume_container > div.row.main ul li {
   font-size: 1.5rem;
   margin-left: 2rem;
 }
 
 body > div.container > div.block_list > div.resume_container > div.row.main > div.col.left li span,
-body > div.container > div.block_list > div.resume_container > div.row.main ul.education li span,
+body > div.container > div.block_list > div.resume_container > div.row.main ul li span,
 body > div.container > div.block_list > div.resume_container > div.row.main ul.activities li span {
   opacity: 0.8;
 }

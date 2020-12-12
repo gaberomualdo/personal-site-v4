@@ -87,7 +87,7 @@
                                     generate_years_experience_list($page_data["content"]["technologies"]);
                                     ?>
                                 </ul>
-                                <ul class="education">
+                                <ul class="list-section">
                                     <h1 class="title">Education</h1>
                                     <?php
                                     foreach($page_data["content"]["education"] as $education) {
@@ -115,7 +115,7 @@
                                 }
                                 ?>
                             </ul>
-                            <ul class="education">
+                            <ul class="list-section">
                                 <h1 class="title">Activities</h1>
                                 <?php
                                 foreach($page_data["content"]["activities"] as $activities) {
@@ -130,6 +130,38 @@
 
             <?php include get_path_of_include("footer.php") ?>
         </div>
+
+        <?php
+        // resume display mode is for printing the resume
+        $query_params = $request->getQueryParams();
+        if(array_key_exists('print-this-page', $query_params)) {
+            echo "
+            <style>
+                body {
+                    zoom: 62%;
+                }
+                .container {
+                    padding: 0 !important;
+                    margin-top: 0 !important;
+                    margin-bottom: 0 !important;
+                }
+                .block_list, body>div.container>div.block_list, body>div.container>div.block_list>.block {
+                    margin-bottom: 0 !important;
+                }
+                nav, .nav_background, footer, body>div.container>div.block_list>div.resume_container>div.row.top_area>p.last_updated {
+                    display: none !important;
+                }
+                body>div.container>div.block_list>.block>.content {
+                    padding-bottom: 1.6rem;
+                }
+                a {
+                    color: inherit !important;
+                    font-weight: inherit !important;
+                }
+            </style>
+            ";
+        }
+        ?>
 
         <?php include get_path_of_include("scripts.php") ?>
     </body>
