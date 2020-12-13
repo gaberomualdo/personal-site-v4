@@ -75,6 +75,7 @@ function generate_blog_block($block, $full_block = false) {
     $HTMLToReturn .= "<div class='post_block block";
     if($include_image) {
         $HTMLToReturn .= " photo'>";
+        $HTMLToReturn .= "<a class='image_container' href='" . $block_url . "'><img class='lazy_load' src='" . $block["thumbnail_small_url"] . "' data-src='" . $block["thumbnail_url"] . "' alt='" . $block_title . "'></a>";
     } else {
         $HTMLToReturn .= "'>";
     }
@@ -96,10 +97,6 @@ function generate_blog_block($block, $full_block = false) {
         </div>
         <div class="text_content post_content">' . $block_preview . '</div>
     </div>';
-
-    if($include_image) {
-        $HTMLToReturn .= "<a class='image_container' href='" . $block_url . "'><img class='lazy_load' src='" . $block["thumbnail_small_url"] . "' data-src='" . $block["thumbnail_url"] . "' alt='" . $block_title . "'></a>";
-    }
 
     $HTMLToReturn .= "</div>";
 

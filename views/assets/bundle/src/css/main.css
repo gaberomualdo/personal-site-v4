@@ -425,7 +425,7 @@ body > div.container > div.block_list > .block {
   width: 100%;
   height: auto;
   overflow: hidden;
-  box-shadow: 0 0.1rem 0.7rem rgba(38, 50, 56, 0.2);
+  box-shadow: 0 0.1rem 0.85rem rgba(38, 50, 56, 0.2);
   box-sizing: border-box;
   border-radius: 0.85rem;
   margin-bottom: 3rem;
@@ -522,7 +522,7 @@ body > div.container > div.block_list > .block.post_block.photo > .content {
 
 @media only screen and (max-width: 690px) {
   body > div.container > div.block_list > .block.post_block {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
   body > div.container > div.block_list > .block.post_block.photo > .image_container,
   body > div.container > div.block_list > .block.post_block.photo > .content {
@@ -585,13 +585,17 @@ body > div.container > div.block_list > .block.post_block > .content > div.top >
 body > div.container > div.block_list > .block.post_block > .content > div.top > h1.title > a {
   color: inherit;
   text-decoration: none;
-  transition: color 0.15s;
+  transition: color 0.2s, transform 0.2s;
   backface-visibility: hidden;
+  display: inline-block;
 }
 
 body > div.container > div.block_list > .block.post_block > .content > div.top > h1.title > a:hover {
   color: var(--link-color);
-  display: inline-block;
+  transform: translateY(-0.15rem);
+}
+body > div.container > div.block_list > .block.post_block > .content > div.top > h1.title > a:active {
+  transform: translateY(-0.05rem);
 }
 
 body > div.container > div.block_list > .block.post_block > .content > div.top > ul.details {
