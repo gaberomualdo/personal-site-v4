@@ -136,3 +136,38 @@ table,
 ul {
   margin-bottom: 2.5rem;
 }
+
+table {
+  width: 100%;
+  font-size: 90%;
+}
+table pre {
+  white-space: pre-wrap;
+}
+table th,
+table td {
+  font-size: 1em;
+  padding: 0.7em;
+  border: 1px solid #e6e6e6;
+  line-height: 1.4;
+}
+table thead tr,
+table tfoot tr {
+  background-color: #f5f5f5;
+}
+table thead th,
+table thead td,
+table tfoot th,
+table tfoot td {
+  font-size: 0.9em;
+  padding: 0.77778em;
+}
+table thead th code,
+table thead td code,
+table tfoot th code,
+table tfoot td code {
+  background-color: #fff;
+}
+table tbody tr {
+  background-color: #fff;
+}
