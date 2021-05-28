@@ -197,8 +197,11 @@ $shortened_links = [];
 $router->get("/links/", function() {
     // declare use of global vars
     global $page_data;
+    global $page_details;
+    global $site_details;
     global $shortened_links;
-
+    
+    $page_details = ["title" => "Shortened Links" . " | " . $site_details["full_title"], "description" => "A list of URLs on this site and their corresponding shortened links."];
     $page_data = $shortened_links;
     include_once __DIR__ . "/../views/links.php";
 });

@@ -14,8 +14,8 @@ $latest_blog_post_datetime = "2019-09-18";
 // set latest time if possible
 $latest_blog_post_datetime = date("c", strtotime($page_data["blog_posts"][0]["last_updated"]));
 
-$site_title = $site_details["full_title"];
-$site_author_name = $site_details["author"]["name"];
+$site_title = htmlspecialchars($site_details["full_title"]);
+$site_author_name = htmlspecialchars($site_details["author"]["name"]);
 
 // return RSS feed
 
@@ -44,8 +44,8 @@ foreach($page_data["blog_posts"] as $post) {
 
     echo '
     <entry>
-        <title>' . $post_title . '</title>
-        <link href="' . $post_url . '" rel="alternate" type="text/html" title="' . $post_title . '" />
+        <title>' . htmlspecialchars($post_title) . '</title>
+        <link href="' . $post_url . '" rel="alternate" type="text/html" title="' . htmlspecialchars($post_title) . '" />
         <published>' . $post_datetime . '</published>
         <id>' . $post_url . '</id>
         
