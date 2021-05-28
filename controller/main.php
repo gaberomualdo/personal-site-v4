@@ -173,6 +173,45 @@ foreach($blog_posts as $post) {
     });
 }
 
+// list of shortened links and their info
+$shortened_links = [];
+(function() {
+    global $shortened_links;
+    global $routes;
+    global $blog_post_urls_and_dates;
+
+    $pages_list = [];
+    foreach($routes as $route) {
+        array_push($pages_list, $route["route"]);
+    }
+    // reverse posts array so that it's in oldest to newest order
+    foreach(array_reverse($blog_post_urls_and_dates) as $post) {
+        array_push($pages_list, $post["url"]);
+    }
+    foreach($pages_list as $key=>$page) {
+        array_push($shortened_links, ["key" => strval(base_convert($key, 10, 32)), "url" => $page]);
+    }
+})();
+
+// Links Page
+$router->get("/links/", function() {
+    // declare use of global vars
+    global $page_data;
+    global $shortened_links;
+
+    $page_data = $shortened_links;
+    include_once __DIR__ . "/../views/links.php";
+});
+
+// Link Redirect
+foreach($shortened_links as $link) {
+    $router->get("/link/" . $link["key"] . "/", function() use( &$link ) {
+        global $page_data;
+        $page_data = $link;
+        include_once __DIR__ . "/../views/link.php";
+    });
+}
+
 // RSS feed
 $router->get("/feed/", function() {
     // declare use of global vars

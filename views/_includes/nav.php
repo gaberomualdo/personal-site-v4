@@ -1,5 +1,5 @@
 <div class="nav_background <?php
-if($filename!="home" && $filename!="error") {
+if($filename!="home" && $filename!="error" && $filename!="links") {
     if($filename!="blog_post"){
         echo "lazy_load photo photo_" . $filename . "\" style=\"--photo-url: url('/views/assets/img/" . $filename . "_page.jpg')";
     } else if (array_key_exists("photo_url", $page_data)) {
@@ -9,7 +9,7 @@ if($filename!="home" && $filename!="error") {
 ?>"></div>
 
 <nav class='not_top <?php
-if($filename!="home" && $filename!="error") {
+if($filename!="home" && $filename!="error" && $filename!="links") {
     if($filename!="blog_post"){
         echo "photo";
     } else if (array_key_exists("photo_url", $page_data)) {

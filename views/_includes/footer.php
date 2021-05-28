@@ -1,5 +1,5 @@
 <footer>
-    <p>&copy; xtrp.io 2019&ndash;Present</p>
+    <p>&copy; Gabriel Romualdo 2019&ndash;<?=date("Y")?></p>
     <ul class="links right">
         <?php
         foreach($site_details["author"]["social_urls"] as $social_url) {
