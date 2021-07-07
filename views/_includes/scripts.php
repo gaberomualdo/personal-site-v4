@@ -5,7 +5,8 @@
 <script>const __siteSocialLinks = [<?php
 
 $all_links = $site_details["author"]["social_urls"];
-array_push($all_links, [ "url" => $request->getServerName(), "name" => "Website", "theme_color" => "#3498db" ]);
+$site_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]";
+array_push($all_links, [ "url" => $site_url, "name" => "Website", "theme_color" => "#3498db" ]);
 
 foreach($all_links as $link) {
     echo "{ name: '" . $link['name'] . "', url: '" . $link['url'] . "', theme: '" . $link['theme_color'] . "' },";

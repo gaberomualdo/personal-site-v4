@@ -58,11 +58,46 @@ $routes = [
 // site details
 $site_details = $api_routes["/site_details/"]();
 
+// add routes to site details
+$site_details['main_pages'] = $routes;
 
 // page details and data
 $page_details;
 $page_data;
 
+// list of blog post objs
+$blog_posts = $api_routes["/blog/"]()["posts"];
+
+// generate more posts function
+function generate_more_posts($exclude_title = "") {
+    global $blog_posts;
+
+    // choose 3 random posts to put in the "more from fred" section
+    $more_posts_source = $blog_posts;
+    shuffle($more_posts_source);
+    $current_blog_post_index = 0;
+    $more_posts = [];
+    while(count($more_posts) < 5) {
+        $current_more_post = $more_posts_source[$current_blog_post_index];
+
+        if(array_key_exists("thumbnail_small_url", $current_more_post) && $current_more_post["title"] != $exclude_title) {
+            $current_more_post_url = "/blog/" . str_replace("-", "/", $current_more_post["last_updated"]) . "/" . $current_more_post["filename"] . "/";
+            array_push($more_posts, [
+                "title" => $current_more_post["title"],
+                "preview_text" => $current_more_post["preview_text"],
+                "date" => $current_more_post["last_updated"],
+                "min_read" => ceil(str_word_count(strip_tags($current_more_post["content"])) / 275),
+                "url" => $current_more_post_url,
+                "thumbnail_url" => $current_more_post["thumbnail_small_url"]
+            ]);
+        }
+        
+        $current_blog_post_index++;
+    }
+    return $more_posts;
+}
+
+// IE error
 $router->error("is_using_ie", function() {
     // declare use of global vars
     global $page_data;
@@ -107,6 +142,9 @@ foreach($routes as $route) {
         // get data from api and store in var
         $page_data = $api_routes[$route["api_route"]]();
 
+        // add more posts to page data
+        $page_data["more_posts"] = generate_more_posts();
+
         // display view
         include_once __DIR__ . "/../views/" . $route["view_filename"];
     });
@@ -116,9 +154,6 @@ foreach($routes as $route) {
 
 // variable for list of posts with URLs and dates, to be used in sitemap
 $blog_post_urls_and_dates = [];
-
-// list of post objs
-$blog_posts = $api_routes["/blog/"]()["posts"];
 
 // loop through each post, add data to $blog_post_urls_and_dates, and route corresponding post path
 foreach($blog_posts as $post) {
@@ -144,25 +179,10 @@ foreach($blog_posts as $post) {
         
         // get page details and store in var
         $page_details = ["title" => $post["title"] . " | " . $site_details["full_title"], "description" => $post_preview];
-        
-        // choose 3 random posts to put in the "more from fred" section
-        shuffle($blog_posts);
-        $current_blog_post_index = 0;
-        $more_posts = [];
-        while(count($more_posts) < 3) {
-            $current_more_post = $blog_posts[$current_blog_post_index];
-
-            if(array_key_exists("thumbnail_small_url", $current_more_post) && $current_more_post["title"] != $post["title"]) {
-                $current_more_post_url = "/blog/" . str_replace("-", "/", $current_more_post["last_updated"]) . "/" . $current_more_post["filename"] . "/";
-                array_push($more_posts, [ "title" => $current_more_post["title"], "url" => $current_more_post_url, "thumbnail_url" => $current_more_post["thumbnail_small_url"] ]);
-            }
-            
-            $current_blog_post_index++;
-        }
 
         // get page data and store in var
         $page_data = $post;
-        $page_data["more_posts"] = $more_posts;
+        $page_data["more_posts"] = generate_more_posts($post["title"]);
 
         /* for featured projects block (not yet implemented): */
         /*$all_projects = $api_routes["/code/"]()["projects"];

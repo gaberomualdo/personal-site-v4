@@ -12,11 +12,12 @@
 
         <div class="container">
             <div class="block_list">
-                <div class="resume_container block post_content">
+                <div class="block resume_container post_content">
                     <div class="mobile content post_content">
                         <h1 class="big_title">Résumé</h1>
-                        <a href="<?php echo $page_data["content"]["png_version_url"]; ?>" download="Gabriel Romualdo's Résumé.png">Download Résumé (PNG)</a><br>
-                        <a href="<?php echo $page_data["content"]["pdf_version_url"]; ?>" download="Gabriel Romualdo's Résumé.pdf">Download Résumé (PDF)</a>
+                        <p>This page is not available on mobile. Please switch to a larger device or reach out to me over email for a copy of my résumé directly.</p>
+                        <!-- <a href="<?php echo $page_data["content"]["png_version_url"]; ?>" download="Gabriel Romualdo's Résumé.png">Download Résumé (PNG)</a><br>
+                        <a href="<?php echo $page_data["content"]["pdf_version_url"]; ?>" download="Gabriel Romualdo's Résumé.pdf">Download Résumé (PDF)</a> -->
                     </div>
                     <div class="row top_area content">
                         <div class="col image">
@@ -36,7 +37,7 @@
                                 ?>
                             </div>
                         </div>
-                        <p class="last_updated"><a href="<?php echo $page_data["content"]["pdf_version_url"]; ?>" download="Gabriel Romualdo's Résumé.pdf">Download as PDF</a></p>
+                        <!-- <p class="last_updated"><a href="<?php echo $page_data["content"]["pdf_version_url"]; ?>" download="Gabriel Romualdo's Résumé.pdf">Download as PDF</a></p> -->
                     </div>
                     <div class="row socials content" style="display:block">
                         <?php
@@ -52,15 +53,15 @@
                         <p class="quote_content">
                         With every aspect of the project, [Gabriel] exceeded expectations, completing tasks efficiently and accurately but also going beyond the call of duty each time to add more value.
                         </p>
-                        <p class="attribution"><em>&mdash; Alex Koumpas, Tech Lead at Spirited Network</em></p>
+                        <p class="attribution"><em>&mdash; Alex Koumpas, Product Manager at Spirited Network</em></p>
                     </div>
                     <div class="row main content">
                         <div class="col left">
-                            <ul class="volunteer_experience">
-                                <h1 class="title">Volunteer Experience</h1>
+                            <ul class="projects">
+                                <h1 class="title">Work Experience</h1>
                                 <?php
-                                foreach($page_data["content"]["volunteer_experience"] as $experience) {
-                                    echo "<li><h2 class='name'>" . $experience["name"] . "</h2><p class='description'>" . $experience["description"] . "</p></li>";
+                                foreach($page_data["content"]["experience"] as $experience) {
+                                    echo "<li><h2 class='name'>" . $experience["name"] . "</h2><h4 class='link'>" . $experience["title"] . " &nbsp;&bull;&nbsp; " . $experience["duration"] . "</h4><p class='description'>" . $experience["description"] . "</p></li>";
                                 }
                                 ?>
                             </ul>
@@ -81,12 +82,6 @@
                                     }
                                 }
                                 ?>
-                                <h1 class="title">Technical Skills</h1>
-                                <ul class="section">
-                                    <?php
-                                    generate_years_experience_list($page_data["content"]["technologies"]);
-                                    ?>
-                                </ul>
                                 <ul class="list-section">
                                     <h1 class="title">Education</h1>
                                     <?php
@@ -115,7 +110,13 @@
                                 }
                                 ?>
                             </ul>
-                            <ul class="list-section">
+                            <ul class="section">
+                                <h1 class="title">Technical Skills</h1>
+                                <?php
+                                generate_years_experience_list($page_data["content"]["technologies"]);
+                                ?>
+                            </ul>
+                            <ul class="list-section" style="margin-top: 2.5rem;">
                                 <h1 class="title">Activities</h1>
                                 <?php
                                 foreach($page_data["content"]["activities"] as $activities) {
@@ -127,18 +128,20 @@
                     </div>
                 </div>
             </div>
-
-            <?php include get_path_of_include("footer.php") ?>
         </div>
-
+        
+        <?php include get_path_of_include("footer.php") ?>
         <?php
         // resume display mode is for printing the resume
         $query_params = $request->getQueryParams();
         if(array_key_exists('print-this-page', $query_params)) {
             echo "
             <style>
+                body > div.container > div.block_list > div.resume_container > div.row.quote {
+                    display: none;
+                }
                 body {
-                    zoom: 62%;
+                    zoom: 55%;
                 }
                 .container {
                     padding: 0 !important;

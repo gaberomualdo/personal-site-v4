@@ -13,7 +13,7 @@ $Parsedown = new ParsedownExtra();
 function extractObjectFromMarkdownFile($file_contents) {
     global $Parsedown;
     
-    // for xtrp.io, a convention is used where JSON can be written at the top of a file, without braces, with a "===" separating the JSON and contents of the file
+    // for this site, a convention is used where JSON can be written at the top of a file, without braces, with a "===" separating the JSON and contents of the file
     
     // variables for file parsed HTML, and JSON metadata
     $file_HTML = $Parsedown->text(explode("===", $file_contents)[1]);

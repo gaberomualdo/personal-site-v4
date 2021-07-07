@@ -2,7 +2,6 @@
 import '../../css/normalize.min.css';
 import '../../css/skeleton.min.css';
 import '../../css/main.css';
-
 // introduction in the console
 import './console_intro';
 
@@ -88,3 +87,38 @@ if (typeof postBlocksToLoadOnScroll !== 'undefined') {
     }
   });
 }
+
+// nav functionality
+(() => {
+  const getHeight = (elm) => elm.getBoundingClientRect().height;
+  const links = document.querySelector('body > nav > ul.links');
+  const nav = document.querySelector('body > nav');
+  const navOverlay = document.querySelector('body > div.nav_mobile_overlay');
+  const toggleNav = () => {
+    nav.classList.add('links_transitioning');
+    if(nav.classList.contains('links_shown')) {
+      nav.setAttribute('style', '');
+      navOverlay.classList.toggle('links_shown');
+      setTimeout(() => {
+        navOverlay.classList.remove('displayed');
+        nav.classList.toggle('links_shown');
+      }, 350);
+    } else {
+      nav.setAttribute('style', `--height: ${getHeight(nav) + getHeight(links)}px`);
+      navOverlay.classList.add('displayed');
+      setTimeout(() => {
+        nav.classList.toggle('links_shown');
+        navOverlay.classList.toggle('links_shown');
+      }, 0);
+    }
+    setTimeout(() => {
+      nav.classList.remove('links_transitioning');
+    }, 350);
+  };
+  document.querySelector('nav .mobile_link_toggler').addEventListener('click', toggleNav);
+  window.addEventListener('resize', () => {
+    if(nav.classList.contains('links_shown')) {
+      toggleNav();
+    }
+  })
+})();

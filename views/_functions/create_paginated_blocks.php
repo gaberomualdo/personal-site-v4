@@ -61,7 +61,7 @@ function create_paginated_blocks($blocks, $block_type, $perpage, $currentpage) {
     // don't display first card if not first page
     if($currentpage != 1) {
       if($filename == 'home') {
-        echo "<style>body>div.container>div.block_list>.block.welcome{display:none;}</style>";
+        echo "<style>body>div.container>div.block_list>.block.welcome, body>div.container>div.block_list>.block.welcome+.block_row{display:none;}</style>";
       } else {
         // this line works, but I'm not ready to push just yet because small UI edits are needed on the projects page
         // echo "<style>body>div.container>div.block_list>.block.intro{display:none;}</style>";

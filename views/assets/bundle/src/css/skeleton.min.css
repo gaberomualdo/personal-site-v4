@@ -1,6 +1,5 @@
 /* Skeleton V2.0.4 * Copyright 2014, Dave Gamache * www.getskeleton.com * Free to use under the MIT license. * http://www.opensource.org/licenses/mit-license.php * 12/29/2014 */
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,600,700,900&display=swap);
-@import url(https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,500,600,700,900&display=swap);
 html {
   font-size: 62.5%;
 }
@@ -105,7 +104,7 @@ code {
   margin: 0 0.2rem;
   font-size: 85%;
   white-space: nowrap;
-  background: #f1f1f1;
+  background: #fafafa;
   border: 1px solid #e1e1e1;
   border-radius: 4px;
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;

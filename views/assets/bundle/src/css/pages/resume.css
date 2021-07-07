@@ -4,6 +4,10 @@ body > div.container > div.block_list > div.resume_container > * {
   position: relative;
 }
 
+body > div.container > div.block_list > div.resume_container strong {
+  font-weight: 600;
+}
+
 /* rows and cols in resume */
 body > div.container > div.block_list > div.resume_container > div.row {
   display: block;
@@ -49,8 +53,6 @@ body > div.container > div.block_list > div.resume_container > div.row.top_area 
   width: 100%;
   height: auto;
   border-radius: 50%;
-  padding: 0.5rem;
-  border: 1px solid var(--light-color);
   box-sizing: border-box;
 }
 
@@ -195,8 +197,9 @@ body > div.container > div.block_list > div.resume_container > div.row.main > di
 body > div.container > div.block_list > div.resume_container > div.row.main > div.col.left ul.section:not(:first-child) {
   margin-top: 3rem;
 }
-body > div.container > div.block_list > div.resume_container > div.row.main > div.col.left ul.section li {
+body > div.container > div.block_list > div.resume_container > div.row.main ul.section li {
   font-size: 85%;
+  margin-bottom: 0.5rem;
 }
 body > div.container > div.block_list > div.resume_container > div.row.main ul li {
   font-size: 1.5rem;
@@ -229,8 +232,12 @@ body > div.container > div.block_list > div.resume_container > div.row.main ul.v
 /* right column */
 body > div.container > div.block_list > div.resume_container > div.row.main ul.projects {
   list-style: none;
+  padding: 0;
 }
 
+body > div.container > div.block_list > div.resume_container > div.row.main ul.projects > li {
+  margin-left: 0;
+}
 body > div.container > div.block_list > div.resume_container > div.row.main ul.projects > li:not(:last-child) {
   margin-bottom: 2.5rem;
 }

@@ -16,9 +16,13 @@ $api_routes["/home/"] = function() {
     // opening card
     $home_opening_card = json_decode(file_get_contents(__DIR__ . "/../content/home/home_opening_card.json"), true);
     
+    // block row
+    $home_block_row = json_decode(file_get_contents(__DIR__ . "/../content/home/home_block_row.json"), true);
+
     // return everything
     return [
         "home_opening_card" => $home_opening_card,
+        "home_block_row" => $home_block_row,
         "blocks" => $total_blocks
     ];
 };

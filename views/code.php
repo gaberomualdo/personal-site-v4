@@ -40,10 +40,9 @@
                     </div>
                 </div>
             </div>
-
-            <?php include get_path_of_include("footer.php") ?>
         </div>
-
+        
+        <?php include get_path_of_include("footer.php") ?>
         <?php include get_path_of_include("scripts.php") ?>
     </body>
 

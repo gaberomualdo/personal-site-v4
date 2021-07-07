@@ -1,6 +1,5 @@
 // css
 import '../../../css/pages/blog-post.css';
-
 import './prism';
 
 const ClipboardJS = require('clipboard');
@@ -47,3 +46,9 @@ checkSideBlockPositionTypeFirstTime();
   window.addEventListener('scroll', updateScrollProgressBar);
   window.addEventListener('load', updateScrollProgressBar);
 })();
+
+document.querySelectorAll('[data-clipboard-action]').forEach((e) => {
+  e.addEventListener('click', () => {
+    console.log("Copied");
+  });
+});

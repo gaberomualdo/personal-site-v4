@@ -63,6 +63,26 @@
                     </div>
                 </div>
 
+                <div class="block_row">
+                    <?php
+                        foreach($page_data["home_block_row"] as $block) {
+                            echo "<div class='block'>
+                                <a href='" . $block['url'] . "'>
+                                    <div class='top' style='--bg: url(" . $block['bg_url'] . ");'>
+                                        <h1>" . $block['title'] . "</h1>
+                                        <div class='icon'>
+                                            <h3>View Now <span>&rarr;</span></h3>
+                                        </div>
+                                    </div>
+                                    <div class='bottom'>
+                                        <p>" . $block['content'] . "</p>
+                                    </div>
+                                </a>
+                            </div>";
+                        }
+                    ?>
+                </div>
+
                 <?php // a buncha blocks ?>
                 <?php
                 $query_params = $request->getQueryParams();
@@ -74,10 +94,9 @@
                 }
                 ?>
             </div>
-
-            <?php include get_path_of_include("footer.php") ?>
         </div>
-
+        
+        <?php include get_path_of_include("footer.php") ?>
         <?php include get_path_of_include("scripts.php") ?>
     </body>
 

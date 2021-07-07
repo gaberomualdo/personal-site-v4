@@ -37,18 +37,20 @@
 }
 
 /* welcome card columns */
+body > div.container > div.block_list > .block.welcome > .content {
+  display: flex;
+}
 body > div.container > div.block_list > .block.welcome > .content > div {
   display: block;
-  float: left;
   height: auto;
   overflow: hidden;
 }
 
 /* welcome card picture */
 body > div.container > div.block_list > .block.welcome > .content > div.picture {
-  width: 28rem;
+  flex: 0 0 20rem;
   box-sizing: border-box;
-  padding: 0 3.5rem;
+  padding: 0;
 }
 
 body > div.container > div.block_list > .block.welcome > .content > div.picture > img {
@@ -59,9 +61,9 @@ body > div.container > div.block_list > .block.welcome > .content > div.picture 
 
 /* welcome card text area */
 body > div.container > div.block_list > .block.welcome > .content > div.text {
-  width: calc(100% - 28rem);
+  flex: 1 1 100%;
   box-sizing: border-box;
-  padding-left: 4rem;
+  padding-left: 3.25rem;
 }
 
 body > div.container > div.block_list > .block.welcome > .content > div.text p {
@@ -106,8 +108,6 @@ body > div.container > div.block_list > .block.welcome > .content > div.text > d
   width: 100%;
   height: auto;
   border-radius: 50%;
-  padding: 0.15rem;
-  border: 1px solid var(--lighter-color);
   box-sizing: border-box;
   display: block;
 }
@@ -195,15 +195,14 @@ body > div.container > div.block_list > .block.welcome > .content > div.text > d
   color: var(--theme-color);
   text-decoration: none;
   text-transform: uppercase;
-  height: 2.1rem;
-  line-height: calc(2.1rem - 1.5px);
-  padding: 0 0.9rem;
-  font-size: 1.375rem;
+  line-height: 1;
+  padding: 0.5rem 1.3rem;
+  font-size: 1.45rem;
   border: 1px solid var(--theme-color);
-  border-radius: 1.05rem;
+  border-radius: 1000px;
   box-sizing: border-box;
   opacity: 0.9;
-  transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out, opacity 0.25s ease-in-out;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
   display: inline-block;
   margin-top: 1rem;
 }
@@ -216,6 +215,14 @@ body > div.container > div.block_list > .block.welcome > .content > div.text > d
   color: #ffffff;
   background-color: var(--theme-color);
   opacity: 1;
+}
+
+/* social urls mobile */
+@media only screen and (max-width: 780px) {
+  body > div.container > div.block_list > .block.welcome > .content > div.text > div.top > div.right > ul.social_links > a {
+    padding: 0.35rem 0.8rem;
+    font-size: 1.2rem;
+  }
 }
 
 /* welcome card mobile */
@@ -276,6 +283,10 @@ body > div.container > div.block_list > .block.welcome > .content > div.text > d
 }
 
 /* actual text of welcome card */
+body > div.container > div.block_list > .block.welcome > .content > div.text > div.text_content a {
+  font-weight: normal;
+}
+
 @media only screen and (max-width: 500px) {
   body > div.container > div.block_list > .block.welcome > .content > div.text > div.text_content .no_display_on_mobile {
     display: none;
@@ -283,4 +294,67 @@ body > div.container > div.block_list > .block.welcome > .content > div.text > d
   body > div.container > div.block_list > .block.welcome > .content > div.text > div.text_content .no_margin_bottom_on_mobile {
     margin-bottom: 0;
   }
+}
+
+/* welcome block row */
+body > div.container > div.block_list > .block_row .block .top {
+  padding: 2.2rem 0;
+  /* background-color: var(--lightest-color); */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), var(--bg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  padding-bottom: 3.75rem;
+}
+body > div.container > div.block_list > .block_row .block .top h1 {
+  font-weight: 600;
+  text-align: center;
+  line-height: 1;
+  margin: 0;
+  font-size: 3rem;
+  color: #fff;
+}
+body > div.container > div.block_list > .block_row .block .icon {
+  transition: background-color 0.2s;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 1.6rem;
+  background-color: #2188ff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 1000px;
+  display: flex;
+  width: auto;
+}
+body > div.container > div.block_list > .block_row .block .icon h3 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  line-height: 1.6rem;
+  font-weight: 500;
+  color: #fff;
+}
+body > div.container > div.block_list > .block_row .block .icon h3 span {
+  margin-left: 0.35rem;
+  display: inline-block;
+  transition: transform 0.2s;
+}
+body > div.container > div.block_list > .block_row .block a:hover .icon h3 span {
+  transform: translateX(0.25rem);
+}
+body > div.container > div.block_list > .block_row .block a:hover .icon {
+  background-color: #0066d8;
+}
+body > div.container > div.block_list > .block_row .block .icon svg {
+  height: 100%;
+  width: auto;
+  fill: #fff;
+}
+body > div.container > div.block_list > .block_row .block .bottom {
+  padding: 1.25rem 1.5rem;
+  padding-top: 3.5rem;
+}
+body > div.container > div.block_list > .block_row .block .bottom p {
+  margin: 0;
 }

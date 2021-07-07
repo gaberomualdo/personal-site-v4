@@ -3,8 +3,8 @@ window.addEventListener('load', () => {
     console.log('%c' + (options.isSeparator ? '' : ' ') + text, customStyle + ' font-size: 120%;');
   };
 
-  const interestedInWorkingText = 'Interested in working with me? Shoot me an email at xtrp@xtrp.io. ';
-  const beforeText = ['Built by...'];
+  const interestedInWorkingText = `Interested in working with me? Shoot me an email at ${(__siteSocialLinks.filter(e => e.name === 'Email')[0] || {url: 'xtrp@xtrp.io'}).url.replace(/mailto:/g, '')}. `;
+  const beforeText = ['Built by:'];
   const asciiText = [
     '   _____          ____  _____  _____ ______ _',
     '  / ____|   /\\   |  _ \\|  __ \\|_   _|  ____| |',
@@ -31,11 +31,10 @@ window.addEventListener('load', () => {
 
   // social links logged with theme color!
   __siteSocialLinks.forEach((link) => {
+    const addWWW = (url) => url.startsWith('www.') ? url : 'www.' + url;
+    const url = link.url.replace(/http:\/\//g, '').replace(/https:\/\//g, '').replace(/mailto:/g, '');
     logToConsole(
-      `${link.name}: ${link.url
-        .replace(/http:\/\//g, '')
-        .replace(/https:\/\//g, '')
-        .replace(/mailto:/g, '')}`,
+      `${link.name}: ${link.url.includes('http://') || link.url.includes('https://') ? addWWW(url) : url}`,
       `color: ${link.theme};`
     );
   });
