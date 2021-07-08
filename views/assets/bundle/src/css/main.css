@@ -657,7 +657,7 @@ body > div.container > div.block_list .block.post_block > .content > div.top > u
 /* post block mobile */
 @media only screen and (max-width: 780px) {
   body > div.container > div.block_list .block.post_block > .content > div.top > h1.title {
-    font-size: 2.7rem !important;
+    font-size: 3rem !important;
   }
 }
 
@@ -670,7 +670,7 @@ body > div.container > div.block_list .block.post_block > .content > div.top > u
     margin-top: 1.25rem;
   }
   body > div.container > div.block_list .block.post_block > .content > div.top > h1.title {
-    font-size: 2.25rem !important;
+    font-size: 3rem !important;
   }
   body > div.container > div.block_list .block.post_block > .content > div.top > ul.details > li > p {
     font-size: 1.4rem;
