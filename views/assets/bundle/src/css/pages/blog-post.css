@@ -440,7 +440,7 @@ body > div.container > ul.side_block_list > .side_block.author_block > div.conte
 body > div.container > ul.side_block_list > .side_block.author_block > div.content > div.top_area > div.right > div.social_links > a {
   display: inline-block;
   height: 2.1rem;
-  margin-right: 1.25rem;
+  margin-right: 1.75rem;
 }
 
 body > div.container > ul.side_block_list > .side_block.author_block > div.content > div.top_area > div.right > div.social_links > a > svg {
@@ -453,11 +453,6 @@ body > div.container > ul.side_block_list > .side_block.author_block > div.conte
 
 body > div.container > ul.side_block_list > .side_block.author_block > div.content > div.top_area > div.right > div.social_links > a:hover > svg {
   fill: var(--text-color) !important;
-  transform: scale(1.08);
-}
-
-body > div.container > ul.side_block_list > .side_block.author_block > div.content > div.top_area > div.right > div.social_links > a:active > svg {
-  transform: scale(1);
 }
 
 body > div.container > ul.side_block_list > .side_block.author_block > div.content > p {

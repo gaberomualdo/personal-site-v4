@@ -122,7 +122,7 @@ body > nav > ul.links > a {
   border: 1px solid transparent;
   margin: 0 0.5rem;
   transition: border-color 0.25s;
-  border-radius: 3px;
+  border-radius: 6px;
 }
 
 body > nav > ul.links > a:hover {
@@ -327,6 +327,7 @@ body > footer {
   clear: both;
   font-size: 1.65rem;
   font-weight: 300;
+  margin-top: 4rem;
 }
 body > footer,
 body > footer * {
@@ -605,9 +606,10 @@ body > div.container > div.block_list .block.post_block > .content > div.top > u
   margin: 0;
   width: 100%;
   overflow: hidden;
-  color: var(--lighter-text-color);
+  color: var(--text-color);
   font-size: 0;
   padding-bottom: 0.75rem;
+  opacity: 0.65;
 }
 
 body > div.container > div.block_list .block.post_block > .content > div.top > ul.details > li {
@@ -633,7 +635,8 @@ body > div.container > div.block_list .block.post_block > .content > div.top > u
   width: 2.25rem;
   box-sizing: border-box;
   margin: 0.125rem;
-  fill: var(--medium-color);
+  fill: var(--text-color);
+  opacity: 0.8;
 }
 
 body > div.container > div.block_list .block.post_block > .content > div.top > ul.details > li > p {

@@ -8,11 +8,8 @@
     </div>
     <div class="row socials">
         <?php
-        foreach($site_details["author"]["social_urls"] as $social_url) {
-            echo "<a rel='noreferrer' target='_blank' href='" . $social_url["url"] . "'>" . $social_url["svg"] . "</a>";
-        }
-        foreach($site_details["author"]["other_urls"] as $social_url) {
-            echo "<a rel='noreferrer' target='_blank' href='" . $social_url["url"] . "'>" . $social_url["svg"] . "</a>";
+        foreach(array_merge($site_details["author"]["social_urls"], $site_details["author"]["other_urls"]) as $social_url) {
+            echo "<a rel='noreferrer' target='_blank' aria-label='" . $social_url["name"] . "' href='" . $social_url["url"] . "'>" . $social_url["svg"] . "</a>";
         }
         ?>
     </div>

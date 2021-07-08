@@ -15,7 +15,7 @@
                 <div class="block resume_container post_content">
                     <div class="mobile content post_content">
                         <h1 class="big_title">Résumé</h1>
-                        <p>This page is not available on mobile. Please switch to a larger device or reach out to me over email for a copy of my résumé directly.</p>
+                        <p>This page is not available on mobile yet. Switch to a larger device or reach out to me over email for a copy of my résumé directly.</p>
                         <!-- <a href="<?php echo $page_data["content"]["png_version_url"]; ?>" download="Gabriel Romualdo's Résumé.png">Download Résumé (PNG)</a><br>
                         <a href="<?php echo $page_data["content"]["pdf_version_url"]; ?>" download="Gabriel Romualdo's Résumé.pdf">Download Résumé (PDF)</a> -->
                     </div>
