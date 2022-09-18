@@ -1,7 +1,7 @@
 RewriteEngine On
 RewriteCond %{HTTP_HOST} ^xtrp.io$ [OR]
 RewriteCond %{HTTP_HOST} ^www.xtrp.io$
-RewriteRule (.*)$ https://www.gabrielromualdo.com/$1 [R=301,L]
+RewriteRule (.*)$ https://gabrielromualdo.com/$1 [R=301,L]
 
 # RewriteEngine On
 # RewriteCond %{HTTPS} !=on
