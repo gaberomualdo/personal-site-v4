@@ -17,7 +17,8 @@ $routes = [
         "view_filename" => "home.php",
         "title" => "Home",
         "priority" => "0.9",
-        "updated" => "weekly"
+        "updated" => "weekly",
+        "redirect" => "https://gabrielromualdo.com/"
     ],
     [
         "route" => "/about/",
@@ -25,7 +26,8 @@ $routes = [
         "view_filename" => "about.php",
         "title" => "About",
         "priority" => "0.6",
-        "updated" => "monthly"
+        "updated" => "monthly",
+        "redirect" => "https://gabrielromualdo.com/story"
     ],
     [
         "route" => "/blog/",
@@ -33,7 +35,8 @@ $routes = [
         "view_filename" => "blog.php",
         "title" => "Blog",
         "priority" => "0.8",
-        "updated" => "weekly"
+        "updated" => "weekly",
+        "redirect" => "https://gabrielromualdo.com/articles"
     ],
     [
         "route" => "/projects/",
@@ -41,7 +44,8 @@ $routes = [
         "view_filename" => "code.php",
         "title" => "Projects",
         "priority" => "0.8",
-        "updated" => "weekly"
+        "updated" => "weekly",
+        "redirect" => "https://gabrielromualdo.com/projects"
     ],
     [
         "route" => "/resume/",
@@ -49,7 +53,8 @@ $routes = [
         "view_filename" => "resume.php",
         "title" => "Résumé",
         "priority" => "0.6",
-        "updated" => "monthly"
+        "updated" => "monthly",
+        "redirect" => "https://gabrielromualdo.com/work"
     ]
 ];
 
@@ -121,6 +126,11 @@ $router->error("is_using_ie", function() {
 // for each route, add to router and display view
 foreach($routes as $route) {
     $router->get($route["route"], function() use( &$route ) {
+        if(array_key_exists("redirect", $route)) {
+            header("Location: " . $route["redirect"], true, 301);
+            exit();
+        }
+
         // declare use of global vars
         global $api_routes;
         global $page_data;
@@ -163,6 +173,9 @@ foreach($blog_posts as $post) {
 
     // route path
     $router->get($post_url, function() use( &$post ) {
+        header("Location: " . "https://gabrielromualdo.com/articles/" . $post["fullFilename"], true, 301);
+        exit();
+
         // declare use of global vars
         global $page_data;
         global $page_details;
@@ -250,6 +263,9 @@ $router->get("/feed/", function() {
 
 // Sitemap XML
 $router->get("/sitemap/", function() {
+    header("Location: " . "https://gabrielromualdo.com/sitemap.xml", true, 301);
+    exit();
+
     // declare use of global vars
     global $page_data;
     global $routes;

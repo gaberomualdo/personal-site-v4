@@ -36,7 +36,9 @@ function getListOfExtractedObjectsFromFilesInDirectory($directory) {
         $endString = ".markdown";
 
         if(substr($object_to_extract_filename, -(strlen($endString))) === $endString) {
-            array_push($extracted_objects, extractObjectFromMarkdownFile( file_get_contents($directory . $object_to_extract_filename)));
+            $object = extractObjectFromMarkdownFile( file_get_contents($directory . $object_to_extract_filename));
+            $object["fullFilename"] = str_replace(".markdown", "", $object_to_extract_filename);
+            array_push($extracted_objects, $object);
         }
     }
     
